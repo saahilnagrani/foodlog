@@ -49,6 +49,10 @@
   .fill{height:100%;border-radius:5px;transition:width .3s;}
   .ok{color:var(--green);} .over{color:var(--red);}
   .fill.g{background:var(--green);} .fill.b{background:var(--blue);} .fill.r{background:var(--red);} .fill.a{background:var(--amber);}
+  .bar.stack{display:flex;position:relative;}
+  .seg{height:100%;transition:width .3s;}
+  .seg.r{background:var(--red);} .seg.g{background:var(--green);}
+  .satmark{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--amber);border-radius:2px;}
 
   .fatline{display:flex;gap:14px;font-size:11.5px;color:var(--muted);margin:-6px 0 12px;}
   .fatline b{color:var(--text);}
@@ -255,8 +259,13 @@ function render(){
     const kcal=round(sum(d.items,'kcal')), pro=round(sum(d.items,'protein')),
           fat=round(sum(d.items,'fat')), sat=round(sum(d.items,'sat')), unsat=round(fat-sat);
     const t=DATA.targets;
-    const pm=meterBar(pro,t.protein,'floor'), fm=meterBar(fat,t.fat,'ceil'), sm=meterBar(sat,t.sat,'ceil');
+    const pm=meterBar(pro,t.protein,'floor'), fm=meterBar(fat,t.fat,'ceil');
     const calOver = kcal>t.kcal;
+    // stacked fat bar: total scaled to the 60g ceiling, split into sat (red) + unsat (green)
+    const totalW = Math.min(100, t.fat? fat/t.fat*100 : 0);
+    const satW = fat>0 ? totalW*(sat/fat) : 0;
+    const unsatW = fat>0 ? totalW*(unsat/fat) : 0;
+    const satMarker = Math.min(100, t.sat/t.fat*100); // 15g sat position on the 60g axis
 
     let itemsHtml='';
     d.items.forEach((it,idx)=>{
@@ -276,13 +285,15 @@ function render(){
       <div class="meters">
         <div class="meter"><div class="mtop"><span class="lbl">Protein</span><span class="val ${pro>=t.protein?'ok':''}">${pro}g / ${t.protein}g floor</span></div>
           <div class="bar"><div class="fill ${pm.cls}" style="width:${pm.pct}%"></div></div></div>
-        <div class="meter"><div class="mtop"><span class="lbl">Total fat</span><span class="val ${fm.status}">${fat}g / ${t.fat}g</span></div>
-          <div class="bar"><div class="fill ${fm.cls}" style="width:${fm.pct}%"></div></div></div>
-        <div class="meter"><div class="mtop"><span class="lbl">Saturated fat</span><span class="val ${sm.status}">${sat}g / ${t.sat}g</span></div>
-          <div class="bar"><div class="fill ${sm.cls}" style="width:${sm.pct}%"></div></div></div>
+        <div class="meter"><div class="mtop"><span class="lbl">Fat &nbsp;<span style="color:var(--faint)">(sat + unsat)</span></span><span class="val ${fm.status}">${fat}g / ${t.fat}g</span></div>
+          <div class="bar stack">
+            <div class="seg r" style="width:${satW}%"></div>
+            <div class="seg g" style="width:${unsatW}%"></div>
+            <div class="satmark" style="left:${satMarker}%" title="15g saturated ceiling"></div>
+          </div></div>
       </div>
       <div class="fatline">
-        <span><span class="dot" style="background:var(--red)"></span>Saturated <b>${sat}g</b></span>
+        <span><span class="dot" style="background:var(--red)"></span>Saturated <b class="${sat>t.sat?'over':''}">${sat}g</b> <span style="color:var(--faint)">/ ${t.sat}g</span></span>
         <span><span class="dot" style="background:var(--green)"></span>Unsaturated <b>${unsat}g</b></span>
       </div>
       <div class="items">${itemsHtml}</div>
