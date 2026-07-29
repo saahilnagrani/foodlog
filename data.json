@@ -1,0 +1,74 @@
+{
+  "targets": { "kcal": 1900, "protein": 150, "fat": 60, "sat": 15 },
+  "updated": "2026-07-29",
+  "days": [
+    {
+      "date": "2026-07-24",
+      "label": "Fri 24 Jul",
+      "workout": "Push",
+      "items": [
+        { "meal": "Breakfast", "name": "Morning shake (vanilla whey, oat milk, nuts, berries)", "kcal": 367, "protein": 29, "fat": 15, "sat": 2.5 },
+        { "meal": "Lunch", "name": "Chicken curry 255g + ghee roti", "kcal": 475, "protein": 38, "fat": 23, "sat": 7 },
+        { "meal": "Snack", "name": "Evening shake + nuts/seeds", "kcal": 180, "protein": 26, "fat": 7, "sat": 1.5 },
+        { "meal": "Dinner", "name": "Chicken momos x16 + sauce", "kcal": 765, "protein": 58, "fat": 12, "sat": 3 }
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "label": "Sat 25 Jul",
+      "workout": "Rest (event day)",
+      "items": [
+        { "meal": "Breakfast", "name": "Burger King Long Chicken", "kcal": 470, "protein": 18, "fat": 23, "sat": 6 },
+        { "meal": "Snack", "name": "Shake + nuts + berries", "kcal": 285, "protein": 27, "fat": 13, "sat": 2.5 },
+        { "meal": "Snack", "name": "Veg pulao w/ tofu + Skyr 0%", "kcal": 570, "protein": 28, "fat": 12, "sat": 2 },
+        { "meal": "Snack", "name": "Carried shake + nuts", "kcal": 180, "protein": 26, "fat": 7, "sat": 1.5 },
+        { "meal": "Dinner", "name": "Carnival tasting menu (partial portions)", "kcal": 1000, "protein": 58, "fat": 49, "sat": 22 },
+        { "meal": "Drink", "name": "Paloma cocktail", "kcal": 130, "protein": 0, "fat": 0, "sat": 0 }
+      ]
+    },
+    {
+      "date": "2026-07-26",
+      "label": "Sun 26 Jul",
+      "workout": "Rest",
+      "items": [
+        { "meal": "Breakfast", "name": "Clear whey + scramble (3 whole + 3 whites)", "kcal": 390, "protein": 50, "fat": 21, "sat": 5.5 },
+        { "meal": "Lunch", "name": "Watermelon, feta & pine nut salad", "kcal": 250, "protein": 8, "fat": 16, "sat": 5 },
+        { "meal": "Snack", "name": "Vanilla whey + oat milk + nuts", "kcal": 270, "protein": 26, "fat": 10, "sat": 2 },
+        { "meal": "Dinner", "name": "Prawn curry (half batch) + ghee roti", "kcal": 415, "protein": 38, "fat": 13, "sat": 4 }
+      ]
+    },
+    {
+      "date": "2026-07-27",
+      "label": "Mon 27 Jul",
+      "workout": "Lower A",
+      "items": [
+        { "meal": "Breakfast", "name": "Morning shake + nuts + berries", "kcal": 255, "protein": 29, "fat": 10, "sat": 2 },
+        { "meal": "Lunch", "name": "White rice 120g + dal palak 250g + papad", "kcal": 415, "protein": 18, "fat": 11, "sat": 1.5 },
+        { "meal": "Snack", "name": "Clear whey 31g in water", "kcal": 110, "protein": 26, "fat": 0.7, "sat": 0.5 },
+        { "meal": "Dinner", "name": "Chicken curry (250g cooked chicken) + ghee roti", "kcal": 665, "protein": 80, "fat": 27, "sat": 8.5 }
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "label": "Tue 28 Jul",
+      "workout": "Pull (PRs)",
+      "items": [
+        { "meal": "Breakfast", "name": "Scramble (2+2) + Awesome plant shake + nuts/berries", "kcal": 765, "protein": 65, "fat": 41, "sat": 7 },
+        { "meal": "Lunch", "name": "6 egg whites + egg curry + chicken curry 200g + ghee roti", "kcal": 640, "protein": 57, "fat": 30, "sat": 8.5 },
+        { "meal": "Dinner", "name": "Pan-seared salmon 200g raw + 1 tsp peanut oil", "kcal": 440, "protein": 40, "fat": 30, "sat": 5 }
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "label": "Wed 29 Jul",
+      "workout": "Lower B",
+      "items": [
+        { "meal": "Early morning", "name": "Manakeesh x2 (zaatar & akkawi + spicy akkawi)", "kcal": 800, "protein": 28, "fat": 38, "sat": 20 },
+        { "meal": "Lunch", "name": "White rice 84g + Greek yogurt 0% 81g + papad", "kcal": 200, "protein": 12, "fat": 2, "sat": 0.5 },
+        { "meal": "Snack", "name": "Vanilla whey + oat milk + nuts + fruit", "kcal": 395, "protein": 31, "fat": 17, "sat": 3 },
+        { "meal": "Dinner", "name": "Chilli tofu (200g) + veg hakka noodles (312g)", "kcal": 755, "protein": 34, "fat": 31, "sat": 5 },
+        { "meal": "Snack", "name": "Clear whey 32g in 450ml water", "kcal": 115, "protein": 27, "fat": 0.7, "sat": 0.5 }
+      ]
+    }
+  ]
+}
