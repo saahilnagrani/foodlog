@@ -390,6 +390,14 @@ async function boot(){
   }catch(e){ DATA=SEED; SOURCE='seed'; }
   render();
 }
+
+// Called by the Android shell on pull-to-refresh and when the app is reopened.
+window.appRefresh = async function(){
+  const y = window.scrollY;
+  await boot();
+  window.scrollTo(0, y);
+};
+
 boot();
 </script>
 </body>
