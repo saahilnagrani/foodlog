@@ -51,6 +51,13 @@
   /* brutalist: whole card wobble */
   body[data-theme="b"][data-motion="wobble"] .card{animation:bcardwob .7s ease both;}
   @keyframes bcardwob{0%{transform:rotate(0)}20%{transform:rotate(-1.3deg)}50%{transform:rotate(1.3deg)}80%{transform:rotate(-.6deg)}100%{transform:rotate(0)}}
+  /* saturated-over flag on weekly fat chart */
+  body[data-theme="b"] .week .n.satover{color:#e5271b;}
+  body[data-theme="b"] .fstack.over .fseg.red{background:#ff1f0f;}
+  body[data-theme="c"] .n.satover{color:#ff5d5d;}
+  body[data-theme="c"] .fstack.over .fseg.red{background:#ff2d2d;}
+  body[data-theme="d"] .spk .n.satover{color:#ff6b6b;font-weight:600;}
+  body[data-theme="d"] .fstack.over .fseg.red{background:#ff3b3b;}
   .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
   .toast.show{display:block;}
   .thumb,.mimg{object-fit:cover;cursor:pointer;background:#ccc;}
@@ -302,10 +309,11 @@ function weekChartB(days){
   const S=weekSeries(days), maxK=Math.max(DATA.targets.kcal,...S.map(x=>x.k),1)*1.05, maxP=Math.max(DATA.targets.protein,...S.map(x=>x.p),1)*1.05, maxF=Math.max(DATA.targets.fat,...S.map(x=>x.f),1)*1.05;
   const cal=S.map(x=>`<div class="c"><div class="n">${x.k}</div><div class="b ${x.k>DATA.targets.kcal?'hi':'lo'}" data-h="${Math.max(4,x.k/maxK*74)}"></div><div class="d">${x.d}</div></div>`).join('')||'<div class="n" style="font-family:Arial">no data</div>';
   const pro=S.map(x=>`<div class="c"><div class="n">${x.p}</div><div class="b ${x.p>=DATA.targets.protein?'pro':'pun'}" data-h="${Math.max(4,x.p/maxP*74)}"></div><div class="d">${x.d}</div></div>`).join('');
-  const fat=S.map(x=>{const th=Math.max(5,x.f/maxF*74),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n">${x.f}</div><div class="fstack" data-h="${th}" style="height:0"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('');
+  const satCeil=DATA.targets.sat, fatOverN=S.filter(x=>x.s>satCeil).length;
+  const fat=S.map(x=>{const over=x.s>satCeil,th=Math.max(5,x.f/maxF*74),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n ${over?'satover':''}">${over?'&#9650; ':''}${x.f}</div><div class="fstack ${over?'over':''}" data-h="${th}" style="height:0"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('');
   return `<div class="card"><div class="ctitle"><span class="dchip">Week &middot; Calories</span></div><div class="week">${cal}</div></div>
     <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Protein</span><span style="font-family:Arial;font-size:10px;color:#666">goal 150</span></div><div class="week">${pro}</div></div>
-    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:#666">red=sat, ceil 60</span></div><div class="week">${fat}</div></div>`;
+    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:${fatOverN?'#e5271b':'#666'}">sat &gt;15g: ${fatOverN} of ${S.length}d</span></div><div class="week">${fat}</div></div>`;
 }
 function renderB(days){
   let h=weekChartB(days);
@@ -340,7 +348,8 @@ function renderC(days){
   let h='';
   h+=`<div class="panel"><div class="h">// calories</div><div class="spk">${S.map(x=>{const H=Math.max(3,x.k/maxK*46);return `<div class="c"><div class="n">${num(x.k)}</div><div class="b ${x.k>T.kcal?'hi':'on'}" data-h="${H}" style="height:${H}px"></div><div class="d">${x.d}</div></div>`;}).join('')||'no data'}</div></div>`;
   h+=`<div class="panel"><div class="h">// protein (goal 150)</div><div class="spk">${S.map(x=>{const H=Math.max(3,x.p/maxP*46);return `<div class="c"><div class="n">${num(x.p)}</div><div class="b ${x.p>=T.protein?'pro':'pun'}" data-h="${H}" style="height:${H}px"></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
-  h+=`<div class="panel"><div class="h">// fat (red=sat, ceil 60)</div><div class="spk">${S.map(x=>{const th=Math.max(4,x.f/maxF*46),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n">${num(x.f)}</div><div class="fstack" data-h="${th}" style="height:${th}px"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
+  const fatOverN=S.filter(x=>x.s>T.sat).length;
+  h+=`<div class="panel"><div class="h">// fat (red=sat, ceil 60) &middot; over ${fatOverN}/${S.length}d</div><div class="spk">${S.map(x=>{const over=x.s>T.sat,th=Math.max(4,x.f/maxF*46),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n ${over?'satover':''}">${over?'&#9650;':''}${num(x.f)}</div><div class="fstack ${over?'over':''}" data-h="${th}" style="height:${th}px"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
@@ -381,7 +390,8 @@ function renderD(days){
   if(fd){h+=`<div class="feat">${glyph(180,{items:fd.items.length,protein:featured.p,fat:featured.f,sat:featured.s,kcal:featured.k})}<div class="fday">${fd.label}</div><div class="fk">${featured.k}<span> / 1900 kcal</span></div></div>`;}
   h+=`<div class="panel"><div class="h">Calories, this week</div><div class="spk">${S.map(x=>`<div class="c"><div class="n">${x.k}</div><div class="b ${x.k>T.kcal?'hi':''}" style="height:${Math.max(4,x.k/maxK*40)}px"></div><div class="d">${x.d}</div></div>`).join('')||'no data'}</div></div>`;
   h+=`<div class="panel"><div class="h">Protein &middot; goal 150</div><div class="spk">${S.map(x=>`<div class="c"><div class="n">${x.p}</div><div class="b ${x.p>=T.protein?'pro':'pun'}" style="height:${Math.max(4,x.p/maxP*40)}px"></div><div class="d">${x.d}</div></div>`).join('')}</div></div>`;
-  h+=`<div class="panel"><div class="h">Fat &middot; ceiling 60 &middot; <span style="color:#ff8a7a">red=sat</span></div><div class="spk">${S.map(x=>{const th=Math.max(5,x.f/maxF*40),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n">${x.f}</div><div class="fstack" style="height:${th}px"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
+  const fatOverN=S.filter(x=>x.s>T.sat).length;
+  h+=`<div class="panel"><div class="h">Fat &middot; ceiling 60 &middot; <span style="color:#ff8a7a">red=sat</span> &middot; over ${fatOverN}/${S.length}d</div><div class="spk">${S.map(x=>{const over=x.s>T.sat,th=Math.max(5,x.f/maxF*40),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n ${over?'satover':''}">${over?'&#9650; ':''}${x.f}</div><div class="fstack ${over?'over':''}" style="height:${th}px"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
     const meals=d.items.map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="lb('${src}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${(it.meal||'').slice(0,3)}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');

@@ -75,7 +75,10 @@
       "label": "Thu 30 Jul",
       "workout": "",
       "items": [
-        { "meal": "Breakfast", "name": "ON vanilla whey 31g + oat milk 150ml + strawberry 80g + nuts/seeds 20g", "kcal": 335, "protein": 30, "fat": 15, "sat": 3, "carb": 23, "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_breakfast.jpg" }
+        { "meal": "Breakfast", "name": "ON vanilla whey 31g + oat milk 150ml + strawberry 80g + nuts/seeds 20g", "kcal": 335, "protein": 30, "fat": 15, "sat": 3, "carb": 23, "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_breakfast.jpg" },
+        { "meal": "Lunch", "name": "Egg white bhurji (5-6 egg whites, onion, tomato) + veg salad + Sprite Zero", "kcal": 210, "protein": 22, "fat": 8, "sat": 1, "carb": 12, "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_lunch.jpg" },
+        { "meal": "Dinner", "name": "Chicken tikka ~185g (from 235g plate) + onion/capsicum + coriander chutney", "kcal": 360, "protein": 53, "fat": 10, "sat": 2.5, "carb": 8, "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_dinner.jpg" },
+        { "meal": "Dinner", "name": "Egg white bhurji (70% of square bowl, ~3 egg whites)", "kcal": 90, "protein": 11, "fat": 4, "sat": 0.6, "carb": 3 }
       ]
     }
   ]
