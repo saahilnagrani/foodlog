@@ -16,10 +16,12 @@
   .gear{border:none;cursor:pointer;width:36px;height:36px;border-radius:10px;font-size:17px;display:flex;align-items:center;justify-content:center;}
   #view{max-width:480px;margin:0 auto;padding:4px 16px 0;}
   .fab{position:fixed;left:50%;transform:translateX(-50%);bottom:24px;z-index:40;border:none;font-weight:800;font-size:15px;padding:14px 26px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.45);cursor:pointer;}
-  .sheet-bg{position:fixed;top:0;left:0;right:0;bottom:0;height:100%;background:rgba(0,0,0,.62);display:none;align-items:center;justify-content:center;z-index:60;padding:16px;}
-  .sheet-bg.open{display:flex;}
-  .sheet{width:100%;max-width:440px;border-radius:16px;padding:18px 16px 22px;max-height:86vh;overflow:auto;-webkit-overflow-scrolling:touch;background:#fff;color:#111;box-shadow:0 20px 60px rgba(0,0,0,.5);}
-  .sheet .close{float:right;border:none;background:#eee;width:30px;height:30px;border-radius:8px;font-size:16px;cursor:pointer;color:#333;}
+  /* Settings/Add render as a full in-flow screen (robust in WebView, no floating overlay) */
+  .sheet-bg{display:none;}
+  .sheet-bg.open{display:block;}
+  body.modal-open #view, body.modal-open .fab{display:none;}
+  .sheet{max-width:480px;margin:0 auto;padding:16px 16px 60px;background:#fff;color:#111;min-height:calc(100vh - 56px);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+  .sheet .close{float:right;border:none;background:#eee;width:32px;height:32px;border-radius:8px;font-size:18px;cursor:pointer;color:#333;}
   .sheet h3{font-size:15px;margin-bottom:12px;}
   .slabel{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#888;margin:16px 0 8px;font-weight:700;}
   .row-chips{display:flex;gap:8px;flex-wrap:wrap;}
@@ -347,8 +349,8 @@ function renderD(days){
 }
 
 /* ---------- settings ---------- */
-function openSettings(){window.scrollTo(0,0);buildSettings();document.getElementById('settingsBg').classList.add('open');}
-function closeSettings(){document.getElementById('settingsBg').classList.remove('open');}
+function openSettings(){buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
+function closeSettings(){document.getElementById('settingsBg').classList.remove('open');document.body.classList.remove('modal-open');window.scrollTo(0,0);}
 function buildSettings(){
   document.getElementById('themeChips').innerHTML=THEMES.map(([n,id])=>`<button class="schip ${PREF.theme===id?'on':''}" onclick="setTheme('${id}')">${n}</button>`).join('');
   document.getElementById('fontChips').innerHTML=FONTS[PREF.theme].map((f,i)=>`<button class="schip ${PREF.font[PREF.theme]===i?'on':''}" onclick="setFont(${i})">${f[0]}</button>`).join('');
@@ -359,8 +361,8 @@ function setFont(i){PREF.font[PREF.theme]=i;savePref();buildSettings();render();
 function setMotion(id){PREF.motion[PREF.theme]=id;savePref();buildSettings();render();}
 
 /* ---------- add food ---------- */
-function openAdd(){const sel=document.getElementById('f_day');const days=allDays();sel.innerHTML=days.map(d=>`<option value="${d.date}">${d.label}</option>`).join('')+`<option value="__today">+ New day (today)</option>`;if(days.length)sel.value=days[days.length-1].date;window.scrollTo(0,0);document.getElementById('addBg').classList.add('open');}
-function closeAdd(){document.getElementById('addBg').classList.remove('open');}
+function openAdd(){const sel=document.getElementById('f_day');const days=allDays();sel.innerHTML=days.map(d=>`<option value="${d.date}">${d.label}</option>`).join('')+`<option value="__today">+ New day (today)</option>`;if(days.length)sel.value=days[days.length-1].date;document.body.classList.add('modal-open');document.getElementById('addBg').classList.add('open');window.scrollTo(0,0);}
+function closeAdd(){document.getElementById('addBg').classList.remove('open');document.body.classList.remove('modal-open');window.scrollTo(0,0);}
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function saveFood(){
   let date=document.getElementById('f_day').value;if(date==='__today')date=todayISO();
