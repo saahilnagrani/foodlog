@@ -69,8 +69,12 @@
   .wk-bar .fseg{width:100%;}
   .wk-days{display:flex;gap:6px;margin-top:5px;}
   .wk-days .wk-d{flex:1;text-align:center;font-size:9px;}
-  .wk-line{position:absolute;left:0;right:0;height:0;border-top:2px dashed;pointer-events:none;}
-  .wk-line span{position:absolute;right:1px;top:-7px;font-size:8px;font-weight:700;line-height:1;padding:0 3px;border-radius:3px;}
+  .wk-line{position:absolute;left:0;right:0;height:0;border-top:1px dashed;pointer-events:none;}
+  .wk-subs{display:flex;gap:6px;margin-top:4px;}
+  .wk-subs .wk-s{flex:1;text-align:center;font-size:9px;line-height:1;}
+  body[data-theme="b"] .wk-s{font-family:Arial;font-weight:900;color:#9a8f7a;} body[data-theme="b"] .wk-s.over{color:#e5271b;}
+  body[data-theme="c"] .wk-s{color:#4c7a63;} body[data-theme="c"] .wk-s.over{color:#ff5d5d;}
+  body[data-theme="d"] .wk-s{color:#565273;} body[data-theme="d"] .wk-s.over{color:#ff6b6b;}
   body[data-theme="b"] .wk-n,body[data-theme="b"] .wk-d{font-family:Arial;font-weight:900;color:#111;}
   body[data-theme="b"] .wk-n.over{color:#e5271b;}
   body[data-theme="b"] .wk-bar{border:3px solid #111;}
@@ -120,7 +124,7 @@
   body[data-theme="b"] .week .d{font-size:9px;font-family:Arial;font-weight:900;margin-top:4px;}
   body[data-theme="b"] .dchip{display:inline-block;font-family:Arial;font-weight:900;font-size:12px;border:3px solid #111;background:#7fd0ff;padding:4px 9px;margin-bottom:10px;text-transform:uppercase;}
   body[data-theme="b"] .kcal{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2px;}
-  body[data-theme="b"] .kcal .big{font-size:42px;letter-spacing:-2px;line-height:1;}
+  body[data-theme="b"] .kcal .big{font-size:42px;letter-spacing:0;line-height:1.12;padding-top:2px;}
   body[data-theme="b"] .kcal .of{font-size:11px;color:#555;font-weight:900;font-family:Arial;} body[data-theme="b"] .kcal .of.over{color:#ff6b57;}
   body[data-theme="b"] .meal{display:flex;gap:10px;align-items:center;border-top:3px dashed #111;padding:10px 0;}
   body[data-theme="b"] .thumb{width:50px;height:50px;border:3px solid #111;box-shadow:3px 3px 0 #111;flex:0 0 auto;}
@@ -356,8 +360,10 @@ function barChart(S,key,max,o){
     else cols+=`<div class="wk-col"><div class="wk-bar ${o.cls?o.cls(x):''}" style="height:${H}px"></div></div>`;
     days+=`<div class="wk-d">${x.d}</div>`;
   });
-  (o.lines||[]).forEach(l=>{const off=Math.min(BM,l.v/max*BM);lines+=`<div class="wk-line ${l.cls||''}" style="bottom:${off}px"><span>${l.label}</span></div>`;});
-  return `<div class="wk"><div class="wk-nums">${nums}</div><div class="wk-plot" style="height:${BM}px">${cols}${lines}</div><div class="wk-days">${days}</div></div>`;
+  (o.lines||[]).forEach(l=>{const off=Math.min(BM,l.v/max*BM);lines+=`<div class="wk-line ${l.cls||''}" style="bottom:${off}px"></div>`;});
+  let subrow='';
+  if(o.sub){let subs='';S.forEach(x=>{subs+=`<div class="wk-s ${o.subOver&&o.subOver(x)?'over':''}">${o.sub(x)}</div>`;});subrow=`<div class="wk-subs">${subs}</div>`;}
+  return `<div class="wk"><div class="wk-nums">${nums}</div><div class="wk-plot" style="height:${BM}px">${cols}${lines}</div>${subrow}<div class="wk-days">${days}</div></div>`;
 }
 function weekCharts(days){
   const S=weekSeries(days),T=DATA.targets;
@@ -365,7 +371,7 @@ function weekCharts(days){
   return {
     cal:barChart(S,'k',maxK,{cls:x=>x.k>T.kcal?'over':'ok',lines:[{v:T.kcal,cls:'target',label:T.kcal}]}),
     pro:barChart(S,'p',maxP,{cls:x=>x.p>=T.protein?'okp':'lowp',lines:[{v:T.protein,cls:'target',label:T.protein}]}),
-    fat:barChart(S,'f',maxF,{stacked:true,over:x=>x.s>T.sat,lines:[{v:T.sat,cls:'sat',label:T.sat},{v:T.fat,cls:'target',label:T.fat}]}),
+    fat:barChart(S,'f',maxF,{stacked:true,over:x=>x.s>T.sat,sub:x=>x.s,subOver:x=>x.s>T.sat,lines:[{v:T.sat,cls:'sat'},{v:T.fat,cls:'target'}]}),
     overN:S.filter(x=>x.s>T.sat).length, ndays:S.length
   };
 }
@@ -386,7 +392,7 @@ function renderB(days){
   const W=weekCharts(days);
   let h=`<div class="card"><div class="ctitle"><span class="dchip">Week &middot; Calories</span><span style="font-family:Arial;font-size:10px;color:#666">target 1900</span></div>${W.cal}</div>
     <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Protein</span><span style="font-family:Arial;font-size:10px;color:#666">goal 150</span></div>${W.pro}</div>
-    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:${W.overN?'#e5271b':'#666'}">sat &gt;15g: ${W.overN} of ${W.ndays}d</span></div>${W.fat}</div>`;
+    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:${W.overN?'#e5271b':'#666'}">red# = sat g &middot; ${W.overN}/${W.ndays} over 15g</span></div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d),T=DATA.targets;
     const meals=d.items.map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="lb('${src}')">`:`<div class="noimg">NO<br>PIC</div>`;
@@ -417,7 +423,7 @@ function renderC(days){
   let h='';
   h+=`<div class="panel"><div class="h">// calories &middot; target 1900</div>${W.cal}</div>`;
   h+=`<div class="panel"><div class="h">// protein &middot; goal 150</div>${W.pro}</div>`;
-  h+=`<div class="panel"><div class="h">// fat (red=sat) &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
+  h+=`<div class="panel"><div class="h">// fat &middot; red#=sat g &middot; lines 15/60 &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
@@ -458,7 +464,7 @@ function renderD(days){
   if(fd){h+=`<div class="feat">${glyph(180,{items:fd.items.length,protein:featured.p,fat:featured.f,sat:featured.s,kcal:featured.k})}<div class="fday">${fd.label}</div><div class="fk">${featured.k}<span> / 1900 kcal</span></div></div>`;}
   h+=`<div class="panel"><div class="h">Calories &middot; target 1900</div>${W.cal}</div>`;
   h+=`<div class="panel"><div class="h">Protein &middot; goal 150</div>${W.pro}</div>`;
-  h+=`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red=sat</span> &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
+  h+=`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat g</span> &middot; lines 15/60 &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
     const meals=d.items.map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="lb('${src}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${(it.meal||'').slice(0,3)}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
