@@ -58,6 +58,45 @@
   body[data-theme="c"] .fstack.over .fseg.red{background:#ff2d2d;}
   body[data-theme="d"] .spk .n.satover{color:#ff6b6b;font-weight:600;}
   body[data-theme="d"] .fstack.over .fseg.red{background:#ff3b3b;}
+  /* ===== unified weekly charts (fixed plot area + reference lines) ===== */
+  .wk{margin-top:2px;}
+  .wk-nums{display:flex;gap:6px;}
+  .wk-nums .wk-n{flex:1;text-align:center;font-size:10px;line-height:1.1;padding-bottom:3px;}
+  .wk-plot{position:relative;display:flex;gap:6px;align-items:flex-end;}
+  .wk-col{flex:1;display:flex;align-items:flex-end;justify-content:center;}
+  .wk-bar{width:100%;transition:height .7s cubic-bezier(.2,.9,.3,1);}
+  .wk-bar.stack{display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;}
+  .wk-bar .fseg{width:100%;}
+  .wk-days{display:flex;gap:6px;margin-top:5px;}
+  .wk-days .wk-d{flex:1;text-align:center;font-size:9px;}
+  .wk-line{position:absolute;left:0;right:0;height:0;border-top:2px dashed;pointer-events:none;}
+  .wk-line span{position:absolute;right:1px;top:-7px;font-size:8px;font-weight:700;line-height:1;padding:0 3px;border-radius:3px;}
+  body[data-theme="b"] .wk-n,body[data-theme="b"] .wk-d{font-family:Arial;font-weight:900;color:#111;}
+  body[data-theme="b"] .wk-n.over{color:#e5271b;}
+  body[data-theme="b"] .wk-bar{border:3px solid #111;}
+  body[data-theme="b"] .wk-bar.ok{background:#c6f042;} body[data-theme="b"] .wk-bar.over{background:#ff6b57;}
+  body[data-theme="b"] .wk-bar.okp{background:#3d5cff;} body[data-theme="b"] .wk-bar.lowp{background:#9fb0ff;}
+  body[data-theme="b"] .wk-bar.stack .fseg.grn{background:#c6f042;} body[data-theme="b"] .wk-bar.stack .fseg.red{background:#ff6b57;}
+  body[data-theme="b"] .wk-bar.stack.over .fseg.red{background:#ff1f0f;}
+  body[data-theme="b"] .wk-line{border-color:rgba(0,0,0,.5);} body[data-theme="b"] .wk-line.sat{border-color:#e5271b;}
+  body[data-theme="b"] .wk-line span{background:#fff;color:#333;} body[data-theme="b"] .wk-line.sat span{color:#e5271b;}
+  body[data-theme="c"] .wk-n{color:#b8f7d6;} body[data-theme="c"] .wk-d{color:#4c7a63;}
+  body[data-theme="c"] .wk-n.over{color:#ff5d5d;}
+  body[data-theme="c"] .wk-bar.ok{background:#3dffa0;} body[data-theme="c"] .wk-bar.over{background:#ff5d5d;}
+  body[data-theme="c"] .wk-bar.okp{background:#5ad0ff;} body[data-theme="c"] .wk-bar.lowp{background:#2f6f88;}
+  body[data-theme="c"] .wk-bar.stack .fseg.grn{background:#3dffa0;} body[data-theme="c"] .wk-bar.stack .fseg.red{background:#ff5d5d;}
+  body[data-theme="c"] .wk-bar.stack.over .fseg.red{background:#ff2d2d;}
+  body[data-theme="c"] .wk-line{border-color:#4c7a63;} body[data-theme="c"] .wk-line.sat{border-color:#ff5d5d;}
+  body[data-theme="c"] .wk-line span{background:#081108;color:#4c7a63;} body[data-theme="c"] .wk-line.sat span{color:#ff5d5d;}
+  body[data-theme="d"] .wk-n{color:#8a86a3;} body[data-theme="d"] .wk-d{color:#565273;}
+  body[data-theme="d"] .wk-n.over{color:#ff6b6b;}
+  body[data-theme="d"] .wk-bar{border-radius:4px 4px 0 0;}
+  body[data-theme="d"] .wk-bar.ok{background:#6ee7a0;} body[data-theme="d"] .wk-bar.over{background:#ff8a7a;}
+  body[data-theme="d"] .wk-bar.okp{background:#7db8ff;} body[data-theme="d"] .wk-bar.lowp{background:#3c5a80;}
+  body[data-theme="d"] .wk-bar.stack{border-radius:4px 4px 0 0;} body[data-theme="d"] .wk-bar.stack .fseg.grn{background:#6ee7a0;} body[data-theme="d"] .wk-bar.stack .fseg.red{background:#ff5d5d;}
+  body[data-theme="d"] .wk-bar.stack.over .fseg.red{background:#ff3b3b;}
+  body[data-theme="d"] .wk-line{border-color:rgba(255,255,255,.3);} body[data-theme="d"] .wk-line.sat{border-color:#ff6b6b;}
+  body[data-theme="d"] .wk-line span{background:#12102a;color:#8a86a3;} body[data-theme="d"] .wk-line.sat span{color:#ff6b6b;}
   .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
   .toast.show{display:block;}
   .thumb,.mimg{object-fit:cover;cursor:pointer;background:#ccc;}
@@ -296,6 +335,7 @@ function render(){
   else if(PREF.theme==='c')view.innerHTML=renderC(days);
   else view.innerHTML=renderD(days);
   applyMotion();
+  chartsGrow();
 }
 function applyMotion(){
   const t=PREF.theme,m=PREF.motion[t];
@@ -303,6 +343,33 @@ function applyMotion(){
   else if(t==='c'){ playC(m); }
   // d handled by CSS classes (data-motion)
 }
+
+/* ---------- unified weekly charts ---------- */
+function barChart(S,key,max,o){
+  const BM=o.bm||84;
+  if(!S.length) return `<div class="wk"><div class="wk-n" style="text-align:left;color:#888">no data yet</div></div>`;
+  let nums='',cols='',days='',lines='';
+  S.forEach(x=>{
+    const v=x[key],H=Math.max(3,v/max*BM),ov=o.over&&o.over(x);
+    nums+=`<div class="wk-n ${ov?'over':''}">${ov?'&#9650; ':''}${v}</div>`;
+    if(o.stacked){const sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;cols+=`<div class="wk-col"><div class="wk-bar stack ${ov?'over':''}" style="height:${H}px"><div class="fseg grn" style="height:${uf}%"></div><div class="fseg red" style="height:${sf}%"></div></div></div>`;}
+    else cols+=`<div class="wk-col"><div class="wk-bar ${o.cls?o.cls(x):''}" style="height:${H}px"></div></div>`;
+    days+=`<div class="wk-d">${x.d}</div>`;
+  });
+  (o.lines||[]).forEach(l=>{const off=Math.min(BM,l.v/max*BM);lines+=`<div class="wk-line ${l.cls||''}" style="bottom:${off}px"><span>${l.label}</span></div>`;});
+  return `<div class="wk"><div class="wk-nums">${nums}</div><div class="wk-plot" style="height:${BM}px">${cols}${lines}</div><div class="wk-days">${days}</div></div>`;
+}
+function weekCharts(days){
+  const S=weekSeries(days),T=DATA.targets;
+  const maxK=Math.max(T.kcal,...S.map(x=>x.k),1)*1.12, maxP=Math.max(T.protein,...S.map(x=>x.p),1)*1.12, maxF=Math.max(T.fat,...S.map(x=>x.f),1)*1.12;
+  return {
+    cal:barChart(S,'k',maxK,{cls:x=>x.k>T.kcal?'over':'ok',lines:[{v:T.kcal,cls:'target',label:T.kcal}]}),
+    pro:barChart(S,'p',maxP,{cls:x=>x.p>=T.protein?'okp':'lowp',lines:[{v:T.protein,cls:'target',label:T.protein}]}),
+    fat:barChart(S,'f',maxF,{stacked:true,over:x=>x.s>T.sat,lines:[{v:T.sat,cls:'sat',label:T.sat},{v:T.fat,cls:'target',label:T.fat}]}),
+    overN:S.filter(x=>x.s>T.sat).length, ndays:S.length
+  };
+}
+function chartsGrow(){const bars=document.querySelectorAll('#view .wk-bar');bars.forEach(b=>{b.dataset.h=b.style.height;b.style.height='0';});requestAnimationFrame(()=>requestAnimationFrame(()=>bars.forEach(b=>b.style.height=b.dataset.h)));}
 
 /* ---------- BRUTALIST ---------- */
 function weekChartB(days){
@@ -316,7 +383,10 @@ function weekChartB(days){
     <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:${fatOverN?'#e5271b':'#666'}">sat &gt;15g: ${fatOverN} of ${S.length}d</span></div><div class="week">${fat}</div></div>`;
 }
 function renderB(days){
-  let h=weekChartB(days);
+  const W=weekCharts(days);
+  let h=`<div class="card"><div class="ctitle"><span class="dchip">Week &middot; Calories</span><span style="font-family:Arial;font-size:10px;color:#666">target 1900</span></div>${W.cal}</div>
+    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Protein</span><span style="font-family:Arial;font-size:10px;color:#666">goal 150</span></div>${W.pro}</div>
+    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:${W.overN?'#e5271b':'#666'}">sat &gt;15g: ${W.overN} of ${W.ndays}d</span></div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d),T=DATA.targets;
     const meals=d.items.map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="lb('${src}')">`:`<div class="noimg">NO<br>PIC</div>`;
@@ -343,13 +413,11 @@ let cRaf;
 const C_SLOTS=18;
 function cbar(pct,over){const f=Math.round(pct/100*C_SLOTS);return `[<b class="${over?'r':''}">${'#'.repeat(f)}</b>${'-'.repeat(C_SLOTS-f)}] ${pct}%`;}
 function renderC(days){
-  const S=weekSeries(days),T=DATA.targets, maxK=Math.max(...S.map(x=>x.k),1)*1.05, maxP=Math.max(...S.map(x=>x.p),1)*1.05, maxF=Math.max(...S.map(x=>x.f),1)*1.05;
-  const num=(v)=>`<span class="cnum" data-val="${v}">${v}</span>`;
+  const T=DATA.targets, num=(v)=>`<span class="cnum" data-val="${v}">${v}</span>`, W=weekCharts(days);
   let h='';
-  h+=`<div class="panel"><div class="h">// calories</div><div class="spk">${S.map(x=>{const H=Math.max(3,x.k/maxK*46);return `<div class="c"><div class="n">${num(x.k)}</div><div class="b ${x.k>T.kcal?'hi':'on'}" data-h="${H}" style="height:${H}px"></div><div class="d">${x.d}</div></div>`;}).join('')||'no data'}</div></div>`;
-  h+=`<div class="panel"><div class="h">// protein (goal 150)</div><div class="spk">${S.map(x=>{const H=Math.max(3,x.p/maxP*46);return `<div class="c"><div class="n">${num(x.p)}</div><div class="b ${x.p>=T.protein?'pro':'pun'}" data-h="${H}" style="height:${H}px"></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
-  const fatOverN=S.filter(x=>x.s>T.sat).length;
-  h+=`<div class="panel"><div class="h">// fat (red=sat, ceil 60) &middot; over ${fatOverN}/${S.length}d</div><div class="spk">${S.map(x=>{const over=x.s>T.sat,th=Math.max(4,x.f/maxF*46),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n ${over?'satover':''}">${over?'&#9650;':''}${num(x.f)}</div><div class="fstack ${over?'over':''}" data-h="${th}" style="height:${th}px"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
+  h+=`<div class="panel"><div class="h">// calories &middot; target 1900</div>${W.cal}</div>`;
+  h+=`<div class="panel"><div class="h">// protein &middot; goal 150</div>${W.pro}</div>`;
+  h+=`<div class="panel"><div class="h">// fat (red=sat) &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
@@ -383,15 +451,14 @@ function playC(m){
 
 /* ---------- BLOOM ---------- */
 function renderD(days){
-  const S=weekSeries(days),T=DATA.targets, maxK=Math.max(...S.map(x=>x.k),1)*1.05, maxP=Math.max(...S.map(x=>x.p),1)*1.05, maxF=Math.max(...S.map(x=>x.f),1)*1.05;
+  const T=DATA.targets,W=weekCharts(days);
   const featured=days.length?totals(days[days.length-1]):{k:0,p:0,f:0,s:0,u:0,c:0};
   const fd=days.length?days[days.length-1]:null;
   let h='';
   if(fd){h+=`<div class="feat">${glyph(180,{items:fd.items.length,protein:featured.p,fat:featured.f,sat:featured.s,kcal:featured.k})}<div class="fday">${fd.label}</div><div class="fk">${featured.k}<span> / 1900 kcal</span></div></div>`;}
-  h+=`<div class="panel"><div class="h">Calories, this week</div><div class="spk">${S.map(x=>`<div class="c"><div class="n">${x.k}</div><div class="b ${x.k>T.kcal?'hi':''}" style="height:${Math.max(4,x.k/maxK*40)}px"></div><div class="d">${x.d}</div></div>`).join('')||'no data'}</div></div>`;
-  h+=`<div class="panel"><div class="h">Protein &middot; goal 150</div><div class="spk">${S.map(x=>`<div class="c"><div class="n">${x.p}</div><div class="b ${x.p>=T.protein?'pro':'pun'}" style="height:${Math.max(4,x.p/maxP*40)}px"></div><div class="d">${x.d}</div></div>`).join('')}</div></div>`;
-  const fatOverN=S.filter(x=>x.s>T.sat).length;
-  h+=`<div class="panel"><div class="h">Fat &middot; ceiling 60 &middot; <span style="color:#ff8a7a">red=sat</span> &middot; over ${fatOverN}/${S.length}d</div><div class="spk">${S.map(x=>{const over=x.s>T.sat,th=Math.max(5,x.f/maxF*40),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n ${over?'satover':''}">${over?'&#9650; ':''}${x.f}</div><div class="fstack ${over?'over':''}" style="height:${th}px"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
+  h+=`<div class="panel"><div class="h">Calories &middot; target 1900</div>${W.cal}</div>`;
+  h+=`<div class="panel"><div class="h">Protein &middot; goal 150</div>${W.pro}</div>`;
+  h+=`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red=sat</span> &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
     const meals=d.items.map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="lb('${src}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${(it.meal||'').slice(0,3)}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
