@@ -1,6 +1,6 @@
 {
   "targets": { "kcal": 1900, "protein": 150, "fat": 60, "sat": 15, "carb": 180 },
-  "updated": "2026-07-29",
+  "updated": "2026-07-30",
   "days": [
     {
       "date": "2026-07-24",
@@ -68,6 +68,14 @@
         { "meal": "Snack", "name": "Vanilla whey + oat milk + nuts + fruit", "kcal": 395, "protein": 31, "fat": 17, "sat": 3, "carb": 30 },
         { "meal": "Dinner", "name": "Chilli tofu (200g) + veg hakka noodles (312g)", "kcal": 755, "protein": 34, "fat": 31, "sat": 5, "carb": 68 },
         { "meal": "Snack", "name": "Clear whey 32g in 450ml water", "kcal": 115, "protein": 27, "fat": 0.7, "sat": 0.5, "carb": 2 }
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "label": "Thu 30 Jul",
+      "workout": "",
+      "items": [
+        { "meal": "Breakfast", "name": "ON vanilla whey 31g + oat milk 150ml + strawberry 80g + nuts/seeds 20g", "kcal": 335, "protein": 30, "fat": 15, "sat": 3, "carb": 23 }
       ]
     }
   ]
