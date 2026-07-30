@@ -66,7 +66,7 @@
         { "meal": "Early morning", "name": "Manakeesh x2 (zaatar & akkawi + spicy akkawi)", "kcal": 800, "protein": 28, "fat": 38, "sat": 20, "carb": 70 },
         { "meal": "Lunch", "name": "White rice 84g + Greek yogurt 0% 81g + papad", "kcal": 200, "protein": 12, "fat": 2, "sat": 0.5, "carb": 32 },
         { "meal": "Snack", "name": "Vanilla whey + oat milk + nuts + fruit", "kcal": 395, "protein": 31, "fat": 17, "sat": 3, "carb": 30 },
-        { "meal": "Dinner", "name": "Chilli tofu (200g) + veg hakka noodles (312g)", "kcal": 755, "protein": 34, "fat": 31, "sat": 5, "carb": 68 },
+        { "meal": "Dinner", "name": "Chilli tofu (200g) + veg hakka noodles (312g)", "kcal": 755, "protein": 34, "fat": 31, "sat": 5, "carb": 68, "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed29_dinner.jpg" },
         { "meal": "Snack", "name": "Clear whey 32g in 450ml water", "kcal": 115, "protein": 27, "fat": 0.7, "sat": 0.5, "carb": 2 }
       ]
     },
@@ -75,7 +75,7 @@
       "label": "Thu 30 Jul",
       "workout": "",
       "items": [
-        { "meal": "Breakfast", "name": "ON vanilla whey 31g + oat milk 150ml + strawberry 80g + nuts/seeds 20g", "kcal": 335, "protein": 30, "fat": 15, "sat": 3, "carb": 23 }
+        { "meal": "Breakfast", "name": "ON vanilla whey 31g + oat milk 150ml + strawberry 80g + nuts/seeds 20g", "kcal": 335, "protein": 30, "fat": 15, "sat": 3, "carb": 23, "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_breakfast.jpg" }
       ]
     }
   ]
