@@ -32,8 +32,25 @@
   .srow{display:flex;gap:10px;margin-top:18px;}
   .sbtn{flex:1;text-align:center;border:none;padding:12px;border-radius:11px;font-size:14px;font-weight:700;cursor:pointer;}
   .sbtn.primary{background:#2e7d5b;color:#fff;} .sbtn.ghost{background:#eee;color:#333;}
-  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.9);display:none;align-items:center;justify-content:center;z-index:80;padding:18px;}
-  .lightbox.open{display:flex;} .lightbox img{max-width:100%;max-height:92vh;border-radius:8px;}
+  /* image viewer as in-flow screen (robust in WebView) */
+  .lightbox{display:none;}
+  .lightbox.open{display:flex;align-items:center;justify-content:center;background:#000;min-height:100vh;padding:10px;}
+  .lightbox img{max-width:100%;max-height:96vh;border-radius:8px;}
+  body.modal-open #topbar{display:none;}
+  /* week-mode toggle */
+  .modebtn{border:none;cursor:pointer;font-size:11px;font-weight:800;padding:8px 11px;border-radius:9px;white-space:nowrap;}
+  body[data-theme="b"] .modebtn{background:#7fd0ff;border:3px solid #111;color:#111;}
+  body[data-theme="c"] .modebtn{background:transparent;border:1px solid #1f8f5e;color:#3dffa0;font-family:inherit;}
+  body[data-theme="d"] .modebtn{background:rgba(255,255,255,.06);color:#cdbcff;}
+  /* terminal grid inside content + bar transitions + scanline */
+  body[data-theme="c"] #view{background-image:linear-gradient(#0e1f17 1px,transparent 1px),linear-gradient(90deg,#0e1f17 1px,transparent 1px);background-size:22px 22px;}
+  body[data-theme="c"] .spk .b, body[data-theme="c"] .fstack{transition:height .8s cubic-bezier(.2,.9,.3,1);}
+  body[data-theme="c"] #view.scan{position:relative;}
+  body[data-theme="c"] #view.scan::after{content:"";position:absolute;left:0;right:0;height:70px;top:0;pointer-events:none;background:linear-gradient(180deg,transparent,rgba(61,255,160,.13),transparent);animation:cscan 2.6s linear infinite;}
+  @keyframes cscan{0%{top:-70px}100%{top:100%}}
+  /* brutalist: whole card wobble */
+  body[data-theme="b"][data-motion="wobble"] .card{animation:bcardwob .7s ease both;}
+  @keyframes bcardwob{0%{transform:rotate(0)}20%{transform:rotate(-1.3deg)}50%{transform:rotate(1.3deg)}80%{transform:rotate(-.6deg)}100%{transform:rotate(0)}}
   .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
   .toast.show{display:block;}
   .thumb,.mimg{object-fit:cover;cursor:pointer;background:#ccc;}
@@ -147,9 +164,10 @@
   @keyframes dpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
 </style></head>
 <body data-theme="b" data-motion="bars">
+  <script>try{var _p=JSON.parse(localStorage.getItem('foodlog_prefs_v1'));if(_p&&_p.theme){document.body.dataset.theme=_p.theme;if(_p.motion&&_p.motion[_p.theme])document.body.dataset.motion=_p.motion[_p.theme];}}catch(e){}</script>
   <div id="topbar">
     <div class="wknav"><button class="wkbtn" onclick="stepWeek(-1)">&#8249;</button><span class="wklabel" id="wklabel">This week</span><button class="wkbtn" onclick="stepWeek(1)">&#8250;</button></div>
-    <button class="gear" onclick="openSettings()">&#9881;</button>
+    <div style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
   </div>
   <div id="view"></div>
   <button class="fab" onclick="openAdd()">+ Add food</button>
@@ -182,7 +200,7 @@
     </div>
   </div>
 
-  <div class="lightbox" id="lb" onclick="this.classList.remove('open')"><img id="lbimg"></div>
+  <div class="lightbox" id="lb" onclick="closeLb()"><img id="lbimg"></div>
   <div class="toast" id="toast"></div>
 
 <script>
@@ -198,7 +216,7 @@ const FONTS={
 };
 const MOTIONS={b:[["Bars fill","bars"],["Pop","pop"],["Slide","slide"],["Wobble","wobble"]],c:[["Bars draw","bars"],["Count up","count"],["Typewriter","type"],["Scanline","scan"]],d:[["Grow","grow"],["Unfurl","unfurl"],["Drift","drift"],["Pulse","pulse"]]};
 const THEMES=[["Brutalist","b"],["Terminal","c"],["Bloom","d"]];
-const DEF={theme:'b',font:{b:0,c:0,d:0},motion:{b:'bars',c:'bars',d:'grow'}};
+const DEF={theme:'b',font:{b:0,c:0,d:0},motion:{b:'bars',c:'bars',d:'grow'},weekMode:'cal'};
 let PREF=loadPref();
 function loadPref(){try{return Object.assign(JSON.parse(JSON.stringify(DEF)),JSON.parse(localStorage.getItem(PREF_KEY))||{});}catch(e){return JSON.parse(JSON.stringify(DEF));}}
 function savePref(){localStorage.setItem(PREF_KEY,JSON.stringify(PREF));}
@@ -220,14 +238,23 @@ function allDays(){
   base.sort((a,b)=>a.date<b.date?-1:1);
   return base;
 }
+function dayDiff(a,b){const pa=(y=>Date.UTC(y[0],y[1]-1,y[2]))(a.split('-').map(Number)),pb=(y=>Date.UTC(y[0],y[1]-1,y[2]))(b.split('-').map(Number));return Math.round((pb-pa)/86400000);}
 let weeks=[], curWeek=0;
 function buildWeeks(){
-  const days=allDays();const map={};
-  days.forEach(d=>{const mk=mondayOf(d.date);(map[mk]=map[mk]||[]).push(d);});
-  weeks=Object.keys(map).sort().map(mk=>({monday:mk,days:map[mk]}));
+  const days=allDays();
+  if(PREF.weekMode==='roll'){
+    if(!days.length){weeks=[];return;}
+    const last=days[days.length-1].date, map={};
+    days.forEach(d=>{const idx=Math.floor(dayDiff(d.date,last)/7);(map[idx]=map[idx]||[]).push(d);});
+    weeks=Object.keys(map).map(Number).sort((a,b)=>b-a).map(i=>{const start=addDays(last,-(i*7)-6),end=addDays(last,-(i*7));return {label:`${shortDate(start)} – ${shortDate(end)}`,days:map[i]};});
+  } else {
+    const map={};days.forEach(d=>{const mk=mondayOf(d.date);(map[mk]=map[mk]||[]).push(d);});
+    weeks=Object.keys(map).sort().map(mk=>({label:`${shortDate(mk)} – ${shortDate(addDays(mk,6))}`,days:map[mk]}));
+  }
   if(curWeek>=weeks.length)curWeek=weeks.length-1; if(curWeek<0)curWeek=0;
 }
 function stepWeek(n){curWeek=Math.max(0,Math.min(weeks.length-1,curWeek+n));render();}
+function toggleWeekMode(){PREF.weekMode=PREF.weekMode==='roll'?'cal':'roll';savePref();buildWeeks();curWeek=weeks.length-1;render();}
 
 /* ---- day totals ---- */
 function totals(d){const k=Math.round(sum(d.items,'kcal')),p=R(sum(d.items,'protein')),f=R(sum(d.items,'fat')),s=R(sum(d.items,'sat')),c=R(sum(d.items,'carb'));return {k,p,f,s,u:R(f-s),c};}
@@ -254,8 +281,8 @@ function render(){
   document.documentElement.style.setProperty('--'+PREF.theme+'font', fdef[1]);
   // week label
   const wk=weeks[curWeek];
-  if(wk){document.getElementById('wklabel').textContent=`${shortDate(wk.monday)} – ${shortDate(addDays(wk.monday,6))}`;}
-  else{document.getElementById('wklabel').textContent='No data';}
+  document.getElementById('wklabel').textContent=wk?wk.label:'No data';
+  const mb=document.getElementById('modebtn');if(mb)mb.textContent=PREF.weekMode==='roll'?'Roll':'Cal';
   const days=wk?[...wk.days]:[];
   const view=document.getElementById('view');
   if(PREF.theme==='b')view.innerHTML=renderB(days);
@@ -276,9 +303,9 @@ function weekChartB(days){
   const cal=S.map(x=>`<div class="c"><div class="n">${x.k}</div><div class="b ${x.k>DATA.targets.kcal?'hi':'lo'}" data-h="${Math.max(4,x.k/maxK*74)}"></div><div class="d">${x.d}</div></div>`).join('')||'<div class="n" style="font-family:Arial">no data</div>';
   const pro=S.map(x=>`<div class="c"><div class="n">${x.p}</div><div class="b ${x.p>=DATA.targets.protein?'pro':'pun'}" data-h="${Math.max(4,x.p/maxP*74)}"></div><div class="d">${x.d}</div></div>`).join('');
   const fat=S.map(x=>{const th=Math.max(5,x.f/maxF*74),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n">${x.f}</div><div class="fstack" data-h="${th}" style="height:0"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('');
-  return `<div class="card"><div class="ctitle"><span>Week &middot; Calories</span></div><div class="week">${cal}</div></div>
-    <div class="card"><div class="ctitle"><span>Week &middot; Protein</span><span style="font-family:Arial;font-size:10px;color:#666">goal 150</span></div><div class="week">${pro}</div></div>
-    <div class="card"><div class="ctitle"><span>Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:#666">red=sat, ceil 60</span></div><div class="week">${fat}</div></div>`;
+  return `<div class="card"><div class="ctitle"><span class="dchip">Week &middot; Calories</span></div><div class="week">${cal}</div></div>
+    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Protein</span><span style="font-family:Arial;font-size:10px;color:#666">goal 150</span></div><div class="week">${pro}</div></div>
+    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:#666">red=sat, ceil 60</span></div><div class="week">${fat}</div></div>`;
 }
 function renderB(days){
   let h=weekChartB(days);
@@ -305,29 +332,44 @@ function setFullB(){document.querySelectorAll('.week .b').forEach(b=>b.style.hei
 
 /* ---------- TERMINAL ---------- */
 let cRaf;
+const C_SLOTS=18;
+function cbar(pct,over){const f=Math.round(pct/100*C_SLOTS);return `[<b class="${over?'r':''}">${'#'.repeat(f)}</b>${'-'.repeat(C_SLOTS-f)}] ${pct}%`;}
 function renderC(days){
-  const S=weekSeries(days),T=DATA.targets, maxK=Math.max(...S.map(x=>x.k),1)*1.05, maxP=Math.max(...S.map(x=>x.p),1)*1.05, maxF=Math.max(...S.map(x=>x.f),1)*1.05, SLOTS=18;
-  const bar=(pct,over)=>{const f=Math.round(pct/100*SLOTS);return `[<b class="${over?'r':''}">${'#'.repeat(f)}</b>${'-'.repeat(SLOTS-f)}] ${pct}%`;};
+  const S=weekSeries(days),T=DATA.targets, maxK=Math.max(...S.map(x=>x.k),1)*1.05, maxP=Math.max(...S.map(x=>x.p),1)*1.05, maxF=Math.max(...S.map(x=>x.f),1)*1.05;
+  const num=(v)=>`<span class="cnum" data-val="${v}">${v}</span>`;
   let h='';
-  h+=`<div class="panel"><div class="h">// calories</div><div class="spk">${S.map(x=>`<div class="c"><div class="n">${x.k}</div><div class="b ${x.k>T.kcal?'hi':'on'}" style="height:${Math.max(3,x.k/maxK*46)}px"></div><div class="d">${x.d}</div></div>`).join('')||'no data'}</div></div>`;
-  h+=`<div class="panel"><div class="h">// protein (goal 150)</div><div class="spk">${S.map(x=>`<div class="c"><div class="n">${x.p}</div><div class="b ${x.p>=T.protein?'pro':'pun'}" style="height:${Math.max(3,x.p/maxP*46)}px"></div><div class="d">${x.d}</div></div>`).join('')}</div></div>`;
-  h+=`<div class="panel"><div class="h">// fat (red=sat, ceil 60)</div><div class="spk">${S.map(x=>{const th=Math.max(4,x.f/maxF*46),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n">${x.f}</div><div class="fstack" style="height:${th}px"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
+  h+=`<div class="panel"><div class="h">// calories</div><div class="spk">${S.map(x=>{const H=Math.max(3,x.k/maxK*46);return `<div class="c"><div class="n">${num(x.k)}</div><div class="b ${x.k>T.kcal?'hi':'on'}" data-h="${H}" style="height:${H}px"></div><div class="d">${x.d}</div></div>`;}).join('')||'no data'}</div></div>`;
+  h+=`<div class="panel"><div class="h">// protein (goal 150)</div><div class="spk">${S.map(x=>{const H=Math.max(3,x.p/maxP*46);return `<div class="c"><div class="n">${num(x.p)}</div><div class="b ${x.p>=T.protein?'pro':'pun'}" data-h="${H}" style="height:${H}px"></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
+  h+=`<div class="panel"><div class="h">// fat (red=sat, ceil 60)</div><div class="spk">${S.map(x=>{const th=Math.max(4,x.f/maxF*46),sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;return `<div class="c"><div class="n">${num(x.f)}</div><div class="fstack" data-h="${th}" style="height:${th}px"><div class="fseg red" style="height:${sf}%"></div><div class="fseg grn" style="height:${uf}%"></div></div><div class="d">${x.d}</div></div>`;}).join('')}</div></div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const id=d.date.replace(/-/g,'_');
-    h+=`<div class="dhead">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
-    h+=`<div class="dk">${t.k} <small>/ 1900 kcal &middot; ${d.label}</small></div>`;
+    h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
+    h+=`<div class="dk">${num(t.k)} <small>/ 1900 kcal &middot; ${d.label}</small></div>`;
     d.items.forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="lb('${src}')">`:`<div class="noimg">no<br>pic</div>`;h+=`<div class="mrow">${thumb}<div class="mn"><small>${(it.meal||'').slice(0,3).toLowerCase()}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`;});
     const pp=Math.round(Math.min(100,t.p/T.protein*100)),fp=Math.round(Math.min(100,t.f/T.fat*100)),cp=Math.round(Math.min(100,t.c/T.carb*100));
-    h+=`<div class="metric"><div class="l"><span class="name">protein</span><span class="rd">${t.p} / 150 g</span></div><div class="track">${bar(pp)}</div></div>`;
-    h+=`<div class="metric"><div class="l"><span class="name">fat</span><span class="rd ${t.f>T.fat?'hi':'ok'}">${t.f} / 60 g</span></div><div class="track">${bar(fp,t.f>T.fat)}</div><div class="sub">&#9492; sat ${t.s}/15 &#9679; unsat ${t.u}</div></div>`;
-    h+=`<div class="metric"><div class="l"><span class="name">carbs</span><span class="rd">${t.c} g</span></div><div class="track">${bar(cp)}</div></div>`;
+    h+=`<div class="metric"><div class="l"><span class="name">protein</span><span class="rd">${num(t.p)} / 150 g</span></div><div class="track" data-pct="${pp}" data-over="0">${cbar(pp)}</div></div>`;
+    h+=`<div class="metric"><div class="l"><span class="name">fat</span><span class="rd ${t.f>T.fat?'hi':'ok'}">${num(t.f)} / 60 g</span></div><div class="track" data-pct="${fp}" data-over="${t.f>T.fat?1:0}">${cbar(fp,t.f>T.fat)}</div><div class="sub">&#9492; sat ${t.s}/15 &#9679; unsat ${t.u}</div></div>`;
+    h+=`<div class="metric"><div class="l"><span class="name">carbs</span><span class="rd">${num(t.c)} g</span></div><div class="track" data-pct="${cp}" data-over="0">${cbar(cp)}</div></div>`;
     h+=`<div class="sync" onclick="syncDay('${d.date}')">[ push &rarr; google_health ]</div>`;
   });
   return h;
 }
-function playC(m){const view=document.getElementById('view');view.classList.remove('scanx');
-  // terminal motion is light-touch on the already-rendered DOM
-  if(m==='scan'){/* handled via css? keep simple: no-op visual */}
+function cAnim(dur,cb,done){cancelAnimationFrame(cRaf);const t0=performance.now();(function s(t){let p=Math.min(1,(t-t0)/dur);cb(p);if(p<1)cRaf=requestAnimationFrame(s);else if(done)done();})(performance.now());}
+function cBarsFull(){document.querySelectorAll('#view .spk .b,#view .fstack').forEach(b=>b.style.height=(b.dataset.h||0)+'px');}
+function cNumsFull(){document.querySelectorAll('#view .cnum').forEach(n=>n.textContent=n.dataset.val);}
+function cTracksFull(){document.querySelectorAll('#view .track').forEach(el=>el.innerHTML=cbar(+el.dataset.pct,el.dataset.over==='1'));}
+function cType(){const heads=[...document.querySelectorAll('#view .dhead')];let hi=0;
+  (function one(){if(hi>=heads.length)return;const el=heads[hi],txt=el.dataset.full||el.textContent;el.textContent='';let i=0;(function ch(){el.textContent=txt.slice(0,i++);if(i<=txt.length)setTimeout(ch,24);else{hi++;setTimeout(one,80);}})();})();}
+function playC(m){
+  const view=document.getElementById('view');view.classList.remove('scan');cancelAnimationFrame(cRaf);
+  if(m==='scan'){cBarsFull();cNumsFull();cTracksFull();view.classList.add('scan');return;}
+  if(m==='type'){cBarsFull();cNumsFull();cTracksFull();cType();return;}
+  if(m==='count'){cBarsFull();cTracksFull();cAnim(1100,p=>document.querySelectorAll('#view .cnum').forEach(n=>n.textContent=Math.round((+n.dataset.val)*p)),cNumsFull);return;}
+  // bars draw (default)
+  cNumsFull();
+  document.querySelectorAll('#view .spk .b,#view .fstack').forEach(b=>b.style.height='0');
+  requestAnimationFrame(()=>requestAnimationFrame(cBarsFull));
+  cAnim(1100,p=>document.querySelectorAll('#view .track').forEach(el=>el.innerHTML=cbar(Math.round((+el.dataset.pct)*p),el.dataset.over==='1')),cTracksFull);
 }
 
 /* ---------- BLOOM ---------- */
@@ -381,7 +423,8 @@ function syncDay(date){
 }
 
 let toastTimer;function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),3200);}
-function lb(src){document.getElementById('lbimg').src=src;document.getElementById('lb').classList.add('open');}
+function lb(src){document.getElementById('lbimg').src=src;document.body.classList.add('modal-open');document.getElementById('lb').classList.add('open');window.scrollTo(0,0);}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.classList.remove('modal-open');}
 
 /* ---------- boot ---------- */
 async function boot(){try{const r=await fetch('data.json?cb='+Date.now(),{cache:'no-store'});if(r.ok)DATA=await r.json();else throw 0;}catch(e){DATA=SEED;}
