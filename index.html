@@ -34,8 +34,13 @@
   .sbtn.primary{background:#2e7d5b;color:#fff;} .sbtn.ghost{background:#eee;color:#333;}
   /* image viewer as in-flow screen (robust in WebView) */
   .lightbox{display:none;}
-  .lightbox.open{display:flex;align-items:center;justify-content:center;background:#000;min-height:100vh;padding:10px;}
-  .lightbox img{max-width:100%;max-height:96vh;border-radius:8px;}
+  .lightbox.open{display:block;background:#000;width:100%;min-height:100vh;}
+  .lbbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:#000;}
+  .lbcap{flex:1;color:#ddd;font-size:12px;line-height:1.35;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+  .lbx{flex:0 0 auto;border:none;background:#222;color:#fff;width:38px;height:38px;border-radius:9px;font-size:20px;line-height:1;cursor:pointer;}
+  .lbwrap{padding:0 8px 40px;}
+  .lightbox img#lbimg{display:block;width:100%;height:auto;max-width:100%;border-radius:8px;background:#111;object-fit:contain;}
+  .lbnote{color:#888;font-size:12px;padding:18px 6px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
   body.modal-open #topbar{display:none;}
   /* week-mode toggle */
   .modebtn{border:none;cursor:pointer;font-size:11px;font-weight:800;padding:8px 11px;border-radius:9px;white-space:nowrap;}
@@ -250,7 +255,10 @@
     </div>
   </div>
 
-  <div class="lightbox" id="lb" onclick="closeLb()"><img id="lbimg"></div>
+  <div class="lightbox" id="lb">
+    <div class="lbbar"><div class="lbcap" id="lbcap"></div><button class="lbx" onclick="closeLb()">&times;</button></div>
+    <div class="lbwrap"><img id="lbimg" alt=""><div class="lbnote" id="lbnote"></div></div>
+  </div>
   <div class="toast" id="toast"></div>
 
 <script>
@@ -309,6 +317,8 @@ function toggleWeekMode(){PREF.weekMode=PREF.weekMode==='roll'?'cal':'roll';save
 /* ---- day totals ---- */
 function totals(d){const k=Math.round(sum(d.items,'kcal')),p=R(sum(d.items,'protein')),f=R(sum(d.items,'fat')),s=R(sum(d.items,'sat')),c=R(sum(d.items,'carb'));return {k,p,f,s,u:R(f-s),c};}
 function imgSrc(it){return it.img||'';}
+/* escape a string so it is safe inside onclick="lb('...')" */
+function jq(s){return String(s==null?'':s).replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;').replace(/</g,'&lt;');}
 
 /* ---- BLOOM glyph ---- */
 function glyph(size,o){const cx=size/2,cy=size/2,petals=Math.max(3,o.items),rMax=size*0.46,r=size*0.15+(Math.min(o.protein,170)/170)*(rMax-size*0.15);
@@ -395,7 +405,7 @@ function renderB(days){
     <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:${W.overN?'#e5271b':'#666'}">red# = sat g &middot; ${W.overN}/${W.ndays} over 15g</span></div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d),T=DATA.targets;
-    const meals=d.items.map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="lb('${src}')">`:`<div class="noimg">NO<br>PIC</div>`;
+    const meals=d.items.map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">NO<br>PIC</div>`;
       return `<div class="meal">${thumb}<div class="mt"><div class="nm">${it.name}</div><div class="mm"><span class="tag">${it.meal||''}</span>${R(it.protein)}g P &middot; ${Math.round(it.kcal)} kcal &middot; ${R(it.fat)}g fat &middot; ${R(it.carb||0)}g C</div></div></div>`;}).join('');
     const pw=Math.min(100,t.p/T.protein*100), fAxis=Math.max(T.fat,t.f), sw=t.f>0?t.s/fAxis*100:0, uw=t.f>0?t.u/fAxis*100:0;
     h+=`<div class="card"><span class="dchip">${d.label}${d.workout?' &middot; '+d.workout:''}</span>
@@ -428,7 +438,7 @@ function renderC(days){
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
     h+=`<div class="dk">${num(t.k)} <small>/ 1900 kcal &middot; ${d.label}</small></div>`;
-    d.items.forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="lb('${src}')">`:`<div class="noimg">no<br>pic</div>`;h+=`<div class="mrow">${thumb}<div class="mn"><small>${(it.meal||'').slice(0,3).toLowerCase()}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`;});
+    d.items.forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">no<br>pic</div>`;h+=`<div class="mrow">${thumb}<div class="mn"><small>${(it.meal||'').slice(0,3).toLowerCase()}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`;});
     const pp=Math.round(Math.min(100,t.p/T.protein*100)),fp=Math.round(Math.min(100,t.f/T.fat*100)),cp=Math.round(Math.min(100,t.c/T.carb*100));
     h+=`<div class="metric"><div class="l"><span class="name">protein</span><span class="rd">${num(t.p)} / 150 g</span></div><div class="track" data-pct="${pp}" data-over="0">${cbar(pp)}</div></div>`;
     h+=`<div class="metric"><div class="l"><span class="name">fat</span><span class="rd ${t.f>T.fat?'hi':'ok'}">${num(t.f)} / 60 g</span></div><div class="track" data-pct="${fp}" data-over="${t.f>T.fat?1:0}">${cbar(fp,t.f>T.fat)}</div><div class="sub">&#9492; sat ${t.s}/15 &#9679; unsat ${t.u}</div></div>`;
@@ -467,7 +477,7 @@ function renderD(days){
   h+=`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat g</span> &middot; lines 15/60 &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
-    const meals=d.items.map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="lb('${src}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${(it.meal||'').slice(0,3)}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
+    const meals=d.items.map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${(it.meal||'').slice(0,3)}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
     h+=`<div class="drow"><div class="gl">${g}</div><div class="info"><div class="dl"><span class="nm">${d.label}${d.workout?' &middot; '+d.workout:''}</span><span class="kc ${t.k>T.kcal?'over':''}">${t.k} <small>kcal</small></span></div><div class="dmac">${t.p}g P &middot; ${t.f}g fat <span class="sat">(${t.s} sat)</span> &middot; ${t.c}g C</div>${meals}<div class="sync" onclick="syncDay('${d.date}')">Sync to Google Health</div></div></div>`;
   });
   return h;
@@ -506,8 +516,31 @@ function syncDay(date){
 }
 
 let toastTimer;function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),3200);}
-function lb(src){document.getElementById('lbimg').src=src;document.body.classList.add('modal-open');document.getElementById('lb').classList.add('open');window.scrollTo(0,0);}
-function closeLb(){document.getElementById('lb').classList.remove('open');document.body.classList.remove('modal-open');}
+function lb(src,cap){
+  if(!src)return false;
+  const im=document.getElementById('lbimg'),note=document.getElementById('lbnote');
+  document.getElementById('lbcap').textContent=cap||'';
+  const ok=()=>{note.style.display='none';im.style.display='block';};
+  const bad=()=>{im.style.display='none';note.style.display='block';note.textContent='Photo could not load. Close, pull down to refresh, then try again.';};
+  im.style.display='none';note.style.display='block';note.textContent='Loading photo…';
+  im.onload=ok;im.onerror=bad;
+  im.removeAttribute('src');im.setAttribute('src',src);
+  if(im.complete&&im.naturalWidth>0)ok();
+  /* belt and braces: hide the log screen directly, not only via the body class */
+  const v=document.getElementById('view'),t=document.getElementById('topbar'),f=document.querySelector('.fab');
+  if(v)v.style.display='none';if(t)t.style.display='none';if(f)f.style.display='none';
+  document.body.classList.add('modal-open');
+  document.getElementById('lb').classList.add('open');
+  window.scrollTo(0,0);setTimeout(()=>window.scrollTo(0,0),60);
+  return false;
+}
+function closeLb(){
+  document.getElementById('lb').classList.remove('open');
+  document.body.classList.remove('modal-open');
+  const v=document.getElementById('view'),t=document.getElementById('topbar'),f=document.querySelector('.fab');
+  if(v)v.style.display='';if(t)t.style.display='';if(f)f.style.display='';
+  window.scrollTo(0,0);
+}
 
 /* ---------- boot ---------- */
 async function boot(){try{const r=await fetch('data.json?cb='+Date.now(),{cache:'no-store'});if(r.ok)DATA=await r.json();else throw 0;}catch(e){DATA=SEED;}
