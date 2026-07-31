@@ -89,7 +89,8 @@
       "items": [
         { "meal": "Early morning", "name": "Baat Cheet papad x2 (5am, estimate)", "kcal": 110, "protein": 6, "fat": 3, "sat": 0.7, "carb": 15 },
         { "meal": "Early morning", "name": "Sugar-free hazelnut dark chocolate x1 piece ~12g (5am)", "kcal": 66, "protein": 0.7, "fat": 5.5, "sat": 2.1, "carb": 5 },
-        { "meal": "Early morning", "name": "Lipton zero sugar iced tea x2 cans (5am)", "kcal": 6, "protein": 0, "fat": 0, "sat": 0, "carb": 1 }
+        { "meal": "Early morning", "name": "Lipton zero sugar iced tea x2 cans (5am)", "kcal": 6, "protein": 0, "fat": 0, "sat": 0, "carb": 1 },
+        { "meal": "Lunch", "name": "Tawa paneer masala 159g (45g paneer) + veg salad + 1 ghee roti", "kcal": 475, "protein": 18, "fat": 26, "sat": 11.5, "carb": 46, "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri31_lunch.jpg" }
       ]
     }
   ]
