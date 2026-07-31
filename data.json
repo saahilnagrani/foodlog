@@ -1,6 +1,6 @@
 {
   "targets": { "kcal": 1900, "protein": 150, "fat": 60, "sat": 15, "carb": 180 },
-  "updated": "2026-07-30",
+  "updated": "2026-07-31",
   "days": [
     {
       "date": "2026-07-24",
@@ -80,6 +80,16 @@
         { "meal": "Dinner", "name": "Chicken tikka ~185g (from 235g plate) + onion/capsicum + coriander chutney", "kcal": 360, "protein": 53, "fat": 10, "sat": 2.5, "carb": 8, "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_dinner.jpg" },
         { "meal": "Dinner", "name": "Egg white bhurji (70% of square bowl, ~3 egg whites)", "kcal": 90, "protein": 11, "fat": 4, "sat": 0.6, "carb": 3 },
         { "meal": "Snack", "name": "Applied Nutrition clear whey isolate 32g in 400ml water", "kcal": 115, "protein": 27, "fat": 0.7, "sat": 0.5, "carb": 2 }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "label": "Fri 31 Jul",
+      "workout": "Rest (no sleep)",
+      "items": [
+        { "meal": "Early morning", "name": "Baat Cheet papad x2 (5am, estimate)", "kcal": 110, "protein": 6, "fat": 3, "sat": 0.7, "carb": 15 },
+        { "meal": "Early morning", "name": "Sugar-free hazelnut dark chocolate x1 piece ~12g (5am)", "kcal": 66, "protein": 0.7, "fat": 5.5, "sat": 2.1, "carb": 5 },
+        { "meal": "Early morning", "name": "Lipton zero sugar iced tea x2 cans (5am)", "kcal": 6, "protein": 0, "fat": 0, "sat": 0, "carb": 1 }
       ]
     }
   ]
