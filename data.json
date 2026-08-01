@@ -15,7 +15,8 @@
       "items": [
         {
           "meal": "Breakfast",
-          "name": "Morning shake (vanilla whey, oat milk, nuts, berries)",
+          "t": "",
+          "name": "Whey shake, vanilla + oat milk + nuts + berries",
           "kcal": 367,
           "protein": 29,
           "fat": 15,
@@ -24,7 +25,8 @@
         },
         {
           "meal": "Lunch",
-          "name": "Chicken curry 255g + ghee roti",
+          "t": "",
+          "name": "Chicken curry 255g + ghee roti 1",
           "kcal": 475,
           "protein": 38,
           "fat": 23,
@@ -33,7 +35,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Evening shake + nuts/seeds",
+          "t": "",
+          "name": "Whey shake + nuts + seeds",
           "kcal": 180,
           "protein": 26,
           "fat": 7,
@@ -42,7 +45,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Chicken momos x16 + sauce",
+          "t": "",
+          "name": "Chicken momos 16 + sauce",
           "kcal": 765,
           "protein": 58,
           "fat": 12,
@@ -58,7 +62,8 @@
       "items": [
         {
           "meal": "Breakfast",
-          "name": "Burger King Long Chicken",
+          "t": "",
+          "name": "Long Chicken burger 1 (Burger King)",
           "kcal": 470,
           "protein": 18,
           "fat": 23,
@@ -67,7 +72,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Shake + nuts + berries",
+          "t": "",
+          "name": "Whey shake + nuts + berries",
           "kcal": 285,
           "protein": 27,
           "fat": 13,
@@ -76,7 +82,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Veg pulao w/ tofu + Skyr 0%",
+          "t": "",
+          "name": "Veg pulao + tofu + Skyr 0%",
           "kcal": 570,
           "protein": 28,
           "fat": 12,
@@ -85,7 +92,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Carried shake + nuts",
+          "t": "",
+          "name": "Whey shake + nuts",
           "kcal": 180,
           "protein": 26,
           "fat": 7,
@@ -94,7 +102,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Carnival tasting menu (partial portions)",
+          "t": "",
+          "name": "Tasting menu, partial portions (Carnival)",
           "kcal": 1000,
           "protein": 58,
           "fat": 49,
@@ -103,7 +112,8 @@
         },
         {
           "meal": "Drink",
-          "name": "Paloma cocktail",
+          "t": "",
+          "name": "Paloma cocktail 1",
           "kcal": 130,
           "protein": 0,
           "fat": 0,
@@ -119,7 +129,8 @@
       "items": [
         {
           "meal": "Breakfast",
-          "name": "Clear whey + scramble (3 whole + 3 whites)",
+          "t": "",
+          "name": "Clear whey + eggs 3 + egg whites 3, scrambled",
           "kcal": 390,
           "protein": 50,
           "fat": 21,
@@ -128,7 +139,8 @@
         },
         {
           "meal": "Lunch",
-          "name": "Watermelon, feta & pine nut salad",
+          "t": "",
+          "name": "Watermelon, feta and pine nut salad",
           "kcal": 250,
           "protein": 8,
           "fat": 16,
@@ -137,7 +149,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Vanilla whey + oat milk + nuts",
+          "t": "",
+          "name": "ON vanilla whey + oat milk + nuts",
           "kcal": 270,
           "protein": 26,
           "fat": 10,
@@ -146,7 +159,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Prawn curry (half batch) + ghee roti",
+          "t": "",
+          "name": "Prawn curry, half batch + ghee roti 1",
           "kcal": 415,
           "protein": 38,
           "fat": 13,
@@ -162,7 +176,8 @@
       "items": [
         {
           "meal": "Breakfast",
-          "name": "Morning shake + nuts + berries",
+          "t": "",
+          "name": "Whey shake + nuts + berries",
           "kcal": 255,
           "protein": 29,
           "fat": 10,
@@ -171,7 +186,8 @@
         },
         {
           "meal": "Lunch",
-          "name": "White rice 120g + dal palak 250g + papad",
+          "t": "",
+          "name": "White rice 120g + dal palak 250g + papad 1",
           "kcal": 415,
           "protein": 18,
           "fat": 11,
@@ -180,7 +196,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Clear whey 31g in water",
+          "t": "",
+          "name": "Clear whey 31g + water",
           "kcal": 110,
           "protein": 26,
           "fat": 0.7,
@@ -189,7 +206,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Chicken curry (250g cooked chicken) + ghee roti",
+          "t": "",
+          "name": "Chicken curry, chicken 250g cooked + ghee roti 1",
           "kcal": 665,
           "protein": 80,
           "fat": 27,
@@ -205,7 +223,8 @@
       "items": [
         {
           "meal": "Breakfast",
-          "name": "Scramble (2+2) + Awesome plant shake + nuts/berries",
+          "t": "",
+          "name": "Eggs 2 + egg whites 2, scrambled + Awesome plant shake + nuts + berries",
           "kcal": 765,
           "protein": 65,
           "fat": 41,
@@ -214,7 +233,8 @@
         },
         {
           "meal": "Lunch",
-          "name": "6 egg whites + egg curry + chicken curry 200g + ghee roti",
+          "t": "",
+          "name": "Egg whites 6 + egg curry + chicken curry 200g + ghee roti 1",
           "kcal": 640,
           "protein": 57,
           "fat": 30,
@@ -223,7 +243,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Pan-seared salmon 200g raw + 1 tsp peanut oil",
+          "t": "",
+          "name": "Salmon 200g raw, pan-seared + peanut oil 1 tsp",
           "kcal": 440,
           "protein": 40,
           "fat": 30,
@@ -239,7 +260,8 @@
       "items": [
         {
           "meal": "Early morning",
-          "name": "Manakeesh x2 (zaatar & akkawi + spicy akkawi)",
+          "t": "",
+          "name": "Manakeesh 2, zaatar and akkawi + spicy akkawi",
           "kcal": 800,
           "protein": 28,
           "fat": 38,
@@ -248,7 +270,8 @@
         },
         {
           "meal": "Lunch",
-          "name": "White rice 84g + Greek yogurt 0% 81g + papad",
+          "t": "",
+          "name": "White rice 84g + Greek yoghurt 0% 81g + papad 1",
           "kcal": 200,
           "protein": 12,
           "fat": 2,
@@ -257,7 +280,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Vanilla whey + oat milk + nuts + fruit",
+          "t": "",
+          "name": "ON vanilla whey + oat milk + nuts + fruit",
           "kcal": 395,
           "protein": 31,
           "fat": 17,
@@ -266,7 +290,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Chilli tofu (200g) + veg hakka noodles (312g)",
+          "t": "",
+          "name": "Chilli tofu 200g + veg hakka noodles 312g",
           "kcal": 755,
           "protein": 34,
           "fat": 31,
@@ -276,7 +301,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Clear whey 32g in 450ml water",
+          "t": "",
+          "name": "Clear whey 32g + water 450ml",
           "kcal": 115,
           "protein": 27,
           "fat": 0.7,
@@ -292,7 +318,8 @@
       "items": [
         {
           "meal": "Breakfast",
-          "name": "ON vanilla whey 31g + oat milk 150ml + strawberry 80g + nuts/seeds 20g",
+          "t": "",
+          "name": "ON vanilla whey 31g + oat milk 150ml + strawberries 80g + nuts and seeds 20g",
           "kcal": 335,
           "protein": 30,
           "fat": 15,
@@ -302,7 +329,8 @@
         },
         {
           "meal": "Lunch",
-          "name": "Egg white bhurji (5-6 egg whites, onion, tomato) + veg salad + Sprite Zero",
+          "t": "",
+          "name": "Egg white bhurji, ~6 egg whites + veg salad + Sprite Zero",
           "kcal": 210,
           "protein": 22,
           "fat": 8,
@@ -312,7 +340,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Chicken tikka ~185g (from 235g plate) + onion/capsicum + coriander chutney",
+          "t": "",
+          "name": "Chicken tikka ~185g, from 235g plate + onion and capsicum + coriander chutney",
           "kcal": 360,
           "protein": 53,
           "fat": 10,
@@ -322,7 +351,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Egg white bhurji (70% of square bowl, ~3 egg whites)",
+          "t": "",
+          "name": "Egg white bhurji, ~3 egg whites",
           "kcal": 90,
           "protein": 11,
           "fat": 4,
@@ -331,7 +361,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Applied Nutrition clear whey isolate 32g in 400ml water",
+          "t": "",
+          "name": "Clear whey 32g + water 400ml (Applied Nutrition)",
           "kcal": 115,
           "protein": 27,
           "fat": 0.7,
@@ -347,7 +378,8 @@
       "items": [
         {
           "meal": "Early morning",
-          "name": "Baat Cheet papad x2 (5am, estimate)",
+          "t": "05:00",
+          "name": "Papad 2 (Baat Cheet)",
           "kcal": 110,
           "protein": 6,
           "fat": 3,
@@ -356,7 +388,8 @@
         },
         {
           "meal": "Early morning",
-          "name": "Sugar-free hazelnut dark chocolate x1 piece ~12g (5am)",
+          "t": "05:00",
+          "name": "Dark chocolate, sugar-free hazelnut ~12g",
           "kcal": 66,
           "protein": 0.7,
           "fat": 5.5,
@@ -365,7 +398,8 @@
         },
         {
           "meal": "Early morning",
-          "name": "Lipton zero sugar iced tea x2 cans (5am)",
+          "t": "05:00",
+          "name": "Lipton zero sugar iced tea 2 cans",
           "kcal": 6,
           "protein": 0,
           "fat": 0,
@@ -374,7 +408,8 @@
         },
         {
           "meal": "Lunch",
-          "name": "Tawa paneer masala 159g (45g paneer) + veg salad + 1 ghee roti",
+          "t": "",
+          "name": "Tawa paneer masala 159g, paneer 45g + veg salad + ghee roti 1",
           "kcal": 475,
           "protein": 18,
           "fat": 26,
@@ -384,7 +419,8 @@
         },
         {
           "meal": "Snack",
-          "name": "Applied Nutrition clear whey isolate 34g in water (5:30pm)",
+          "t": "17:30",
+          "name": "Clear whey 34g + water (Applied Nutrition)",
           "kcal": 122,
           "protein": 29,
           "fat": 0.7,
@@ -394,7 +430,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Prawn curry 358g (from 250g frozen prawns) + moong sprout salad 87g + veg salad + 1 ghee roti",
+          "t": "",
+          "name": "Prawn curry 358g, from 250g frozen prawns + moong sprout salad 87g + veg salad + ghee roti 1",
           "kcal": 605,
           "protein": 57,
           "fat": 21.5,
@@ -404,7 +441,8 @@
         },
         {
           "meal": "Dinner",
-          "name": "Watermelon 400g + strawberries 100g (9:08pm)",
+          "t": "21:08",
+          "name": "Watermelon 400g + strawberries 100g",
           "kcal": 152,
           "protein": 2.5,
           "fat": 0.8,
@@ -414,7 +452,8 @@
         },
         {
           "meal": "Snack",
-          "name": "ON vanilla whey 2 scoops (62g) in 400ml water (1am, Fri night)",
+          "t": "25:00",
+          "name": "ON vanilla whey 62g + water 400ml",
           "kcal": 240,
           "protein": 48,
           "fat": 2.5,
@@ -430,7 +469,8 @@
       "items": [
         {
           "meal": "Breakfast",
-          "name": "Scrambled 6 egg whites + 50ml oat milk + ~1/2 yolk + 1/2 tsp oil",
+          "t": "",
+          "name": "Egg whites 6 + oat milk 50ml + ~1/2 yolk + oil 1/2 tsp, scrambled",
           "kcal": 175,
           "protein": 23,
           "fat": 5.5,
@@ -440,7 +480,8 @@
         },
         {
           "meal": "Breakfast",
-          "name": "Zaatar manakeesh half, oil runoff left on plate (Zaatar w Zeit)",
+          "t": "",
+          "name": "Zaatar manakeesh 1/2, oil drained (Zaatar w Zeit)",
           "kcal": 155,
           "protein": 4,
           "fat": 5.5,
@@ -450,7 +491,8 @@
         },
         {
           "meal": "Snack",
-          "name": "ON vanilla whey 2 scoops (62g) in 400ml water (3:15pm)",
+          "t": "15:15",
+          "name": "ON vanilla whey 62g + water 400ml",
           "kcal": 240,
           "protein": 48,
           "fat": 2.5,
@@ -460,6 +502,7 @@
         },
         {
           "meal": "Snack",
+          "t": "15:15",
           "name": "Apple 144g + strawberries 70g",
           "kcal": 97,
           "protein": 0.8,

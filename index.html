@@ -242,6 +242,7 @@
     <div class="sheet"><h3>Add a food</h3>
       <div class="field"><label>Day</label><select id="f_day"></select></div>
       <div class="field"><label>Meal</label><select id="f_meal"><option>Breakfast</option><option>Lunch</option><option>Snack</option><option>Dinner</option><option>Early morning</option><option>Drink</option></select></div>
+      <div class="field"><label>Time</label><input id="f_time" type="time"></div>
       <div class="field"><label>What did you eat?</label><input id="f_name" placeholder="e.g. Clear whey 30g in water"></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
         <div class="field"><label>Calories</label><input id="f_kcal" type="number" inputmode="numeric"></div>
@@ -317,6 +318,13 @@ function toggleWeekMode(){PREF.weekMode=PREF.weekMode==='roll'?'cal':'roll';save
 /* ---- day totals ---- */
 function totals(d){const k=Math.round(sum(d.items,'kcal')),p=R(sum(d.items,'protein')),f=R(sum(d.items,'fat')),s=R(sum(d.items,'sat')),c=R(sum(d.items,'carb'));return {k,p,f,s,u:R(f-s),c};}
 function imgSrc(it){return it.img||'';}
+/* time handling: it.t is 24h "HH:MM". displayed 12h, rows sorted by it. */
+const MEALORD={'Early morning':'04:00','Breakfast':'08:30','Snack':'11:00','Lunch':'13:30','Drink':'16:00','Dinner':'20:00'};
+function tkey(it){return it.t||MEALORD[it.meal]||'12:00';}
+function sortItems(items){return (items||[]).map((x,i)=>[x,i]).sort((a,b)=>{const ka=tkey(a[0]),kb=tkey(b[0]);return ka<kb?-1:ka>kb?1:a[1]-b[1];}).map(x=>x[0]);}
+/* hours >=24 mean "after midnight, still the same waking day" (e.g. 25:00 = 1am) */
+function tf(t){if(!t)return'';const p=String(t).split(':');let h=+p[0];const m=p[1]||'00';if(h>=24)h-=24;const ap=h<12?'am':'pm';h=h%12||12;return h+':'+m+ap;}
+function mlab(it){const m=it.meal||'';return it.t?(m?m+' &middot; ':'')+tf(it.t):m;}
 /* escape a string so it is safe inside onclick="lb('...')" */
 function jq(s){return String(s==null?'':s).replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;').replace(/</g,'&lt;');}
 
@@ -405,8 +413,8 @@ function renderB(days){
     <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:${W.overN?'#e5271b':'#666'}">red# = sat g &middot; ${W.overN}/${W.ndays} over 15g</span></div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d),T=DATA.targets;
-    const meals=d.items.map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">NO<br>PIC</div>`;
-      return `<div class="meal">${thumb}<div class="mt"><div class="nm">${it.name}</div><div class="mm"><span class="tag">${it.meal||''}</span>${R(it.protein)}g P &middot; ${Math.round(it.kcal)} kcal &middot; ${R(it.fat)}g fat &middot; ${R(it.carb||0)}g C</div></div></div>`;}).join('');
+    const meals=sortItems(d.items).map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">NO<br>PIC</div>`;
+      return `<div class="meal">${thumb}<div class="mt"><div class="nm">${it.name}</div><div class="mm"><span class="tag">${mlab(it)}</span>${R(it.protein)}g P &middot; ${Math.round(it.kcal)} kcal &middot; ${R(it.fat)}g fat &middot; ${R(it.carb||0)}g C</div></div></div>`;}).join('');
     const pw=Math.min(100,t.p/T.protein*100), fAxis=Math.max(T.fat,t.f), sw=t.f>0?t.s/fAxis*100:0, uw=t.f>0?t.u/fAxis*100:0;
     h+=`<div class="card"><span class="dchip">${d.label}${d.workout?' &middot; '+d.workout:''}</span>
       <div class="kcal"><span class="big">${t.k}</span><span class="of ${t.k>T.kcal?'over':''}">/ ${T.kcal} KCAL</span></div>
@@ -438,7 +446,7 @@ function renderC(days){
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
     h+=`<div class="dk">${num(t.k)} <small>/ 1900 kcal &middot; ${d.label}</small></div>`;
-    d.items.forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">no<br>pic</div>`;h+=`<div class="mrow">${thumb}<div class="mn"><small>${(it.meal||'').slice(0,3).toLowerCase()}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`;});
+    sortItems(d.items).forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">no<br>pic</div>`;h+=`<div class="mrow">${thumb}<div class="mn"><small>${(it.meal||'').slice(0,3).toLowerCase()}${it.t?' '+tf(it.t):''}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`;});
     const pp=Math.round(Math.min(100,t.p/T.protein*100)),fp=Math.round(Math.min(100,t.f/T.fat*100)),cp=Math.round(Math.min(100,t.c/T.carb*100));
     h+=`<div class="metric"><div class="l"><span class="name">protein</span><span class="rd">${num(t.p)} / 150 g</span></div><div class="track" data-pct="${pp}" data-over="0">${cbar(pp)}</div></div>`;
     h+=`<div class="metric"><div class="l"><span class="name">fat</span><span class="rd ${t.f>T.fat?'hi':'ok'}">${num(t.f)} / 60 g</span></div><div class="track" data-pct="${fp}" data-over="${t.f>T.fat?1:0}">${cbar(fp,t.f>T.fat)}</div><div class="sub">&#9492; sat ${t.s}/15 &#9679; unsat ${t.u}</div></div>`;
@@ -477,7 +485,7 @@ function renderD(days){
   h+=`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat g</span> &middot; lines 15/60 &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
-    const meals=d.items.map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${(it.meal||'').slice(0,3)}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
+    const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${(it.meal||'').slice(0,3)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
     h+=`<div class="drow"><div class="gl">${g}</div><div class="info"><div class="dl"><span class="nm">${d.label}${d.workout?' &middot; '+d.workout:''}</span><span class="kc ${t.k>T.kcal?'over':''}">${t.k} <small>kcal</small></span></div><div class="dmac">${t.p}g P &middot; ${t.f}g fat <span class="sat">(${t.s} sat)</span> &middot; ${t.c}g C</div>${meals}<div class="sync" onclick="syncDay('${d.date}')">Sync to Google Health</div></div></div>`;
   });
   return h;
@@ -501,9 +509,9 @@ function closeAdd(){document.getElementById('addBg').classList.remove('open');do
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function saveFood(){
   let date=document.getElementById('f_day').value;if(date==='__today')date=todayISO();
-  const item={meal:document.getElementById('f_meal').value,name:document.getElementById('f_name').value.trim()||'Food',kcal:+document.getElementById('f_kcal').value||0,protein:+document.getElementById('f_pro').value||0,carb:+document.getElementById('f_carb').value||0,fat:+document.getElementById('f_fat').value||0,sat:+document.getElementById('f_sat').value||0};
+  const item={meal:document.getElementById('f_meal').value,t:document.getElementById('f_time').value||'',name:document.getElementById('f_name').value.trim()||'Food',kcal:+document.getElementById('f_kcal').value||0,protein:+document.getElementById('f_pro').value||0,carb:+document.getElementById('f_carb').value||0,fat:+document.getElementById('f_fat').value||0,sat:+document.getElementById('f_sat').value||0};
   const file=document.getElementById('f_img').files[0];
-  const finish=()=>{const extra=loadExtra();(extra[date]=extra[date]||[]).push(item);saveExtra(extra);['f_name','f_kcal','f_pro','f_carb','f_fat','f_sat'].forEach(id=>document.getElementById(id).value='');document.getElementById('f_img').value='';closeAdd();curWeek=weeks.length-1;render();toast('Added to '+labelFor(date));};
+  const finish=()=>{const extra=loadExtra();(extra[date]=extra[date]||[]).push(item);saveExtra(extra);['f_name','f_kcal','f_pro','f_carb','f_fat','f_sat','f_time'].forEach(id=>document.getElementById(id).value='');document.getElementById('f_img').value='';closeAdd();curWeek=weeks.length-1;render();toast('Added to '+labelFor(date));};
   if(file){const rd=new FileReader();rd.onload=e=>{item.img=e.target.result;finish();};rd.readAsDataURL(file);}else finish();
 }
 
