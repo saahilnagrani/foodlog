@@ -481,11 +481,11 @@
         {
           "meal": "Breakfast",
           "t": "14:00",
-          "name": "Zaatar manakeesh 1/2, oil drained (Zaatar w Zeit)",
-          "kcal": 155,
-          "protein": 4,
-          "fat": 5.5,
-          "sat": 1,
+          "name": "Zaatar manakeesh 1/2 + akkawi cheese ~15g, oil drained (Zaatar w Zeit)",
+          "kcal": 200,
+          "protein": 7,
+          "fat": 9.3,
+          "sat": 3.4,
           "carb": 22,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_manakeesh.jpg"
         },
