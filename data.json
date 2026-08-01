@@ -520,6 +520,37 @@
           "sat": 0.7,
           "carb": 3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_whey2.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:00",
+          "name": "Salmon 241g cooked + olive oil 4ml, pan-seared",
+          "kcal": 584,
+          "protein": 66,
+          "fat": 35.7,
+          "sat": 6.9,
+          "carb": 0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_dinner.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:00",
+          "name": "Sprouted moong + onion + tomato ~120g",
+          "kcal": 40,
+          "protein": 3.5,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 7
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:00",
+          "name": "Green salad, lettuce + carrot + cucumber ~120g",
+          "kcal": 30,
+          "protein": 1,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 6.5
         }
       ]
     }
