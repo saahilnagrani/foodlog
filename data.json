@@ -561,6 +561,16 @@
           "fat": 0,
           "sat": 0,
           "carb": 1
+        },
+        {
+          "meal": "Snack",
+          "t": "22:40",
+          "name": "Zaatar manakeesh 1 slice + akkawi cheese ~4g (Zaatar w Zeit)",
+          "kcal": 50,
+          "protein": 1.8,
+          "fat": 2.3,
+          "sat": 0.9,
+          "carb": 5.5
         }
       ]
     }
