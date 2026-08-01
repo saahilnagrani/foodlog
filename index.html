@@ -324,7 +324,9 @@ function tkey(it){return it.t||MEALORD[it.meal]||'12:00';}
 function sortItems(items){return (items||[]).map((x,i)=>[x,i]).sort((a,b)=>{const ka=tkey(a[0]),kb=tkey(b[0]);return ka<kb?-1:ka>kb?1:a[1]-b[1];}).map(x=>x[0]);}
 /* hours >=24 mean "after midnight, still the same waking day" (e.g. 25:00 = 1am) */
 function tf(t){if(!t)return'';const p=String(t).split(':');let h=+p[0];const m=p[1]||'00';if(h>=24)h-=24;const ap=h<12?'am':'pm';h=h%12||12;return h+':'+m+ap;}
-function mlab(it){const m=it.meal||'';return it.t?(m?m+' &middot; ':'')+tf(it.t):m;}
+const MABBR={'Breakfast':'BRK','Lunch':'LUN','Snack':'SNK','Dinner':'DNR','Early morning':'EAM','Drink':'DRK'};
+function mabbr(m){return MABBR[m]||String(m||'').slice(0,3).toUpperCase();}
+function mlab(it){const m=mabbr(it.meal);return it.t?(m?m+' &middot; ':'')+tf(it.t):m;}
 /* escape a string so it is safe inside onclick="lb('...')" */
 function jq(s){return String(s==null?'':s).replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;').replace(/</g,'&lt;');}
 
@@ -446,7 +448,7 @@ function renderC(days){
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
     h+=`<div class="dk">${num(t.k)} <small>/ 1900 kcal &middot; ${d.label}</small></div>`;
-    sortItems(d.items).forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">no<br>pic</div>`;h+=`<div class="mrow">${thumb}<div class="mn"><small>${(it.meal||'').slice(0,3).toLowerCase()}${it.t?' '+tf(it.t):''}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`;});
+    sortItems(d.items).forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">no<br>pic</div>`;h+=`<div class="mrow">${thumb}<div class="mn"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`;});
     const pp=Math.round(Math.min(100,t.p/T.protein*100)),fp=Math.round(Math.min(100,t.f/T.fat*100)),cp=Math.round(Math.min(100,t.c/T.carb*100));
     h+=`<div class="metric"><div class="l"><span class="name">protein</span><span class="rd">${num(t.p)} / 150 g</span></div><div class="track" data-pct="${pp}" data-over="0">${cbar(pp)}</div></div>`;
     h+=`<div class="metric"><div class="l"><span class="name">fat</span><span class="rd ${t.f>T.fat?'hi':'ok'}">${num(t.f)} / 60 g</span></div><div class="track" data-pct="${fp}" data-over="${t.f>T.fat?1:0}">${cbar(fp,t.f>T.fat)}</div><div class="sub">&#9492; sat ${t.s}/15 &#9679; unsat ${t.u}</div></div>`;
@@ -485,7 +487,7 @@ function renderD(days){
   h+=`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat g</span> &middot; lines 15/60 &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
-    const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${(it.meal||'').slice(0,3)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
+    const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
     h+=`<div class="drow"><div class="gl">${g}</div><div class="info"><div class="dl"><span class="nm">${d.label}${d.workout?' &middot; '+d.workout:''}</span><span class="kc ${t.k>T.kcal?'over':''}">${t.k} <small>kcal</small></span></div><div class="dmac">${t.p}g P &middot; ${t.f}g fat <span class="sat">(${t.s} sat)</span> &middot; ${t.c}g C</div>${meals}<div class="sync" onclick="syncDay('${d.date}')">Sync to Google Health</div></div></div>`;
   });
   return h;

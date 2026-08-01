@@ -469,7 +469,7 @@
       "items": [
         {
           "meal": "Breakfast",
-          "t": "",
+          "t": "14:00",
           "name": "Egg whites 6 + oat milk 50ml + ~1/2 yolk + oil 1/2 tsp, scrambled",
           "kcal": 175,
           "protein": 23,
@@ -480,7 +480,7 @@
         },
         {
           "meal": "Breakfast",
-          "t": "",
+          "t": "14:00",
           "name": "Zaatar manakeesh 1/2, oil drained (Zaatar w Zeit)",
           "kcal": 155,
           "protein": 4,
