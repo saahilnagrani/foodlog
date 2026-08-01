@@ -439,12 +439,12 @@
         },
         {
           "meal": "Breakfast",
-          "name": "Scrambled 6 egg whites + 50ml oat milk + ~1/2 yolk + <1 tsp oil",
-          "kcal": 190,
-          "protein": 24,
-          "fat": 7.4,
-          "sat": 1.5,
-          "carb": 5.3,
+          "name": "Scrambled 6 egg whites + 50ml oat milk + ~1/2 yolk + 1/2 tsp oil",
+          "kcal": 175,
+          "protein": 23,
+          "fat": 5.5,
+          "sat": 1.2,
+          "carb": 5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_eggs.jpg"
         },
         {
