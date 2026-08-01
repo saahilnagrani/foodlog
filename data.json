@@ -551,6 +551,16 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 6.5
+        },
+        {
+          "meal": "Drink",
+          "t": "22:15",
+          "name": "Zero sugar mango iced tea 500ml (Lipton)",
+          "kcal": 5,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 1
         }
       ]
     }
