@@ -448,12 +448,12 @@
         },
         {
           "meal": "Breakfast",
-          "name": "Zaatar manakeesh half (Zaatar w Zeit)",
-          "kcal": 190,
+          "name": "Zaatar manakeesh half, oil runoff left on plate (Zaatar w Zeit)",
+          "kcal": 155,
           "protein": 4,
-          "fat": 9,
-          "sat": 1.5,
-          "carb": 23,
+          "fat": 5.5,
+          "sat": 1,
+          "carb": 22,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_manakeesh.jpg"
         },
         {
