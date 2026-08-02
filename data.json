@@ -620,6 +620,17 @@
           "sat": 1.6,
           "carb": 11.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_whey.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "17:30",
+          "name": "Chicken curry, chicken 205g + gravy 84g, yogurt marinated (home)",
+          "kcal": 410,
+          "protein": 65,
+          "fat": 12,
+          "sat": 2.2,
+          "carb": 6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_currymeal.jpg"
         }
       ]
     }
