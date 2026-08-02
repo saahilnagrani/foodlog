@@ -609,6 +609,17 @@
           "sat": 2.2,
           "carb": 1.8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_eggs.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "16:00",
+          "name": "ON vanilla whey 62g + oat milk 75ml + water",
+          "kcal": 275,
+          "protein": 48.5,
+          "fat": 3.6,
+          "sat": 1.6,
+          "carb": 11.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_whey.jpg"
         }
       ]
     }
