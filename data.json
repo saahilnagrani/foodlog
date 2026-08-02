@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-01",
+  "updated": "2026-08-02",
   "days": [
     {
       "date": "2026-07-24",
@@ -571,8 +571,34 @@
           "fat": 2.3,
           "sat": 0.9,
           "carb": 5.5
+        },
+        {
+          "meal": "Snack",
+          "t": "27:30",
+          "name": "Papad 1 (Baat Cheet)",
+          "kcal": 40,
+          "protein": 3,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 6.5
+        },
+        {
+          "meal": "Snack",
+          "t": "27:30",
+          "name": "Piri piri makhana 75g (Mr. Makhana)",
+          "kcal": 356,
+          "protein": 5.9,
+          "fat": 14.9,
+          "sat": 2.5,
+          "carb": 47.6
         }
       ]
+    },
+    {
+      "date": "2026-08-02",
+      "label": "Sun 2 Aug",
+      "workout": "",
+      "items": []
     }
   ]
 }
