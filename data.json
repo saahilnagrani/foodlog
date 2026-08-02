@@ -598,7 +598,19 @@
       "date": "2026-08-02",
       "label": "Sun 2 Aug",
       "workout": "",
-      "items": []
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "14:00",
+          "name": "Egg whites 6 + whole egg 1 + olive oil 1 tsp, scrambled",
+          "kcal": 212,
+          "protein": 28,
+          "fat": 9.9,
+          "sat": 2.2,
+          "carb": 1.8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_eggs.jpg"
+        }
+      ]
     }
   ]
 }
