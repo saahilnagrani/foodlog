@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-02",
+  "updated": "2026-08-03",
   "days": [
     {
       "date": "2026-07-24",
@@ -642,8 +642,54 @@
           "sat": 0.1,
           "carb": 15.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_sprouts.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "20:00",
+          "name": "Gin ~45ml + zero sugar tonic, 4 glasses",
+          "kcal": 400,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Grilled chicken and avocado club 1 (Cheesecake Factory)",
+          "kcal": 1180,
+          "protein": 100,
+          "fat": 81,
+          "sat": 18,
+          "carb": 79
+        },
+        {
+          "meal": "Snack",
+          "t": "28:00",
+          "name": "Chicken tandoori momos 8",
+          "kcal": 450,
+          "protein": 22,
+          "fat": 18,
+          "sat": 5,
+          "carb": 48
+        },
+        {
+          "meal": "Snack",
+          "t": "28:00",
+          "name": "Samosa 2 + dahi + chutney",
+          "kcal": 600,
+          "protein": 10.5,
+          "fat": 32,
+          "sat": 11,
+          "carb": 68
         }
       ]
+    },
+    {
+      "date": "2026-08-03",
+      "label": "Mon 3 Aug",
+      "workout": "",
+      "items": []
     }
   ]
 }
