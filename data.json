@@ -730,6 +730,17 @@
           "fat": 0,
           "sat": 0,
           "carb": 18
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:00",
+          "name": "Chicken curry 422g, yogurt marinated (home)",
+          "kcal": 480,
+          "protein": 50,
+          "fat": 12.2,
+          "sat": 2.3,
+          "carb": 25,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_curry.jpg"
         }
       ]
     }
