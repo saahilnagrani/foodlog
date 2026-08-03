@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-03",
+  "updated": "2026-08-04",
   "days": [
     {
       "date": "2026-07-24",
@@ -741,8 +741,24 @@
           "sat": 2.3,
           "carb": 25,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_curry.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "25:15",
+          "name": "ON vanilla whey 31g + water",
+          "kcal": 120,
+          "protein": 24,
+          "fat": 1.2,
+          "sat": 0.7,
+          "carb": 3
         }
       ]
+    },
+    {
+      "date": "2026-08-04",
+      "label": "Tue 4 Aug",
+      "workout": "",
+      "items": []
     }
   ]
 }
