@@ -805,11 +805,11 @@
         {
           "meal": "Breakfast",
           "t": "11:30",
-          "name": "Egg whites 6 + whole eggs 2 + ~2 leaked yolks + olive oil 1 tsp, scrambled",
-          "kcal": 395,
-          "protein": 39.6,
-          "fat": 27.5,
-          "sat": 7.5,
+          "name": "Egg whites 6 + whole eggs 2 + olive oil 1 tsp, scrambled",
+          "kcal": 285,
+          "protein": 34.2,
+          "fat": 14,
+          "sat": 3.7,
           "carb": 1.5
         }
       ]
