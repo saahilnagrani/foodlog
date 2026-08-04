@@ -811,6 +811,17 @@
           "fat": 14,
           "sat": 3.7,
           "carb": 1.5
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:30",
+          "name": "Chicken shawarma 210g + saj bread 1/2 + fries 4 + garlic sauce ~4g + pickles (Operation Falafel)",
+          "kcal": 595,
+          "protein": 53.5,
+          "fat": 26.2,
+          "sat": 6.5,
+          "carb": 30,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue4_shawarma.jpg"
         }
       ]
     }
