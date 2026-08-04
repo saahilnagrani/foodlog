@@ -822,6 +822,16 @@
           "sat": 6.4,
           "carb": 18,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue4_shawarma.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "17:15",
+          "name": "Applied Nutrition clear whey ~25g + water, eyeballed",
+          "kcal": 95,
+          "protein": 21,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 0.5
         }
       ]
     }
