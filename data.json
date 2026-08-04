@@ -751,6 +751,39 @@
           "fat": 1.2,
           "sat": 0.7,
           "carb": 3
+        },
+        {
+          "meal": "Snack",
+          "t": "28:00",
+          "name": "Hot honey chicken burger 1 (McDonald's)",
+          "kcal": 556,
+          "protein": 25.8,
+          "fat": 22.8,
+          "sat": 5,
+          "carb": 60,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_mcd_a.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "28:15",
+          "name": "Biscoff McFlurry 1/2 regular (McDonald's)",
+          "kcal": 245,
+          "protein": 5,
+          "fat": 7.5,
+          "sat": 5,
+          "carb": 39.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_mcd_b.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "28:15",
+          "name": "Sakura x Sprite ~400ml (McDonald's)",
+          "kcal": 195,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 49,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_mcd_c.jpg"
         }
       ]
     },
