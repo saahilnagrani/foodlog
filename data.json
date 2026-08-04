@@ -791,7 +791,28 @@
       "date": "2026-08-04",
       "label": "Tue 4 Aug",
       "workout": "",
-      "items": []
+      "items": [
+        {
+          "meal": "Snack",
+          "t": "11:30",
+          "name": "Applied Nutrition clear whey 25g + water",
+          "kcal": 95,
+          "protein": 21,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 0.5
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:30",
+          "name": "Egg whites 6 + whole eggs 2 + ~2 leaked yolks + olive oil 1 tsp, scrambled",
+          "kcal": 395,
+          "protein": 39.6,
+          "fat": 27.5,
+          "sat": 7.5,
+          "carb": 1.5
+        }
+      ]
     }
   ]
 }
