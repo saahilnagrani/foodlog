@@ -76,6 +76,16 @@ Notes:
 4. **Edit `data.json`**: add the item(s) to the right `date` (create the day
    object if it's a new day), keep items roughly in time order, and bump
    `"updated"` to today.
+   **Set each item's `t` from the photo's EXIF `DateTimeOriginal`** (the phone's
+   local capture time) as `HH:MM` — do NOT ask the user for the time and do NOT
+   use the container clock (it runs in UTC, not the user's local time). For a
+   meal with no photo (e.g. a shake), reuse the nearest photo's time on that day
+   or ask. Read it with Pillow:
+   ```python
+   from PIL import Image
+   t = Image.open(p).getexif().get_ifd(0x8769).get(36867)  # "2026:08:10 14:21:30"
+   hhmm = t[11:16]  # -> "14:21"
+   ```
 5. **Commit + push to `main`.** Commit message style matches the existing log:
    `"<Dow> <D> <Mon>: <what changed>"`, e.g. `Tue 4 Aug: chicken shawarma platter`.
    Corrections are their own commits, same style. Pushing to `main` is what makes
