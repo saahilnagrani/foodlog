@@ -1298,6 +1298,34 @@
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_soursop.jpg"
         }
       ]
+    },
+    {
+      "date": "2026-08-10",
+      "label": "Mon 10 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Dinner",
+          "t": "21:30",
+          "name": "Egg curry - 197g boiled egg white (yolks out) + 80g masala gravy",
+          "kcal": 200,
+          "protein": 23,
+          "fat": 8,
+          "sat": 1.5,
+          "carb": 7,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon10_eggcurry.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:30",
+          "name": "Boiled egg whites x2 (on the side)",
+          "kcal": 35,
+          "protein": 7,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 0.7
+        }
+      ]
     }
   ]
 }
