@@ -1305,16 +1305,6 @@
       "workout": "",
       "items": [
         {
-          "meal": "Snack",
-          "t": "00:45",
-          "name": "Baat Cheet papad x2 (roasted)",
-          "kcal": 90,
-          "protein": 6,
-          "fat": 0.8,
-          "sat": 0.1,
-          "carb": 15
-        },
-        {
           "meal": "Breakfast",
           "t": "10:30",
           "name": "Egg-white omelette (3 egg whites + onion/tomato/capsicum/carrot)",
@@ -1418,6 +1408,16 @@
           "fat": 3,
           "sat": 2,
           "carb": 8
+        },
+        {
+          "meal": "Snack",
+          "t": "24:45",
+          "name": "Baat Cheet papad x2 (roasted)",
+          "kcal": 90,
+          "protein": 6,
+          "fat": 0.8,
+          "sat": 0.1,
+          "carb": 15
         }
       ]
     }
