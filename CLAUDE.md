@@ -58,6 +58,21 @@ Notes:
 3. **Save the photo** (if the user wants it kept) into `images/` using the naming
    pattern `<dow><daynum>_<shortlabel>.jpg`, e.g. `tue4_shawarma.jpg`,
    `sat1_eggs.jpg`. Reference it via the full raw URL in the item's `img`.
+   **Auto-enhance every photo before saving** (user preference): auto-orient via
+   EXIF, lift exposure only when the shot is dark, correct white balance, and add
+   gentle contrast/saturation/sharpening — natural, not over-processed. Downscale
+   to ~1200px long edge, JPEG quality ~85, target < ~320KB. Pillow pipeline:
+   ```python
+   from PIL import Image, ImageOps, ImageEnhance, ImageStat
+   im = ImageOps.exif_transpose(Image.open(p)).convert('RGB')
+   lum = ImageStat.Stat(im.convert('L')).mean[0]
+   if lum < 115:
+       im = ImageEnhance.Brightness(im).enhance(min(1.9, 118/max(lum,1)))
+   im = ImageOps.autocontrast(im, cutoff=(0.4, 0.2))   # white balance + levels
+   im = ImageEnhance.Color(im).enhance(1.08)
+   im = ImageEnhance.Contrast(im).enhance(1.04)
+   im = ImageEnhance.Sharpness(im).enhance(1.15)
+   ```
 4. **Edit `data.json`**: add the item(s) to the right `date` (create the day
    object if it's a new day), keep items roughly in time order, and bump
    `"updated"` to today.
