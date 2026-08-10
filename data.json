@@ -1306,7 +1306,7 @@
       "items": [
         {
           "meal": "Breakfast",
-          "t": "08:30",
+          "t": "10:30",
           "name": "Egg-white omelette (3 egg whites + onion/tomato/capsicum/carrot)",
           "kcal": 110,
           "protein": 12,
@@ -1317,7 +1317,7 @@
         },
         {
           "meal": "Breakfast",
-          "t": "08:30",
+          "t": "10:30",
           "name": "Mixed nuts & seeds 22g (walnut, pecan, pumpkin seeds, pine nuts)",
           "kcal": 145,
           "protein": 4,
@@ -1327,7 +1327,7 @@
         },
         {
           "meal": "Breakfast",
-          "t": "08:30",
+          "t": "10:30",
           "name": "Awesome protein (choc & nut) 35g in water",
           "kcal": 129,
           "protein": 21.3,
@@ -1337,7 +1337,7 @@
         },
         {
           "meal": "Lunch",
-          "t": "13:30",
+          "t": "14:30",
           "name": "Yellow moong dal 316g",
           "kcal": 285,
           "protein": 16,
@@ -1348,7 +1348,7 @@
         },
         {
           "meal": "Lunch",
-          "t": "13:30",
+          "t": "14:30",
           "name": "White rice 120g",
           "kcal": 155,
           "protein": 3,
@@ -1358,7 +1358,7 @@
         },
         {
           "meal": "Lunch",
-          "t": "13:30",
+          "t": "14:30",
           "name": "Pan-seared tofu with veggies 103g (~50g tofu)",
           "kcal": 130,
           "protein": 9.5,
@@ -1369,7 +1369,7 @@
         },
         {
           "meal": "Lunch",
-          "t": "13:30",
+          "t": "14:30",
           "name": "Kimchi 48g",
           "kcal": 12,
           "protein": 0.7,
@@ -1380,7 +1380,7 @@
         },
         {
           "meal": "Dinner",
-          "t": "21:30",
+          "t": "21:00",
           "name": "Egg curry - 197g boiled egg white (yolks out) + 80g masala gravy",
           "kcal": 200,
           "protein": 23,
@@ -1391,13 +1391,23 @@
         },
         {
           "meal": "Dinner",
-          "t": "21:30",
+          "t": "21:00",
           "name": "Boiled egg whites x2 (on the side)",
           "kcal": 35,
           "protein": 7,
           "fat": 0.2,
           "sat": 0,
           "carb": 0.7
+        },
+        {
+          "meal": "Snack",
+          "t": "23:00",
+          "name": "ON Gold Standard Whey (vanilla ice cream) 2 scoops in water",
+          "kcal": 240,
+          "protein": 48,
+          "fat": 3,
+          "sat": 2,
+          "carb": 8
         }
       ]
     }
