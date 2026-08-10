@@ -81,8 +81,10 @@ Notes:
    with no photo (e.g. a shake): use a time the user states; else reuse the
    nearest photographed sibling's time in the same meal; else use the container
    UTC clock converted to the user's local time — **Abu Dhabi, UTC+4** (`date -u`
-   plus 4 hours). Never write the raw UTC clock as the local time. Read EXIF with
-   Pillow:
+   plus 4 hours). Never write the raw UTC clock as the local time. If that local
+   time is past midnight but the meal continues the same waking day (a late-night
+   snack after that evening's dinner), write it as 24+ (`00:45` → `24:45`) so it
+   sorts after the evening, not at the top of the day. Read EXIF with Pillow:
    ```python
    from PIL import Image
    t = Image.open(p).getexif().get_ifd(0x8769).get(36867)  # "2026:08:10 14:21:30"
