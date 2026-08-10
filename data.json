@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-04",
+  "updated": "2026-08-10",
   "days": [
     {
       "date": "2026-07-24",
@@ -832,6 +832,175 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 0.5
+        },
+        {
+          "meal": "Snack",
+          "t": "21:30",
+          "name": "Roasted cashews, lightly salted 40g (Cornitos)",
+          "kcal": 229,
+          "protein": 7.1,
+          "fat": 18.6,
+          "sat": 4.3,
+          "carb": 11.4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue4_cashews.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "21:30",
+          "name": "7up Zero Sugar 300ml",
+          "kcal": 0,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-08-05",
+      "label": "Wed 5 Aug",
+      "workout": "Yin yoga + walk",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "12:15",
+          "name": "Chicken and vegetable broth ~200ml + brown bread roll 1/2 + horsegram paste in olive oil ~80% (resort)",
+          "kcal": 213,
+          "protein": 9.4,
+          "fat": 9.1,
+          "sat": 1.65,
+          "carb": 21.8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_broth.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "12:15",
+          "name": "Pumpkin soup 4 spoons, ~60ml (resort)",
+          "kcal": 35,
+          "protein": 1,
+          "fat": 2,
+          "sat": 1,
+          "carb": 4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_pumpkinsoup.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "12:45",
+          "name": "Grilled white fish ~120g + prawns 2 + white rice ~100g + lemongrass coconut sauce ~80ml + mushroom puree ~7g (resort)",
+          "kcal": 478,
+          "protein": 44.4,
+          "fat": 20.0,
+          "sat": 10.3,
+          "carb": 31.7,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fish.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "12:50",
+          "name": "White fish in curry sauce ~50g, wife left it (resort)",
+          "kcal": 75,
+          "protein": 11.0,
+          "fat": 3.0,
+          "sat": 1.8,
+          "carb": 1.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fishcurry.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:15",
+          "name": "Coffee fondant + vanilla ice cream 1 scoop + chocolate sauce 1/2 + pistachio biscuit 1/2 (resort)",
+          "kcal": 430,
+          "protein": 6.2,
+          "fat": 23.0,
+          "sat": 13.7,
+          "carb": 49.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fondant.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "18:45",
+          "name": "Applied Nutrition clear whey 25g + water",
+          "kcal": 95,
+          "protein": 21.0,
+          "fat": 0.1,
+          "sat": 0.0,
+          "carb": 0.5
+        },
+        {
+          "meal": "Drink",
+          "t": "19:00",
+          "name": "Green Fizz cocktail 1, gin + tonic + cucumber + lime + lemongrass (resort)",
+          "kcal": 160,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 16.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_greenfizz.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:15",
+          "name": "Tofu timbale ~75g + cream + sauce + fried poppadum 1/2 (resort)",
+          "kcal": 260,
+          "protein": 14.5,
+          "fat": 19.0,
+          "sat": 3.2,
+          "carb": 12.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_tofu.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:30",
+          "name": "Cauliflower soup ~120ml + hummus ~13g with olive oil + brown bread roll 1 (resort)",
+          "kcal": 200,
+          "protein": 6.0,
+          "fat": 9.5,
+          "sat": 2.8,
+          "carb": 23.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_cauliflower.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:50",
+          "name": "Grilled chicken breast ~120g + mashed potato ~55g + carrot puree + chicken jus (resort)",
+          "kcal": 355,
+          "protein": 39.0,
+          "fat": 14.0,
+          "sat": 6.3,
+          "carb": 11.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_chicken.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:55",
+          "name": "Pesto chicken ~80g, wife left it (resort)",
+          "kcal": 220,
+          "protein": 26.3,
+          "fat": 12.0,
+          "sat": 2.3,
+          "carb": 1.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_pestochicken.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:20",
+          "name": "Coconut layered cheesecake + chocolate quenelle + crumble + jam (resort)",
+          "kcal": 420,
+          "protein": 5.7,
+          "fat": 27.0,
+          "sat": 18.0,
+          "carb": 39.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_cheesecake.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "20:30",
+          "name": "Colombo gin 50ml + lime + cucumber + sparkling water (resort)",
+          "kcal": 115,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 1.0
         }
       ]
     }
