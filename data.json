@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-10",
+  "updated": "2026-08-11",
   "days": [
     {
       "date": "2026-07-24",
@@ -1438,6 +1438,56 @@
           "fat": 0,
           "sat": 0,
           "carb": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "label": "Tue 11 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "11:37",
+          "name": "Egg-white omelette (4 egg whites + veggies)",
+          "kcal": 125,
+          "protein": 15,
+          "fat": 5,
+          "sat": 0.7,
+          "carb": 4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_omelette.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:42",
+          "name": "Grapes 55g + apple 57g",
+          "kcal": 68,
+          "protein": 0.6,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 18,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_fruit.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:45",
+          "name": "ON Gold Standard Whey (vanilla) 34g shake",
+          "kcal": 132,
+          "protein": 26,
+          "fat": 1.7,
+          "sat": 1.1,
+          "carb": 4.4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_shake.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:45",
+          "name": "Mix nuts & seeds 22g (in the shake)",
+          "kcal": 145,
+          "protein": 4,
+          "fat": 13.5,
+          "sat": 1.5,
+          "carb": 3
         }
       ]
     }
