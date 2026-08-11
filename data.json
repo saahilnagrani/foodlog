@@ -1891,6 +1891,17 @@
           "sat": 3.6,
           "carb": 0,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_salmon.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "24:35",
+          "name": "Applied Nutrition Clear Whey 59g in water (bedtime)",
+          "kcal": 215,
+          "protein": 49.6,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 2.4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_bedtimewhey.jpg"
         }
       ]
     }
