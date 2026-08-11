@@ -1884,11 +1884,11 @@
         {
           "meal": "Dinner",
           "t": "22:38",
-          "name": "Cooked salmon 130g (Fresh to Home, from 300g raw)",
-          "kcal": 364,
-          "protein": 40.9,
-          "fat": 22.3,
-          "sat": 4.5,
+          "name": "Cooked salmon 130g (Fresh to Home, 240g drained basis)",
+          "kcal": 291,
+          "protein": 32.7,
+          "fat": 17.8,
+          "sat": 3.6,
           "carb": 0,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_salmon.jpg"
         }
