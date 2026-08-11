@@ -1880,6 +1880,17 @@
           "sat": 1.1,
           "carb": 42,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_daalpalak.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:38",
+          "name": "Cooked salmon 130g (Fresh to Home, from 300g raw)",
+          "kcal": 364,
+          "protein": 40.9,
+          "fat": 22.3,
+          "sat": 4.5,
+          "carb": 0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_salmon.jpg"
         }
       ]
     }
