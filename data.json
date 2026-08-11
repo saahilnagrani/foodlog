@@ -1883,6 +1883,16 @@
         },
         {
           "meal": "Dinner",
+          "t": "19:15",
+          "name": "Baat Cheet papad x1 (roasted, with dal)",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.05,
+          "carb": 7.5
+        },
+        {
+          "meal": "Dinner",
           "t": "22:38",
           "name": "Cooked salmon 130g (Fresh to Home, 240g drained basis)",
           "kcal": 291,
@@ -1902,6 +1912,26 @@
           "sat": 0,
           "carb": 2.4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_bedtimewhey.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "24:40",
+          "name": "Baat Cheet papad x1 (roasted)",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.05,
+          "carb": 7.5
+        },
+        {
+          "meal": "Snack",
+          "t": "24:40",
+          "name": "Mix nuts & seeds 10g",
+          "kcal": 66,
+          "protein": 1.8,
+          "fat": 6.1,
+          "sat": 0.7,
+          "carb": 1.4
         }
       ]
     }
