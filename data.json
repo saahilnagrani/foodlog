@@ -1300,6 +1300,222 @@
       ]
     },
     {
+      "date": "2026-08-08",
+      "label": "Sat 8 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "BRK",
+          "t": "10:00",
+          "name": "Fruit platter ~240g, mango + watermelon + pineapple (resort)",
+          "kcal": 110,
+          "protein": 1.3,
+          "fat": 0.5,
+          "sat": 0.0,
+          "carb": 27.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_fruitplatter.jpg"
+        },
+        {
+          "meal": "DRK",
+          "t": "10:02",
+          "name": "Cucumber + celery + ginger juice ~200ml (resort)",
+          "kcal": 60,
+          "protein": 1.2,
+          "fat": 0.3,
+          "sat": 0.0,
+          "carb": 13.0
+        },
+        {
+          "meal": "BRK",
+          "t": "10:05",
+          "name": "Scrambled eggs ~90g on toasted bread round ~35g (resort)",
+          "kcal": 285,
+          "protein": 15.0,
+          "fat": 16.0,
+          "sat": 6.2,
+          "carb": 18.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_scrambledeggs.jpg"
+        },
+        {
+          "meal": "BRK",
+          "t": "10:06",
+          "name": "Bacon 2 strips ~25g (resort)",
+          "kcal": 120,
+          "protein": 8.0,
+          "fat": 9.5,
+          "sat": 3.2,
+          "carb": 0.3
+        },
+        {
+          "meal": "BRK",
+          "t": "10:20",
+          "name": "Pancakes 2.5 ~112g + chocolate sauce ~20g, half sauce left (resort)",
+          "kcal": 305,
+          "protein": 6.5,
+          "fat": 10.0,
+          "sat": 3.7,
+          "carb": 46.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_pancakeschocolat.jpg"
+        },
+        {
+          "meal": "LUN",
+          "t": "13:00",
+          "name": "Garden salad ~180g with dressing (resort)",
+          "kcal": 120,
+          "protein": 3.0,
+          "fat": 6.0,
+          "sat": 0.9,
+          "carb": 14.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_gardensalad.jpg"
+        },
+        {
+          "meal": "LUN",
+          "t": "13:20",
+          "name": "Marinated spiced prawns 12 pieces ~310g cooked (resort)",
+          "kcal": 425,
+          "protein": 66.0,
+          "fat": 15.7,
+          "sat": 2.8,
+          "carb": 2.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_marinatedspiced.jpg"
+        },
+        {
+          "meal": "LUN",
+          "t": "13:21",
+          "name": "White rice ~100g + raita 2 bowls ~100g (resort)",
+          "kcal": 200,
+          "protein": 6.2,
+          "fat": 3.8,
+          "sat": 2.2,
+          "carb": 33.0
+        },
+        {
+          "meal": "DRK",
+          "t": "13:30",
+          "name": "Coconut water 2 glasses ~500ml (resort)",
+          "kcal": 95,
+          "protein": 1.0,
+          "fat": 0.2,
+          "sat": 0.0,
+          "carb": 22.0
+        },
+        {
+          "meal": "LUN",
+          "t": "14:15",
+          "name": "Black forest, chocolate sponge ~40g only, most cream removed (resort)",
+          "kcal": 140,
+          "protein": 2.0,
+          "fat": 7.0,
+          "sat": 4.0,
+          "carb": 17.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_blackforest.jpg"
+        },
+        {
+          "meal": "LUN",
+          "t": "14:20",
+          "name": "Passion fruit sorbet 2 scoops ~90g (resort)",
+          "kcal": 110,
+          "protein": 0.4,
+          "fat": 0.3,
+          "sat": 0.0,
+          "carb": 27.0
+        },
+        {
+          "meal": "DNR",
+          "t": "20:00",
+          "name": "Fish masala ~110g + white rice ~90g + olives 3 + fruit ~90g (Colombo airport lounge)",
+          "kcal": 422,
+          "protein": 22.9,
+          "fat": 16.8,
+          "sat": 4.4,
+          "carb": 43.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_fishmasala.jpg"
+        },
+        {
+          "meal": "SNK",
+          "t": "22:00",
+          "name": "Tandoori chicken pizza 5 slices ~450g (Pizza Hut)",
+          "kcal": 1240,
+          "protein": 56.0,
+          "fat": 47.0,
+          "sat": 21.0,
+          "carb": 140.0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_tandoorichicken.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-09",
+      "label": "Sun 9 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "BRK",
+          "t": "11:30",
+          "name": "Scrambled eggs, 5 egg whites + 1 whole egg + oil ~5g",
+          "kcal": 203,
+          "protein": 24.3,
+          "fat": 10.3,
+          "sat": 2.3,
+          "carb": 1.6
+        },
+        {
+          "meal": "LUN",
+          "t": "15:00",
+          "name": "Poha 2 bowls, 180g cooked total, ~60g dry + peanuts + tempering oil",
+          "kcal": 371,
+          "protein": 7.7,
+          "fat": 14.7,
+          "sat": 2.1,
+          "carb": 51.8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_pohabowls.jpg"
+        },
+        {
+          "meal": "LUN",
+          "t": "15:01",
+          "name": "Crunchy masala chana dal 50g, appears fried not roasted",
+          "kcal": 240,
+          "protein": 11.0,
+          "fat": 11.0,
+          "sat": 4.5,
+          "carb": 22.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_crunchymasala.jpg"
+        },
+        {
+          "meal": "DNR",
+          "t": "20:30",
+          "name": "Egg noodles 297g cooked, 194g + 103g bowls, with egg and vegetables",
+          "kcal": 432,
+          "protein": 17.5,
+          "fat": 18.6,
+          "sat": 4.0,
+          "carb": 49.0
+        },
+        {
+          "meal": "DNR",
+          "t": "20:35",
+          "name": "Korean fried chicken 5 pieces ~160g",
+          "kcal": 464,
+          "protein": 28.8,
+          "fat": 27.2,
+          "sat": 6.4,
+          "carb": 27.2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_koreanfried.jpg"
+        },
+        {
+          "meal": "DNR",
+          "t": "20:40",
+          "name": "Chilli tofu 60g cooked with vegetables, fried + sauce",
+          "kcal": 136,
+          "protein": 7.7,
+          "fat": 8.0,
+          "sat": 1.2,
+          "carb": 9.1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_chillitofu.jpg"
+        }
+      ]
+    },
+    {
       "date": "2026-08-10",
       "label": "Mon 10 Aug",
       "workout": "",
