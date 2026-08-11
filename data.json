@@ -1839,6 +1839,47 @@
           "fat": 13.5,
           "sat": 1.5,
           "carb": 3
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:15",
+          "name": "Veg salad 50g (lettuce, carrot, cucumber)",
+          "kcal": 12,
+          "protein": 0.5,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 2.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:15",
+          "name": "Moong sprouts 50g",
+          "kcal": 15,
+          "protein": 1.5,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 3
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:15",
+          "name": "White rice 130g",
+          "kcal": 168,
+          "protein": 3.3,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 37
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:15",
+          "name": "Daal palak 262g (chana dal + spinach)",
+          "kcal": 310,
+          "protein": 15,
+          "fat": 9,
+          "sat": 1.1,
+          "carb": 42,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_daalpalak.jpg"
         }
       ]
     }
