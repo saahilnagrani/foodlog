@@ -2002,6 +2002,17 @@
           "sat": 4.2,
           "carb": 14,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_chickencurry.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "18:10",
+          "name": "Salted pecan caramel swirl 30g (Luff) + 5g nuts/seeds",
+          "kcal": 153,
+          "protein": 2.4,
+          "fat": 9,
+          "sat": 3.1,
+          "carb": 16,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_dessert.jpg"
         }
       ]
     }
