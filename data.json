@@ -1969,6 +1969,39 @@
           "fat": 12.3,
           "sat": 1.4,
           "carb": 2.7
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:50",
+          "name": "Veg salad ~160g (lettuce, carrot, cucumber)",
+          "kcal": 60,
+          "protein": 1.6,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 12,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_salad.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:50",
+          "name": "Ghee roti x1",
+          "kcal": 175,
+          "protein": 4.5,
+          "fat": 6,
+          "sat": 3,
+          "carb": 26,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_roti.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:52",
+          "name": "Chicken breast curry 410g (220g chicken + 190g tomato-onion gravy)",
+          "kcal": 550,
+          "protein": 71,
+          "fat": 20,
+          "sat": 4.2,
+          "carb": 14,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_chickencurry.jpg"
         }
       ]
     }
