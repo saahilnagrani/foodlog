@@ -2105,6 +2105,27 @@
           "sat": 0,
           "carb": 15.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu13_fruit.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:14",
+          "name": "Matar tofu 173g (~105g tofu + peas/tomato masala)",
+          "kcal": 230,
+          "protein": 15,
+          "fat": 13,
+          "sat": 2,
+          "carb": 11,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu13_matartofu.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:14",
+          "name": "Plain roti x1.5",
+          "kcal": 180,
+          "protein": 6,
+          "fat": 3,
+          "sat": 0.6,
+          "carb": 33
         }
       ]
     }
