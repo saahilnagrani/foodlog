@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-13",
+  "updated": "2026-08-14",
   "days": [
     {
       "date": "2026-07-24",
@@ -2177,6 +2177,16 @@
           "fat": 0.4,
           "sat": 0.05,
           "carb": 7.5
+        },
+        {
+          "meal": "Snack",
+          "t": "27:26",
+          "name": "Mix nuts & seeds 18g",
+          "kcal": 119,
+          "protein": 3.3,
+          "fat": 11.0,
+          "sat": 1.2,
+          "carb": 2.5
         }
       ]
     }
