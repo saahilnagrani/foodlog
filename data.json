@@ -2058,6 +2058,44 @@
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_fries.jpg"
         }
       ]
+    },
+    {
+      "date": "2026-08-13",
+      "label": "Thu 13 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "13:35",
+          "name": "ON whey shake (34g whey + 75ml Oatly Barista in water)",
+          "kcal": 177,
+          "protein": 26.8,
+          "fat": 4,
+          "sat": 1.4,
+          "carb": 9.4
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:35",
+          "name": "White rice 120g",
+          "kcal": 155,
+          "protein": 3,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 34
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:35",
+          "name": "Prawn curry 250g (150g prawns, 3/4 packet + tomato-onion gravy)",
+          "kcal": 251,
+          "protein": 36.7,
+          "fat": 9.2,
+          "sat": 1.6,
+          "carb": 6.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu13_prawncurry.jpg"
+        }
+      ]
     }
   ]
 }
