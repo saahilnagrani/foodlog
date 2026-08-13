@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-12",
+  "updated": "2026-08-13",
   "days": [
     {
       "date": "2026-07-24",
@@ -2034,6 +2034,28 @@
           "fat": 1.5,
           "sat": 0.2,
           "carb": 3
+        },
+        {
+          "meal": "Snack",
+          "t": "27:52",
+          "name": "Nashville fried chicken burger (Dip’d)",
+          "kcal": 720,
+          "protein": 30,
+          "fat": 40,
+          "sat": 11,
+          "carb": 55,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_burger.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "27:52",
+          "name": "Dip’d fries (1 box)",
+          "kcal": 380,
+          "protein": 4.5,
+          "fat": 19,
+          "sat": 3,
+          "carb": 47,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_fries.jpg"
         }
       ]
     }
