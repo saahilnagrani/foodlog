@@ -2187,6 +2187,55 @@
           "fat": 11.0,
           "sat": 1.2,
           "carb": 2.5
+        },
+        {
+          "meal": "Snack",
+          "t": "28:30",
+          "name": "Pine nuts 25-30g (before sleeping)",
+          "kcal": 185,
+          "protein": 3.8,
+          "fat": 18.8,
+          "sat": 1.3,
+          "carb": 3.6
+        }
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "label": "Fri 14 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "00:07",
+          "name": "ON whey 36g + 100ml oat milk + 200ml water",
+          "kcal": 199,
+          "protein": 28.9,
+          "fat": 4.7,
+          "sat": 1.5,
+          "carb": 11.3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_shake.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "00:07",
+          "name": "Mix nuts & seeds 16g",
+          "kcal": 106,
+          "protein": 2.9,
+          "fat": 9.8,
+          "sat": 1.1,
+          "carb": 2.2
+        },
+        {
+          "meal": "Breakfast",
+          "t": "00:07",
+          "name": "Strawberries 63g",
+          "kcal": 20,
+          "protein": 0.4,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 4.8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_strawberries.jpg"
         }
       ]
     }
