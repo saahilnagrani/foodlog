@@ -2234,6 +2234,27 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 4.8
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:31",
+          "name": "Chicken biryani 240g (incl 104g cooked chicken breast)",
+          "kcal": 410,
+          "protein": 37.3,
+          "fat": 12.4,
+          "sat": 3.9,
+          "carb": 36,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_biryani.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:31",
+          "name": "Mint cucumber raita 100g (40g Hayatna 0% Greek yogurt + water + cucumber)",
+          "kcal": 28,
+          "protein": 4.3,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 2.5
         }
       ]
     }
