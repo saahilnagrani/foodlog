@@ -2265,6 +2265,28 @@
           "fat": 3,
           "sat": 2,
           "carb": 5
+        },
+        {
+          "meal": "Snack",
+          "t": "17:35",
+          "name": "Age.3 Chicken Namban fried sando (some bread left)",
+          "kcal": 466,
+          "protein": 17.8,
+          "fat": 32.1,
+          "sat": 6.1,
+          "carb": 25.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_namban.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "17:38",
+          "name": "Age.3 mango & cream fried sando (some bread left)",
+          "kcal": 350,
+          "protein": 4.5,
+          "fat": 21.1,
+          "sat": 9.6,
+          "carb": 35.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_mangosando.jpg"
         }
       ]
     }
