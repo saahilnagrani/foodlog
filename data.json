@@ -2255,6 +2255,16 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 2.5
+        },
+        {
+          "meal": "Drink",
+          "t": "13:32",
+          "name": "Amul Masti buttermilk 200ml",
+          "kcal": 60,
+          "protein": 3,
+          "fat": 3,
+          "sat": 2,
+          "carb": 5
         }
       ]
     }
