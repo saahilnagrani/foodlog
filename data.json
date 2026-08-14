@@ -2287,6 +2287,27 @@
           "sat": 9.6,
           "carb": 35.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_mangosando.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:20",
+          "name": "Cooked prawns 46g (stir-fried)",
+          "kcal": 75,
+          "protein": 11,
+          "fat": 3,
+          "sat": 0.5,
+          "carb": 1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_prawnnoodles.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:20",
+          "name": "Veg hakka noodles 70g",
+          "kcal": 112,
+          "protein": 3.5,
+          "fat": 4.5,
+          "sat": 0.9,
+          "carb": 15
         }
       ]
     }
