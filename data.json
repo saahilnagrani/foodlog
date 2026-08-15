@@ -2347,6 +2347,26 @@
           "sat": 2.8,
           "carb": 41,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat15_pbsandwich.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "20:56",
+          "name": "Chicken biryani 220g (incl 50g cooked chicken breast)",
+          "kcal": 386,
+          "protein": 21,
+          "fat": 12.8,
+          "sat": 3.9,
+          "carb": 45
+        },
+        {
+          "meal": "Lunch",
+          "t": "20:56",
+          "name": "Greek yogurt 160g (Hayatna 0%)",
+          "kcal": 101,
+          "protein": 16.0,
+          "fat": 0.8,
+          "sat": 0,
+          "carb": 7.2
         }
       ]
     }
