@@ -2367,6 +2367,46 @@
           "fat": 0.8,
           "sat": 0,
           "carb": 7.2
+        },
+        {
+          "meal": "Snack",
+          "t": "22:00",
+          "name": "ON whey 52g + 100ml oat milk",
+          "kcal": 261,
+          "protein": 41.2,
+          "fat": 5.5,
+          "sat": 2,
+          "carb": 13.4
+        },
+        {
+          "meal": "Snack",
+          "t": "22:00",
+          "name": "Mix nuts & seeds 22g",
+          "kcal": 145,
+          "protein": 4,
+          "fat": 13.5,
+          "sat": 1.5,
+          "carb": 3
+        },
+        {
+          "meal": "Snack",
+          "t": "25:30",
+          "name": "Fleur de lys cake ~75g (Paul) at Al Quaa",
+          "kcal": 278,
+          "protein": 4,
+          "fat": 17,
+          "sat": 9,
+          "carb": 28
+        },
+        {
+          "meal": "Snack",
+          "t": "25:45",
+          "name": "Ritz crackers x4, 2 with boiled shredded chicken salad",
+          "kcal": 174,
+          "protein": 8.4,
+          "fat": 11.9,
+          "sat": 1.8,
+          "carb": 9
         }
       ]
     }
