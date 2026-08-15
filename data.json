@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-14",
+  "updated": "2026-08-15",
   "days": [
     {
       "date": "2026-07-24",
@@ -2308,6 +2308,45 @@
           "fat": 4.5,
           "sat": 0.9,
           "carb": 15
+        }
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "label": "Sat 15 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "12:19",
+          "name": "Scrambled egg whites x4 + 1 tsp oil",
+          "kcal": 113,
+          "protein": 14.5,
+          "fat": 5.2,
+          "sat": 0.8,
+          "carb": 1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat15_eggs.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "12:19",
+          "name": "Cinnamon apple slices ~60g",
+          "kcal": 32,
+          "protein": 0.2,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 8.4
+        },
+        {
+          "meal": "Breakfast",
+          "t": "12:19",
+          "name": "Peanut butter & orange marmalade sandwich (multigrain, 1 tsp oil)",
+          "kcal": 335,
+          "protein": 9.8,
+          "fat": 15.2,
+          "sat": 2.8,
+          "carb": 41,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat15_pbsandwich.jpg"
         }
       ]
     }
