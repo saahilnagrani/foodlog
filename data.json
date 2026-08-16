@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-15",
+  "updated": "2026-08-16",
   "days": [
     {
       "date": "2026-07-24",
@@ -2407,6 +2407,53 @@
           "fat": 11.9,
           "sat": 1.8,
           "carb": 9
+        }
+      ]
+    },
+    {
+      "date": "2026-08-16",
+      "label": "Sun 16 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "11:00",
+          "name": "Fleur de lys cake 75g (Paul)",
+          "kcal": 278,
+          "protein": 4,
+          "fat": 17,
+          "sat": 9,
+          "carb": 28
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:45",
+          "name": "Palak tofu 180g (~100g cooked tofu)",
+          "kcal": 210,
+          "protein": 14,
+          "fat": 13.5,
+          "sat": 2.1,
+          "carb": 8
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:45",
+          "name": "Plain roti x1",
+          "kcal": 120,
+          "protein": 4,
+          "fat": 2,
+          "sat": 0.4,
+          "carb": 22
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:45",
+          "name": "Moong sprouts 60g with lemon & chaat masala",
+          "kcal": 18,
+          "protein": 1.8,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 3.6
         }
       ]
     }
