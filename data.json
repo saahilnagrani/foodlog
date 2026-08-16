@@ -2479,11 +2479,11 @@
           "meal": "Dinner",
           "t": "19:44",
           "name": "Salmon pesto pasta 290g (~39% of batch: 240g salmon, 136g dry pasta, veg, pesto & tomato)",
-          "kcal": 545,
-          "protein": 30.2,
-          "fat": 26.4,
-          "sat": 4.7,
-          "carb": 45.7,
+          "kcal": 522,
+          "protein": 29.5,
+          "fat": 24.1,
+          "sat": 4.0,
+          "carb": 46.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun16_salmonpasta.jpg"
         }
       ]
