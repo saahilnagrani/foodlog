@@ -2454,6 +2454,26 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 3.6
+        },
+        {
+          "meal": "Snack",
+          "t": "17:25",
+          "name": "ON whey 42g + 100ml oat milk + 200ml water",
+          "kcal": 223,
+          "protein": 33.5,
+          "fat": 5,
+          "sat": 1.7,
+          "carb": 12.1
+        },
+        {
+          "meal": "Snack",
+          "t": "17:25",
+          "name": "Mix nuts & seeds 22g",
+          "kcal": 145,
+          "protein": 4,
+          "fat": 13.5,
+          "sat": 1.5,
+          "carb": 3
         }
       ]
     }
