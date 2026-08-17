@@ -1854,11 +1854,11 @@
           "meal": "Dinner",
           "t": "19:15",
           "name": "Moong sprouts 50g",
-          "kcal": 15,
-          "protein": 1.5,
-          "fat": 0.1,
+          "kcal": 68,
+          "protein": 4.8,
+          "fat": 0.2,
           "sat": 0,
-          "carb": 3
+          "carb": 12.5
         },
         {
           "meal": "Dinner",
@@ -2449,11 +2449,11 @@
           "meal": "Lunch",
           "t": "16:45",
           "name": "Moong sprouts 60g with lemon & chaat masala",
-          "kcal": 18,
-          "protein": 1.8,
-          "fat": 0.1,
+          "kcal": 82,
+          "protein": 5.8,
+          "fat": 0.3,
           "sat": 0,
-          "carb": 3.6
+          "carb": 15.0
         },
         {
           "meal": "Snack",
@@ -2557,11 +2557,11 @@
           "meal": "Lunch",
           "t": "19:03",
           "name": "Moong sprouts ~60g with onion & tomato",
-          "kcal": 26,
-          "protein": 2,
-          "fat": 0.1,
+          "kcal": 89,
+          "protein": 6.1,
+          "fat": 0.3,
           "sat": 0,
-          "carb": 5
+          "carb": 16.5
         },
         {
           "meal": "Lunch",
