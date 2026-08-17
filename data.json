@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-16",
+  "updated": "2026-08-17",
   "days": [
     {
       "date": "2026-07-24",
@@ -2485,6 +2485,63 @@
           "sat": 5.0,
           "carb": 50.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun16_salmonpasta.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "25:00",
+          "name": "Applied Nutrition Clear Whey 38g in water (bedtime)",
+          "kcal": 138,
+          "protein": 31.9,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 1.5
+        }
+      ]
+    },
+    {
+      "date": "2026-08-17",
+      "label": "Mon 17 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "12:00",
+          "name": "Boiled egg whites x2 (large)",
+          "kcal": 34,
+          "protein": 7.2,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 0.4
+        },
+        {
+          "meal": "Breakfast",
+          "t": "12:00",
+          "name": "ON whey 38g + 100ml oat milk",
+          "kcal": 207,
+          "protein": 30.4,
+          "fat": 4.8,
+          "sat": 1.5,
+          "carb": 11.6
+        },
+        {
+          "meal": "Breakfast",
+          "t": "12:00",
+          "name": "Strawberries 88g",
+          "kcal": 28,
+          "protein": 0.6,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 6.8
+        },
+        {
+          "meal": "Breakfast",
+          "t": "12:00",
+          "name": "Mix nuts & seeds 23g",
+          "kcal": 152,
+          "protein": 4.2,
+          "fat": 14.1,
+          "sat": 1.6,
+          "carb": 3.1
         }
       ]
     }
