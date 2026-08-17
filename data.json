@@ -2542,6 +2542,36 @@
           "fat": 14.1,
           "sat": 1.6,
           "carb": 3.1
+        },
+        {
+          "meal": "Lunch",
+          "t": "19:03",
+          "name": "Veg salad ~100g",
+          "kcal": 25,
+          "protein": 1,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 5
+        },
+        {
+          "meal": "Lunch",
+          "t": "19:03",
+          "name": "Moong sprouts ~60g with onion & tomato",
+          "kcal": 26,
+          "protein": 2,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 5
+        },
+        {
+          "meal": "Lunch",
+          "t": "19:03",
+          "name": "Egg curry with 6 boiled egg whites (~198g) + masala gravy",
+          "kcal": 200,
+          "protein": 23,
+          "fat": 8,
+          "sat": 1.5,
+          "carb": 7
         }
       ]
     }
