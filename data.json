@@ -2576,12 +2576,12 @@
         {
           "meal": "Dinner",
           "t": "26:21",
-          "name": "Chicken curry 260g (~135g cooked chicken breast + gravy)",
-          "kcal": 357,
-          "protein": 45.7,
-          "fat": 14.9,
-          "sat": 3,
-          "carb": 10,
+          "name": "Chicken curry 260g (175g cooked chicken breast + 85g gravy)",
+          "kcal": 376,
+          "protein": 57.7,
+          "fat": 13.3,
+          "sat": 2.9,
+          "carb": 7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon17_chickencurry.jpg"
         },
         {
