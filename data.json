@@ -2572,6 +2572,27 @@
           "fat": 8,
           "sat": 1.5,
           "carb": 7
+        },
+        {
+          "meal": "Dinner",
+          "t": "26:21",
+          "name": "Chicken curry 260g (~135g cooked chicken breast + gravy)",
+          "kcal": 357,
+          "protein": 45.7,
+          "fat": 14.9,
+          "sat": 3,
+          "carb": 10,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon17_chickencurry.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "26:21",
+          "name": "Ghee roti x1.5",
+          "kcal": 263,
+          "protein": 6.8,
+          "fat": 9,
+          "sat": 4.5,
+          "carb": 39
         }
       ]
     }
