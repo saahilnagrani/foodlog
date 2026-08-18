@@ -2652,6 +2652,26 @@
           "sat": 1.1,
           "carb": 31.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue18_daalchawal.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "18:07",
+          "name": "White rice 97g cooked (2nd serving)",
+          "kcal": 126,
+          "protein": 2.5,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 28
+        },
+        {
+          "meal": "Lunch",
+          "t": "18:07",
+          "name": "Daal 187g thick + 43g water (2nd serving)",
+          "kcal": 252,
+          "protein": 12.2,
+          "fat": 7.5,
+          "sat": 1.1,
+          "carb": 32.7
         }
       ]
     }
