@@ -673,7 +673,6 @@ const QUICK=[
 const R1=n=>Math.round(n*10)/10;
 let selDate='', selMeal='Snack';
 const MEALS=['Early morning','Breakfast','Lunch','Snack','Drink','Dinner'];
-const MSHORT={'Early morning':'Early','Breakfast':'Brkfst','Lunch':'Lunch','Snack':'Snack','Drink':'Drink','Dinner':'Dinner'};
 function shortDay(iso){const t=todayISO();
   if(iso===t)return 'Today';
   if(iso===addDays(t,-1))return 'Yesterday';
@@ -689,7 +688,7 @@ function buildDayChips(){
 function pickDay(d){selDate=d;buildDayChips();}
 function buildMealChips(){
   document.getElementById('mealChips').innerHTML=MEALS.map(m=>
-    `<button class="chip2 ${m===selMeal?'on':''}" title="${m}" onclick="pickMeal('${m}')">${MSHORT[m]||m}</button>`).join('');
+    `<button class="chip2 ${m===selMeal?'on':''}" title="${m}" onclick="pickMeal('${m}')">${mabbr(m)}</button>`).join('');
 }
 function pickMeal(m){selMeal=m;buildMealChips();}
 function guessMeal(){const h=(new Date()).getHours();
