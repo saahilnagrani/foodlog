@@ -52,6 +52,12 @@
   .qadd{display:block;width:100%;border:none;background:#2e7d5b;color:#fff;padding:12px;border-radius:10px;font-size:15px;font-weight:700;cursor:pointer;opacity:.4;}
   .qadd.on{opacity:1;}
   .qempty{color:#999;font-size:13px;padding:10px 0;}
+  .chiprow{display:flex;gap:8px;overflow-x:auto;padding:2px 0 6px;scrollbar-width:none;}
+  .chiprow::-webkit-scrollbar{display:none;}
+  .chipwrap{display:flex;gap:8px;flex-wrap:wrap;padding:2px 0 2px;}
+  .chip2{flex:0 0 auto;border:1.5px solid #dcdcdc;background:#fff;color:#444;padding:9px 14px;border-radius:11px;font-size:13.5px;font-weight:600;cursor:pointer;white-space:nowrap;}
+  .chip2.on{border-color:#2e7d5b;background:#2e7d5b;color:#fff;}
+  .chip2 small{display:block;font-size:10px;font-weight:500;opacity:.7;margin-top:1px;}
   .mid{display:flex;align-items:center;gap:7px;margin-top:8px;font-size:12px;color:#666;cursor:pointer;}
   .mid input{width:16px;height:16px;flex:0 0 auto;}
   .sheet .close{position:sticky;top:8px;z-index:5;}
@@ -279,8 +285,8 @@
   <div class="sheet-bg" id="addBg">
     <div class="sheet">
       <button class="close" onclick="closeAdd()">&times;</button><h3>Add a food</h3>
-      <div class="field"><label>Day</label><select id="f_day"></select></div>
-      <div class="field"><label>Meal</label><select id="f_meal"><option>Breakfast</option><option>Lunch</option><option>Snack</option><option>Dinner</option><option>Early morning</option><option>Drink</option></select></div>
+      <div class="field"><label>Day</label><div class="chiprow" id="dayChips"></div></div>
+      <div class="field"><label>Meal</label><div class="chipwrap" id="mealChips"></div></div>
       <div class="field"><label>Time</label><input id="f_time" type="time">
         <label class="mid"><input type="checkbox" id="f_pastmid"><span>After midnight &mdash; still count it on the day above</span></label>
       </div>
@@ -650,6 +656,28 @@ const QUICK=[
  {n:'Banana',                 meal:'Snack',    parts:[{u:'g',d:100,k:.89, p:.011,f:.003,s:0,   c:.23}]}
 ];
 const R1=n=>Math.round(n*10)/10;
+let selDate='', selMeal='Snack';
+const MEALS=['Early morning','Breakfast','Lunch','Snack','Drink','Dinner'];
+function shortDay(iso){const t=todayISO();
+  if(iso===t)return 'Today';
+  if(iso===addDays(t,-1))return 'Yesterday';
+  const l=labelFor(iso).split(' ');return l[0]+' '+l[1];}
+function buildDayChips(){
+  const have=allDays().map(d=>d.date), t=todayISO();
+  let list=have.slice(-12); if(list.indexOf(t)<0)list.push(t);
+  list=list.reverse();
+  if(!selDate||list.indexOf(selDate)<0)selDate=t;
+  document.getElementById('dayChips').innerHTML=list.map(d=>
+    `<button class="chip2 ${d===selDate?'on':''}" onclick="pickDay('${d}')">${shortDay(d)}</button>`).join('');
+}
+function pickDay(d){selDate=d;buildDayChips();}
+function buildMealChips(){
+  document.getElementById('mealChips').innerHTML=MEALS.map(m=>
+    `<button class="chip2 ${m===selMeal?'on':''}" onclick="pickMeal('${m}')">${m}</button>`).join('');
+}
+function pickMeal(m){selMeal=m;buildMealChips();}
+function guessMeal(){const h=(new Date()).getHours();
+  return h<6?'Early morning':h<11?'Breakfast':h<16?'Lunch':h<19?'Snack':'Dinner';}
 function fTime(){
   const v=document.getElementById('f_time').value||'';
   if(!v) return '';
@@ -701,11 +729,10 @@ function qadd(i){
   const q=QUICK[i], amts=qamts(i);
   if(!amts.some(a=>a>0)){toast('Enter an amount first');return;}
   const x=qmacros(i,amts);
-  let date=document.getElementById('f_day').value; if(date==='__today')date=todayISO();
+  const date=selDate||todayISO();
   const bits=q.parts.map((pt,j)=>amts[j]>0?`${amts[j]}${pt.u==='pc'?'':pt.u}${pt.lab?' '+pt.lab:''}`:null).filter(Boolean);
   const name = q.parts.length>1 ? `${q.n} (${bits.join(' + ')})` : `${q.n} ${bits[0]}`;
-  const item=Object.assign({meal:document.getElementById('f_meal').value||q.meal,
-                            t:fTime(),name:name},x);
+  const item=Object.assign({meal:selMeal||q.meal,t:fTime(),name:name},x);
   const extra=loadExtra();(extra[date]=extra[date]||[]).push(item);saveExtra(extra);
   q.parts.forEach((_,j)=>document.getElementById(`qi${i}_${j}`).value='');
   document.getElementById('qr'+i).classList.remove('open');
@@ -714,12 +741,21 @@ function qadd(i){
 }
 
 /* ---------- add food ---------- */
-function openAdd(){const sel=document.getElementById('f_day');const days=allDays();sel.innerHTML=days.map(d=>`<option value="${d.date}">${d.label}</option>`).join('')+`<option value="__today">+ New day (today)</option>`;if(days.length)sel.value=days[days.length-1].date;document.getElementById('qsearch').value='';document.getElementById('f_pastmid').checked=false;buildQuick();document.body.classList.add('modal-open');document.getElementById('addBg').classList.add('open');window.scrollTo(0,0);}
+function openAdd(){
+  selDate=todayISO(); selMeal=guessMeal();
+  buildDayChips(); buildMealChips();
+  document.getElementById('qsearch').value='';
+  document.getElementById('f_pastmid').checked=false;
+  buildQuick();
+  document.body.classList.add('modal-open');
+  document.getElementById('addBg').classList.add('open');
+  window.scrollTo(0,0);
+}
 function closeAdd(){document.getElementById('addBg').classList.remove('open');document.body.classList.remove('modal-open');window.scrollTo(0,0);}
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function saveFood(){
-  let date=document.getElementById('f_day').value;if(date==='__today')date=todayISO();
-  const item={meal:document.getElementById('f_meal').value,t:fTime(),name:document.getElementById('f_name').value.trim()||'Food',kcal:+document.getElementById('f_kcal').value||0,protein:+document.getElementById('f_pro').value||0,carb:+document.getElementById('f_carb').value||0,fat:+document.getElementById('f_fat').value||0,sat:+document.getElementById('f_sat').value||0};
+  const date=selDate||todayISO();
+  const item={meal:selMeal,t:fTime(),name:document.getElementById('f_name').value.trim()||'Food',kcal:+document.getElementById('f_kcal').value||0,protein:+document.getElementById('f_pro').value||0,carb:+document.getElementById('f_carb').value||0,fat:+document.getElementById('f_fat').value||0,sat:+document.getElementById('f_sat').value||0};
   const file=document.getElementById('f_img').files[0];
   const finish=()=>{const extra=loadExtra();(extra[date]=extra[date]||[]).push(item);saveExtra(extra);['f_name','f_kcal','f_pro','f_carb','f_fat','f_sat','f_time'].forEach(id=>document.getElementById(id).value='');document.getElementById('f_img').value='';closeAdd();curWeek=weeks.length-1;render();toast('Added to '+labelFor(date));};
   if(file){const rd=new FileReader();rd.onload=e=>{item.img=e.target.result;finish();};rd.readAsDataURL(file);}else finish();
