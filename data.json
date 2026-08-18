@@ -2682,6 +2682,27 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.2
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:27",
+          "name": "Daal paratha x1 (leftover daal + atta, 1 tsp oil)",
+          "kcal": 301,
+          "protein": 9.9,
+          "fat": 8.2,
+          "sat": 1.2,
+          "carb": 46.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue18_daalparatha.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:27",
+          "name": "Greek yogurt 190g (Hayatna 0%)",
+          "kcal": 120,
+          "protein": 19.0,
+          "fat": 0.9,
+          "sat": 0,
+          "carb": 8.5
         }
       ]
     }
