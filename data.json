@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-17",
+  "updated": "2026-08-18",
   "days": [
     {
       "date": "2026-07-24",
@@ -2603,6 +2603,34 @@
           "fat": 7,
           "sat": 1,
           "carb": 14
+        }
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "label": "Tue 18 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "11:55",
+          "name": "Guacamole 100g (avocado + onion & tomato, no oil)",
+          "kcal": 121,
+          "protein": 1.7,
+          "fat": 10.5,
+          "sat": 1.5,
+          "carb": 8.3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue18_guacomelette.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:55",
+          "name": "Egg-white omelette 195g (4 egg whites + veggies)",
+          "kcal": 125,
+          "protein": 15,
+          "fat": 5,
+          "sat": 0.7,
+          "carb": 4
         }
       ]
     }
