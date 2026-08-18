@@ -821,11 +821,36 @@ function showBridgeInfo(){
   box.textContent=bridgeInfo()+'\n\nUA: '+navigator.userAgent.slice(0,120);
 }
 
+/* The Android wrapper (decompiled) only understands the meal names
+   breakfast / lunch / dinner, invents the time from that name, stacks every
+   item in a meal onto overlapping 60s intervals and keys each record by its
+   array index - so per-item records get lost. We therefore send ONE combined
+   record per meal: 3 non-overlapping records, stable ids, exact totals.      */
+function syncBucket(it){
+  const m=String(it.meal||'').toLowerCase();
+  if(m==='breakfast')return 'Breakfast';
+  if(m==='lunch')return 'Lunch';
+  if(m==='dinner')return 'Dinner';
+  const h=parseInt(tkey(it),10);            /* Snack / Drink / Early morning: nearest meal by time */
+  return h<11?'Breakfast':(h<17?'Lunch':'Dinner');
+}
+function syncPayload(day){
+  const order=['Breakfast','Lunch','Dinner'], g={};
+  sortItems(day.items).forEach(it=>{const b=syncBucket(it);(g[b]=g[b]||[]).push(it);});
+  return order.filter(b=>g[b]&&g[b].length).map(b=>{
+    const list=g[b], sum=k=>list.reduce((a,x)=>a+(+x[k]||0),0);
+    let names=list.map(x=>String(x.name).replace(/\s*\(.*$/,'').trim()).join(', ');
+    if(names.length>150)names=names.slice(0,147)+'...';
+    return {meal:b,name:b+' - '+list.length+' item'+(list.length>1?'s':'')+': '+names,
+            kcal:Math.round(sum('kcal')),protein:R(sum('protein')),fat:R(sum('fat')),
+            sat:R(sum('sat')),carb:R(sum('carb'))};
+  });
+}
 function syncDay(date){
   const day=allDays().find(d=>d.date===date);if(!day){toast('No data for '+date);return;}
-  const items=day.items.map(it=>({meal:it.meal||'',name:it.name||'Food',kcal:Math.round(+it.kcal||0),protein:+it.protein||0,fat:+it.fat||0,sat:+it.sat||0,carb:+it.carb||0}));
+  const items=syncPayload(day);
   if(window.HealthBridge&&typeof window.HealthBridge.syncDayItems==='function'){window.HealthBridge.syncDayItems(date,JSON.stringify(items));}
-  else{const tk=items.reduce((a,b)=>a+b.kcal,0),tp=R(items.reduce((a,b)=>a+(+b.protein||0),0));toast('In the app this logs '+items.length+' dishes for '+date+' ('+tk+' kcal, '+tp+'g protein) to Google Health.');}
+  else{const tk=items.reduce((a,b)=>a+b.kcal,0),tp=R(items.reduce((a,b)=>a+(+b.protein||0),0));toast('In the app this logs '+items.length+' meal(s) for '+date+' ('+tk+' kcal, '+tp+'g protein) to Google Health.');}
 }
 
 let toastTimer;function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),3200);}
