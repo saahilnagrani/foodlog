@@ -2593,6 +2593,16 @@
           "fat": 9,
           "sat": 4.5,
           "carb": 39
+        },
+        {
+          "meal": "Snack",
+          "t": "28:21",
+          "name": "Mr Makhana Himalayan Salt & Pepper 25g pack",
+          "kcal": 110,
+          "protein": 2.5,
+          "fat": 3,
+          "sat": 0.4,
+          "carb": 17
         }
       ]
     }
