@@ -796,34 +796,9 @@ function saveFood(){
 }
 
 /* ---------- sync ---------- */
-/* Build the timestamp handed to Google Health.
-   Items logged after midnight carry 24+ hours (24:35 = 00:35 the next morning,
-   still the same waking day). Health buckets strictly by calendar date, so we
-   CLAMP those back into the evening they belong to - staggered a minute apart,
-   in the order eaten - keeping Health's daily totals equal to the app's.     */
-function syncTimes(day){
-  const items=sortItems(day.items), out=new Map();
-  const mins=k=>{const p=String(k).split(':');return (+p[0])*60+(+(p[1]||0));};
-  let latest=-1;
-  items.forEach(it=>{const k=tkey(it);
-    if(parseInt(k,10)<24){out.set(it,k.slice(0,5));latest=Math.max(latest,mins(k));}});
-  const late=items.filter(it=>parseInt(tkey(it),10)>=24);
-  const END=23*60+59;
-  let slot=Math.max(23*60+50, latest+1);        /* start after the last real item */
-  if(slot+late.length-1>END) slot=Math.max(0,END-late.length+1);
-  late.forEach(it=>{const m=Math.min(slot++,END);
-    out.set(it,String(Math.floor(m/60)).padStart(2,'0')+':'+String(m%60).padStart(2,'0'));});
-  return {items:items,time:out};
-}
 function syncDay(date){
   const day=allDays().find(d=>d.date===date);if(!day){toast('No data for '+date);return;}
-  const st=syncTimes(day);
-  const items=st.items.map(it=>{
-    const hhmm=st.time.get(it)||'12:00';
-    return {meal:it.meal||'',name:it.name||'Food',
-            kcal:Math.round(+it.kcal||0),protein:+it.protein||0,fat:+it.fat||0,sat:+it.sat||0,carb:+it.carb||0,
-            t:hhmm, date:date, at:date+'T'+hhmm+':00'};   /* several key names so the wrapper finds one */
-  });
+  const items=day.items.map(it=>({meal:it.meal||'',name:it.name||'Food',kcal:Math.round(+it.kcal||0),protein:+it.protein||0,fat:+it.fat||0,sat:+it.sat||0,carb:+it.carb||0}));
   if(window.HealthBridge&&typeof window.HealthBridge.syncDayItems==='function'){window.HealthBridge.syncDayItems(date,JSON.stringify(items));}
   else{const tk=items.reduce((a,b)=>a+b.kcal,0),tp=R(items.reduce((a,b)=>a+(+b.protein||0),0));toast('In the app this logs '+items.length+' dishes for '+date+' ('+tk+' kcal, '+tp+'g protein) to Google Health.');}
 }
