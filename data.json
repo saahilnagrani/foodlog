@@ -2672,6 +2672,16 @@
           "fat": 7.5,
           "sat": 1.1,
           "carb": 32.7
+        },
+        {
+          "meal": "Snack",
+          "t": "19:09",
+          "name": "Applied Nutrition Clear Whey 30g in water",
+          "kcal": 109,
+          "protein": 25.2,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 1.2
         }
       ]
     }
