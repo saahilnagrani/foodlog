@@ -280,6 +280,10 @@
       <div class="slabel">Font</div><div class="row-chips" id="fontChips"></div>
       <div class="slabel">Motion</div><div class="row-chips" id="motionChips"></div>
 
+      <div class="slabel">Diagnostics</div>
+      <button class="sbtn ghost" style="padding:10px 14px;" onclick="showBridgeInfo()">Show Google Health bridge info</button>
+      <pre id="bridge_out" style="white-space:pre-wrap;word-break:break-word;font-size:11px;line-height:1.5;color:#444;background:#f4f4f4;border:1px solid #e2e2e2;border-radius:8px;padding:10px;margin-top:8px;max-height:260px;overflow:auto;"></pre>
+
       <div class="slabel">Save to GitHub</div>
       <div id="gh_pend" style="font-size:12px;color:#666;margin-bottom:8px;"></div>
       <div class="field"><label>Fine-grained token (this device only, never committed)</label>
@@ -566,7 +570,7 @@ function renderD(days){
 }
 
 /* ---------- settings ---------- */
-function openSettings(){document.getElementById('gh_tok').value=ghToken();refreshPending();ghStatus('');buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
+function openSettings(){document.getElementById('bridge_out').textContent='';document.getElementById('gh_tok').value=ghToken();refreshPending();ghStatus('');buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
 function closeSettings(){document.getElementById('settingsBg').classList.remove('open');document.body.classList.remove('modal-open');window.scrollTo(0,0);}
 function buildSettings(){
   document.getElementById('themeChips').innerHTML=THEMES.map(([n,id])=>`<button class="schip ${PREF.theme===id?'on':''}" onclick="setTheme('${id}')">${n}</button>`).join('');
@@ -796,6 +800,27 @@ function saveFood(){
 }
 
 /* ---------- sync ---------- */
+/* ---------- read-only diagnostic: what does the Android wrapper expose? ---------- */
+function bridgeInfo(){
+  const B=window.HealthBridge;
+  if(!B) return 'HealthBridge: not present (you are in a normal browser, not the app)';
+  const names=new Set();
+  try{for(const k in B) names.add(k);}catch(e){}
+  try{Object.getOwnPropertyNames(B).forEach(k=>names.add(k));}catch(e){}
+  try{const p=Object.getPrototypeOf(B); if(p)Object.getOwnPropertyNames(p).forEach(k=>names.add(k));}catch(e){}
+  const NOISE=new Set(Object.getOwnPropertyNames(Object.prototype).concat(['constructor']));
+  const rows=[...names].filter(k=>!NOISE.has(k)).sort().map(k=>{
+    let t='?'; try{t=typeof B[k];}catch(e){t='(unreadable)';}
+    let arity=''; try{if(typeof B[k]==='function'&&typeof B[k].length==='number')arity='('+B[k].length+' args)';}catch(e){}
+    return k+' : '+t+' '+arity;
+  });
+  return 'HealthBridge exposes '+rows.length+' member(s)\n'+(rows.join('\n')||'(nothing enumerable)');
+}
+function showBridgeInfo(){
+  const box=document.getElementById('bridge_out');
+  box.textContent=bridgeInfo()+'\n\nUA: '+navigator.userAgent.slice(0,120);
+}
+
 function syncDay(date){
   const day=allDays().find(d=>d.date===date);if(!day){toast('No data for '+date);return;}
   const items=day.items.map(it=>({meal:it.meal||'',name:it.name||'Food',kcal:Math.round(+it.kcal||0),protein:+it.protein||0,fat:+it.fat||0,sat:+it.sat||0,carb:+it.carb||0}));
