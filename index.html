@@ -683,9 +683,10 @@ function buildQuick(){
 }
 function qtoggle(i){
   const row=document.getElementById('qr'+i), wasOpen=row.classList.contains('open');
+  /* drop focus first so the on-screen keyboard doesn't flicker shut-then-open */
+  const a=document.activeElement; if(a&&a.blur&&a.tagName==='INPUT')a.blur();
   document.querySelectorAll('.qrow.open').forEach(r=>r.classList.remove('open'));   /* accordion */
-  if(!wasOpen){row.classList.add('open');
-    const f=document.getElementById(`qi${i}_0`); if(f)setTimeout(()=>f.focus(),60);}
+  if(!wasOpen)row.classList.add('open');                 /* no autofocus: user taps the box */
 }
 function qcalc(i){
   const amts=qamts(i), any=amts.some(a=>a>0);
