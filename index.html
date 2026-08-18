@@ -300,11 +300,11 @@
       <div class="slabel">Or enter it manually</div>
       <div class="field"><label>What did you eat?</label><input id="f_name" placeholder="e.g. Clear whey 30g in water"></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-        <div class="field"><label>Calories</label><input id="f_kcal" type="number" inputmode="numeric"></div>
-        <div class="field"><label>Protein g</label><input id="f_pro" type="number" inputmode="decimal"></div>
-        <div class="field"><label>Carbs g</label><input id="f_carb" type="number" inputmode="decimal"></div>
-        <div class="field"><label>Total fat g</label><input id="f_fat" type="number" inputmode="decimal"></div>
-        <div class="field"><label>Saturated fat g</label><input id="f_sat" type="number" inputmode="decimal"></div>
+        <div class="field"><label>Calories</label><input id="f_kcal" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
+        <div class="field"><label>Protein g</label><input id="f_pro" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
+        <div class="field"><label>Carbs g</label><input id="f_carb" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
+        <div class="field"><label>Total fat g</label><input id="f_fat" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
+        <div class="field"><label>Saturated fat g</label><input id="f_sat" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
         <div class="field"><label>Photo (optional)</label><input id="f_img" type="file" accept="image/*"></div>
       </div>
       <div class="srow"><button class="sbtn ghost" onclick="closeAdd()">Cancel</button><button class="sbtn primary" onclick="saveFood()">Save</button></div>
@@ -687,7 +687,8 @@ function fTime(){
   if(pm && h<12) h+=24;                       /* 00:45 -> 24:45, same waking day */
   return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');
 }
-function qamts(i){return QUICK[i].parts.map((_,j)=>+document.getElementById(`qi${i}_${j}`).value||0);}
+function numv(el){if(!el)return 0;const v=String(el.value||'').replace(',','.').replace(/[^0-9.]/g,'');const n=parseFloat(v);return isFinite(n)&&n>0?n:0;}
+function qamts(i){return QUICK[i].parts.map((_,j)=>numv(document.getElementById(`qi${i}_${j}`)));}
 function qmacros(i,amts){
   let o={kcal:0,protein:0,fat:0,sat:0,carb:0};
   QUICK[i].parts.forEach((pt,j)=>{const a=amts[j]||0;
@@ -701,7 +702,7 @@ function buildQuick(){
     if(term && q.n.toLowerCase().indexOf(term)<0) return;
     shown++;
     const ins=q.parts.map((pt,j)=>
-      `<div class="qin"><span class="qlab">${q.parts.length>1?pt.lab:'amount'}</span><input id="qi${i}_${j}" type="number" inputmode="decimal" min="0" step="any" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span></div>`).join('');
+      `<div class="qin"><span class="qlab">${q.parts.length>1?pt.lab:'amount'}</span><input id="qi${i}_${j}" type="text" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span></div>`).join('');
     h+=`<div class="qrow" id="qr${i}">
       <div class="qhead" onclick="qtoggle(${i})"><span class="qname">${q.n}</span><span class="qsum" id="qs${i}"></span><span class="qcar">&#9654;</span></div>
       <div class="qbody">${ins}
