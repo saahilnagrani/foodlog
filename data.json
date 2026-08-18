@@ -2645,12 +2645,12 @@
         {
           "meal": "Lunch",
           "t": "17:51",
-          "name": "Daal 224g (thick, water added after weighing)",
-          "kcal": 260,
-          "protein": 12.5,
-          "fat": 7.5,
+          "name": "Daal 224g as eaten (~180g thick daal + water added)",
+          "kcal": 243,
+          "protein": 11.7,
+          "fat": 7.2,
           "sat": 1.1,
-          "carb": 34,
+          "carb": 31.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue18_daalchawal.jpg"
         }
       ]
