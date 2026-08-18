@@ -2631,6 +2631,27 @@
           "fat": 5,
           "sat": 0.7,
           "carb": 4
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:51",
+          "name": "White rice 131g cooked (123g after microwave - water loss only)",
+          "kcal": 170,
+          "protein": 3.4,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 37
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:51",
+          "name": "Daal 224g (thick, water added after weighing)",
+          "kcal": 260,
+          "protein": 12.5,
+          "fat": 7.5,
+          "sat": 1.1,
+          "carb": 34,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue18_daalchawal.jpg"
         }
       ]
     }
