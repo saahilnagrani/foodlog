@@ -34,6 +34,7 @@
   /* quick-add list (tap to expand) */
   .qrow{border-top:1px solid #eee;}
   .qrow:first-child{border-top:none;}
+  .qrow{scroll-margin-top:220px;}
   .qhead{display:flex;align-items:center;gap:10px;padding:12px 2px;cursor:pointer;}
   .qhead .qname{flex:1;min-width:0;font-size:14px;color:#222;}
   .qhead .qsum{font-size:11px;color:#2e7d5b;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
@@ -724,11 +725,18 @@ function buildQuick(){
   box.innerHTML = shown? h : '<div class="qempty">No match.</div>';
 }
 function qtoggle(i){
-  const row=document.getElementById('qr'+i), wasOpen=row.classList.contains('open');
-  /* drop focus first so the on-screen keyboard doesn't flicker shut-then-open */
-  const a=document.activeElement; if(a&&a.blur&&a.tagName==='INPUT')a.blur();
-  document.querySelectorAll('.qrow.open').forEach(r=>r.classList.remove('open'));   /* accordion */
-  if(!wasOpen)row.classList.add('open');                 /* no autofocus: user taps the box */
+  const row=document.getElementById('qr'+i);
+  if(row.classList.contains('open')){          /* collapsing: let the keyboard go */
+    row.classList.remove('open');
+    const a=document.activeElement; if(a&&a.blur)a.blur();
+    return;
+  }
+  /* Order matters: open the new row and move focus BEFORE closing the old one,
+     so focus never passes through <body> and Android keeps the keyboard up. */
+  row.classList.add('open');
+  const f=document.getElementById('qi'+i+'_0');
+  if(f)try{f.focus({preventScroll:false});}catch(e){f.focus();}
+  document.querySelectorAll('.qrow.open').forEach(r=>{if(r!==row)r.classList.remove('open');});
 }
 function qcalc(i){
   const amts=qamts(i), any=amts.some(a=>a>0);
