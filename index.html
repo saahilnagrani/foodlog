@@ -37,10 +37,10 @@
   .qmac.on{color:#2e7d5b;font-weight:600;}
   .qins{display:flex;flex-direction:column;gap:6px;}
   /* fixed 3-column grid so every input box lines up, 1-part or 2-part */
-  .qin{display:grid;grid-template-columns:64px 26px 56px;gap:6px;align-items:center;}
+  .qin{display:grid;grid-template-columns:58px 64px 26px;gap:7px;align-items:center;}
   .qin input{width:100%;padding:8px 6px;border:1px solid #ddd;border-radius:8px;font-size:14px;text-align:right;background:#fafafa;font-variant-numeric:tabular-nums;}
   .qin .qunit{font-size:11px;color:#888;text-align:left;}
-  .qin .qlab{font-size:10px;color:#aaa;text-align:left;line-height:1.15;}
+  .qin .qlab{font-size:10.5px;color:#8a8a8a;text-align:right;line-height:1.15;}
   .mid{display:flex;align-items:center;gap:7px;margin-top:8px;font-size:12px;color:#666;cursor:pointer;}
   .mid input{width:16px;height:16px;flex:0 0 auto;}
   .sheet .close{position:sticky;top:8px;z-index:5;}
@@ -595,7 +595,7 @@ function buildQuick(){
     if(term && q.n.toLowerCase().indexOf(term)<0) return;
     shown++;
     const ins=q.parts.map((pt,j)=>
-      `<div class="qin"><input id="qi${i}_${j}" type="number" inputmode="decimal" min="0" step="any" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span><span class="qlab">${q.parts.length>1?pt.lab:''}</span></div>`).join('');
+      `<div class="qin"><span class="qlab">${q.parts.length>1?pt.lab:''}</span><input id="qi${i}_${j}" type="number" inputmode="decimal" min="0" step="any" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span></div>`).join('');
     h+=`<div class="qrow">
       <div><div class="qname">${q.n}</div><span class="qmac" id="qm${i}">enter amount</span></div>
       <div class="qins">${ins}</div>
