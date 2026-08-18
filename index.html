@@ -29,6 +29,17 @@
   .schip.on{border-color:#111;background:#111;color:#fff;}
   .field{margin-top:12px;} .field label{display:block;font-size:12px;color:#777;margin-bottom:5px;}
   .field input,.field select{width:100%;padding:11px;border:1px solid #ddd;border-radius:10px;font-size:14px;background:#fafafa;}
+  /* quick-add list */
+  .qrow{display:grid;grid-template-columns:1fr 76px 34px;gap:9px;align-items:center;padding:9px 0;border-top:1px solid #eee;}
+  .qrow:first-child{border-top:none;}
+  .qname{min-width:0;font-size:13.5px;color:#222;line-height:1.25;}
+  .qmac{display:block;font-size:11px;color:#888;margin-top:2px;font-variant-numeric:tabular-nums;}
+  .qmac.on{color:#2e7d5b;font-weight:600;}
+  .qrow input{width:100%;padding:8px 6px;border:1px solid #ddd;border-radius:8px;font-size:14px;text-align:right;background:#fafafa;font-variant-numeric:tabular-nums;}
+  .qunit{font-size:10px;color:#999;display:block;text-align:right;margin-top:2px;}
+  .qadd{border:none;background:#2e7d5b;color:#fff;width:34px;height:34px;border-radius:9px;font-size:19px;line-height:1;cursor:pointer;opacity:.35;}
+  .qadd.on{opacity:1;}
+  .qempty{color:#999;font-size:13px;padding:10px 0;}
   .srow{display:flex;gap:10px;margin-top:18px;}
   .sbtn{flex:1;text-align:center;border:none;padding:12px;border-radius:11px;font-size:14px;font-weight:700;cursor:pointer;}
   .sbtn.primary{background:#2e7d5b;color:#fff;} .sbtn.ghost{background:#eee;color:#333;}
@@ -243,6 +254,13 @@
       <div class="field"><label>Day</label><select id="f_day"></select></div>
       <div class="field"><label>Meal</label><select id="f_meal"><option>Breakfast</option><option>Lunch</option><option>Snack</option><option>Dinner</option><option>Early morning</option><option>Drink</option></select></div>
       <div class="field"><label>Time</label><input id="f_time" type="time"></div>
+
+      <div class="slabel">Quick add <span id="qhint" style="float:right;text-transform:none;letter-spacing:0;color:#aaa;font-weight:400">type an amount &rarr; tap +</span></div>
+      <input id="qsearch" placeholder="Search foods&hellip;" oninput="buildQuick()"
+             style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;font-size:14px;background:#fafafa;margin-bottom:8px;">
+      <div id="qlist"></div>
+
+      <div class="slabel">Or enter it manually</div>
       <div class="field"><label>What did you eat?</label><input id="f_name" placeholder="e.g. Clear whey 30g in water"></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
         <div class="field"><label>Calories</label><input id="f_kcal" type="number" inputmode="numeric"></div>
@@ -505,8 +523,78 @@ function setTheme(id){PREF.theme=id;savePref();buildSettings();render();}
 function setFont(i){PREF.font[PREF.theme]=i;savePref();buildSettings();render();}
 function setMotion(id){PREF.motion[PREF.theme]=id;savePref();buildSettings();render();}
 
+/* ---------- quick add: frequent foods, macros per 1 unit ---------- */
+/* n=name  u=unit  d=default amount  meal=suggested meal  then kcal,protein,fat,sat,carb PER UNIT */
+const QUICK=[
+  {n:'Clear whey',            u:'g',     d:30, meal:'Snack',     k:3.64, p:.84,  f:.004,s:0,    c:.04},
+  {n:'ON whey (vanilla)',     u:'g',     d:34, meal:'Snack',     k:3.87, p:.774, f:.048,s:.032, c:.129},
+  {n:'Awesome protein',       u:'g',     d:35, meal:'Snack',     k:3.69, p:.61,  f:.084,s:.03,  c:.036},
+  {n:'Oat milk (Oatly)',      u:'ml',    d:100,meal:'Snack',     k:.6,   p:.01,  f:.03, s:.003, c:.067},
+  {n:'Mix nuts & seeds',      u:'g',     d:20, meal:'Snack',     k:6.6,  p:.18,  f:.61, s:.068, c:.136},
+  {n:'Egg white (large)',     u:'pc',    d:4,  meal:'Breakfast', k:17,   p:3.6,  f:.06, s:0,    c:.2},
+  {n:'Whole egg (large)',     u:'pc',    d:2,  meal:'Breakfast', k:72,   p:6.3,  f:4.8, s:1.6,  c:.4},
+  {n:'Chicken breast, cooked',u:'g',     d:150,meal:'Lunch',     k:1.6,  p:.32,  f:.036,s:.0105,c:0},
+  {n:'Salmon (drained wt)',   u:'g',     d:150,meal:'Dinner',    k:1.96, p:.22,  f:.12, s:.024, c:0},
+  {n:'Prawns, cooked',        u:'g',     d:150,meal:'Lunch',     k:1.1,  p:.234, f:.015,s:.004, c:.006},
+  {n:'Tofu, firm',            u:'g',     d:100,meal:'Dinner',    k:1.2,  p:.12,  f:.07, s:.01,  c:.02},
+  {n:'Daal, thick (no water)',u:'g',     d:200,meal:'Lunch',     k:1.35, p:.065, f:.04, s:.006, c:.175},
+  {n:'White rice, cooked',    u:'g',     d:130,meal:'Lunch',     k:1.3,  p:.026, f:.003,s:.001, c:.28},
+  {n:'Chicken biryani',       u:'g',     d:240,meal:'Lunch',     k:1.71, p:.155, f:.052,s:.016, c:.15},
+  {n:'Greek yogurt 0%',       u:'g',     d:150,meal:'Snack',     k:.63,  p:.10,  f:.005,s:0,    c:.045},
+  {n:'Moong sprouts',         u:'g',     d:60, meal:'Lunch',     k:1.36, p:.096, f:.005,s:0,    c:.25},
+  {n:'Veg salad',             u:'g',     d:150,meal:'Lunch',     k:.25,  p:.01,  f:.002,s:0,    c:.05},
+  {n:'Guacamole (no oil)',    u:'g',     d:100,meal:'Snack',     k:1.21, p:.017, f:.105,s:.015, c:.083},
+  {n:'Plain roti',            u:'pc',    d:1,  meal:'Dinner',    k:120,  p:4,    f:2,   s:.4,   c:22},
+  {n:'Ghee roti',             u:'pc',    d:1,  meal:'Dinner',    k:175,  p:4.5,  f:6,   s:3,    c:26},
+  {n:'Baat Cheet papad',      u:'pc',    d:1,  meal:'Snack',     k:45,   p:3,    f:.4,  s:.05,  c:7.5},
+  {n:'Makhana (roasted pack)',u:'g',     d:25, meal:'Snack',     k:5.2,  p:.08,  f:.28, s:.04,  c:.56},
+  {n:'Apple',                 u:'g',     d:100,meal:'Snack',     k:.52,  p:.003, f:.002,s:0,    c:.14},
+  {n:'Grapes',                u:'g',     d:100,meal:'Snack',     k:.69,  p:.006, f:.002,s:0,    c:.18},
+  {n:'Strawberries',          u:'g',     d:100,meal:'Snack',     k:.32,  p:.007, f:.003,s:0,    c:.077},
+  {n:'Banana',                u:'g',     d:100,meal:'Snack',     k:.89,  p:.011, f:.003,s:0,    c:.23}
+];
+const R1=n=>Math.round(n*10)/10;
+function qmacros(i,amt){const q=QUICK[i];return {kcal:Math.round(q.k*amt),protein:R1(q.p*amt),fat:R1(q.f*amt),sat:R1(q.s*amt),carb:R1(q.c*amt)};}
+function buildQuick(){
+  const term=(document.getElementById('qsearch').value||'').trim().toLowerCase();
+  const box=document.getElementById('qlist');
+  let h='',shown=0;
+  QUICK.forEach((q,i)=>{
+    if(term && q.n.toLowerCase().indexOf(term)<0) return;
+    shown++;
+    h+=`<div class="qrow">
+      <div><div class="qname">${q.n}</div><span class="qmac" id="qm${i}">enter amount</span></div>
+      <div><input id="qi${i}" type="number" inputmode="decimal" min="0" step="any" placeholder="${q.d}" oninput="qcalc(${i})"><span class="qunit">${q.u}</span></div>
+      <button class="qadd" id="qb${i}" onclick="qadd(${i})">+</button>
+    </div>`;
+  });
+  box.innerHTML = shown? h : '<div class="qempty">No match.</div>';
+}
+function qcalc(i){
+  const amt=+document.getElementById('qi'+i).value;
+  const m=document.getElementById('qm'+i), b=document.getElementById('qb'+i);
+  if(!amt||amt<=0){m.textContent='enter amount';m.classList.remove('on');b.classList.remove('on');return;}
+  const x=qmacros(i,amt);
+  m.textContent=`${x.kcal} kcal · ${x.protein}P · ${x.fat}F · ${x.sat} sat · ${x.carb}C`;
+  m.classList.add('on'); b.classList.add('on');
+}
+function qadd(i){
+  const amt=+document.getElementById('qi'+i).value;
+  if(!amt||amt<=0){toast('Enter an amount first');return;}
+  const q=QUICK[i], x=qmacros(i,amt);
+  let date=document.getElementById('f_day').value; if(date==='__today')date=todayISO();
+  const mealSel=document.getElementById('f_meal').value;
+  const item=Object.assign({meal:mealSel||q.meal,t:document.getElementById('f_time').value||'',
+                            name:`${q.n} ${amt}${q.u==='pc'?'':q.u}`.replace(' pc','')},x);
+  if(q.u==='pc') item.name=`${q.n} x${amt}`;
+  const extra=loadExtra();(extra[date]=extra[date]||[]).push(item);saveExtra(extra);
+  document.getElementById('qi'+i).value='';qcalc(i);
+  curWeek=weeks.length-1;render();
+  toast(`${item.name} → ${labelFor(date)}`);
+}
+
 /* ---------- add food ---------- */
-function openAdd(){const sel=document.getElementById('f_day');const days=allDays();sel.innerHTML=days.map(d=>`<option value="${d.date}">${d.label}</option>`).join('')+`<option value="__today">+ New day (today)</option>`;if(days.length)sel.value=days[days.length-1].date;document.body.classList.add('modal-open');document.getElementById('addBg').classList.add('open');window.scrollTo(0,0);}
+function openAdd(){const sel=document.getElementById('f_day');const days=allDays();sel.innerHTML=days.map(d=>`<option value="${d.date}">${d.label}</option>`).join('')+`<option value="__today">+ New day (today)</option>`;if(days.length)sel.value=days[days.length-1].date;document.getElementById('qsearch').value='';buildQuick();document.body.classList.add('modal-open');document.getElementById('addBg').classList.add('open');window.scrollTo(0,0);}
 function closeAdd(){document.getElementById('addBg').classList.remove('open');document.body.classList.remove('modal-open');window.scrollTo(0,0);}
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function saveFood(){
