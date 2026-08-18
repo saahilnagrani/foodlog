@@ -36,10 +36,14 @@
   .qmac{display:block;font-size:11px;color:#888;margin-top:3px;font-variant-numeric:tabular-nums;line-height:1.3;}
   .qmac.on{color:#2e7d5b;font-weight:600;}
   .qins{display:flex;flex-direction:column;gap:6px;}
-  .qin{display:flex;align-items:center;gap:6px;justify-content:flex-end;}
-  .qin input{width:62px;padding:8px 6px;border:1px solid #ddd;border-radius:8px;font-size:14px;text-align:right;background:#fafafa;font-variant-numeric:tabular-nums;}
-  .qin .qunit{font-size:11px;color:#888;min-width:24px;text-align:left;}
-  .qin .qlab{font-size:10px;color:#aaa;min-width:52px;text-align:left;}
+  /* fixed 3-column grid so every input box lines up, 1-part or 2-part */
+  .qin{display:grid;grid-template-columns:64px 26px 56px;gap:6px;align-items:center;}
+  .qin input{width:100%;padding:8px 6px;border:1px solid #ddd;border-radius:8px;font-size:14px;text-align:right;background:#fafafa;font-variant-numeric:tabular-nums;}
+  .qin .qunit{font-size:11px;color:#888;text-align:left;}
+  .qin .qlab{font-size:10px;color:#aaa;text-align:left;line-height:1.15;}
+  .mid{display:flex;align-items:center;gap:7px;margin-top:8px;font-size:12px;color:#666;cursor:pointer;}
+  .mid input{width:16px;height:16px;flex:0 0 auto;}
+  .sheet .close{position:sticky;top:8px;z-index:5;}
   .qadd{border:none;background:#2e7d5b;color:#fff;width:34px;height:34px;border-radius:9px;font-size:19px;line-height:1;cursor:pointer;opacity:.35;}
   .qadd.on{opacity:1;}
   .qempty{color:#999;font-size:13px;padding:10px 0;}
@@ -253,10 +257,13 @@
   </div>
 
   <div class="sheet-bg" id="addBg">
-    <div class="sheet"><h3>Add a food</h3>
+    <div class="sheet">
+      <button class="close" onclick="closeAdd()">&times;</button><h3>Add a food</h3>
       <div class="field"><label>Day</label><select id="f_day"></select></div>
       <div class="field"><label>Meal</label><select id="f_meal"><option>Breakfast</option><option>Lunch</option><option>Snack</option><option>Dinner</option><option>Early morning</option><option>Drink</option></select></div>
-      <div class="field"><label>Time</label><input id="f_time" type="time"></div>
+      <div class="field"><label>Time</label><input id="f_time" type="time">
+        <label class="mid"><input type="checkbox" id="f_pastmid"><span>After midnight &mdash; still count it on the day above</span></label>
+      </div>
 
       <div class="slabel">Quick add <span id="qhint" style="float:right;text-transform:none;letter-spacing:0;color:#aaa;font-weight:400">type an amount &rarr; tap +</span></div>
       <input id="qsearch" placeholder="Search foods&hellip;" oninput="buildQuick()"
@@ -566,6 +573,14 @@ const QUICK=[
  {n:'Banana',                 meal:'Snack',    parts:[{u:'g',d:100,k:.89, p:.011,f:.003,s:0,   c:.23}]}
 ];
 const R1=n=>Math.round(n*10)/10;
+function fTime(){
+  const v=document.getElementById('f_time').value||'';
+  if(!v) return '';
+  const pm=document.getElementById('f_pastmid').checked;
+  let [h,m]=v.split(':').map(Number);
+  if(pm && h<12) h+=24;                       /* 00:45 -> 24:45, same waking day */
+  return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');
+}
 function qamts(i){return QUICK[i].parts.map((_,j)=>+document.getElementById(`qi${i}_${j}`).value||0);}
 function qmacros(i,amts){
   let o={kcal:0,protein:0,fat:0,sat:0,carb:0};
@@ -580,7 +595,7 @@ function buildQuick(){
     if(term && q.n.toLowerCase().indexOf(term)<0) return;
     shown++;
     const ins=q.parts.map((pt,j)=>
-      `<div class="qin"><input id="qi${i}_${j}" type="number" inputmode="decimal" min="0" step="any" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span>${q.parts.length>1?`<span class="qlab">${pt.lab}</span>`:''}</div>`).join('');
+      `<div class="qin"><input id="qi${i}_${j}" type="number" inputmode="decimal" min="0" step="any" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span><span class="qlab">${q.parts.length>1?pt.lab:''}</span></div>`).join('');
     h+=`<div class="qrow">
       <div><div class="qname">${q.n}</div><span class="qmac" id="qm${i}">enter amount</span></div>
       <div class="qins">${ins}</div>
@@ -605,7 +620,7 @@ function qadd(i){
   const bits=q.parts.map((pt,j)=>amts[j]>0?`${amts[j]}${pt.u==='pc'?'':pt.u}${pt.lab?' '+pt.lab:''}`:null).filter(Boolean);
   const name = q.parts.length>1 ? `${q.n} (${bits.join(' + ')})` : `${q.n} ${bits[0]}`;
   const item=Object.assign({meal:document.getElementById('f_meal').value||q.meal,
-                            t:document.getElementById('f_time').value||'',name:name},x);
+                            t:fTime(),name:name},x);
   const extra=loadExtra();(extra[date]=extra[date]||[]).push(item);saveExtra(extra);
   q.parts.forEach((_,j)=>document.getElementById(`qi${i}_${j}`).value='');
   qcalc(i); curWeek=weeks.length-1; render();
@@ -613,12 +628,12 @@ function qadd(i){
 }
 
 /* ---------- add food ---------- */
-function openAdd(){const sel=document.getElementById('f_day');const days=allDays();sel.innerHTML=days.map(d=>`<option value="${d.date}">${d.label}</option>`).join('')+`<option value="__today">+ New day (today)</option>`;if(days.length)sel.value=days[days.length-1].date;document.getElementById('qsearch').value='';buildQuick();document.body.classList.add('modal-open');document.getElementById('addBg').classList.add('open');window.scrollTo(0,0);}
+function openAdd(){const sel=document.getElementById('f_day');const days=allDays();sel.innerHTML=days.map(d=>`<option value="${d.date}">${d.label}</option>`).join('')+`<option value="__today">+ New day (today)</option>`;if(days.length)sel.value=days[days.length-1].date;document.getElementById('qsearch').value='';document.getElementById('f_pastmid').checked=false;buildQuick();document.body.classList.add('modal-open');document.getElementById('addBg').classList.add('open');window.scrollTo(0,0);}
 function closeAdd(){document.getElementById('addBg').classList.remove('open');document.body.classList.remove('modal-open');window.scrollTo(0,0);}
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function saveFood(){
   let date=document.getElementById('f_day').value;if(date==='__today')date=todayISO();
-  const item={meal:document.getElementById('f_meal').value,t:document.getElementById('f_time').value||'',name:document.getElementById('f_name').value.trim()||'Food',kcal:+document.getElementById('f_kcal').value||0,protein:+document.getElementById('f_pro').value||0,carb:+document.getElementById('f_carb').value||0,fat:+document.getElementById('f_fat').value||0,sat:+document.getElementById('f_sat').value||0};
+  const item={meal:document.getElementById('f_meal').value,t:fTime(),name:document.getElementById('f_name').value.trim()||'Food',kcal:+document.getElementById('f_kcal').value||0,protein:+document.getElementById('f_pro').value||0,carb:+document.getElementById('f_carb').value||0,fat:+document.getElementById('f_fat').value||0,sat:+document.getElementById('f_sat').value||0};
   const file=document.getElementById('f_img').files[0];
   const finish=()=>{const extra=loadExtra();(extra[date]=extra[date]||[]).push(item);saveExtra(extra);['f_name','f_kcal','f_pro','f_carb','f_fat','f_sat','f_time'].forEach(id=>document.getElementById(id).value='');document.getElementById('f_img').value='';closeAdd();curWeek=weeks.length-1;render();toast('Added to '+labelFor(date));};
   if(file){const rd=new FileReader();rd.onload=e=>{item.img=e.target.result;finish();};rd.readAsDataURL(file);}else finish();
