@@ -2804,16 +2804,6 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.5
-        },
-        {
-          "meal": "Dinner",
-          "t": "",
-          "name": "Salmon (drained wt) 240g",
-          "kcal": 470,
-          "protein": 52.8,
-          "fat": 28.8,
-          "sat": 5.8,
-          "carb": 0
         }
       ]
     }
