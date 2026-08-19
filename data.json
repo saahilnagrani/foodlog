@@ -2798,12 +2798,12 @@
         {
           "meal": "Lunch",
           "t": "15:46",
-          "name": "Chilli tofu 150g (100g cooked tofu + capsicum, onion, ketchup)",
-          "kcal": 252,
-          "protein": 8,
-          "fat": 16.8,
-          "sat": 2.5,
-          "carb": 17.5,
+          "name": "Chilli tofu 150g (100g cooked tofu, cornflour-coated & pan-fried, + capsicum, onion, ketchup)",
+          "kcal": 229,
+          "protein": 8.9,
+          "fat": 14.3,
+          "sat": 1.8,
+          "carb": 16.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_chillitofu.jpg"
         }
       ]
