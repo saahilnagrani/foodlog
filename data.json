@@ -889,7 +889,7 @@
           "name": "Grilled white fish ~120g + prawns 2 + white rice ~100g + lemongrass coconut sauce ~80ml + mushroom puree ~7g (resort)",
           "kcal": 478,
           "protein": 44.4,
-          "fat": 20.0,
+          "fat": 20,
           "sat": 10.3,
           "carb": 31.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fish.jpg"
@@ -899,10 +899,10 @@
           "t": "12:50",
           "name": "White fish in curry sauce ~50g, wife left it (resort)",
           "kcal": 75,
-          "protein": 11.0,
-          "fat": 3.0,
+          "protein": 11,
+          "fat": 3,
           "sat": 1.8,
-          "carb": 1.0,
+          "carb": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fishcurry.jpg"
         },
         {
@@ -911,7 +911,7 @@
           "name": "Coffee fondant + vanilla ice cream 1 scoop + chocolate sauce 1/2 + pistachio biscuit 1/2 (resort)",
           "kcal": 430,
           "protein": 6.2,
-          "fat": 23.0,
+          "fat": 23,
           "sat": 13.7,
           "carb": 49.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fondant.jpg"
@@ -921,9 +921,9 @@
           "t": "18:45",
           "name": "Applied Nutrition clear whey 25g + water",
           "kcal": 95,
-          "protein": 21.0,
+          "protein": 21,
           "fat": 0.1,
-          "sat": 0.0,
+          "sat": 0,
           "carb": 0.5
         },
         {
@@ -934,7 +934,7 @@
           "protein": 0,
           "fat": 0,
           "sat": 0,
-          "carb": 16.0,
+          "carb": 16,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_greenfizz.jpg"
         },
         {
@@ -943,9 +943,9 @@
           "name": "Tofu timbale ~75g + cream + sauce + fried poppadum 1/2 (resort)",
           "kcal": 260,
           "protein": 14.5,
-          "fat": 19.0,
+          "fat": 19,
           "sat": 3.2,
-          "carb": 12.0,
+          "carb": 12,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_tofu.jpg"
         },
         {
@@ -953,10 +953,10 @@
           "t": "19:30",
           "name": "Cauliflower soup ~120ml + hummus ~13g with olive oil + brown bread roll 1 (resort)",
           "kcal": 200,
-          "protein": 6.0,
+          "protein": 6,
           "fat": 9.5,
           "sat": 2.8,
-          "carb": 23.0,
+          "carb": 23,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_cauliflower.jpg"
         },
         {
@@ -964,8 +964,8 @@
           "t": "19:50",
           "name": "Grilled chicken breast ~120g + mashed potato ~55g + carrot puree + chicken jus (resort)",
           "kcal": 355,
-          "protein": 39.0,
-          "fat": 14.0,
+          "protein": 39,
+          "fat": 14,
           "sat": 6.3,
           "carb": 11.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_chicken.jpg"
@@ -976,9 +976,9 @@
           "name": "Pesto chicken ~80g, wife left it (resort)",
           "kcal": 220,
           "protein": 26.3,
-          "fat": 12.0,
+          "fat": 12,
           "sat": 2.3,
-          "carb": 1.0,
+          "carb": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_pestochicken.jpg"
         },
         {
@@ -987,9 +987,9 @@
           "name": "Coconut layered cheesecake + chocolate quenelle + crumble + jam (resort)",
           "kcal": 420,
           "protein": 5.7,
-          "fat": 27.0,
-          "sat": 18.0,
-          "carb": 39.0,
+          "fat": 27,
+          "sat": 18,
+          "carb": 39,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_cheesecake.jpg"
         },
         {
@@ -1000,7 +1000,7 @@
           "protein": 0,
           "fat": 0,
           "sat": 0,
-          "carb": 1.0
+          "carb": 1
         }
       ]
     },
@@ -1015,9 +1015,9 @@
           "name": "Fruit platter ~350g, guava + mango + watermelon + papaya + pineapple + banana (resort)",
           "kcal": 200,
           "protein": 2.5,
-          "fat": 1.0,
+          "fat": 1,
           "sat": 0.2,
-          "carb": 48.0,
+          "carb": 48,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_fruitplatter.jpg"
         },
         {
@@ -1025,10 +1025,10 @@
           "t": "10:15",
           "name": "Celery + carrot + ginger juice 2 glasses, ~500ml (resort)",
           "kcal": 190,
-          "protein": 2.0,
+          "protein": 2,
           "fat": 0.5,
-          "sat": 0.0,
-          "carb": 43.0
+          "sat": 0,
+          "carb": 43
         },
         {
           "meal": "BRK",
@@ -1037,8 +1037,8 @@
           "kcal": 352,
           "protein": 9.2,
           "fat": 7.5,
-          "sat": 6.0,
-          "carb": 61.0,
+          "sat": 6,
+          "carb": 61,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_hoppersplain.jpg"
         },
         {
@@ -1046,20 +1046,20 @@
           "t": "10:30",
           "name": "Fish curry ~60g fish + coconut gravy ~60ml (resort)",
           "kcal": 155,
-          "protein": 14.0,
-          "fat": 10.0,
+          "protein": 14,
+          "fat": 10,
           "sat": 7.5,
-          "carb": 3.0
+          "carb": 3
         },
         {
           "meal": "BRK",
           "t": "10:31",
           "name": "Daal curry ~70ml (resort)",
           "kcal": 110,
-          "protein": 4.0,
-          "fat": 6.0,
+          "protein": 4,
+          "fat": 6,
           "sat": 4.5,
-          "carb": 10.0
+          "carb": 10
         },
         {
           "meal": "BRK",
@@ -1078,9 +1078,9 @@
           "name": "Chia and fruit slice, dark flour base + chia layer + fruit + seeds (resort)",
           "kcal": 370,
           "protein": 10.5,
-          "fat": 15.0,
+          "fat": 15,
           "sat": 3.6,
-          "carb": 48.0,
+          "carb": 48,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_chiafruit.jpg"
         },
         {
@@ -1089,9 +1089,9 @@
           "name": "Grilled white fish ~150g + coral coconut sauce ~50ml + cous cous ~6g + herb puree (resort)",
           "kcal": 375,
           "protein": 34.5,
-          "fat": 23.0,
-          "sat": 9.0,
-          "carb": 5.0,
+          "fat": 23,
+          "sat": 9,
+          "carb": 5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_grilledwhite.jpg"
         },
         {
@@ -1099,10 +1099,10 @@
           "t": "14:40",
           "name": "Chicken curry 4-5 boneless leg pieces ~120g + gravy ~60ml, own cooking in virgin coconut oil and coconut milk (resort)",
           "kcal": 381,
-          "protein": 32.0,
-          "fat": 26.0,
+          "protein": 32,
+          "fat": 26,
           "sat": 15.1,
-          "carb": 4.0,
+          "carb": 4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_chickencurry.jpg"
         },
         {
@@ -1110,10 +1110,10 @@
           "t": "14:41",
           "name": "Daal curry ~55g, own cooking in coconut milk (resort)",
           "kcal": 110,
-          "protein": 4.0,
+          "protein": 4,
           "fat": 6.5,
-          "sat": 5.0,
-          "carb": 9.0,
+          "sat": 5,
+          "carb": 9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_daalcurry.jpg"
         },
         {
@@ -1121,10 +1121,10 @@
           "t": "14:42",
           "name": "Pol sambol ~25g, own cooking, no added oil (resort)",
           "kcal": 90,
-          "protein": 1.0,
+          "protein": 1,
           "fat": 8.3,
           "sat": 7.4,
-          "carb": 4.0,
+          "carb": 4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_polsambol.jpg"
         },
         {
@@ -1135,7 +1135,7 @@
           "protein": 4.3,
           "fat": 21.5,
           "sat": 14.5,
-          "carb": 36.0,
+          "carb": 36,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_passionfruit.jpg"
         },
         {
@@ -1143,10 +1143,10 @@
           "t": "19:30",
           "name": "Mutton curry ~170g, 4 servings + gravy ~20g, cooked in coconut oil, no coconut milk (resort)",
           "kcal": 330,
-          "protein": 47.0,
-          "fat": 13.0,
-          "sat": 8.0,
-          "carb": 2.0,
+          "protein": 47,
+          "fat": 13,
+          "sat": 8,
+          "carb": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_muttoncurry.jpg"
         },
         {
@@ -1154,10 +1154,10 @@
           "t": "19:32",
           "name": "Green herb rice ~150g (resort)",
           "kcal": 220,
-          "protein": 4.0,
-          "fat": 4.0,
+          "protein": 4,
+          "fat": 4,
           "sat": 2.5,
-          "carb": 42.0
+          "carb": 42
         },
         {
           "meal": "DNR",
@@ -1167,17 +1167,17 @@
           "protein": 0.5,
           "fat": 4.5,
           "sat": 3.5,
-          "carb": 9.0
+          "carb": 9
         },
         {
           "meal": "DNR",
           "t": "19:35",
           "name": "Daal curry, full bowl ~120ml (resort)",
           "kcal": 190,
-          "protein": 7.0,
-          "fat": 11.0,
+          "protein": 7,
+          "fat": 11,
           "sat": 8.5,
-          "carb": 16.0,
+          "carb": 16,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_daalcurry2.jpg"
         },
         {
@@ -1185,10 +1185,10 @@
           "t": "19:36",
           "name": "Murunga drumstick 1 piece + coconut gravy (resort)",
           "kcal": 30,
-          "protein": 1.0,
-          "fat": 2.0,
+          "protein": 1,
+          "fat": 2,
           "sat": 1.7,
-          "carb": 2.0
+          "carb": 2
         },
         {
           "meal": "DNR",
@@ -1197,18 +1197,18 @@
           "kcal": 16,
           "protein": 0.7,
           "fat": 1.2,
-          "sat": 1.0,
-          "carb": 1.0
+          "sat": 1,
+          "carb": 1
         },
         {
           "meal": "DNR",
           "t": "20:15",
           "name": "Kiri peni 4 spoons, buffalo curd + kithul treacle (resort)",
           "kcal": 110,
-          "protein": 3.0,
+          "protein": 3,
           "fat": 4.2,
           "sat": 2.7,
-          "carb": 14.0,
+          "carb": 14,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_kiripeni.jpg"
         },
         {
@@ -1218,8 +1218,8 @@
           "kcal": 110,
           "protein": 0.4,
           "fat": 0.3,
-          "sat": 0.0,
-          "carb": 27.0
+          "sat": 0,
+          "carb": 27
         }
       ]
     },
@@ -1235,8 +1235,8 @@
           "kcal": 120,
           "protein": 1.3,
           "fat": 0.4,
-          "sat": 0.0,
-          "carb": 29.0,
+          "sat": 0,
+          "carb": 29,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_fruitplatter.jpg"
         },
         {
@@ -1244,10 +1244,10 @@
           "t": "10:00",
           "name": "Beetroot + celery + ginger juice ~250ml (resort)",
           "kcal": 110,
-          "protein": 2.0,
+          "protein": 2,
           "fat": 0.3,
-          "sat": 0.0,
-          "carb": 25.0,
+          "sat": 0,
+          "carb": 25,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_beetrootcelery.jpg"
         },
         {
@@ -1265,10 +1265,10 @@
           "t": "10:15",
           "name": "Scrambled egg whites ~90g, no yolks (resort)",
           "kcal": 95,
-          "protein": 10.0,
+          "protein": 10,
           "fat": 5.2,
           "sat": 3.2,
-          "carb": 1.0,
+          "carb": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_scrambledegg.jpg"
         },
         {
@@ -1277,9 +1277,9 @@
           "name": "Sauteed mushrooms ~40g + grilled tomato 1/2 (resort)",
           "kcal": 60,
           "protein": 1.8,
-          "fat": 4.0,
+          "fat": 4,
           "sat": 0.5,
-          "carb": 4.0
+          "carb": 4
         },
         {
           "meal": "LUN",
@@ -1297,10 +1297,10 @@
           "t": "13:30",
           "name": "Grilled prawns ~200g, 8 pieces + white rice ~130g + steamed vegetables ~90g (resort)",
           "kcal": 415,
-          "protein": 48.0,
+          "protein": 48,
           "fat": 3.1,
           "sat": 0.7,
-          "carb": 45.0,
+          "carb": 45,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_grilledprawns.jpg"
         },
         {
@@ -1309,7 +1309,7 @@
           "name": "Garlic butter sauce ~25g (resort)",
           "kcal": 180,
           "protein": 0.2,
-          "fat": 20.0,
+          "fat": 20,
           "sat": 12.5,
           "carb": 0.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_garlicbutter.jpg"
@@ -1322,7 +1322,7 @@
           "protein": 3.5,
           "fat": 13.8,
           "sat": 8.3,
-          "carb": 54.0,
+          "carb": 54,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_minidate.jpg"
         },
         {
@@ -1332,8 +1332,8 @@
           "kcal": 110,
           "protein": 0.4,
           "fat": 0.3,
-          "sat": 0.0,
-          "carb": 27.0,
+          "sat": 0,
+          "carb": 27,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_passionfruit.jpg"
         },
         {
@@ -1344,7 +1344,7 @@
           "protein": 0,
           "fat": 0,
           "sat": 0,
-          "carb": 7.0
+          "carb": 7
         },
         {
           "meal": "DNR",
@@ -1354,7 +1354,7 @@
           "protein": 13.5,
           "fat": 15.5,
           "sat": 2.6,
-          "carb": 8.0,
+          "carb": 8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_seafoodtimbale.jpg"
         },
         {
@@ -1362,10 +1362,10 @@
           "t": "20:00",
           "name": "Cream soup 4 half spoons ~30ml + brown bread roll 1 (resort)",
           "kcal": 165,
-          "protein": 5.0,
+          "protein": 5,
           "fat": 3.8,
           "sat": 1.5,
-          "carb": 27.0,
+          "carb": 27,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_creamsoup.jpg"
         },
         {
@@ -1376,7 +1376,7 @@
           "protein": 0,
           "fat": 0,
           "sat": 0,
-          "carb": 9.0
+          "carb": 9
         },
         {
           "meal": "DNR",
@@ -1386,7 +1386,7 @@
           "protein": 95.5,
           "fat": 27.5,
           "sat": 7.1,
-          "carb": 8.0,
+          "carb": 8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_chickentikka.jpg"
         },
         {
@@ -1394,10 +1394,10 @@
           "t": "20:30",
           "name": "Grilled chicken breast ~130g, 5 of 7 slices + chicken jus ~25ml (resort)",
           "kcal": 255,
-          "protein": 41.0,
+          "protein": 41,
           "fat": 7.2,
           "sat": 2.5,
-          "carb": 2.0,
+          "carb": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_grilledchicken.jpg"
         },
         {
@@ -1408,7 +1408,7 @@
           "protein": 0,
           "fat": 0,
           "sat": 0,
-          "carb": 1.0
+          "carb": 1
         },
         {
           "meal": "DNR",
@@ -1418,7 +1418,7 @@
           "protein": 4.5,
           "fat": 16.5,
           "sat": 9.9,
-          "carb": 21.0,
+          "carb": 21,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_tiramisupastry.jpg"
         },
         {
@@ -1428,8 +1428,8 @@
           "kcal": 170,
           "protein": 1.2,
           "fat": 3.5,
-          "sat": 2.0,
-          "carb": 34.0,
+          "sat": 2,
+          "carb": 34,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_passionfruit2.jpg"
         }
       ]
@@ -1446,8 +1446,8 @@
           "kcal": 110,
           "protein": 1.3,
           "fat": 0.5,
-          "sat": 0.0,
-          "carb": 27.0,
+          "sat": 0,
+          "carb": 27,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_fruitplatter.jpg"
         },
         {
@@ -1457,16 +1457,16 @@
           "kcal": 60,
           "protein": 1.2,
           "fat": 0.3,
-          "sat": 0.0,
-          "carb": 13.0
+          "sat": 0,
+          "carb": 13
         },
         {
           "meal": "BRK",
           "t": "10:05",
           "name": "Scrambled eggs ~90g on toasted bread round ~35g (resort)",
           "kcal": 285,
-          "protein": 15.0,
-          "fat": 16.0,
+          "protein": 15,
+          "fat": 16,
           "sat": 6.2,
           "carb": 18.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_scrambledeggs.jpg"
@@ -1476,7 +1476,7 @@
           "t": "10:06",
           "name": "Bacon 2 strips ~25g (resort)",
           "kcal": 120,
-          "protein": 8.0,
+          "protein": 8,
           "fat": 9.5,
           "sat": 3.2,
           "carb": 0.3
@@ -1487,9 +1487,9 @@
           "name": "Pancakes 2.5 ~112g + chocolate sauce ~20g, half sauce left (resort)",
           "kcal": 305,
           "protein": 6.5,
-          "fat": 10.0,
+          "fat": 10,
           "sat": 3.7,
-          "carb": 46.0,
+          "carb": 46,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_pancakeschocolat.jpg"
         },
         {
@@ -1497,10 +1497,10 @@
           "t": "13:00",
           "name": "Garden salad ~180g with dressing (resort)",
           "kcal": 120,
-          "protein": 3.0,
-          "fat": 6.0,
+          "protein": 3,
+          "fat": 6,
           "sat": 0.9,
-          "carb": 14.0,
+          "carb": 14,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_gardensalad.jpg"
         },
         {
@@ -1508,10 +1508,10 @@
           "t": "13:20",
           "name": "Marinated spiced prawns 12 pieces ~310g cooked (resort)",
           "kcal": 425,
-          "protein": 66.0,
+          "protein": 66,
           "fat": 15.7,
           "sat": 2.8,
-          "carb": 2.0,
+          "carb": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_marinatedspiced.jpg"
         },
         {
@@ -1522,27 +1522,27 @@
           "protein": 6.2,
           "fat": 3.8,
           "sat": 2.2,
-          "carb": 33.0
+          "carb": 33
         },
         {
           "meal": "DRK",
           "t": "13:30",
           "name": "Coconut water 2 glasses ~500ml (resort)",
           "kcal": 95,
-          "protein": 1.0,
+          "protein": 1,
           "fat": 0.2,
-          "sat": 0.0,
-          "carb": 22.0
+          "sat": 0,
+          "carb": 22
         },
         {
           "meal": "LUN",
           "t": "14:15",
           "name": "Black forest, chocolate sponge ~40g only, most cream removed (resort)",
           "kcal": 140,
-          "protein": 2.0,
-          "fat": 7.0,
-          "sat": 4.0,
-          "carb": 17.0,
+          "protein": 2,
+          "fat": 7,
+          "sat": 4,
+          "carb": 17,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_blackforest.jpg"
         },
         {
@@ -1552,8 +1552,8 @@
           "kcal": 110,
           "protein": 0.4,
           "fat": 0.3,
-          "sat": 0.0,
-          "carb": 27.0
+          "sat": 0,
+          "carb": 27
         },
         {
           "meal": "DNR",
@@ -1563,7 +1563,7 @@
           "protein": 22.9,
           "fat": 16.8,
           "sat": 4.4,
-          "carb": 43.0,
+          "carb": 43,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_fishmasala.jpg"
         },
         {
@@ -1571,10 +1571,10 @@
           "t": "22:00",
           "name": "Tandoori chicken pizza 5 slices ~450g (Pizza Hut)",
           "kcal": 1240,
-          "protein": 56.0,
-          "fat": 47.0,
-          "sat": 21.0,
-          "carb": 140.0,
+          "protein": 56,
+          "fat": 47,
+          "sat": 21,
+          "carb": 140,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_tandoorichicken.jpg"
         }
       ]
@@ -1610,8 +1610,8 @@
           "t": "15:01",
           "name": "Crunchy masala chana dal 50g, appears fried not roasted",
           "kcal": 240,
-          "protein": 11.0,
-          "fat": 11.0,
+          "protein": 11,
+          "fat": 11,
           "sat": 4.5,
           "carb": 22.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_crunchymasala.jpg"
@@ -1623,8 +1623,8 @@
           "kcal": 432,
           "protein": 17.5,
           "fat": 18.6,
-          "sat": 4.0,
-          "carb": 49.0
+          "sat": 4,
+          "carb": 49
         },
         {
           "meal": "DNR",
@@ -1643,7 +1643,7 @@
           "name": "Chilli tofu 60g cooked with vegetables, fried + sauce",
           "kcal": 136,
           "protein": 7.7,
-          "fat": 8.0,
+          "fat": 8,
           "sat": 1.2,
           "carb": 9.1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_chillitofu.jpg"
@@ -2155,7 +2155,7 @@
           "kcal": 28,
           "protein": 4.3,
           "fat": 0.2,
-          "sat": 0.0,
+          "sat": 0,
           "carb": 2.5
         },
         {
@@ -2184,7 +2184,7 @@
           "name": "Mix nuts & seeds 18g",
           "kcal": 119,
           "protein": 3.3,
-          "fat": 11.0,
+          "fat": 11,
           "sat": 1.2,
           "carb": 2.5
         },
@@ -2363,7 +2363,7 @@
           "t": "20:56",
           "name": "Greek yogurt 160g (Hayatna 0%)",
           "kcal": 101,
-          "protein": 16.0,
+          "protein": 16,
           "fat": 0.8,
           "sat": 0,
           "carb": 7.2
@@ -2453,7 +2453,7 @@
           "protein": 5.8,
           "fat": 0.3,
           "sat": 0,
-          "carb": 15.0
+          "carb": 15
         },
         {
           "meal": "Snack",
@@ -2480,9 +2480,9 @@
           "t": "19:44",
           "name": "Salmon pesto pasta 310g (42% of 740g batch) + 15g pesto on top",
           "kcal": 616,
-          "protein": 32.0,
+          "protein": 32,
           "fat": 31.5,
-          "sat": 5.0,
+          "sat": 5,
           "carb": 50.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun16_salmonpasta.jpg"
         },
@@ -2699,10 +2699,20 @@
           "t": "22:27",
           "name": "Greek yogurt 190g (Hayatna 0%)",
           "kcal": 120,
-          "protein": 19.0,
+          "protein": 19,
           "fat": 0.9,
           "sat": 0,
           "carb": 8.5
+        },
+        {
+          "meal": "Snack",
+          "t": "24:30",
+          "name": "Clear whey 48g",
+          "kcal": 175,
+          "protein": 40.3,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 1.9
         },
         {
           "meal": "Snack",
