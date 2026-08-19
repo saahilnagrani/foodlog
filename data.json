@@ -2787,17 +2787,6 @@
         {
           "meal": "Lunch",
           "t": "15:46",
-          "name": "Guacamole 90g (avocado + onion & tomato)",
-          "kcal": 109,
-          "protein": 1.5,
-          "fat": 9.5,
-          "sat": 1.4,
-          "carb": 7.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_guac.jpg"
-        },
-        {
-          "meal": "Lunch",
-          "t": "15:46",
           "name": "Chilli tofu 150g (100g cooked tofu, cornflour-coated & pan-fried, + capsicum, onion, ketchup)",
           "kcal": 229,
           "protein": 8.9,
