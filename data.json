@@ -2725,6 +2725,34 @@
           "carb": 74
         }
       ]
+    },
+    {
+      "date": "2026-08-19",
+      "label": "Wed 19 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "12:35",
+          "name": "ON whey 44g + 100ml oat milk + 50g strawberries",
+          "kcal": 246,
+          "protein": 35.5,
+          "fat": 5.3,
+          "sat": 1.7,
+          "carb": 16.2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_shake.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "12:35",
+          "name": "Mix nuts & seeds 12g",
+          "kcal": 79,
+          "protein": 2.2,
+          "fat": 7.3,
+          "sat": 0.8,
+          "carb": 1.6
+        }
+      ]
     }
   ]
 }
