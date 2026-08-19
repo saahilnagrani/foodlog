@@ -123,3 +123,25 @@ Notes:
   your next edit.
 - **Sync to Google Health**: handled on-device by the Android wrapper's
   `HealthBridge`. In a plain desktop browser the button just shows a toast.
+
+## Google Health sync — what the wrapper actually does
+Decompiled from the installed APK (`MainActivity.writeDayItems`). The wrapper
+cannot be rebuilt here, so `index.html` works around it:
+
+- `syncDayItems(date, itemsJson)` **deletes every `NutritionRecord` inside that
+  calendar date and then inserts** what you passed. So a payload must always be
+  the *complete* day — never a fragment, or you silently wipe the rest.
+- It **ignores each item's `t`.** Times come from the `meal` string only:
+  breakfast → 08:30, lunch → 13:00, dinner → 20:00, anything else → 16:30.
+  That is why the app aggregates a day into at most three records
+  (`syncBucket` / `syncPayload`) — per-item records would collide and be lost.
+- `clientRecordId` is `foodlog-<date>-<index>`, so records are keyed by position
+  in the array you send.
+
+Because Health totals by **calendar** date and the log is kept by **waking**
+day, `syncDay(date)` writes calendar date `date` (= that date's pre-midnight
+items **plus** the previous night's 24+ tail, via `calDayItems`), and also
+writes `date+1` when that night ran past midnight. Settings → **Day boundary**
+switches the whole app between waking-day and calendar-day grouping; calendar
+grouping is display-only (`toCalDays`) and matches Health exactly, so the two
+can be compared number for number. `data.json` is always stored by waking day.

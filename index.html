@@ -289,6 +289,10 @@
       <div class="slabel">Font</div><div class="row-chips" id="fontChips"></div>
       <div class="slabel">Motion</div><div class="row-chips" id="motionChips"></div>
 
+      <h3 style="margin-top:22px;">Day boundary</h3>
+      <div class="slabel">Group the log by</div><div class="row-chips" id="dayModeChips"></div>
+      <div id="dayModeNote" style="font-size:12px;line-height:1.5;color:#666;margin-top:8px;"></div>
+
       <div class="slabel">Diagnostics</div>
       <button class="sbtn ghost" style="padding:10px 14px;" onclick="showBridgeInfo()">Show Google Health bridge info</button>
       <pre id="bridge_out" style="white-space:pre-wrap;word-break:break-word;font-size:11px;line-height:1.5;color:#444;background:#f4f4f4;border:1px solid #e2e2e2;border-radius:8px;padding:10px;margin-top:8px;max-height:260px;overflow:auto;"></pre>
@@ -360,7 +364,7 @@ const FONTS={
 };
 const MOTIONS={b:[["Bars fill","bars"],["Pop","pop"],["Slide","slide"],["Wobble","wobble"]],c:[["Bars draw","bars"],["Count up","count"],["Typewriter","type"],["Scanline","scan"]],d:[["Grow","grow"],["Unfurl","unfurl"],["Drift","drift"],["Pulse","pulse"]]};
 const THEMES=[["Brutalist","b"],["Terminal","c"],["Bloom","d"]];
-const DEF={theme:'b',font:{b:0,c:0,d:0},motion:{b:'bars',c:'bars',d:'grow'},weekMode:'cal'};
+const DEF={theme:'b',font:{b:0,c:0,d:0},motion:{b:'bars',c:'bars',d:'grow'},weekMode:'cal',dayMode:'wake'};
 let PREF=loadPref();
 function loadPref(){try{return Object.assign(JSON.parse(JSON.stringify(DEF)),JSON.parse(localStorage.getItem(PREF_KEY))||{});}catch(e){return JSON.parse(JSON.stringify(DEF));}}
 function savePref(){localStorage.setItem(PREF_KEY,JSON.stringify(PREF));}
@@ -374,7 +378,10 @@ function dow(iso){const [y,m,d]=iso.split('-').map(Number);return ['Sun','Mon','
 function mondayOf(iso){const [y,m,d]=iso.split('-').map(Number);const dt=new Date(Date.UTC(y,m-1,d));const wd=(dt.getUTCDay()+6)%7;dt.setUTCDate(dt.getUTCDate()-wd);return dt.toISOString().slice(0,10);}
 function addDays(iso,n){const [y,m,d]=iso.split('-').map(Number);const dt=new Date(Date.UTC(y,m-1,d));dt.setUTCDate(dt.getUTCDate()+n);return dt.toISOString().slice(0,10);}
 function shortDate(iso){const [y,m,d]=iso.split('-').map(Number);return `${d} ${['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'][m-1]}`;}
-function allDays(){
+/* rawDays(): the log exactly as stored - one object per WAKING day, late-night
+   items carried on the day they belong to as hours 24..29. This is the only
+   grouping that is ever written to data.json. */
+function rawDays(){
   const extra=loadExtra();
   const base=(DATA.days||[]).map(d=>({date:d.date,label:d.label||labelFor(d.date),workout:d.workout||'',items:[...d.items]}));
   const byDate={};base.forEach(d=>byDate[d.date]=d);
@@ -382,6 +389,34 @@ function allDays(){
   base.sort((a,b)=>a.date<b.date?-1:1);
   return base;
 }
+function hourOf(it){return parseInt(tkey(it),10);}
+function isLate(it){return hourOf(it)>=24;}                     /* eaten after midnight */
+function unshift24(t){const p=String(t).split(':');return String(parseInt(p[0],10)-24).padStart(2,'0')+':'+(p[1]||'00');}
+/* Move a late-night item onto the calendar date it was actually eaten on.
+   _date0/_t0 remember where it lives in data.json, so delete still finds it. */
+function toCalItem(it,date){return Object.assign({},it,{t:unshift24(it.t),_date0:date,_t0:it.t});}
+/* calDayItems(date): everything Google Health should hold for that CALENDAR
+   date - the day's own pre-midnight items plus the previous night's tail. */
+function calDayItems(date){
+  const src=rawDays(), out=[];
+  const cur=src.find(d=>d.date===date);
+  if(cur)cur.items.forEach(it=>{if(!isLate(it))out.push(it);});
+  const prev=src.find(d=>d.date===addDays(date,-1));
+  if(prev)prev.items.forEach(it=>{if(isLate(it))out.push(toCalItem(it,prev.date));});
+  return sortItems(out);
+}
+function toCalDays(base){
+  const map={};
+  const at=date=>map[date]||(map[date]={date:date,label:labelFor(date),workout:'',items:[]});
+  base.forEach(d=>{
+    at(d.date).workout=d.workout||at(d.date).workout;
+    d.items.forEach(it=>{ if(isLate(it)){const n=at(addDays(d.date,1));n.items.push(toCalItem(it,d.date));n.carried=(n.carried||0)+1;} else at(d.date).items.push(it); });
+  });
+  return Object.keys(map).sort().map(k=>{map[k].items=sortItems(map[k].items);return map[k];});
+}
+function allDays(){const base=rawDays();return PREF.dayMode==='cal'?toCalDays(base):base;}
+/* in calendar view, say how many of a day's items were actually eaten after midnight the night before */
+function carryNote(d){return d.carried?' &middot; +'+d.carried+' late':'';}
 function dayDiff(a,b){const pa=(y=>Date.UTC(y[0],y[1]-1,y[2]))(a.split('-').map(Number)),pb=(y=>Date.UTC(y[0],y[1]-1,y[2]))(b.split('-').map(Number));return Math.round((pb-pa)/86400000);}
 let weeks=[], curWeek=0;
 function buildWeeks(){
@@ -457,7 +492,7 @@ let ROWS=[];
 const SWDEL=88;                                     /* must match .swipe-del width */
 function swipeRow(it,date,html){
   const n=ROWS.length;
-  ROWS.push({date:date,src:it._local?'local':'repo',name:it.name,t:it.t||'',kcal:Math.round(+it.kcal||0)});
+  ROWS.push({date:it._date0||date,src:it._local?'local':'repo',name:it.name,t:it._t0!==undefined?it._t0:(it.t||''),kcal:Math.round(+it.kcal||0)});
   return `<div class="swipe"><div class="swipe-in">${html}<button class="swipe-del" type="button" onclick="delRow(${n})">Delete</button></div></div>`;
 }
 function closeSwipes(except){
@@ -590,7 +625,7 @@ function renderB(days){
     const meals=sortItems(d.items).map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">NO<br>PIC</div>`;
       return swipeRow(it,d.date,`<div class="meal">${thumb}<div class="mt"><div class="nm">${it.name}</div><div class="mm"><span class="tag">${mlab(it)}</span>${R(it.protein)}g P &middot; ${Math.round(it.kcal)} kcal &middot; ${R(it.fat)}g fat &middot; ${R(it.carb||0)}g C</div></div></div>`);}).join('');
     const pw=Math.min(100,t.p/T.protein*100), fAxis=Math.max(T.fat,t.f), sw=t.f>0?t.s/fAxis*100:0, uw=t.f>0?t.u/fAxis*100:0;
-    h+=`<div class="card"><span class="dchip">${d.label}${d.workout?' &middot; '+d.workout:''}</span>
+    h+=`<div class="card"><span class="dchip">${d.label}${d.workout?' &middot; '+d.workout:''}${carryNote(d)}</span>
       <div class="kcal"><span class="big">${t.k}</span><span class="of ${t.k>T.kcal?'over':''}">/ ${T.kcal} KCAL</span></div>
       ${meals}
       <div class="dtot">
@@ -619,7 +654,7 @@ function renderC(days){
   [...days].reverse().forEach(d=>{
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
-    h+=`<div class="dk">${num(t.k)} <small>/ 1900 kcal &middot; ${d.label}</small></div>`;
+    h+=`<div class="dk">${num(t.k)} <small>/ 1900 kcal &middot; ${d.label}${carryNote(d)}</small></div>`;
     sortItems(d.items).forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">no<br>pic</div>`;h+=swipeRow(it,d.date,`<div class="mrow">${thumb}<div class="mn"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`);});
     const pp=Math.round(Math.min(100,t.p/T.protein*100)),fp=Math.round(Math.min(100,t.f/T.fat*100)),cp=Math.round(Math.min(100,t.c/T.carb*100));
     h+=`<div class="metric"><div class="l"><span class="name">protein</span><span class="rd">${num(t.p)} / 150 g</span></div><div class="track" data-pct="${pp}" data-over="0">${cbar(pp)}</div></div>`;
@@ -660,7 +695,7 @@ function renderD(days){
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
     const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return swipeRow(it,d.date,`<div class="meal">${im}<div class="nm"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`);}).join('');
-    h+=`<div class="drow"><div class="gl">${g}</div><div class="info"><div class="dl"><span class="nm">${d.label}${d.workout?' &middot; '+d.workout:''}</span><span class="kc ${t.k>T.kcal?'over':''}">${t.k} <small>kcal</small></span></div><div class="dmac">${t.p}g P &middot; ${t.f}g fat <span class="sat">(${t.s} sat)</span> &middot; ${t.c}g C</div>${meals}<div class="sync" onclick="syncDay('${d.date}')">Sync to Google Health</div></div></div>`;
+    h+=`<div class="drow"><div class="gl">${g}</div><div class="info"><div class="dl"><span class="nm">${d.label}${d.workout?' &middot; '+d.workout:''}${carryNote(d)}</span><span class="kc ${t.k>T.kcal?'over':''}">${t.k} <small>kcal</small></span></div><div class="dmac">${t.p}g P &middot; ${t.f}g fat <span class="sat">(${t.s} sat)</span> &middot; ${t.c}g C</div>${meals}<div class="sync" onclick="syncDay('${d.date}')">Sync to Google Health</div></div></div>`;
   });
   return h;
 }
@@ -672,10 +707,17 @@ function buildSettings(){
   document.getElementById('themeChips').innerHTML=THEMES.map(([n,id])=>`<button class="schip ${PREF.theme===id?'on':''}" onclick="setTheme('${id}')">${n}</button>`).join('');
   document.getElementById('fontChips').innerHTML=FONTS[PREF.theme].map((f,i)=>`<button class="schip ${PREF.font[PREF.theme]===i?'on':''}" onclick="setFont(${i})">${f[0]}</button>`).join('');
   document.getElementById('motionChips').innerHTML=MOTIONS[PREF.theme].map(([n,id])=>`<button class="schip ${PREF.motion[PREF.theme]===id?'on':''}" onclick="setMotion('${id}')">${n}</button>`).join('');
+  const DAYS=[['Waking day','wake'],['Calendar day','cal']];
+  document.getElementById('dayModeChips').innerHTML=DAYS.map(([n,id])=>`<button class="schip ${PREF.dayMode===id?'on':''}" onclick="setDayMode('${id}')">${n}</button>`).join('');
+  document.getElementById('dayModeNote').innerHTML = PREF.dayMode==='cal'
+    ? 'Days end at midnight. A 1am snack counts on the date you ate it, so these totals are exactly what Google Health shows - use this to check the two agree.'
+    : 'Days end when you go to sleep, so a 1am snack still counts on the evening before. This is how the log is written and how you think about it. Google Health cannot do this, so its daily totals will differ on nights you ate past midnight.';
 }
 function setTheme(id){PREF.theme=id;savePref();buildSettings();render();}
 function setFont(i){PREF.font[PREF.theme]=i;savePref();buildSettings();render();}
 function setMotion(id){PREF.motion[PREF.theme]=id;savePref();buildSettings();render();}
+/* view only - data.json is always stored by waking day, whichever is picked */
+function setDayMode(id){PREF.dayMode=id;savePref();buildSettings();buildWeeks();curWeek=weeks.length-1;render();}
 
 /* ---------- save local items into data.json on GitHub ----------
    Token is a fine-grained PAT scoped to this repo only. It lives in this
@@ -952,9 +994,9 @@ function syncBucket(it){
   const h=parseInt(tkey(it),10);            /* Snack / Drink / Early morning: nearest meal by time */
   return h<11?'Breakfast':(h<17?'Lunch':'Dinner');
 }
-function syncPayload(day){
+function syncPayload(items){
   const order=['Breakfast','Lunch','Dinner'], g={};
-  sortItems(day.items).forEach(it=>{const b=syncBucket(it);(g[b]=g[b]||[]).push(it);});
+  sortItems(items).forEach(it=>{const b=syncBucket(it);(g[b]=g[b]||[]).push(it);});
   return order.filter(b=>g[b]&&g[b].length).map(b=>{
     const list=g[b], sum=k=>list.reduce((a,x)=>a+(+x[k]||0),0);
     let names=list.map(x=>String(x.name).replace(/\s*\(.*$/,'').trim()).join(', ');
@@ -964,11 +1006,28 @@ function syncPayload(day){
             sat:R(sum('sat')),carb:R(sum('carb'))};
   });
 }
+/* One Health write for one CALENDAR date.
+   The wrapper deletes every NutritionRecord inside that date before inserting,
+   so whatever we hand it has to be the complete day - never just a fragment. */
+function syncCal(date){
+  const items=syncPayload(calDayItems(date));
+  if(!items.length)return null;
+  if(window.HealthBridge&&typeof window.HealthBridge.syncDayItems==='function')window.HealthBridge.syncDayItems(date,JSON.stringify(items));
+  return {date:date,n:items.length,kcal:items.reduce((a,b)=>a+b.kcal,0),protein:R(items.reduce((a,b)=>a+(+b.protein||0),0))};
+}
+/* Syncing a logged day writes the calendar date it started on, and - when that
+   night ran past midnight - the next calendar date too, because those calories
+   happened on that date and Google Health totals by calendar date. */
 function syncDay(date){
-  const day=allDays().find(d=>d.date===date);if(!day){toast('No data for '+date);return;}
-  const items=syncPayload(day);
-  if(window.HealthBridge&&typeof window.HealthBridge.syncDayItems==='function'){window.HealthBridge.syncDayItems(date,JSON.stringify(items));}
-  else{const tk=items.reduce((a,b)=>a+b.kcal,0),tp=R(items.reduce((a,b)=>a+(+b.protein||0),0));toast('In the app this logs '+items.length+' meal(s) for '+date+' ('+tk+' kcal, '+tp+'g protein) to Google Health.');}
+  const raw=rawDays().find(d=>d.date===date);
+  const late=raw?raw.items.filter(isLate).length:0;
+  const done=[syncCal(date)];
+  if(late)done.push(syncCal(addDays(date,1)));
+  const ok=done.filter(Boolean);
+  if(!ok.length){toast('No data for '+date);return;}
+  if(window.HealthBridge&&typeof window.HealthBridge.syncDayItems==='function')return;   /* wrapper toasts per write */
+  toast('In the app this writes '+ok.map(r=>shortDate(r.date)+': '+r.kcal+' kcal, '+r.protein+'g P').join(' · ')
+        +(late?' - '+late+' after-midnight item'+(late>1?'s':'')+' counted on the next date':''));
 }
 
 let toastTimer;
