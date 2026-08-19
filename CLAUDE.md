@@ -15,7 +15,25 @@ calorie/macro numbers and writing them into `data.json`. That is the routine job
   isn't the data.
 - `data.json` — **the source of truth for the food log.** This is what you edit.
 - `images/` — meal photos, referenced by URL from `data.json`.
+- `tools/fmt_data.py` — the one definition of `data.json`'s on-disk format.
 - `README.md` — placeholder, ignore.
+
+## Always write `data.json` through `tools/fmt_data.py`
+`data.json` has **two** writers: this session (Python) and the app itself (the
+"+ Add food" sheet pushes via the GitHub Contents API using
+`JSON.stringify(data, null, 2)`). If the two disagree on formatting, every app
+commit rewrites the whole file and the diff becomes unreadable. So never call
+`json.dump` directly — use:
+
+```python
+import sys; sys.path.insert(0, 'tools')
+from fmt_data import load, save
+d = load(); ...; save(d)
+```
+
+which matches `JSON.stringify` exactly: 2-space indent, whole numbers as ints
+(`20.0` → `20`), raw UTF-8 (not `\uXXXX`), no trailing newline. Running
+`python3 tools/fmt_data.py` normalises the file in place.
 
 ## `data.json` shape
 ```jsonc
