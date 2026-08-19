@@ -2815,6 +2815,16 @@
           "sat": 5.2,
           "carb": 0.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_salmon.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:10",
+          "name": "Chicken biryani 177g (incl 96g cooked chicken breast)",
+          "kcal": 301,
+          "protein": 33,
+          "fat": 8.6,
+          "sat": 2.7,
+          "carb": 21.5
         }
       ]
     }
