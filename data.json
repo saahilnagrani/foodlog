@@ -2751,6 +2751,17 @@
           "fat": 7.3,
           "sat": 0.8,
           "carb": 1.6
+        },
+        {
+          "meal": "Breakfast",
+          "t": "12:35",
+          "name": "Watermelon & feta salad 85g (~22g feta) + 4g pine nuts",
+          "kcal": 103,
+          "protein": 4.1,
+          "fat": 7.4,
+          "sat": 3.5,
+          "carb": 5.9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_wmfeta.jpg"
         }
       ]
     }
