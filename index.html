@@ -612,11 +612,11 @@ function mergeExtras(data,extra){
   data.updated=todayISO();
   return data;
 }
-async function ghPush(){
+async function ghPush(quiet){
   const tok=ghToken();
-  if(!tok){ghStatus('Add a token first.');return;}
+  if(!tok){if(!quiet)ghStatus('Add a token first.');return;}
   const n=pendingCount();
-  if(!n){ghStatus('Nothing new to save.');return;}
+  if(!n){if(!quiet)ghStatus('Nothing new to save.');return;}
   const btn=document.getElementById('gh_push'); btn.disabled=true; ghStatus('Saving '+n+' item(s)…');
   const api=`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`;
   const H={Authorization:'Bearer '+tok,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
@@ -632,8 +632,9 @@ async function ghPush(){
     DATA=data; buildWeeks(); curWeek=weeks.length-1; render();
     ghStatus('Saved. '+n+' item(s) are now in data.json.');
     toast('Saved '+n+' item(s) to GitHub');
-  }catch(err){ghStatus(String(err.message||err));}
-  finally{btn.disabled=false; refreshPending();}
+  }catch(err){ghStatus(String(err.message||err));
+    if(quiet)toast('Could not save to GitHub - kept on this device');}
+  finally{btn.disabled=false; refreshPending(); pendingBadge();}
 }
 function refreshPending(){const e=document.getElementById('gh_pend');if(e){const n=pendingCount();
   e.textContent = n? n+' item(s) on this device not saved yet' : 'Everything is saved.';}}
@@ -782,14 +783,26 @@ function openAdd(){
   setFab(true);
   window.scrollTo(0,0);
 }
+function pendingBadge(){
+  const f=document.getElementById('fab'); if(!f)return;
+  const n=(document.body.classList.contains('add-open'))?0:pendingCount();
+  f.innerHTML = document.body.classList.contains('add-open') ? '&times;'
+      : ('+ Add food'+(n?' <sup style="font-weight:700">'+n+'</sup>':''));
+}
 function setFab(closing){
   const f=document.getElementById('fab'); if(!f)return;
   f.classList.toggle('closing',!!closing);
   f.innerHTML = closing ? '&times;' : '+ Add food';
+  if(!closing)pendingBadge();
   f.setAttribute('aria-label', closing?'Close':'Add food');
 }
 function fabTap(){ document.body.classList.contains('add-open') ? closeAdd() : openAdd(); }
-function closeAdd(){document.getElementById('addBg').classList.remove('open');document.body.classList.remove('modal-open','add-open');setFab(false);window.scrollTo(0,0);}
+function closeAdd(){
+  document.getElementById('addBg').classList.remove('open');
+  document.body.classList.remove('modal-open','add-open');
+  setFab(false);window.scrollTo(0,0);
+  if(ghToken()&&pendingCount())ghPush(true);      /* quiet auto-save; manual button remains for retries */
+}
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
 function saveFood(){
   const date=selDate||todayISO();
