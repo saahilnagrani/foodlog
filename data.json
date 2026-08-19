@@ -2772,6 +2772,39 @@
           "sat": 3.5,
           "carb": 5.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_wmfeta.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:46",
+          "name": "Veg hakka noodles 183g cooked",
+          "kcal": 278,
+          "protein": 6.8,
+          "fat": 9.2,
+          "sat": 1.5,
+          "carb": 40.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_noodles.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:46",
+          "name": "Guacamole 90g (avocado + onion & tomato)",
+          "kcal": 109,
+          "protein": 1.5,
+          "fat": 9.5,
+          "sat": 1.4,
+          "carb": 7.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_guac.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:46",
+          "name": "Chilli tofu 150g (100g cooked tofu + capsicum, onion, ketchup)",
+          "kcal": 252,
+          "protein": 8,
+          "fat": 16.8,
+          "sat": 2.5,
+          "carb": 17.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_chillitofu.jpg"
         }
       ]
     }
