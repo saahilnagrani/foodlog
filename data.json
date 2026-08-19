@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-18",
+  "updated": "2026-08-19",
   "days": [
     {
       "date": "2026-07-24",
@@ -2703,6 +2703,26 @@
           "fat": 0.9,
           "sat": 0,
           "carb": 8.5
+        },
+        {
+          "meal": "Snack",
+          "t": "28:30",
+          "name": "Filet-O-Fish (McDonald's)",
+          "kcal": 390,
+          "protein": 15,
+          "fat": 19,
+          "sat": 4,
+          "carb": 39
+        },
+        {
+          "meal": "Snack",
+          "t": "28:30",
+          "name": "Biscoff McFlurry, regular (McDonald's)",
+          "kcal": 490,
+          "protein": 11,
+          "fat": 17,
+          "sat": 10,
+          "carb": 74
         }
       ]
     }
