@@ -2794,6 +2794,16 @@
           "sat": 1.8,
           "carb": 16.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_chillitofu.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "19:45",
+          "name": "Clear whey 37g",
+          "kcal": 135,
+          "protein": 31.1,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 1.5
         }
       ]
     }
