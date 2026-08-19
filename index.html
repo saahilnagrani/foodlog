@@ -153,7 +153,16 @@
   body[data-theme="d"] .wk-line span{background:#12102a;color:#8a86a3;} body[data-theme="d"] .wk-line.sat span{color:#ff6b6b;}
   .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
   .toast.show{display:block;}
+  .toast .tact{margin-left:14px;background:none;border:0;padding:0;font:inherit;font-weight:800;color:#7ef0b0;text-decoration:underline;cursor:pointer;}
   .thumb,.mimg{object-fit:cover;cursor:pointer;background:#ccc;}
+
+  /* ---- swipe-left-to-delete on a food row (all three themes) ---- */
+  .swipe{overflow:hidden;}
+  .swipe-in{display:flex;align-items:stretch;transition:transform .18s ease;will-change:transform;touch-action:pan-y;}
+  .swipe.drag .swipe-in{transition:none;}
+  .swipe.open .swipe-in{transform:translateX(-88px);}
+  .swipe-in > :first-child{flex:0 0 100%;min-width:0;}
+  .swipe-del{flex:0 0 88px;border:0;background:#c0271b;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;}
 
   /* ===================== BRUTALIST (b) ===================== */
   body[data-theme="b"]{background:#e9dcc0;color:#111;font-family:var(--bfont,'Archivo Black',Arial,sans-serif);}
@@ -431,12 +440,99 @@ function render(){
   const mb=document.getElementById('modebtn');if(mb)mb.textContent=PREF.weekMode==='roll'?'Roll':'Cal';
   const days=wk?[...wk.days]:[];
   const view=document.getElementById('view');
+  ROWS=[];                                  /* rebuilt by swipeRow() below */
   if(PREF.theme==='b')view.innerHTML=renderB(days);
   else if(PREF.theme==='c')view.innerHTML=renderC(days);
   else view.innerHTML=renderD(days);
   applyMotion();
   chartsGrow();
 }
+/* ---------- swipe a food row left to reveal Delete ----------
+   Every meal row in every theme is wrapped by swipeRow(). ROWS is rebuilt on
+   each render() and holds just enough to find the item again in its store:
+   a row is either _local (still only in localStorage, not pushed yet) or lives
+   in data.json on GitHub. We match on name+time+kcal rather than on an index,
+   because data.json may have moved on since this screen was drawn. */
+let ROWS=[];
+const SWDEL=88;                                     /* must match .swipe-del width */
+function swipeRow(it,date,html){
+  const n=ROWS.length;
+  ROWS.push({date:date,src:it._local?'local':'repo',name:it.name,t:it.t||'',kcal:Math.round(+it.kcal||0)});
+  return `<div class="swipe"><div class="swipe-in">${html}<button class="swipe-del" type="button" onclick="delRow(${n})">Delete</button></div></div>`;
+}
+function closeSwipes(except){
+  document.querySelectorAll('#view .swipe.open').forEach(b=>{if(b!==except)b.classList.remove('open');});
+}
+let SW=null, SWJUST=0;
+function swipeInit(){
+  const v=document.getElementById('view');
+  v.addEventListener('pointerdown',e=>{
+    if(e.target.closest('.swipe-del'))return;         /* let the button take the tap */
+    const inn=e.target.closest('.swipe-in');
+    if(!inn){closeSwipes();return;}
+    closeSwipes(inn.parentNode);
+    SW={el:inn,box:inn.parentNode,x:e.clientX,y:e.clientY,dx:0,live:false};
+  },{passive:true});
+  v.addEventListener('pointermove',e=>{
+    if(!SW)return;
+    const dx=e.clientX-SW.x, dy=e.clientY-SW.y;
+    if(!SW.live){
+      if(Math.abs(dx)<8&&Math.abs(dy)<8)return;
+      if(Math.abs(dx)<=Math.abs(dy)){SW=null;return;}  /* a vertical scroll, not a swipe */
+      SW.live=true; SW.box.classList.add('drag');
+    }
+    const from=SW.box.classList.contains('open')?-SWDEL:0;
+    SW.dx=Math.min(0,Math.max(-SWDEL,from+dx));
+    SW.el.style.transform='translateX('+SW.dx+'px)';
+  },{passive:true});
+  const end=()=>{
+    if(!SW)return; const s=SW; SW=null;
+    if(!s.live)return;
+    s.box.classList.remove('drag'); s.el.style.transform='';
+    s.box.classList.toggle('open', s.dx < -SWDEL/2);
+    SWJUST=Date.now();
+  };
+  v.addEventListener('pointerup',end); v.addEventListener('pointercancel',end);
+  /* a swipe must not also count as a tap on the photo underneath it */
+  v.addEventListener('click',e=>{
+    if(Date.now()-SWJUST<350 && !e.target.closest('.swipe-del')){e.stopPropagation();e.preventDefault();}
+  },true);
+}
+async function delRow(n){
+  const r=ROWS[n]; if(!r)return;
+  closeSwipes();
+  const same=it=>it.name===r.name && (it.t||'')===r.t && Math.round(+it.kcal||0)===r.kcal;
+  if(r.src==='local'){                               /* never pushed - pure localStorage */
+    const x=loadExtra(), arr=x[r.date]||[], i=arr.findIndex(same);
+    if(i<0){toast('Could not find that item any more');return;}
+    const gone=arr.splice(i,1)[0];
+    if(arr.length)x[r.date]=arr; else delete x[r.date];
+    saveExtra(x); render(); refreshPending(); pendingBadge();
+    toast('Deleted '+r.name,'Undo',()=>{
+      const y=loadExtra();(y[r.date]=y[r.date]||[]).push(gone);saveExtra(y);
+      render(); refreshPending(); pendingBadge(); toast('Restored '+r.name);
+    });
+    return;
+  }
+  if(!ghToken()){toast('Add a GitHub token in Settings to delete a saved item');return;}
+  toast('Deleting '+r.name+'…');
+  let gone=null;
+  try{
+    const data=await ghCommit(d=>{
+      const day=(d.days||[]).find(x=>x.date===r.date);
+      const i=day?day.items.findIndex(same):-1;
+      if(i<0)throw new Error('That item is not in data.json any more - pull down to refresh');
+      gone=day.items[i]; day.items.splice(i,1);       /* keep the day even if now empty: it holds the workout */
+      d.updated=todayISO();
+    },'App: delete "'+r.name+'" from '+r.date);
+    DATA=data; buildWeeks(); render();
+    toast('Deleted '+r.name,'Undo',()=>{
+      const y=loadExtra();(y[r.date]=y[r.date]||[]).push(gone);saveExtra(y);
+      render(); refreshPending(); pendingBadge(); ghPush(true,'App: restore "'+r.name+'" on '+r.date);
+    });
+  }catch(err){toast(String(err.message||err));}
+}
+
 function applyMotion(){
   const t=PREF.theme,m=PREF.motion[t];
   if(t==='b'){ if(m==='bars')fillB(); else setFullB(); }
@@ -492,7 +588,7 @@ function renderB(days){
   [...days].reverse().forEach(d=>{
     const t=totals(d),T=DATA.targets;
     const meals=sortItems(d.items).map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">NO<br>PIC</div>`;
-      return `<div class="meal">${thumb}<div class="mt"><div class="nm">${it.name}</div><div class="mm"><span class="tag">${mlab(it)}</span>${R(it.protein)}g P &middot; ${Math.round(it.kcal)} kcal &middot; ${R(it.fat)}g fat &middot; ${R(it.carb||0)}g C</div></div></div>`;}).join('');
+      return swipeRow(it,d.date,`<div class="meal">${thumb}<div class="mt"><div class="nm">${it.name}</div><div class="mm"><span class="tag">${mlab(it)}</span>${R(it.protein)}g P &middot; ${Math.round(it.kcal)} kcal &middot; ${R(it.fat)}g fat &middot; ${R(it.carb||0)}g C</div></div></div>`);}).join('');
     const pw=Math.min(100,t.p/T.protein*100), fAxis=Math.max(T.fat,t.f), sw=t.f>0?t.s/fAxis*100:0, uw=t.f>0?t.u/fAxis*100:0;
     h+=`<div class="card"><span class="dchip">${d.label}${d.workout?' &middot; '+d.workout:''}</span>
       <div class="kcal"><span class="big">${t.k}</span><span class="of ${t.k>T.kcal?'over':''}">/ ${T.kcal} KCAL</span></div>
@@ -524,7 +620,7 @@ function renderC(days){
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
     h+=`<div class="dk">${num(t.k)} <small>/ 1900 kcal &middot; ${d.label}</small></div>`;
-    sortItems(d.items).forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">no<br>pic</div>`;h+=`<div class="mrow">${thumb}<div class="mn"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`;});
+    sortItems(d.items).forEach(it=>{const src=imgSrc(it);const thumb=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">no<br>pic</div>`;h+=swipeRow(it,d.date,`<div class="mrow">${thumb}<div class="mn"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}/</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)}k ${R(it.protein)}P</div></div>`);});
     const pp=Math.round(Math.min(100,t.p/T.protein*100)),fp=Math.round(Math.min(100,t.f/T.fat*100)),cp=Math.round(Math.min(100,t.c/T.carb*100));
     h+=`<div class="metric"><div class="l"><span class="name">protein</span><span class="rd">${num(t.p)} / 150 g</span></div><div class="track" data-pct="${pp}" data-over="0">${cbar(pp)}</div></div>`;
     h+=`<div class="metric"><div class="l"><span class="name">fat</span><span class="rd ${t.f>T.fat?'hi':'ok'}">${num(t.f)} / 60 g</span></div><div class="track" data-pct="${fp}" data-over="${t.f>T.fat?1:0}">${cbar(fp,t.f>T.fat)}</div><div class="sub">&#9492; sat ${t.s}/15 &#9679; unsat ${t.u}</div></div>`;
@@ -563,15 +659,15 @@ function renderD(days){
   h+=`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat g</span> &middot; lines 15/60 &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
-    const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return `<div class="meal">${im}<div class="nm"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`;}).join('');
+    const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return swipeRow(it,d.date,`<div class="meal">${im}<div class="nm"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`);}).join('');
     h+=`<div class="drow"><div class="gl">${g}</div><div class="info"><div class="dl"><span class="nm">${d.label}${d.workout?' &middot; '+d.workout:''}</span><span class="kc ${t.k>T.kcal?'over':''}">${t.k} <small>kcal</small></span></div><div class="dmac">${t.p}g P &middot; ${t.f}g fat <span class="sat">(${t.s} sat)</span> &middot; ${t.c}g C</div>${meals}<div class="sync" onclick="syncDay('${d.date}')">Sync to Google Health</div></div></div>`;
   });
   return h;
 }
 
 /* ---------- settings ---------- */
-function openSettings(){document.getElementById('bridge_out').textContent='';document.getElementById('gh_tok').value=ghToken();refreshPending();ghStatus('');buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
-function closeSettings(){document.getElementById('settingsBg').classList.remove('open');document.body.classList.remove('modal-open');window.scrollTo(0,0);}
+function openSettings(){keepScroll();document.getElementById('bridge_out').textContent='';document.getElementById('gh_tok').value=ghToken();refreshPending();ghStatus('');buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
+function closeSettings(){document.getElementById('settingsBg').classList.remove('open');document.body.classList.remove('modal-open');restoreScroll();}
 function buildSettings(){
   document.getElementById('themeChips').innerHTML=THEMES.map(([n,id])=>`<button class="schip ${PREF.theme===id?'on':''}" onclick="setTheme('${id}')">${n}</button>`).join('');
   document.getElementById('fontChips').innerHTML=FONTS[PREF.theme].map((f,i)=>`<button class="schip ${PREF.font[PREF.theme]===i?'on':''}" onclick="setFont(${i})">${f[0]}</button>`).join('');
@@ -612,22 +708,30 @@ function mergeExtras(data,extra){
   data.updated=todayISO();
   return data;
 }
-async function ghPush(quiet){
+/* read data.json from GitHub, let `mutate` change it, write it back as one commit.
+   Always works from a fresh GET so we never clobber a change made elsewhere. */
+async function ghCommit(mutate,message){
   const tok=ghToken();
-  if(!tok){if(!quiet)ghStatus('Add a token first.');return;}
+  if(!tok)throw new Error('No GitHub token on this device. Add one in Settings.');
+  const api=`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`;
+  const H={Authorization:'Bearer '+tok,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
+  const g=await fetch(api+'?ref=main',{headers:H,cache:'no-store'});
+  if(!g.ok) throw new Error(g.status===401?'Token rejected (401). Check it has Contents: read & write on this repo.':'GitHub GET failed: '+g.status);
+  const meta=await g.json();
+  const data=JSON.parse(b64dec(meta.content));
+  mutate(data);
+  const p=await fetch(api,{method:'PUT',headers:Object.assign({'Content-Type':'application/json'},H),
+    body:JSON.stringify({message:message,content:b64enc(JSON.stringify(data,null,2)),sha:meta.sha,branch:'main'})});
+  if(!p.ok){const e=await p.text();throw new Error('GitHub save failed: '+p.status+' '+e.slice(0,120));}
+  return data;
+}
+async function ghPush(quiet,msg){
+  if(!ghToken()){if(!quiet)ghStatus('Add a token first.');return;}
   const n=pendingCount();
   if(!n){if(!quiet)ghStatus('Nothing new to save.');return;}
   const btn=document.getElementById('gh_push'); btn.disabled=true; ghStatus('Saving '+n+' item(s)…');
-  const api=`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`;
-  const H={Authorization:'Bearer '+tok,Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'};
   try{
-    const g=await fetch(api+'?ref=main',{headers:H,cache:'no-store'});
-    if(!g.ok) throw new Error(g.status===401?'Token rejected (401). Check it has Contents: read & write on this repo.':'GitHub GET failed: '+g.status);
-    const meta=await g.json();
-    const data=mergeExtras(JSON.parse(b64dec(meta.content)), loadExtra());
-    const p=await fetch(api,{method:'PUT',headers:Object.assign({'Content-Type':'application/json'},H),
-      body:JSON.stringify({message:'App: add '+n+' item(s) from quick add',content:b64enc(JSON.stringify(data,null,2)),sha:meta.sha,branch:'main'})});
-    if(!p.ok){const e=await p.text();throw new Error('GitHub save failed: '+p.status+' '+e.slice(0,120));}
+    const data=await ghCommit(d=>mergeExtras(d,loadExtra()),msg||('App: add '+n+' item(s) from quick add'));
     saveExtra({});                       /* merged - clear local copies */
     DATA=data; buildWeeks(); curWeek=weeks.length-1; render();
     ghStatus('Saved. '+n+' item(s) are now in data.json.');
@@ -773,6 +877,7 @@ function qadd(i){
 
 /* ---------- add food ---------- */
 function openAdd(){
+  keepScroll();
   selDate=todayISO(); selMeal=guessMeal();
   buildDayChips(); buildMealChips();
   document.getElementById('qsearch').value='';
@@ -800,7 +905,7 @@ function fabTap(){ document.body.classList.contains('add-open') ? closeAdd() : o
 function closeAdd(){
   document.getElementById('addBg').classList.remove('open');
   document.body.classList.remove('modal-open','add-open');
-  setFab(false);window.scrollTo(0,0);
+  setFab(false);restoreScroll();
   if(ghToken()&&pendingCount())ghPush(true);      /* quiet auto-save; manual button remains for retries */
 }
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
@@ -866,7 +971,14 @@ function syncDay(date){
   else{const tk=items.reduce((a,b)=>a+b.kcal,0),tp=R(items.reduce((a,b)=>a+(+b.protein||0),0));toast('In the app this logs '+items.length+' meal(s) for '+date+' ('+tk+' kcal, '+tp+'g protein) to Google Health.');}
 }
 
-let toastTimer;function toast(m){const e=document.getElementById('toast');e.textContent=m;e.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>e.classList.remove('show'),3200);}
+let toastTimer;
+function toast(m,label,fn){
+  const e=document.getElementById('toast');e.textContent=m;
+  if(label&&fn){const b=document.createElement('button');b.className='tact';b.type='button';b.textContent=label;
+    b.onclick=()=>{e.classList.remove('show');fn();};e.appendChild(b);}
+  e.classList.add('show');clearTimeout(toastTimer);
+  toastTimer=setTimeout(()=>e.classList.remove('show'),label?6000:3200);
+}
 function lb(src,cap){
   if(!src)return false;
   const im=document.getElementById('lbimg'),note=document.getElementById('lbnote');
@@ -878,6 +990,7 @@ function lb(src,cap){
   im.removeAttribute('src');im.setAttribute('src',src);
   if(im.complete&&im.naturalWidth>0)ok();
   /* belt and braces: hide the log screen directly, not only via the body class */
+  keepScroll();
   const v=document.getElementById('view'),t=document.getElementById('topbar'),f=document.querySelector('.fab');
   if(v)v.style.display='none';if(t)t.style.display='none';if(f)f.style.display='none';
   document.body.classList.add('modal-open');
@@ -890,12 +1003,22 @@ function closeLb(){
   document.body.classList.remove('modal-open');
   const v=document.getElementById('view'),t=document.getElementById('topbar'),f=document.querySelector('.fab');
   if(v)v.style.display='';if(t)t.style.display='';if(f)f.style.display='';
-  window.scrollTo(0,0);
+  restoreScroll();
 }
+
+/* ---------- keep the log's scroll position across modals ----------
+   Opening a modal sets body.modal-open, which display:none's #view; the page
+   then has no height and the browser resets scroll to 0. So remember where we
+   were on the way in and put it back on the way out. */
+let SCROLLY=0;
+function keepScroll(){if(!document.body.classList.contains('modal-open'))SCROLLY=window.scrollY||document.documentElement.scrollTop||0;}
+function restoreScroll(){const y=SCROLLY;window.scrollTo(0,y);
+  requestAnimationFrame(()=>window.scrollTo(0,y));setTimeout(()=>window.scrollTo(0,y),60);}
 
 /* ---------- boot ---------- */
 async function boot(){try{const r=await fetch('data.json?cb='+Date.now(),{cache:'no-store'});if(r.ok)DATA=await r.json();else throw 0;}catch(e){DATA=SEED;}
   buildWeeks();curWeek=weeks.length-1;render();}
 window.appRefresh=async function(){const y=window.scrollY;await boot();window.scrollTo(0,y);};
+swipeInit();
 boot();
 </script></body></html>

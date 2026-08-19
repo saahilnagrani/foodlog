@@ -117,5 +117,9 @@ Notes:
 - Viewing the log, weekly charts, macros: pure static site.
 - Adding a food by hand: the app's **+ Add food** button (manual macro entry,
   stored per-device in `localStorage`, not committed here).
+- Deleting a food: swipe a row left in the app and tap Delete. If the item was
+  still local it just disappears; if it was already in `data.json` the app
+  commits the removal itself (`App: delete "..." from <date>`), so pull before
+  your next edit.
 - **Sync to Google Health**: handled on-device by the Android wrapper's
   `HealthBridge`. In a plain desktop browser the button just shows a toast.
