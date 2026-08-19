@@ -2772,16 +2772,6 @@
           "sat": 3.5,
           "carb": 5.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_wmfeta.jpg"
-        },
-        {
-          "meal": "Lunch",
-          "t": "",
-          "name": "Mix nuts & seeds 33g",
-          "kcal": 218,
-          "protein": 5.9,
-          "fat": 20.1,
-          "sat": 2.2,
-          "carb": 4.5
         }
       ]
     }
