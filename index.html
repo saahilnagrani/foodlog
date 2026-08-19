@@ -1010,6 +1010,8 @@ function syncPayload(items){
    The wrapper deletes every NutritionRecord inside that date before inserting,
    so whatever we hand it has to be the complete day - never just a fragment. */
 function syncCal(date){
+  if(date>todayISO())return null;   /* the wrapper clamps its range to now; a date that
+                                       has not started yet gives it end < start and throws */
   const items=syncPayload(calDayItems(date));
   if(!items.length)return null;
   if(window.HealthBridge&&typeof window.HealthBridge.syncDayItems==='function')window.HealthBridge.syncDayItems(date,JSON.stringify(items));
