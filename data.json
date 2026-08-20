@@ -2844,16 +2844,6 @@
       "workout": "",
       "items": [
         {
-          "meal": "Dinner",
-          "t": "",
-          "name": "Strawberries 40g",
-          "kcal": 13,
-          "protein": 0.3,
-          "fat": 0.1,
-          "sat": 0,
-          "carb": 3.1
-        },
-        {
           "meal": "Lunch",
           "t": "14:40",
           "name": "Egg-white omelette (4 egg whites + tomato, 1 tsp oil)",
