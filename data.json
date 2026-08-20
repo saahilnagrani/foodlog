@@ -2919,23 +2919,23 @@
         {
           "meal": "Dinner",
           "t": "21:25",
-          "name": "Prawn pasta 240g (34% of 700g batch: 200g prawns drained, 0% Greek yogurt sauce)",
-          "kcal": 335,
-          "protein": 25.9,
-          "fat": 6.5,
-          "sat": 0.9,
-          "carb": 42.4,
+          "name": "Prawn pasta 300g (41% of 740g batch: 200g prawns drained, 0% Greek yogurt sauce)",
+          "kcal": 418,
+          "protein": 31.4,
+          "fat": 7.8,
+          "sat": 1.1,
+          "carb": 54.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_prawnpasta.jpg"
         },
         {
           "meal": "Dinner",
           "t": "23:00",
-          "name": "Prawn pasta 200g (2nd serving, 29% of the same 700g batch)",
+          "name": "Prawn pasta 200g (2nd serving, 27% of the same 740g batch)",
           "kcal": 279,
-          "protein": 21.5,
-          "fat": 5.5,
-          "sat": 0.8,
-          "carb": 35.3
+          "protein": 20.9,
+          "fat": 5.2,
+          "sat": 0.7,
+          "carb": 36.5
         }
       ]
     }
