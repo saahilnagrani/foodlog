@@ -2837,6 +2837,46 @@
           "carb": 15
         }
       ]
+    },
+    {
+      "date": "2026-08-20",
+      "label": "Thu 20 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:40",
+          "name": "Egg-white omelette (4 egg whites + tomato, 1 tsp oil)",
+          "kcal": 118,
+          "protein": 14.8,
+          "fat": 4.6,
+          "sat": 0.6,
+          "carb": 2.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_omelette.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:40",
+          "name": "Greek yogurt 116g (Hayatna 0%)",
+          "kcal": 73,
+          "protein": 11.6,
+          "fat": 0.5,
+          "sat": 0,
+          "carb": 5.2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_yogurt.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:40",
+          "name": "Chicken biryani 250g (incl 130g cooked chicken breast)",
+          "kcal": 426,
+          "protein": 45.1,
+          "fat": 12.4,
+          "sat": 3.8,
+          "carb": 31.9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_biryani.jpg"
+        }
+      ]
     }
   ]
 }
