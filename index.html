@@ -847,6 +847,8 @@ function buildMealChips(){
 function pickMeal(m){selMeal=m;buildMealChips();}
 function guessMeal(){const h=(new Date()).getHours();
   return h<6?'Early morning':h<11?'Breakfast':h<16?'Lunch':h<19?'Snack':'Dinner';}
+function nowHM(){const d=new Date();return String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');}
+function isLateNight(){return (new Date()).getHours()<5;}   /* 00:00-04:59 belongs to last night */
 function fTime(){
   const v=document.getElementById('f_time').value||'';
   if(!v) return '';
@@ -920,10 +922,16 @@ function qadd(i){
 /* ---------- add food ---------- */
 function openAdd(){
   keepScroll();
-  selDate=todayISO(); selMeal=guessMeal();
+  /* Default the time to the clock on this device (= UAE time on your phone).
+     Before 5am you are almost certainly finishing the previous waking day, so
+     pre-select yesterday and tick After midnight - both stay visible and
+     changeable, nothing is decided silently. */
+  const late=isLateNight();
+  selDate=late?addDays(todayISO(),-1):todayISO(); selMeal=guessMeal();
   buildDayChips(); buildMealChips();
   document.getElementById('qsearch').value='';
-  document.getElementById('f_pastmid').checked=false;
+  document.getElementById('f_time').value=nowHM();
+  document.getElementById('f_pastmid').checked=late;
   buildQuick();
   document.body.classList.add('modal-open','add-open');
   document.getElementById('addBg').classList.add('open');
