@@ -2875,6 +2875,46 @@
           "sat": 3.8,
           "carb": 31.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_biryani.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "",
+          "name": "Awesome protein 53g",
+          "kcal": 196,
+          "protein": 32.3,
+          "fat": 4.5,
+          "sat": 1.6,
+          "carb": 1.9
+        },
+        {
+          "meal": "Dinner",
+          "t": "",
+          "name": "Oat milk (Oatly) 200ml",
+          "kcal": 120,
+          "protein": 2,
+          "fat": 6,
+          "sat": 0.6,
+          "carb": 13.4
+        },
+        {
+          "meal": "Dinner",
+          "t": "",
+          "name": "Mix nuts & seeds 15g",
+          "kcal": 99,
+          "protein": 2.7,
+          "fat": 9.2,
+          "sat": 1,
+          "carb": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "",
+          "name": "Strawberries 40g",
+          "kcal": 13,
+          "protein": 0.3,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 3.1
         }
       ]
     }
