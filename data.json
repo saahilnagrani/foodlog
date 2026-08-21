@@ -2940,12 +2940,12 @@
         {
           "meal": "Snack",
           "t": "29:00",
-          "name": "Haldiram's Minute Khana Poha cup 80g (estimated, label not photographed)",
-          "kcal": 310,
-          "protein": 6.5,
-          "fat": 8.5,
-          "sat": 3,
-          "carb": 52,
+          "name": "Haldiram's Minute Khana Poha cup 80g",
+          "kcal": 353,
+          "protein": 6.3,
+          "fat": 12.2,
+          "sat": 2.4,
+          "carb": 54.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_poha.jpg"
         }
       ]
