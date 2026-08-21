@@ -3001,12 +3001,12 @@
         {
           "meal": "Lunch",
           "t": "13:47",
-          "name": "Guacamole ~30g",
-          "kcal": 36,
-          "protein": 0.5,
-          "fat": 3.2,
-          "sat": 0.5,
-          "carb": 2.5
+          "name": "Guacamole ~15g (half of ~30g served, rest left)",
+          "kcal": 18,
+          "protein": 0.3,
+          "fat": 1.6,
+          "sat": 0.2,
+          "carb": 1.2
         }
       ]
     }
