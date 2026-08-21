@@ -3018,6 +3018,16 @@
           "sat": 2.1,
           "carb": 1.1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_scrambled.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "14:57",
+          "name": "Acai shake: 100g skyr 0% + 52g Sambazon acai + 96g strawberries + 30g ON vanilla whey",
+          "kcal": 268,
+          "protein": 35.3,
+          "fat": 3.3,
+          "sat": 0.9,
+          "carb": 25.8
         }
       ]
     }
