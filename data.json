@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-20",
+  "updated": "2026-08-21",
   "days": [
     {
       "date": "2026-07-24",
@@ -2936,6 +2936,17 @@
           "fat": 5.2,
           "sat": 0.7,
           "carb": 36.5
+        },
+        {
+          "meal": "Snack",
+          "t": "29:00",
+          "name": "Haldiram's Minute Khana Poha cup 80g (estimated, label not photographed)",
+          "kcal": 310,
+          "protein": 6.5,
+          "fat": 8.5,
+          "sat": 3,
+          "carb": 52,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_poha.jpg"
         }
       ]
     }
