@@ -533,6 +533,21 @@ function swipeInit(){
     if(Date.now()-SWJUST<350 && !e.target.closest('.swipe-del')){e.stopPropagation();e.preventDefault();}
   },true);
 }
+/* The system reserves the screen edges for its own back gesture, so an edge
+   swipe never reaches this page. A tap, or a swipe that starts away from the
+   edge, does - so give the photo viewer both as a way out. */
+function lbInit(){
+  const lb=document.getElementById('lb'); if(!lb)return;
+  let sx=0,sy=0,moved=false;
+  lb.addEventListener('pointerdown',e=>{sx=e.clientX;sy=e.clientY;moved=false;},{passive:true});
+  lb.addEventListener('pointermove',e=>{
+    if(Math.abs(e.clientX-sx)>10||Math.abs(e.clientY-sy)>10)moved=true;},{passive:true});
+  lb.addEventListener('pointerup',e=>{
+    if(e.target.closest('.lbx'))return;                 /* the X button handles itself */
+    const dx=e.clientX-sx, dy=e.clientY-sy;
+    if(!moved || Math.abs(dx)>70 || Math.abs(dy)>70) closeLb();
+  },{passive:true});
+}
 async function delRow(n){
   const r=ROWS[n]; if(!r)return;
   closeSwipes();
@@ -701,8 +716,8 @@ function renderD(days){
 }
 
 /* ---------- settings ---------- */
-function openSettings(){keepScroll();document.getElementById('bridge_out').textContent='';document.getElementById('gh_tok').value=ghToken();refreshPending();ghStatus('');buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
-function closeSettings(){document.getElementById('settingsBg').classList.remove('open');document.body.classList.remove('modal-open');restoreScroll();}
+function openSettings(){keepScroll();histPush();document.getElementById('bridge_out').textContent='';document.getElementById('gh_tok').value=ghToken();refreshPending();ghStatus('');buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
+function closeSettings(fromHistory){if(!fromHistory)histPop();document.getElementById('settingsBg').classList.remove('open');document.body.classList.remove('modal-open');restoreScroll();}
 function buildSettings(){
   document.getElementById('themeChips').innerHTML=THEMES.map(([n,id])=>`<button class="schip ${PREF.theme===id?'on':''}" onclick="setTheme('${id}')">${n}</button>`).join('');
   document.getElementById('fontChips').innerHTML=FONTS[PREF.theme].map((f,i)=>`<button class="schip ${PREF.font[PREF.theme]===i?'on':''}" onclick="setFont(${i})">${f[0]}</button>`).join('');
@@ -921,7 +936,7 @@ function qadd(i){
 
 /* ---------- add food ---------- */
 function openAdd(){
-  keepScroll();
+  keepScroll(); histPush();
   /* Default the time to the clock on this device (= UAE time on your phone).
      Before 5am you are almost certainly finishing the previous waking day, so
      pre-select yesterday and tick After midnight - both stay visible and
@@ -952,7 +967,8 @@ function setFab(closing){
   f.setAttribute('aria-label', closing?'Close':'Add food');
 }
 function fabTap(){ document.body.classList.contains('add-open') ? closeAdd() : openAdd(); }
-function closeAdd(){
+function closeAdd(fromHistory){
+  if(!fromHistory)histPop();
   document.getElementById('addBg').classList.remove('open');
   document.body.classList.remove('modal-open','add-open');
   setFab(false);restoreScroll();
@@ -1059,7 +1075,7 @@ function lb(src,cap){
   im.removeAttribute('src');im.setAttribute('src',src);
   if(im.complete&&im.naturalWidth>0)ok();
   /* belt and braces: hide the log screen directly, not only via the body class */
-  keepScroll();
+  keepScroll(); histPush();
   const v=document.getElementById('view'),t=document.getElementById('topbar'),f=document.querySelector('.fab');
   if(v)v.style.display='none';if(t)t.style.display='none';if(f)f.style.display='none';
   document.body.classList.add('modal-open');
@@ -1067,13 +1083,36 @@ function lb(src,cap){
   window.scrollTo(0,0);setTimeout(()=>window.scrollTo(0,0),60);
   return false;
 }
-function closeLb(){
+function closeLb(fromHistory){
+  if(!fromHistory)histPop();
   document.getElementById('lb').classList.remove('open');
   document.body.classList.remove('modal-open');
   const v=document.getElementById('view'),t=document.getElementById('topbar'),f=document.querySelector('.fab');
   if(v)v.style.display='';if(t)t.style.display='';if(f)f.style.display='';
   restoreScroll();
 }
+
+/* ---------- Android back gesture closes the modal, not the app ----------
+   Every modal pushes a history entry on open. If the wrapper routes the system
+   back gesture into the WebView's session history, back pops that entry and we
+   close the modal instead of the Activity finishing. HISTBUSY marks a popstate
+   we caused ourselves (via a close button) so it is not handled twice. */
+let HIST=0, HISTBUSY=false;
+function histPush(){try{history.pushState({fl:++HIST},'');}catch(e){}}
+function histPop(){                       /* called when a close button is tapped */
+  if(HIST<=0)return;
+  HIST--; HISTBUSY=true;
+  try{history.back();}catch(e){HISTBUSY=false;}
+}
+function closeTopModal(){
+  if(document.getElementById('lb').classList.contains('open'))return closeLb(true);
+  if(document.body.classList.contains('add-open'))return closeAdd(true);
+  if(document.getElementById('settingsBg').classList.contains('open'))return closeSettings(true);
+}
+window.addEventListener('popstate',function(){
+  if(HISTBUSY){HISTBUSY=false;return;}
+  if(HIST>0){HIST--;closeTopModal();}
+});
 
 /* ---------- keep the log's scroll position across modals ----------
    Opening a modal sets body.modal-open, which display:none's #view; the page
@@ -1088,6 +1127,6 @@ function restoreScroll(){const y=SCROLLY;window.scrollTo(0,y);
 async function boot(){try{const r=await fetch('data.json?cb='+Date.now(),{cache:'no-store'});if(r.ok)DATA=await r.json();else throw 0;}catch(e){DATA=SEED;}
   buildWeeks();curWeek=weeks.length-1;render();}
 window.appRefresh=async function(){const y=window.scrollY;await boot();window.scrollTo(0,y);};
-swipeInit();
+swipeInit(); lbInit();
 boot();
 </script></body></html>
