@@ -3060,6 +3060,17 @@
           "fat": 5.6,
           "sat": 0.7,
           "carb": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:30",
+          "name": "Salmon 215g cooked, Indian-spiced, pan-seared",
+          "kcal": 520,
+          "protein": 54.8,
+          "fat": 33.5,
+          "sat": 6.5,
+          "carb": 0.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_salmon.jpg"
         }
       ]
     }
