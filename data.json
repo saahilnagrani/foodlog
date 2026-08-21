@@ -3007,6 +3007,17 @@
           "fat": 1.6,
           "sat": 0.2,
           "carb": 1.2
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:11",
+          "name": "Scrambled eggs (3 egg whites + 1 whole egg, 1 tsp oil)",
+          "kcal": 160,
+          "protein": 17.1,
+          "fat": 9,
+          "sat": 2.1,
+          "carb": 1.1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_scrambled.jpg"
         }
       ]
     }
