@@ -3029,6 +3029,37 @@
           "sat": 2.1,
           "carb": 30.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_acaishake.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:53",
+          "name": "Onion & mint paratha x2.5",
+          "kcal": 520,
+          "protein": 14.2,
+          "fat": 14.2,
+          "sat": 2,
+          "carb": 84.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_paratha.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:53",
+          "name": "Skyr 100g (Hayatna)",
+          "kcal": 69,
+          "protein": 10,
+          "fat": 0.5,
+          "sat": 0,
+          "carb": 6
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:53",
+          "name": "Green chilli pickle 20g (Chokhi Dhani)",
+          "kcal": 60,
+          "protein": 0.4,
+          "fat": 5.6,
+          "sat": 0.7,
+          "carb": 2
         }
       ]
     }
