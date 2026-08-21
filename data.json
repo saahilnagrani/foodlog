@@ -2959,6 +2959,56 @@
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_poha.jpg"
         }
       ]
+    },
+    {
+      "date": "2026-08-21",
+      "label": "Fri 21 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "13:47",
+          "name": "Moong sprouts ~85g with onion & tomato",
+          "kcal": 126,
+          "protein": 8.6,
+          "fat": 0.4,
+          "sat": 0,
+          "carb": 23.4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_sprouts.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:47",
+          "name": "Chicken biryani 116g (incl 27g cooked chicken breast)",
+          "kcal": 201,
+          "protein": 11.9,
+          "fat": 6.7,
+          "sat": 2.1,
+          "carb": 23.7,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_biryani.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:47",
+          "name": "Raw carrot & cucumber ~80g",
+          "kcal": 30,
+          "protein": 0.7,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 6.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_rawveg.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:47",
+          "name": "Guacamole ~30g",
+          "kcal": 36,
+          "protein": 0.5,
+          "fat": 3.2,
+          "sat": 0.5,
+          "carb": 2.5
+        }
+      ]
     }
   ]
 }
