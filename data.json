@@ -3022,12 +3022,12 @@
         {
           "meal": "Drink",
           "t": "14:57",
-          "name": "Acai shake: 100g Hayatna skyr + 52g Sambazon acai + 96g strawberries + 30g ON vanilla whey + 20g fruit & nut mix",
-          "kcal": 368,
-          "protein": 36.5,
-          "fat": 9,
-          "sat": 1.5,
-          "carb": 36.8,
+          "name": "Acai shake: 100g Hayatna skyr + 52g Sambazon acai + 96g strawberries + 30g ON vanilla whey + 20g mix nuts & seeds",
+          "kcal": 406,
+          "protein": 38,
+          "fat": 15.8,
+          "sat": 2.1,
+          "carb": 30.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_acaishake.jpg"
         }
       ]
