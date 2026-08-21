@@ -2939,6 +2939,16 @@
         },
         {
           "meal": "Snack",
+          "t": "28:30",
+          "name": "Roasted makhana, whole 75g pack (3 x 25g servings), grazed 4:30-6:15am",
+          "kcal": 273,
+          "protein": 6,
+          "fat": 15,
+          "sat": 3,
+          "carb": 33
+        },
+        {
+          "meal": "Snack",
           "t": "29:00",
           "name": "Haldiram's Minute Khana Poha cup 80g",
           "kcal": 353,
