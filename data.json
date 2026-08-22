@@ -3071,6 +3071,16 @@
           "sat": 6.5,
           "carb": 0.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_salmon.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "26:00",
+          "name": "Mr Makhana Piri Piri, whole 75g pack (3 x 25g servings)",
+          "kcal": 356,
+          "protein": 6.7,
+          "fat": 14,
+          "sat": 6.9,
+          "carb": 50.8
         }
       ]
     },
