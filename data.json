@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-21",
+  "updated": "2026-08-22",
   "days": [
     {
       "date": "2026-07-24",
@@ -3071,6 +3071,34 @@
           "sat": 6.5,
           "carb": 0.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_salmon.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "label": "Sat 22 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "13:29",
+          "name": "Poha ~180g cooked with peanuts & tempering (estimated, not weighed)",
+          "kcal": 371,
+          "protein": 7.7,
+          "fat": 14.7,
+          "sat": 2.1,
+          "carb": 51.8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat22_poha.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:29",
+          "name": "Masala boondi ~30g (estimated, not weighed)",
+          "kcal": 171,
+          "protein": 3.9,
+          "fat": 10.5,
+          "sat": 1.2,
+          "carb": 15
         }
       ]
     }
