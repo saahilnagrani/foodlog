@@ -3149,6 +3149,17 @@
           "fat": 12.2,
           "sat": 1.4,
           "carb": 2.7
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:01",
+          "name": "Prawn curry 274g (109g cooked prawns + 165g curry: red curry paste, 0% Greek yogurt)",
+          "kcal": 282,
+          "protein": 36.9,
+          "fat": 10.6,
+          "sat": 1.5,
+          "carb": 8.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat22_prawncurry.jpg"
         }
       ]
     }
