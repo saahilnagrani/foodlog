@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-22",
+  "updated": "2026-08-23",
   "days": [
     {
       "date": "2026-07-24",
@@ -3160,6 +3160,37 @@
           "sat": 1.5,
           "carb": 8.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat22_prawncurry.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:01",
+          "name": "Papa John's Nashville chicken sandwich (estimated)",
+          "kcal": 750,
+          "protein": 39,
+          "fat": 32,
+          "sat": 10.5,
+          "carb": 76,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat22_pjsandwich.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:01",
+          "name": "Mexican Ole pizza, 1 of 6 slices, medium, garlic parmesan crust",
+          "kcal": 340,
+          "protein": 15,
+          "fat": 14,
+          "sat": 5.5,
+          "carb": 37
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:01",
+          "name": "Buffalo Saucy Poppers x3 (half a 6-pc)",
+          "kcal": 180,
+          "protein": 10,
+          "fat": 8.5,
+          "sat": 1.5,
+          "carb": 13
         }
       ]
     }
