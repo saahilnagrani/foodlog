@@ -3109,6 +3109,46 @@
           "fat": 10.5,
           "sat": 1.2,
           "carb": 15
+        },
+        {
+          "meal": "Snack",
+          "t": "16:12",
+          "name": "Awesome protein 49g",
+          "kcal": 181,
+          "protein": 29.9,
+          "fat": 4.1,
+          "sat": 1.5,
+          "carb": 1.8
+        },
+        {
+          "meal": "Snack",
+          "t": "16:12",
+          "name": "ON whey (vanilla) 38g",
+          "kcal": 147,
+          "protein": 29.4,
+          "fat": 1.8,
+          "sat": 1.2,
+          "carb": 4.9
+        },
+        {
+          "meal": "Snack",
+          "t": "16:12",
+          "name": "Oat milk (Oatly) 200ml",
+          "kcal": 120,
+          "protein": 2,
+          "fat": 6,
+          "sat": 0.6,
+          "carb": 13.4
+        },
+        {
+          "meal": "Snack",
+          "t": "16:12",
+          "name": "Mix nuts & seeds 20g",
+          "kcal": 132,
+          "protein": 3.6,
+          "fat": 12.2,
+          "sat": 1.4,
+          "carb": 2.7
         }
       ]
     }
