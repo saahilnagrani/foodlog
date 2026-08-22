@@ -27,6 +27,25 @@
   .sheet{max-width:480px;overflow-x:clip;margin:0 auto;padding:16px 16px 60px;background:#fff;color:#111;min-height:calc(100vh - 56px);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
   .sheet .close{float:right;border:none;background:#eee;width:32px;height:32px;border-radius:8px;font-size:18px;cursor:pointer;color:#333;}
   .sheet h3{font-size:15px;margin-bottom:12px;}
+  /* three controls + the week nav is tight on 360px phones, mostly in Brutalist
+     where every button carries a 3px border - claw back the padding there */
+  @media (max-width:380px){
+    #topbar{padding:12px 8px;gap:6px;}
+    #topbar .wknav{gap:5px;}
+    .wkbtn{width:30px;height:30px;font-size:15px;}
+    .wklabel{font-size:12px;}
+    .gear{width:32px;height:32px;font-size:15px;}
+    .modebtn{padding:8px 7px;}
+  }
+  .planramp{font-size:12.5px;line-height:1.55;background:#f2f6ff;border:1px solid #d6e2ff;color:#24406e;border-radius:10px;padding:10px 12px;margin:4px 0 14px;}
+  .planday{font-size:12.5px;color:#555;margin:2px 0 12px;line-height:1.6;}
+  .planday b{color:#111;}
+  table.plan{width:100%;border-collapse:collapse;font-size:13px;}
+  table.plan th{text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;padding:0 0 6px;font-weight:700;}
+  table.plan td{padding:9px 0;border-top:1px solid #eee;vertical-align:top;}
+  table.plan td.ex{font-weight:600;color:#111;}
+  table.plan td.sr{white-space:nowrap;text-align:right;color:#111;font-variant-numeric:tabular-nums;padding-left:10px;}
+  table.plan .note{display:block;font-weight:400;font-size:11.5px;color:#777;margin-top:3px;line-height:1.45;}
   .slabel{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#888;margin:16px 0 8px;font-weight:700;}
   .row-chips{display:flex;gap:8px;flex-wrap:wrap;}
   .schip{border:2px solid #ddd;background:#fff;color:#333;padding:8px 12px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;}
@@ -276,10 +295,21 @@
   <script>try{var _p=JSON.parse(localStorage.getItem('foodlog_prefs_v1'));if(_p&&_p.theme){document.body.dataset.theme=_p.theme;if(_p.motion&&_p.motion[_p.theme])document.body.dataset.motion=_p.motion[_p.theme];}}catch(e){}</script>
   <div id="topbar">
     <div class="wknav"><button class="wkbtn" onclick="stepWeek(-1)">&#8249;</button><span class="wklabel" id="wklabel">This week</span><button class="wkbtn" onclick="stepWeek(1)">&#8250;</button></div>
-    <div style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
+    <div style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="modebtn" onclick="openPlan()" aria-label="Training plan">Plan</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
   </div>
   <div id="view"></div>
   <button class="fab" id="fab" onclick="fabTap()">+ Add food</button>
+
+  <div class="sheet-bg" id="planBg">
+    <div class="sheet">
+      <button class="close" onclick="closePlan()">&times;</button>
+      <h3>Training plan v22</h3>
+      <div id="planRamp" class="planramp"></div>
+      <div class="row-chips" id="planTabs" style="margin-bottom:14px;"></div>
+      <div id="planBody"></div>
+      <button class="sbtn primary" style="margin-top:22px;" onclick="closePlan()">Done</button>
+    </div>
+  </div>
 
   <div class="sheet-bg" id="settingsBg">
     <div class="sheet">
@@ -716,6 +746,95 @@ function renderD(days){
 }
 
 /* ---------- settings ---------- */
+/* ---------- training plan v22 (read-only reference) ----------
+   Sets/reps/loads still live in Hevy - this is the "what am I doing today"
+   screen so you are not digging the spreadsheet out at the rack. */
+const PLAN_START='2026-08-24';                       /* Monday of week 1 */
+const PLAN={
+ A:{n:'Full Body A',d:'Monday',ex:[
+  ['Matrix Leg Press','3','8-12','Anchor lift. Pivot set so knees bend to 90 at the start'],
+  ['Chest Press (pad position A)','3','8-12','Anchor lift. Same multi-press station as B and C'],
+  ['Lat Pulldown','3','8-12','Anchor lift. Thigh pad on top. Pull to upper chest'],
+  ['Matrix Leg Curl','3','10-12','Leg pad BELOW ankles; knees on the orange pivot'],
+  ['DB lateral raise','2','12-15','Start 4-6 kg. If you swing it, it is too heavy'],
+  ['Plank','3','30-45s','Add 5 sec each week']]},
+ B:{n:'Full Body B',d:'Wednesday',ex:[
+  ['Romanian deadlift','3','10-12','DBs 14-16 kg each, or Smith. Hinge at the hip, soft knees'],
+  ['Incline Press (pad position B)','3','10-12','Same multi-press, re-set the pad'],
+  ['Seated Row','3','8-12','Raise the thigh pad first. Elbows past the ribs'],
+  ['Leg Press, feet high','3','10-12','Higher feet shifts work to glutes and hamstrings'],
+  ['Rear delt fly','2','12-15','4-8 kg is plenty. The muscle a desk job kills'],
+  ['Calf press on the Leg Press','3','12-15','Balls of feet on the bottom edge, full stretch']]},
+ C:{n:'Full Body C',d:'Friday',ex:[
+  ['Matrix Leg Press','3','10-15','Lighter than Monday, higher reps'],
+  ['Shoulder Press (pad position C)','3','8-12','Third position on the same station'],
+  ['Lat Pulldown','3','10-12','Close grip if the bar allows - different angle to Monday'],
+  ['Split squat','2','10/leg','Bodyweight first session, then add DBs'],
+  ['SUPERSET curl + pushdown','2 ea','10-12','Back to back, rest after the pair. Only direct arm work'],
+  ['Decline bench sit-ups','3','12-15','Or cable crunch on the functional trainer']]},
+ H:{n:'Home top-ups',d:'Tuesday & Thursday, 15 min',ex:[
+  ['TUE - lateral raise (band/DB)','3','15-20','Bands or light DBs'],
+  ['TUE - band triceps pushdown','3','12-15',''],
+  ['TUE - curl (band or DB)','3','12-15',''],
+  ['TUE - dead bug','3','10/side',''],
+  ['THU - band face pull','3','15-20',''],
+  ['THU - DB curl, 3-sec lowering','3','10-12',''],
+  ['THU - overhead triceps extension','3','12-15',''],
+  ['THU - standing calf raise','3','15-20',''],
+  ['THU - side plank','2','20-30s/side','Never to failure. Skip freely if tired - these are top-ups']]},
+ F:{n:'Gym day died',d:'20-minute home fallback',ex:[
+  ['Goblet or split squat','3','10',''],
+  ['Push-ups','3','max-2',''],
+  ['Band row','3','12',''],
+  ['Band curl + pushdown','2 ea','',''],
+  ['Plank','3','40s','Keeps the week off zero, which is the only thing that matters']]}
+};
+let planTab='A';
+function planWeek(){                       /* which week of the ramp are we in */
+  const wk=Math.floor(dayDiff(PLAN_START,todayISO())/7);
+  if(wk<0)return 0; return wk+1;
+}
+function planRampText(){
+  const w=planWeek();
+  if(w<=0)  return '<b>Starts Monday 24 Aug.</b> Week 1 is deliberately easy so that session 2 actually happens.';
+  if(w===1) return '<b>Week 1 of the ramp.</b> 2 work sets per exercise, stop 3 reps short of failure. It will feel too easy. That is the point - you had 18 days off and soreness is what ends comebacks.';
+  if(w===2) return '<b>Week 2 of the ramp.</b> 3 work sets, stop 2 reps short of failure.';
+  return '<b>Week '+w+'.</b> Full sets as written, last set 1-2 reps short of failure. Add a rep each session; when all sets hit the top of the range, add the smallest increment and restart.';
+}
+function buildPlan(){
+  document.getElementById('planRamp').innerHTML=planRampText();
+  const tabs=[['A','A'],['B','B'],['C','C'],['H','Home'],['F','Missed']];
+  document.getElementById('planTabs').innerHTML=tabs.map(([k,lab])=>
+    `<button class="schip ${planTab===k?'on':''}" onclick="planPick('${k}')">${lab}</button>`).join('');
+  const p=PLAN[planTab];
+  let h=`<div class="planday"><b>${p.n}</b> &middot; ${p.d}</div>`;
+  h+='<table class="plan"><tr><th>Exercise</th><th style="text-align:right">Sets &times; reps</th></tr>';
+  p.ex.forEach(([ex,sets,reps,note])=>{
+    h+=`<tr><td class="ex">${ex}${note?`<span class="note">${note}</span>`:''}</td>`
+      +`<td class="sr">${sets}${reps?' &times; '+reps:''}</td></tr>`;
+  });
+  h+='</table>';
+  if(planTab==='A'||planTab==='B'||planTab==='C')
+    h+='<div class="planday" style="margin-top:14px;">Finish with <b>15 min incline treadmill</b>, brisk. Always after weights, never before.</div>';
+  if(planTab==='H')
+    h+='<div class="planday" style="margin-top:14px;">Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days.</div>';
+  document.getElementById('planBody').innerHTML=h;
+}
+function planPick(k){planTab=k;buildPlan();}
+function openPlan(){
+  keepScroll(); histPush();
+  planTab=({1:'A',3:'B',5:'C'})[new Date().getDay()]||planTab;   /* Mon/Wed/Fri open on that day's session */
+  buildPlan();
+  document.body.classList.add('modal-open');
+  document.getElementById('planBg').classList.add('open');
+  window.scrollTo(0,0);
+}
+function closePlan(fromHistory){
+  if(!fromHistory)histPop();
+  document.getElementById('planBg').classList.remove('open');
+  document.body.classList.remove('modal-open');
+  restoreScroll();
+}
 function openSettings(){keepScroll();histPush();document.getElementById('bridge_out').textContent='';document.getElementById('gh_tok').value=ghToken();refreshPending();ghStatus('');buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
 function closeSettings(fromHistory){if(!fromHistory)histPop();document.getElementById('settingsBg').classList.remove('open');document.body.classList.remove('modal-open');restoreScroll();}
 function buildSettings(){
@@ -1106,6 +1225,7 @@ function histPop(){                       /* called when a close button is tappe
 }
 function closeTopModal(){
   if(document.getElementById('lb').classList.contains('open'))return closeLb(true);
+  if(document.getElementById('planBg').classList.contains('open'))return closePlan(true);
   if(document.body.classList.contains('add-open'))return closeAdd(true);
   if(document.getElementById('settingsBg').classList.contains('open'))return closeSettings(true);
 }
