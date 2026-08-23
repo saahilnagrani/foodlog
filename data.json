@@ -3193,6 +3193,23 @@
           "carb": 13
         }
       ]
+    },
+    {
+      "date": "2026-08-23",
+      "label": "Sun 23 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "13:34",
+          "name": "Moong sprouts 100g",
+          "kcal": 136,
+          "protein": 9.6,
+          "fat": 0.4,
+          "sat": 0,
+          "carb": 25
+        }
+      ]
     }
   ]
 }
