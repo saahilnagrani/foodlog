@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-23",
+  "updated": "2026-08-24",
   "days": [
     {
       "date": "2026-07-24",
@@ -3310,6 +3310,36 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 20
+        },
+        {
+          "meal": "Snack",
+          "t": "25:00",
+          "name": "Bhujia 100g (export pack, from label)",
+          "kcal": 572,
+          "protein": 12.5,
+          "fat": 39.2,
+          "sat": 12.2,
+          "carb": 42.3
+        },
+        {
+          "meal": "Snack",
+          "t": "25:00",
+          "name": "Fresh To Home poha 80g (from label)",
+          "kcal": 271,
+          "protein": 5.3,
+          "fat": 6.7,
+          "sat": 0.9,
+          "carb": 47.2
+        },
+        {
+          "meal": "Drink",
+          "t": "26:00",
+          "name": "Clear whey 36g in water",
+          "kcal": 131,
+          "protein": 30.2,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 1.4
         }
       ]
     }
