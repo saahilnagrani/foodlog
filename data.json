@@ -3208,6 +3208,17 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 25
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:03",
+          "name": "Pav bhaji: bhaji 195g (potato, carrot, peas, cauliflower, ~10g butter) + pav 110g toasted",
+          "kcal": 519,
+          "protein": 13.1,
+          "fat": 17,
+          "sat": 9.7,
+          "carb": 79.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun23_pavbhaji.jpg"
         }
       ]
     }
