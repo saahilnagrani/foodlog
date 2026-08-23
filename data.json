@@ -3222,6 +3222,16 @@
         },
         {
           "meal": "Snack",
+          "t": "16:30",
+          "name": "Bhaji 100g (2nd serving, no pav)",
+          "kcal": 90,
+          "protein": 2.1,
+          "fat": 4.4,
+          "sat": 2.6,
+          "carb": 11.5
+        },
+        {
+          "meal": "Snack",
           "t": "18:24",
           "name": "ON whey (vanilla) 31g",
           "kcal": 120,
