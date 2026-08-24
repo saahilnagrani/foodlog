@@ -68,6 +68,19 @@ Notes:
 - `sat` (saturated fat) is a subset of `fat`; the app draws attention when a
   day's `sat` exceeds the target (15g).
 
+## Known tare weights
+The user often weighs food **in** its container and gives the gross weight. Subtract:
+
+| container | empty weight |
+|---|---|
+| square glass container (the one in the moong-sprout photos) | **330 g** |
+| deep steel bowl (egg curry, 10 Aug) | 353 g |
+| large salad bowl (watermelon & feta, 19 Aug) | 833 g |
+
+If a gross weight arrives for a container that isn't listed, estimate it but say so,
+and ask for the empty weight — the container is usually most of the gross figure, so
+guessing it badly swamps the food estimate.
+
 ## Routine: "here's a photo of what I ate" → update the app
 1. **Estimate macros from the photo(s).** For each dish give `kcal`, `protein`,
    `fat`, `sat`, `carb`. Use portion cues in the image and the user's known
