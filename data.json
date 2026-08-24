@@ -3407,6 +3407,28 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 36
+        },
+        {
+          "meal": "Dinner",
+          "t": "17:50",
+          "name": "Palak tofu 205g (155g weighed tofu + 50g gravy)",
+          "kcal": 208,
+          "protein": 16.4,
+          "fat": 13.9,
+          "sat": 2,
+          "carb": 5.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon24_palaktofu.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "17:51",
+          "name": "Egg brown fried rice 100g",
+          "kcal": 155,
+          "protein": 4.8,
+          "fat": 7.9,
+          "sat": 1.6,
+          "carb": 16.3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon24_friedrice.jpg"
         }
       ]
     }
