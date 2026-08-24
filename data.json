@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-24",
+  "updated": "2026-08-25",
   "days": [
     {
       "date": "2026-07-24",
@@ -3422,7 +3422,7 @@
         },
         {
           "meal": "Drink",
-          "t": "23:45",
+          "t": "24:30",
           "name": "ON whey (vanilla ice cream) 50g in water",
           "kcal": 194,
           "protein": 38.8,
