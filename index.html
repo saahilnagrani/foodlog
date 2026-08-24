@@ -39,6 +39,9 @@
   }
   .planramp{font-size:12.5px;line-height:1.55;background:#f2f6ff;border:1px solid #d6e2ff;color:#24406e;border-radius:10px;padding:10px 12px;margin:4px 0 14px;}
   .planday{font-size:12.5px;color:#555;margin:2px 0 12px;line-height:1.6;}
+  .planwarm{font-size:12px;line-height:1.6;color:#4a4a4a;background:#fafafa;border:1px solid #ececec;border-left:3px solid #bdbdbd;border-radius:8px;padding:9px 11px;margin:0 0 14px;}
+  .planwarm b{color:#111;}
+  .planwarm.after{margin:14px 0 0;border-left-color:#38618c;}
   .planday b{color:#111;}
   table.plan{width:100%;border-collapse:collapse;font-size:13px;}
   table.plan th{text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;padding:0 0 6px;font-weight:700;}
@@ -903,16 +906,21 @@ function buildPlan(){
   const tabs=[['A','A'],['B','B'],['C','C'],['H','Home'],['F','Missed']];
   document.getElementById('planTabs').innerHTML=tabs.map(([k,lab])=>
     `<button class="schip ${planTab===k?'on':''}" onclick="planPick('${k}')">${lab}</button>`).join('');
-  const p=PLAN[planTab];
+  const p=PLAN[planTab], gym=(planTab==='A'||planTab==='B'||planTab==='C');
   let h=`<div class="planday"><b>${p.n}</b> &middot; ${p.d}</div>`;
+  if(gym) h+='<div class="planwarm"><b>Warm up first, 5-8 min.</b> '
+    +'3-5 min easy cardio, warm but not sweating. Then 10 bodyweight squats, 10 hip hinges, '
+    +'10 arm circles each way, 10 wall slides. Then ramp the FIRST lift only: ~50% x10, ~75% x5 '
+    +'(tag these W in Hevy). No static stretching before lifting - it makes you weaker for the session.</div>';
   h+='<table class="plan"><tr><th>Exercise</th><th style="text-align:right">Sets &times; reps</th></tr>';
   p.ex.forEach(([ex,sets,reps,note])=>{
     h+=`<tr><td class="ex">${ex}${note?`<span class="note">${note}</span>`:''}</td>`
       +`<td class="sr">${sets}${reps?' &times; '+reps:''}</td></tr>`;
   });
   h+='</table>';
-  if(planTab==='A'||planTab==='B'||planTab==='C')
-    h+='<div class="planday" style="margin-top:14px;">Finish with <b>15 min incline treadmill</b>, brisk. Always after weights, never before.</div>';
+  if(gym) h+='<div class="planwarm after"><b>Then finish.</b> 15 min incline treadmill, brisk, always after '
+    +'the weights and never before. Then static stretches 30 sec each while you are still warm - quads, '
+    +'hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.</div>';
   if(planTab==='H')
     h+='<div class="planday" style="margin-top:14px;">Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days.</div>';
   document.getElementById('planBody').innerHTML=h;
