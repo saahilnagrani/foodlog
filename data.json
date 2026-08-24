@@ -3399,6 +3399,16 @@
           "carb": 6.2
         },
         {
+          "meal": "Drink",
+          "t": "14:00",
+          "name": "Whey drink (31g ON whey vanilla + 13g Awesome choc&nut + 200ml Oatly Barista + 19g nuts & seeds + 80g strawberries)",
+          "kcal": 439,
+          "protein": 37.9,
+          "fat": 20.4,
+          "sat": 3.3,
+          "carb": 26.6
+        },
+        {
           "meal": "Snack",
           "t": "17:27",
           "name": "Moong sprouts with onion & tomato 170g (500g less 330g container)",
