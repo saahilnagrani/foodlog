@@ -3419,6 +3419,16 @@
           "fat": 7.9,
           "sat": 1.6,
           "carb": 16.3
+        },
+        {
+          "meal": "Drink",
+          "t": "23:45",
+          "name": "ON whey (vanilla ice cream) 50g in water",
+          "kcal": 194,
+          "protein": 38.8,
+          "fat": 3,
+          "sat": 1.6,
+          "carb": 5
         }
       ]
     }
