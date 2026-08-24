@@ -64,9 +64,12 @@
   .qrow.open .qhead .qname{font-weight:600;}
   .qbody{display:none;padding:2px 2px 14px;}
   .qrow.open .qbody{display:block;}
-  .qins{display:flex;gap:14px;align-items:flex-end;margin-bottom:2px;}
-  .qin{flex:1;min-width:0;}
-  .qins.one .qin{max-width:170px;}
+  /* one component = a single narrow box; two or more = a 2-column grid, so a
+     six-part item like the whey drink wraps to three tidy rows instead of
+     squeezing six boxes onto one line */
+  .qins{display:grid;grid-template-columns:1fr 1fr;gap:12px 14px;align-items:end;margin-bottom:2px;}
+  .qin{min-width:0;}
+  .qins.one{grid-template-columns:170px;}
   .qin .qlab{display:block;font-size:11px;color:#777;line-height:1.2;margin-bottom:4px;}
   .qfield{display:flex;align-items:center;gap:6px;}
   .qfield input{flex:1;min-width:0;box-sizing:border-box;padding:9px 8px;border:1px solid #ddd;border-radius:8px;font-size:15px;text-align:right;background:#fafafa;font-variant-numeric:tabular-nums;}
@@ -179,9 +182,11 @@
   .swipe{overflow:hidden;}
   .swipe-in{display:flex;align-items:stretch;transition:transform .18s ease;will-change:transform;touch-action:pan-y;}
   .swipe.drag .swipe-in{transition:none;}
-  .swipe.open .swipe-in{transform:translateX(-88px);}
+  .swipe.open .swipe-in{transform:translateX(-152px);}
   .swipe-in > :first-child{flex:0 0 100%;min-width:0;}
-  .swipe-del{flex:0 0 88px;border:0;background:#c0271b;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;}
+  .swipe-del,.swipe-edit{flex:0 0 76px;border:0;color:#fff;font-family:Arial,sans-serif;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;}
+  .swipe-edit{background:#38618c;}
+  .swipe-del{background:#c0271b;}
 
   /* ===================== BRUTALIST (b) ===================== */
   body[data-theme="b"]{background:#e9dcc0;color:#111;font-family:var(--bfont,'Archivo Black',Arial,sans-serif);}
@@ -299,6 +304,27 @@
   </div>
   <div id="view"></div>
   <button class="fab" id="fab" onclick="fabTap()">+ Add food</button>
+
+  <div class="sheet-bg" id="editBg">
+    <div class="sheet">
+      <button class="close" onclick="closeEdit()">&times;</button>
+      <h3>Edit item</h3>
+      <div id="editWhere" class="planday"></div>
+      <div class="field"><label>Name</label><input id="e_name"></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div class="field"><label>Meal</label><select id="e_meal"></select></div>
+        <div class="field"><label>Time (24h, 24+ = after midnight)</label>
+          <input id="e_time" type="text" inputmode="numeric" placeholder="21:30" autocomplete="off"></div>
+        <div class="field"><label>Calories</label><input id="e_kcal" type="text" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label>Protein g</label><input id="e_pro" type="text" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label>Carbs g</label><input id="e_carb" type="text" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label>Total fat g</label><input id="e_fat" type="text" inputmode="decimal" autocomplete="off"></div>
+        <div class="field"><label>Saturated fat g</label><input id="e_sat" type="text" inputmode="decimal" autocomplete="off"></div>
+      </div>
+      <div id="editMsg" class="planday" style="margin-top:10px;"></div>
+      <div class="srow"><button class="sbtn ghost" onclick="closeEdit()">Cancel</button><button class="sbtn primary" id="e_save" onclick="saveEdit()">Save</button></div>
+    </div>
+  </div>
 
   <div class="sheet-bg" id="planBg">
     <div class="sheet">
@@ -519,11 +545,14 @@ function render(){
    in data.json on GitHub. We match on name+time+kcal rather than on an index,
    because data.json may have moved on since this screen was drawn. */
 let ROWS=[];
-const SWDEL=88;                                     /* must match .swipe-del width */
+const SWDEL=152;                                    /* must match .swipe-edit + .swipe-del width */
 function swipeRow(it,date,html){
   const n=ROWS.length;
-  ROWS.push({date:it._date0||date,src:it._local?'local':'repo',name:it.name,t:it._t0!==undefined?it._t0:(it.t||''),kcal:Math.round(+it.kcal||0)});
-  return `<div class="swipe"><div class="swipe-in">${html}<button class="swipe-del" type="button" onclick="delRow(${n})">Delete</button></div></div>`;
+  ROWS.push({date:it._date0||date,src:it._local?'local':'repo',name:it.name,t:it._t0!==undefined?it._t0:(it.t||''),kcal:Math.round(+it.kcal||0),
+             meal:it.meal||'Snack',protein:+it.protein||0,fat:+it.fat||0,sat:+it.sat||0,carb:+it.carb||0,img:it.img||''});
+  return `<div class="swipe"><div class="swipe-in">${html}`
+    +`<button class="swipe-edit" type="button" onclick="editRow(${n})">Edit</button>`
+    +`<button class="swipe-del" type="button" onclick="delRow(${n})">Delete</button></div></div>`;
 }
 function closeSwipes(except){
   document.querySelectorAll('#view .swipe.open').forEach(b=>{if(b!==except)b.classList.remove('open');});
@@ -532,7 +561,7 @@ let SW=null, SWJUST=0;
 function swipeInit(){
   const v=document.getElementById('view');
   v.addEventListener('pointerdown',e=>{
-    if(e.target.closest('.swipe-del'))return;         /* let the button take the tap */
+    if(e.target.closest('.swipe-del,.swipe-edit'))return;   /* let the buttons take the tap */
     const inn=e.target.closest('.swipe-in');
     if(!inn){closeSwipes();return;}
     closeSwipes(inn.parentNode);
@@ -560,7 +589,7 @@ function swipeInit(){
   v.addEventListener('pointerup',end); v.addEventListener('pointercancel',end);
   /* a swipe must not also count as a tap on the photo underneath it */
   v.addEventListener('click',e=>{
-    if(Date.now()-SWJUST<350 && !e.target.closest('.swipe-del')){e.stopPropagation();e.preventDefault();}
+    if(Date.now()-SWJUST<350 && !e.target.closest('.swipe-del,.swipe-edit')){e.stopPropagation();e.preventDefault();}
   },true);
 }
 /* The system reserves the screen edges for its own back gesture, so an edge
@@ -578,6 +607,74 @@ function lbInit(){
     if(!moved || Math.abs(dx)>70 || Math.abs(dy)>70) closeLb();
   },{passive:true});
 }
+/* ---------- edit an existing row ----------
+   Same two stores as delete: a not-yet-pushed item is patched in localStorage,
+   one already in data.json is patched through ghCommit. Matched on
+   name + time + kcal, never on an index, because the file may have moved on. */
+let EDITROW=null;
+function editRow(n){
+  const r=ROWS[n]; if(!r)return;
+  closeSwipes(); EDITROW=r;
+  document.getElementById('e_meal').innerHTML=MEALS.map(m=>`<option${m===r.meal?' selected':''}>${m}</option>`).join('');
+  document.getElementById('e_name').value=r.name;
+  document.getElementById('e_time').value=r.t;
+  document.getElementById('e_kcal').value=r.kcal;
+  document.getElementById('e_pro').value=r.protein;
+  document.getElementById('e_carb').value=r.carb;
+  document.getElementById('e_fat').value=r.fat;
+  document.getElementById('e_sat').value=r.sat;
+  document.getElementById('editWhere').innerHTML=
+    `<b>${labelFor(r.date)}</b> &middot; ${r.src==='local'?'not saved to GitHub yet':'in data.json'}`;
+  document.getElementById('editMsg').textContent='';
+  keepScroll(); histPush();
+  document.body.classList.add('modal-open');
+  document.getElementById('editBg').classList.add('open');
+  window.scrollTo(0,0);
+}
+function closeEdit(fromHistory){
+  if(!fromHistory)histPop();
+  document.getElementById('editBg').classList.remove('open');
+  document.body.classList.remove('modal-open');
+  EDITROW=null; restoreScroll();
+}
+function editPatch(){
+  const g=id=>document.getElementById(id);
+  const t=String(g('e_time').value||'').trim();
+  if(t && !/^\d{1,2}:\d{2}$/.test(t)) return null;         /* HH:MM or 24+ only */
+  return {meal:g('e_meal').value, t:t, name:(g('e_name').value||'').trim()||'Food',
+          kcal:Math.round(numv(g('e_kcal'))), protein:R1(numv(g('e_pro'))),
+          fat:R1(numv(g('e_fat'))), sat:R1(numv(g('e_sat'))), carb:R1(numv(g('e_carb')))};
+}
+async function saveEdit(){
+  const r=EDITROW; if(!r)return;
+  const p=editPatch();
+  if(!p){document.getElementById('editMsg').textContent='Time must look like 21:30 (or 25:30 for after midnight).';return;}
+  const same=it=>it.name===r.name && (it.t||'')===r.t && Math.round(+it.kcal||0)===r.kcal;
+  const btn=document.getElementById('e_save'); btn.disabled=true;
+  try{
+    if(r.src==='local'){
+      const x=loadExtra(), arr=x[r.date]||[], i=arr.findIndex(same);
+      if(i<0)throw new Error('Could not find that item any more');
+      arr[i]=Object.assign({},arr[i],p); x[r.date]=arr; saveExtra(x);
+      render(); refreshPending(); pendingBadge();
+      closeEdit(); toast('Updated '+p.name);
+    }else{
+      document.getElementById('editMsg').textContent='Saving to GitHub…';
+      const data=await ghCommit(d=>{
+        const day=(d.days||[]).find(x=>x.date===r.date);
+        const i=day?day.items.findIndex(same):-1;
+        if(i<0)throw new Error('That item is not in data.json any more - pull down to refresh');
+        day.items[i]=Object.assign({},day.items[i],p);
+        day.items=sortItems(day.items);
+        d.updated=todayISO();
+      },'App: edit "'+r.name+'" on '+r.date);
+      DATA=data; buildWeeks(); render();
+      closeEdit(); toast('Updated '+p.name);
+    }
+  }catch(err){document.getElementById('editMsg').textContent=String(err.message||err);}
+  finally{btn.disabled=false;}
+}
+
 async function delRow(n){
   const r=ROWS[n]; if(!r)return;
   closeSwipes();
@@ -927,12 +1024,31 @@ const OIL ={lab:'oil', u:'tsp', d:1, k:45, p:0,   f:5,    s:.7,   c:0};
 const GRVY={lab:'gravy',u:'g',  d:85,k:1.12,p:.02,f:.082, s:.013, c:.082};
 const CHIK={lab:'chicken',u:'g',d:150,k:1.6,p:.32,f:.036, s:.0105,c:0};
 const EWHT={lab:'egg whites',u:'pc',d:4,k:17,p:3.6,f:.06, s:0,    c:.2};
+/* Per-unit rates defined once, so the standalone rows and the combined
+   "Whey drink" below can never drift apart. lab() tags a copy for the
+   multi-part rows, where each component needs its own caption. */
+const RATE={
+  onwhey: {u:'g', d:34, k:3.87,p:.774,f:.048,s:.032,c:.129},
+  awesome:{u:'g', d:35, k:3.69,p:.61, f:.084,s:.03, c:.036},
+  clear:  {u:'g', d:30, k:3.64,p:.84, f:.004,s:0,   c:.04},
+  oatly:  {u:'ml',d:100,k:.6,  p:.01, f:.03, s:.003,c:.067},
+  nuts:   {u:'g', d:20, k:6.6, p:.18, f:.61, s:.068,c:.136},
+  straw:  {u:'g', d:100,k:.32, p:.007,f:.003,s:0,   c:.077},
+};
+const lab=(r,l,d)=>Object.assign({},r,{lab:l},d===undefined?{}:{d:d});
 const QUICK=[
- {n:'Clear whey',             meal:'Snack',    parts:[{u:'g',d:30, k:3.64,p:.84, f:.004,s:0,   c:.04}]},
- {n:'ON whey (vanilla)',      meal:'Snack',    parts:[{u:'g',d:34, k:3.87,p:.774,f:.048,s:.032,c:.129}]},
- {n:'Awesome protein',        meal:'Snack',    parts:[{u:'g',d:35, k:3.69,p:.61, f:.084,s:.03, c:.036}]},
- {n:'Oat milk (Oatly)',       meal:'Snack',    parts:[{u:'ml',d:100,k:.6, p:.01, f:.03, s:.003,c:.067}]},
- {n:'Mix nuts & seeds',       meal:'Snack',    parts:[{u:'g',d:20, k:6.6, p:.18, f:.61, s:.068,c:.136}]},
+ {n:'Whey drink',             meal:'Drink',    parts:[
+    lab(RATE.onwhey ,'ON whey vanilla'),
+    lab(RATE.awesome,'Awesome choc&nut'),
+    lab(RATE.clear  ,'Clear whey str&lime'),
+    lab(RATE.oatly  ,'Oatly Barista'),
+    lab(RATE.nuts   ,'nuts & seeds', 10),
+    lab(RATE.straw  ,'strawberries', 50)]},
+ {n:'Clear whey',             meal:'Snack',    parts:[RATE.clear]},
+ {n:'ON whey (vanilla)',      meal:'Snack',    parts:[RATE.onwhey]},
+ {n:'Awesome protein',        meal:'Snack',    parts:[RATE.awesome]},
+ {n:'Oat milk (Oatly)',       meal:'Snack',    parts:[RATE.oatly]},
+ {n:'Mix nuts & seeds',       meal:'Snack',    parts:[RATE.nuts]},
  {n:'Egg-white omelette',     meal:'Breakfast',parts:[EWHT, OIL]},
  {n:'Scrambled eggs (whole)', meal:'Breakfast',parts:[{lab:'eggs',u:'pc',d:2,k:72,p:6.3,f:4.8,s:1.6,c:.4}, OIL]},
  {n:'Egg curry',              meal:'Dinner',   parts:[{lab:'egg whites',u:'pc',d:6,k:17,p:3.6,f:.06,s:0,c:.2}, GRVY]},
@@ -955,7 +1071,7 @@ const QUICK=[
  {n:'Makhana (roasted pack)', meal:'Snack',    parts:[{u:'g',d:25, k:5.2, p:.08, f:.28, s:.04, c:.56}]},
  {n:'Apple',                  meal:'Snack',    parts:[{u:'g',d:100,k:.52, p:.003,f:.002,s:0,   c:.14}]},
  {n:'Grapes',                 meal:'Snack',    parts:[{u:'g',d:100,k:.69, p:.006,f:.002,s:0,   c:.18}]},
- {n:'Strawberries',           meal:'Snack',    parts:[{u:'g',d:100,k:.32, p:.007,f:.003,s:0,   c:.077}]},
+ {n:'Strawberries',           meal:'Snack',    parts:[RATE.straw]},
  {n:'Banana',                 meal:'Snack',    parts:[{u:'g',d:100,k:.89, p:.011,f:.003,s:0,   c:.23}]}
 ];
 const R1=n=>Math.round(n*10)/10;
@@ -1225,6 +1341,7 @@ function histPop(){                       /* called when a close button is tappe
 }
 function closeTopModal(){
   if(document.getElementById('lb').classList.contains('open'))return closeLb(true);
+  if(document.getElementById('editBg').classList.contains('open'))return closeEdit(true);
   if(document.getElementById('planBg').classList.contains('open'))return closePlan(true);
   if(document.body.classList.contains('add-open'))return closeAdd(true);
   if(document.getElementById('settingsBg').classList.contains('open'))return closeSettings(true);
