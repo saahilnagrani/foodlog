@@ -3397,6 +3397,16 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 6.2
+        },
+        {
+          "meal": "Snack",
+          "t": "17:27",
+          "name": "Moong sprouts with onion & tomato ~165g (500g incl. container, container estimated ~335g)",
+          "kcal": 186,
+          "protein": 12.5,
+          "fat": 0.5,
+          "sat": 0,
+          "carb": 34.8
         }
       ]
     }
