@@ -3346,7 +3346,7 @@
     {
       "date": "2026-08-24",
       "label": "Mon 24 Aug",
-      "workout": "",
+      "workout": "Full Body A",
       "items": [
         {
           "meal": "Drink",
@@ -3399,6 +3399,16 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.1
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:15",
+          "name": "Palak tofu 83g leftover (60g tofu + 23g gravy)",
+          "kcal": 86,
+          "protein": 6.4,
+          "fat": 5.8,
+          "sat": 0.8,
+          "carb": 2.3
         }
       ]
     }
