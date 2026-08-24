@@ -1130,7 +1130,7 @@ function buildQuick(){
     if(term && q.n.toLowerCase().indexOf(term)<0) return;
     shown++;
     const ins=q.parts.map((pt,j)=>
-      `<div class="qin">${q.parts.length>1?`<span class="qlab">${pt.lab}</span>`:''}<span class="qfield"><input id="qi${i}_${j}" type="text" inputmode="decimal" pattern="[0-9]*[.,]?[0-9]*" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span></span></div>`).join('');
+      `<div class="qin">${q.parts.length>1?`<span class="qlab">${pt.lab}</span>`:''}<span class="qfield"><input id="qi${i}_${j}" type="text" inputmode="decimal" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span></span></div>`).join('');
     h+=`<div class="qrow" id="qr${i}">
       <div class="qhead" onclick="qtoggle(${i})"><span class="qname">${q.n}</span><span class="qsum" id="qs${i}"></span><span class="qcar">&#9654;</span></div>
       <div class="qbody"><div class="qins ${q.parts.length>1?'two':'one'}">${ins}</div>
