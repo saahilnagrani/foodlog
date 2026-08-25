@@ -3487,6 +3487,26 @@
           "fat": 10.3,
           "sat": 2.3,
           "carb": 5.7
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:35",
+          "name": "Greek yogurt 201g (0%)",
+          "kcal": 127,
+          "protein": 20.1,
+          "fat": 0.9,
+          "sat": 0,
+          "carb": 9
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:35",
+          "name": "Haldiram frozen pudina paratha x1 ~80g (estimated, no label)",
+          "kcal": 264,
+          "protein": 5.2,
+          "fat": 12.8,
+          "sat": 4.5,
+          "carb": 32
         }
       ]
     }
