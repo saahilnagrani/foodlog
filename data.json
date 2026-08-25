@@ -3467,6 +3467,16 @@
           "sat": 4.4,
           "carb": 6.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue25_gdkbox.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:35",
+          "name": "GDK pita bread 65g",
+          "kcal": 182,
+          "protein": 6,
+          "fat": 1.6,
+          "sat": 0.3,
+          "carb": 36
         }
       ]
     }
