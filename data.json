@@ -3429,6 +3429,16 @@
           "fat": 3,
           "sat": 1.6,
           "carb": 5
+        },
+        {
+          "meal": "Snack",
+          "t": "26:00",
+          "name": "Safari Grills salt & vinegar 60g",
+          "kcal": 271,
+          "protein": 2.6,
+          "fat": 10.3,
+          "sat": 0.8,
+          "carb": 41.8
         }
       ]
     },
