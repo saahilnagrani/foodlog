@@ -3487,16 +3487,6 @@
           "fat": 10.3,
           "sat": 2.3,
           "carb": 5.7
-        },
-        {
-          "meal": "Dinner",
-          "t": "21:23",
-          "name": "Chicken curry (128g chicken + 70g gravy)",
-          "kcal": 283,
-          "protein": 42.4,
-          "fat": 10.3,
-          "sat": 2.3,
-          "carb": 5.7
         }
       ]
     }
