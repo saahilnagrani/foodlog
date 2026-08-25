@@ -3501,12 +3501,22 @@
         {
           "meal": "Dinner",
           "t": "21:35",
-          "name": "Haldiram frozen pudina paratha x1 ~80g (estimated, no label)",
-          "kcal": 264,
-          "protein": 5.2,
-          "fat": 12.8,
-          "sat": 4.5,
-          "carb": 32
+          "name": "Haldiram frozen pudina paratha x1 (60g piece, from label)",
+          "kcal": 209,
+          "protein": 5.1,
+          "fat": 9.3,
+          "sat": 0.9,
+          "carb": 25.2
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:35",
+          "name": "Dilkhush papad x1 (11g, from label)",
+          "kcal": 34,
+          "protein": 2,
+          "fat": 0.5,
+          "sat": 0.2,
+          "carb": 6
         }
       ]
     }
