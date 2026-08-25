@@ -48,6 +48,7 @@
   table.plan td{padding:9px 0;border-top:1px solid #eee;vertical-align:top;}
   table.plan td.ex{font-weight:600;color:#111;}
   table.plan td.sr{white-space:nowrap;text-align:right;color:#111;font-variant-numeric:tabular-nums;padding-left:10px;}
+  table.plan .vid{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:#c4302b;text-decoration:none;border:1px solid #f0cdcb;border-radius:6px;padding:1px 6px;vertical-align:2px;white-space:nowrap;}
   table.plan .note{display:block;font-weight:400;font-size:11.5px;color:#777;margin-top:3px;line-height:1.45;}
   .slabel{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#888;margin:16px 0 8px;font-weight:700;}
   .row-chips{display:flex;gap:8px;flex-wrap:wrap;}
@@ -873,15 +874,15 @@ const PLAN={
   ['SUPERSET curl + pushdown','2 ea','10-12','Back to back, rest after the pair. Only direct arm work'],
   ['Decline bench sit-ups','3','12-15','Or cable crunch on the functional trainer']]},
  H:{n:'Home top-ups',d:'Tuesday & Thursday, 15 min',ex:[
-  ['TUE - lateral raise','3','15-20','NO ANCHOR. Stand on the middle of the band, a handle in each hand at your sides, raise out to shoulder height. One foot on it = lighter, two = heavier. Start 10 lb (yellow)'],
-  ['TUE - triceps pushdown','3','12-15','ANCHOR TOP. Face the door, elbows pinned to your ribs and still, push the handles down to your thighs. Only the forearms move. Start 20 lb (orange)'],
-  ['TUE - biceps curl','3','12-15','NO ANCHOR. Stand on the middle of the band, palms up, elbows glued to your sides. Start 20-25 lb'],
-  ['TUE - dead bug','3','10/side','No kit. Lower opposite arm and leg, keep your lower back flat on the floor'],
-  ['THU - face pull','3','15-20','ANCHOR TOP. Palms down, pull to your forehead with elbows HIGH AND WIDE, squeeze the shoulder blades. Start 15 lb (green)'],
-  ['THU - biceps curl, 3-sec lowering','3','10-12','Same as Tuesday, but take three seconds to lower each rep'],
-  ['THU - overhead triceps extension','3','12-15','ANCHOR BOTTOM, face AWAY from the door. Handles behind your head, elbows pointing forward, straighten overhead. Start 15-20 lb'],
-  ['THU - standing calf raise','3','15-20','No kit. Heels off a step edge, rise up, pause, lower slowly below the step'],
-  ['THU - side plank','2','20-30s/side','Never to failure. Skip freely if tired - these are top-ups']]},
+  ['TUE - lateral raise','3','15-20','NO ANCHOR. Stand on the middle of the band, a handle in each hand at your sides, raise out to shoulder height. One foot on it = lighter, two = heavier. Start 10 lb (yellow)','resistance band lateral raise form'],
+  ['TUE - triceps pushdown','3','12-15','ANCHOR TOP. Face the door, elbows pinned to your ribs and still, push the handles down to your thighs. Only the forearms move. Start 20 lb (orange)','resistance band triceps pushdown door anchor'],
+  ['TUE - biceps curl','3','12-15','NO ANCHOR. Stand on the middle of the band, palms up, elbows glued to your sides. Start 20-25 lb','resistance band biceps curl form'],
+  ['TUE - dead bug','3','10/side','No kit. Lower opposite arm and leg, keep your lower back flat on the floor','dead bug exercise form'],
+  ['THU - face pull','3','15-20','ANCHOR TOP. Palms down, pull to your forehead with elbows HIGH AND WIDE, squeeze the shoulder blades. Start 15 lb (green)','resistance band face pull form'],
+  ['THU - biceps curl, 3-sec lowering','3','10-12','Same as Tuesday, but take three seconds to lower each rep','resistance band biceps curl slow eccentric'],
+  ['THU - overhead triceps extension','3','12-15','ANCHOR BOTTOM, face AWAY from the door. Handles behind your head, elbows pointing forward, straighten overhead. Start 15-20 lb','resistance band overhead triceps extension'],
+  ['THU - standing calf raise','3','15-20','No kit. Heels off a step edge, rise up, pause, lower slowly below the step','standing calf raise on step form'],
+  ['THU - side plank','2','20-30s/side','Never to failure. Skip freely if tired - these are top-ups','side plank form']]},
  F:{n:'Gym day died',d:'20-minute home fallback',ex:[
   ['Goblet or split squat','3','10',''],
   ['Push-ups','3','max-2',''],
@@ -913,8 +914,14 @@ function buildPlan(){
     +'10 arm circles each way, 10 wall slides. Then ramp the FIRST lift only: ~50% x10, ~75% x5 '
     +'(tag these W in Hevy). No static stretching before lifting - it makes you weaker for the session.</div>';
   h+='<table class="plan"><tr><th>Exercise</th><th style="text-align:right">Sets &times; reps</th></tr>';
-  p.ex.forEach(([ex,sets,reps,note])=>{
-    h+=`<tr><td class="ex">${ex}${note?`<span class="note">${note}</span>`:''}</td>`
+  p.ex.forEach(([ex,sets,reps,note,vid])=>{
+    /* A YouTube SEARCH url, never a specific video: search results cannot rot,
+       and I have no way to check a given video from here. It opens inside the
+       wrapper's WebView (it has no WebChromeClient, so target=_blank is inert)
+       - pull down to refresh to come back to the log. */
+    const link = vid ? ` <a class="vid" target="_blank" rel="noopener"`
+      + ` href="https://www.youtube.com/results?search_query=${encodeURIComponent(vid)}">&#9654; video</a>` : '';
+    h+=`<tr><td class="ex">${ex}${link}${note?`<span class="note">${note}</span>`:''}</td>`
       +`<td class="sr">${sets}${reps?' &times; '+reps:''}</td></tr>`;
   });
   h+='</table>';
@@ -929,7 +936,9 @@ function buildPlan(){
      +'last two reps of 15 are hard but your form holds. Check the clip end for wear before each session and never '
      +'stretch a band past about 2.5x its resting length.</div>'+h;
     h+='<div class="planwarm after">Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days. '
-     +'Bands cover every loaded exercise here - no dumbbells needed.</div>';
+     +'Bands cover every loaded exercise here - no dumbbells needed.<br><br>'
+     +'<b>&#9654; video</b> opens a YouTube <i>search</i>, not one chosen video, so it can never go dead. '
+     +'It loads inside this app and replaces the log - <b>pull down to refresh to come back</b>.</div>';
   }
   document.getElementById('planBody').innerHTML=h;
 }
