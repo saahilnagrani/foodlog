@@ -3456,6 +3456,17 @@
           "fat": 19.9,
           "sat": 3.4,
           "carb": 17.6
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:22",
+          "name": "GDK Doner Gym Box: 164g chicken + 90g salad (324g box, 70g salad left)",
+          "kcal": 347,
+          "protein": 39.2,
+          "fat": 18.1,
+          "sat": 4.4,
+          "carb": 6.2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue25_gdkbox.jpg"
         }
       ]
     }
