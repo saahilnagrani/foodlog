@@ -873,14 +873,14 @@ const PLAN={
   ['SUPERSET curl + pushdown','2 ea','10-12','Back to back, rest after the pair. Only direct arm work'],
   ['Decline bench sit-ups','3','12-15','Or cable crunch on the functional trainer']]},
  H:{n:'Home top-ups',d:'Tuesday & Thursday, 15 min',ex:[
-  ['TUE - lateral raise (band/DB)','3','15-20','Bands or light DBs'],
-  ['TUE - band triceps pushdown','3','12-15',''],
-  ['TUE - curl (band or DB)','3','12-15',''],
-  ['TUE - dead bug','3','10/side',''],
-  ['THU - band face pull','3','15-20',''],
-  ['THU - DB curl, 3-sec lowering','3','10-12',''],
-  ['THU - overhead triceps extension','3','12-15',''],
-  ['THU - standing calf raise','3','15-20',''],
+  ['TUE - lateral raise','3','15-20','NO ANCHOR. Stand on the middle of the band, a handle in each hand at your sides, raise out to shoulder height. One foot on it = lighter, two = heavier. Start 10 lb (yellow)'],
+  ['TUE - triceps pushdown','3','12-15','ANCHOR TOP. Face the door, elbows pinned to your ribs and still, push the handles down to your thighs. Only the forearms move. Start 20 lb (orange)'],
+  ['TUE - biceps curl','3','12-15','NO ANCHOR. Stand on the middle of the band, palms up, elbows glued to your sides. Start 20-25 lb'],
+  ['TUE - dead bug','3','10/side','No kit. Lower opposite arm and leg, keep your lower back flat on the floor'],
+  ['THU - face pull','3','15-20','ANCHOR TOP. Palms down, pull to your forehead with elbows HIGH AND WIDE, squeeze the shoulder blades. Start 15 lb (green)'],
+  ['THU - biceps curl, 3-sec lowering','3','10-12','Same as Tuesday, but take three seconds to lower each rep'],
+  ['THU - overhead triceps extension','3','12-15','ANCHOR BOTTOM, face AWAY from the door. Handles behind your head, elbows pointing forward, straighten overhead. Start 15-20 lb'],
+  ['THU - standing calf raise','3','15-20','No kit. Heels off a step edge, rise up, pause, lower slowly below the step'],
   ['THU - side plank','2','20-30s/side','Never to failure. Skip freely if tired - these are top-ups']]},
  F:{n:'Gym day died',d:'20-minute home fallback',ex:[
   ['Goblet or split squat','3','10',''],
@@ -921,8 +921,16 @@ function buildPlan(){
   if(gym) h+='<div class="planwarm after"><b>Then finish.</b> 15 min incline treadmill, brisk, always after '
     +'the weights and never before. Then static stretches 30 sec each while you are still warm - quads, '
     +'hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.</div>';
-  if(planTab==='H')
-    h+='<div class="planday" style="margin-top:14px;">Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days.</div>';
+  if(planTab==='H'){
+    h='<div class="planwarm"><b>Door anchor.</b> Foam ball through the gap on the HINGE side at the height you want, '
+     +'then close the door. Use a door that opens away from you so pulling can never swing it open. Clip bands to the '
+     +'loop on your side. Three heights matter: top, middle, bottom.<br><br>'
+     +'<b>Resistance.</b> Clip a second tube on when one gets easy, or step further from the anchor. Right weight = the '
+     +'last two reps of 15 are hard but your form holds. Check the clip end for wear before each session and never '
+     +'stretch a band past about 2.5x its resting length.</div>'+h;
+    h+='<div class="planwarm after">Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days. '
+     +'Bands cover every loaded exercise here - no dumbbells needed.</div>';
+  }
   document.getElementById('planBody').innerHTML=h;
 }
 function planPick(k){planTab=k;buildPlan();}
