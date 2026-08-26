@@ -3544,6 +3544,28 @@
           "fat": 15.2,
           "sat": 2.8,
           "carb": 24.9
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:14",
+          "name": "Moong sprout salad ~100g with onion & tomato (estimated, not weighed)",
+          "kcal": 112,
+          "protein": 7.5,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 20.9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed26_sprouts.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:14",
+          "name": "Moong dal 280g cooked + white rice 120g cooked",
+          "kcal": 408,
+          "protein": 17.3,
+          "fat": 7.5,
+          "sat": 1.4,
+          "carb": 67.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed26_daalchawal.jpg"
         }
       ]
     }
