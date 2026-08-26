@@ -3529,6 +3529,23 @@
           "carb": 23.9
         }
       ]
+    },
+    {
+      "date": "2026-08-26",
+      "label": "Wed 26 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Drink",
+          "t": "13:30",
+          "name": "Whey drink (32g ON whey vanilla + 16g Awesome choc&nut + 200ml Oatly Barista + 10g nuts & seeds + 70g strawberries)",
+          "kcal": 391,
+          "protein": 38.8,
+          "fat": 15.2,
+          "sat": 2.8,
+          "carb": 24.9
+        }
+      ]
     }
   ]
 }
