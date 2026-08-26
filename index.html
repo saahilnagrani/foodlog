@@ -873,7 +873,7 @@ const PLAN={
   ['Split squat','2','10/leg','Bodyweight first session, then add DBs'],
   ['SUPERSET curl + pushdown','2 ea','10-12','Back to back, rest after the pair. Only direct arm work'],
   ['Decline bench sit-ups','3','12-15','Or cable crunch on the functional trainer']]},
- H:{n:'Home top-ups',d:'Tuesday & Thursday, 15 min',ex:[
+ H:{n:'Home top-ups',d:'Tuesday & Thursday',ex:[
   ['TUE - lateral raise','3','15-20','NO ANCHOR. Stand on the middle of the band, a handle in each hand at your sides, raise out to shoulder height. One foot on it = lighter, two = heavier. Start 10 lb (yellow)','resistance band lateral raise form'],
   ['TUE - triceps pushdown','3','12-15','ANCHOR TOP. Face the door, elbows pinned to your ribs and still, push the handles down to your thighs. Only the forearms move. Start 20 lb (orange)','resistance band triceps pushdown door anchor'],
   ['TUE - biceps curl','3','12-15','NO ANCHOR. Stand on the middle of the band, palms up, elbows glued to your sides. Start 20-25 lb','resistance band biceps curl form'],
@@ -883,7 +883,7 @@ const PLAN={
   ['THU - overhead triceps extension','3','12-15','ANCHOR BOTTOM, face AWAY from the door. Handles behind your head, elbows pointing forward, straighten overhead. Start 15-20 lb','resistance band overhead triceps extension'],
   ['THU - standing calf raise','3','15-20','No kit. Heels off a step edge, rise up, pause, lower slowly below the step','standing calf raise on step form'],
   ['THU - side plank','2','20-30s/side','Never to failure. Skip freely if tired - these are top-ups','side plank form']]},
- F:{n:'Gym day died',d:'20-minute home fallback',ex:[
+ F:{n:'Gym day died',d:'home fallback',ex:[
   ['Goblet or split squat','3','10',''],
   ['Push-ups','3','max-2',''],
   ['Band row','3','12',''],
@@ -908,7 +908,14 @@ function buildPlan(){
   document.getElementById('planTabs').innerHTML=tabs.map(([k,lab])=>
     `<button class="schip ${planTab===k?'on':''}" onclick="planPick('${k}')">${lab}</button>`).join('');
   const p=PLAN[planTab], gym=(planTab==='A'||planTab==='B'||planTab==='C');
-  let h=`<div class="planday"><b>${p.n}</b> &middot; ${p.d}</div>`;
+  /* Calibrated against the measured Mon 24 Aug session in Hevy: 56 min for a
+     week-1 Full Body A with a short 9.5-min treadmill. With the full 15 min
+     that is ~60; week 3 adds ~5 work sets at ~2 min each. */
+  const w=planWeek();
+  const mins = gym ? (w<=2 ? '~60 min' : '~70 min')
+             : planTab==='H' ? '15-20 min'
+             : planTab==='F' ? '~25 min' : '';
+  let h=`<div class="planday"><b>${p.n}</b> &middot; ${p.d}${mins?` &middot; <b>${mins}</b>`:''}</div>`;
   if(gym) h+='<div class="planwarm"><b>Warm up first, 5-8 min.</b> '
     +'3-5 min easy cardio, warm but not sweating. Then 10 bodyweight squats, 10 hip hinges, '
     +'10 arm circles each way, 10 wall slides. Then ramp the FIRST lift only: ~50% x10, ~75% x5 '
@@ -927,7 +934,9 @@ function buildPlan(){
   h+='</table>';
   if(gym) h+='<div class="planwarm after"><b>Then finish.</b> 15 min incline treadmill, brisk, always after '
     +'the weights and never before. Then static stretches 30 sec each while you are still warm - quads, '
-    +'hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.</div>';
+    +'hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.<br><br>'
+    +'<b>Where the '+mins+' goes:</b> ~8 warm-up, ~'+(w<=2?'32':'42')+' lifting, 15 treadmill, ~5 stretching. '
+    +'Your logged Full Body A on 24 Aug came in at 56 min with a short treadmill.</div>';
   if(planTab==='F'){
     h='<div class="planwarm"><b>Warm up first, 3 min.</b> No treadmill at home, so 1-2 min marching on the spot, '
      +'stairs or 20 jumping jacks until warm. Then 10 bodyweight squats, 10 hip hinges, 10 arm circles each way, '
