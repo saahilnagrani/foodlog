@@ -3533,7 +3533,7 @@
     {
       "date": "2026-08-26",
       "label": "Wed 26 Aug",
-      "workout": "",
+      "workout": "Missed B",
       "items": [
         {
           "meal": "Drink",
@@ -3596,6 +3596,17 @@
           "fat": 0.2,
           "sat": 0.1,
           "carb": 22.4
+        },
+        {
+          "meal": "Dinner",
+          "t": "25:36",
+          "name": "Chicken pasta 217g (100g cooked chicken breast + pasta, tomato sauce)",
+          "kcal": 379,
+          "protein": 36.2,
+          "fat": 11.7,
+          "sat": 2.1,
+          "carb": 29.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed26_chickenpasta.jpg"
         }
       ]
     }
