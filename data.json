@@ -3586,6 +3586,16 @@
           "fat": 17.7,
           "sat": 3.4,
           "carb": 13.5
+        },
+        {
+          "meal": "Early morning",
+          "t": "25:03",
+          "name": "White rice, cooked 80g",
+          "kcal": 104,
+          "protein": 2.1,
+          "fat": 0.2,
+          "sat": 0.1,
+          "carb": 22.4
         }
       ]
     }
