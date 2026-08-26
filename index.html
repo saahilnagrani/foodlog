@@ -928,6 +928,16 @@ function buildPlan(){
   if(gym) h+='<div class="planwarm after"><b>Then finish.</b> 15 min incline treadmill, brisk, always after '
     +'the weights and never before. Then static stretches 30 sec each while you are still warm - quads, '
     +'hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.</div>';
+  if(planTab==='F'){
+    h='<div class="planwarm"><b>Warm up first, 3 min.</b> No treadmill at home, so 1-2 min marching on the spot, '
+     +'stairs or 20 jumping jacks until warm. Then 10 bodyweight squats, 10 hip hinges, 10 arm circles each way, '
+     +'10 wall slides. Make the FIRST set of the squat and the push-ups noticeably easier than the rest. '
+     +'No static stretching before.</div>'+h;
+    h+='<div class="planwarm after"><b>Then cool down, 4 min.</b> Static stretches 30 sec each while still warm - '
+     +'quads, hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.<br><br>'
+     +'This keeps the week off zero. It is <b>not</b> a replacement for the session you missed - no hinge, '
+     +'no calf, no rear delt. The missed letter still happens on your next gym day.</div>';
+  }
   if(planTab==='H'){
     h='<div class="planwarm"><b>Door anchor.</b> Foam ball through the gap on the HINGE side at the height you want, '
      +'then close the door. Use a door that opens away from you so pulling can never swing it open. Clip bands to the '
