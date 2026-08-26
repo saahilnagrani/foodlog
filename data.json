@@ -3566,6 +3566,16 @@
           "sat": 1.4,
           "carb": 67.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed26_daalchawal.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:10",
+          "name": "Moong dal 230g cooked (2nd serving, no rice)",
+          "kcal": 207,
+          "protein": 11.6,
+          "fat": 5.8,
+          "sat": 1.1,
+          "carb": 27.7
         }
       ]
     }
