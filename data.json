@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-25",
+  "updated": "2026-08-26",
   "days": [
     {
       "date": "2026-07-24",
@@ -3517,6 +3517,16 @@
           "fat": 0.5,
           "sat": 0.2,
           "carb": 6
+        },
+        {
+          "meal": "Snack",
+          "t": "27:00",
+          "name": "Hunter's Gourmet hand cooked chips, sea salt & black pepper, 40g pack",
+          "kcal": 195,
+          "protein": 3,
+          "fat": 10.7,
+          "sat": 1.1,
+          "carb": 23.9
         }
       ]
     }
