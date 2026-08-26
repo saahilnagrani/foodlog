@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-26",
+  "updated": "2026-08-27",
   "days": [
     {
       "date": "2026-07-24",
@@ -3576,6 +3576,16 @@
           "fat": 5.8,
           "sat": 1.1,
           "carb": 27.7
+        },
+        {
+          "meal": "Dinner",
+          "t": "25:00",
+          "name": "Chicken curry (117g chicken + 165g gravy)",
+          "kcal": 372,
+          "protein": 40.7,
+          "fat": 17.7,
+          "sat": 3.4,
+          "carb": 13.5
         }
       ]
     }
