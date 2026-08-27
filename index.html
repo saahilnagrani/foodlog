@@ -50,6 +50,7 @@
   table.plan td.sr{white-space:nowrap;text-align:right;color:#111;font-variant-numeric:tabular-nums;padding-left:10px;}
   table.plan .vid{display:inline-block;margin-left:8px;font-size:11px;font-weight:700;color:#c4302b;text-decoration:none;border:1px solid #f0cdcb;border-radius:6px;padding:1px 6px;vertical-align:2px;white-space:nowrap;}
   table.plan .note{display:block;font-weight:400;font-size:11.5px;color:#777;margin-top:3px;line-height:1.45;}
+  table.plan .rest{display:block;font-weight:400;font-size:11px;color:#888;margin-top:3px;}
   .slabel{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#888;margin:16px 0 8px;font-weight:700;}
   .row-chips{display:flex;gap:8px;flex-wrap:wrap;}
   .schip{border:2px solid #ddd;background:#fff;color:#333;padding:8px 12px;border-radius:10px;font-size:13px;font-weight:600;cursor:pointer;}
@@ -853,26 +854,26 @@ function renderD(days){
 const PLAN_START='2026-08-24';                       /* Monday of week 1 */
 const PLAN={
  A:{n:'Full Body A',d:'Monday',ex:[
-  ['Matrix Leg Press','3','8-12','Anchor lift. Pivot set so knees bend to 90 at the start'],
-  ['Chest Press (pad position A)','3','8-12','Anchor lift. Same multi-press station as B and C'],
-  ['Lat Pulldown','3','8-12','Anchor lift. Thigh pad on top. Pull to upper chest'],
-  ['Matrix Leg Curl','3','10-12','Leg pad BELOW ankles; knees on the orange pivot'],
-  ['DB lateral raise','2','12-15','Start 4-6 kg. If you swing it, it is too heavy'],
-  ['Plank','3','30-45s','Add 5 sec each week']]},
+  ['Matrix Leg Press','3','8-12','Anchor lift. Pivot set so knees bend to 90 at the start','','2:00'],
+  ['Chest Press (pad position A)','3','8-12','Anchor lift. Same multi-press station as B and C','','2:00'],
+  ['Lat Pulldown','3','8-12','Anchor lift. Thigh pad on top. Pull to upper chest','','1:30'],
+  ['Matrix Leg Curl','3','10-12','Leg pad BELOW ankles; knees on the orange pivot','','1:30'],
+  ['DB lateral raise','2','12-15','Start 4-6 kg. If you swing it, it is too heavy','','1:00'],
+  ['Plank','3','30-45s','Add 5 sec each week','','1:00']]},
  B:{n:'Full Body B',d:'Wednesday',ex:[
-  ['Romanian deadlift','3','10-12','DBs 14-16 kg each, or Smith. Hinge at the hip, soft knees'],
-  ['Incline Press (pad position B)','3','10-12','Same multi-press, re-set the pad'],
-  ['Seated Row','3','8-12','Raise the thigh pad first. Elbows past the ribs'],
-  ['Leg Press, feet high','3','10-12','Higher feet shifts work to glutes and hamstrings'],
-  ['Rear delt fly','2','12-15','4-8 kg is plenty. The muscle a desk job kills'],
-  ['Calf press on the Leg Press','3','12-15','Balls of feet on the bottom edge, full stretch']]},
+  ['Romanian deadlift','3','10-12','DBs 14-16 kg each, or Smith. Hinge at the hip, soft knees','','2:00'],
+  ['Incline Press (pad position B)','3','10-12','Same multi-press, re-set the pad','','2:00'],
+  ['Seated Row','3','8-12','Raise the thigh pad first. Elbows past the ribs','','1:30'],
+  ['Leg Press, feet high','3','10-12','Higher feet shifts work to glutes and hamstrings','','2:00'],
+  ['Rear delt fly','2','12-15','4-8 kg is plenty. The muscle a desk job kills','','1:00'],
+  ['Calf press on the Leg Press','3','12-15','Balls of feet on the bottom edge, full stretch','','1:00']]},
  C:{n:'Full Body C',d:'Friday',ex:[
-  ['Matrix Leg Press','3','10-15','Lighter than Monday, higher reps'],
-  ['Shoulder Press (pad position C)','3','8-12','Third position on the same station'],
-  ['Lat Pulldown','3','10-12','Close grip if the bar allows - different angle to Monday'],
-  ['Split squat','2','10/leg','Bodyweight first session, then add DBs'],
-  ['SUPERSET curl + pushdown','2 ea','10-12','Back to back, rest after the pair. Only direct arm work'],
-  ['Decline bench sit-ups','3','12-15','Or cable crunch on the functional trainer']]},
+  ['Matrix Leg Press','3','10-15','Lighter than Monday, higher reps','','2:00'],
+  ['Shoulder Press (pad position C)','3','8-12','Third position on the same station','','2:00'],
+  ['Lat Pulldown','3','10-12','Close grip if the bar allows - different angle to Monday','','1:30'],
+  ['Split squat','2','10/leg','Bodyweight first session, then add DBs','','1:30'],
+  ['SUPERSET curl + pushdown','2 ea','10-12','Back to back, rest after the pair. Only direct arm work','','1:00'],
+  ['Decline bench sit-ups','3','12-15','Or cable crunch on the functional trainer','','1:00']]},
  H:{n:'Home top-ups',d:'Tuesday & Thursday',ex:[
   ['TUE - lateral raise','3','15-20','NO ANCHOR. Stand on the middle of the band, a handle in each hand at your sides, raise out to shoulder height. One foot on it = lighter, two = heavier. Start 10 lb (yellow)','resistance band lateral raise form'],
   ['TUE - triceps pushdown','3','12-15','ANCHOR TOP. Face the door, elbows pinned to your ribs and still, push the handles down to your thighs. Only the forearms move. Start 20 lb (orange)','resistance band triceps pushdown door anchor'],
@@ -919,9 +920,12 @@ function buildPlan(){
   if(gym) h+='<div class="planwarm"><b>Warm up first, 5-8 min.</b> '
     +'3-5 min easy cardio, warm but not sweating. Then 10 bodyweight squats, 10 hip hinges, '
     +'10 arm circles each way, 10 wall slides. Then ramp the FIRST lift only: ~50% x10, ~75% x5 '
-    +'(tag these W in Hevy). No static stretching before lifting - it makes you weaker for the session.</div>';
+    +'(tag these W in Hevy). No static stretching before lifting - it makes you weaker for the session.<br><br>'
+    +'<b>Set the rest timer per exercise in Hevy</b> to the times in the table - Hevy defaults every exercise to 1 min, '
+    +'which is too short for the heavy ones. A minute is not enough to recover for a hard set of 10, so sets 2 and 3 '
+    +'lose reps and you do less total work. Long rests on the compounds, short on the small stuff.</div>';
   h+='<table class="plan"><tr><th>Exercise</th><th style="text-align:right">Sets &times; reps</th></tr>';
-  p.ex.forEach(([ex,sets,reps,note,vid])=>{
+  p.ex.forEach(([ex,sets,reps,note,vid,rest])=>{
     /* A YouTube SEARCH url, never a specific video: search results cannot rot,
        and I have no way to check a given video from here. It opens inside the
        wrapper's WebView (it has no WebChromeClient, so target=_blank is inert)
@@ -929,7 +933,8 @@ function buildPlan(){
     const link = vid ? ` <a class="vid" target="_blank" rel="noopener"`
       + ` href="https://www.youtube.com/results?search_query=${encodeURIComponent(vid)}">&#9654; video</a>` : '';
     h+=`<tr><td class="ex">${ex}${link}${note?`<span class="note">${note}</span>`:''}</td>`
-      +`<td class="sr">${sets}${reps?' &times; '+reps:''}</td></tr>`;
+      +`<td class="sr">${sets}${reps?' &times; '+reps:''}`
+      +`${rest?`<span class="rest">rest ${rest}</span>`:''}</td></tr>`;
   });
   h+='</table>';
   if(gym) h+='<div class="planwarm after"><b>Then finish.</b> 15 min incline treadmill, brisk, always after '
@@ -941,7 +946,8 @@ function buildPlan(){
     h='<div class="planwarm"><b>Warm up first, 3 min.</b> No treadmill at home, so 1-2 min marching on the spot, '
      +'stairs or 20 jumping jacks until warm. Then 10 bodyweight squats, 10 hip hinges, 10 arm circles each way, '
      +'10 wall slides. Make the FIRST set of the squat and the push-ups noticeably easier than the rest. '
-     +'No static stretching before.</div>'+h;
+     +'No static stretching before.<br><br><b>Rest 60-90 sec between sets.</b> Keep it moving - this one is about '
+     +'not missing the week, not about maximum output.</div>'+h;
     h+='<div class="planwarm after"><b>Then cool down, 4 min.</b> Static stretches 30 sec each while still warm - '
      +'quads, hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.<br><br>'
      +'This keeps the week off zero. It is <b>not</b> a replacement for the session you missed - no hinge, '
@@ -954,7 +960,8 @@ function buildPlan(){
      +'<b>Resistance.</b> Clip a second tube on when one gets easy, or step further from the anchor. Right weight = the '
      +'last two reps of 15 are hard but your form holds. Check the clip end for wear before each session and never '
      +'stretch a band past about 2.5x its resting length.</div>'+h;
-    h+='<div class="planwarm after">Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days. '
+    h+='<div class="planwarm after"><b>Rest 60 sec between sets</b> - it is all light, high-rep work, nothing here needs more. '
+     +'Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days. '
      +'Bands cover every loaded exercise here - no dumbbells needed.<br><br>'
      +'<b>&#9654; video</b> opens a YouTube <i>search</i>, not one chosen video, so it can never go dead. '
      +'It loads inside this app and replaces the log - <b>pull down to refresh to come back</b>.</div>';
