@@ -3645,6 +3645,16 @@
           "fat": 2,
           "sat": 0.4,
           "carb": 22
+        },
+        {
+          "meal": "Drink",
+          "t": "15:15",
+          "name": "Whey drink (34g ON whey vanilla + 16g Awesome choc&nut + 175ml Oatly Barista + 20g nuts & seeds)",
+          "kcal": 428,
+          "protein": 41.4,
+          "fat": 20.4,
+          "sat": 3.5,
+          "carb": 19.4
         }
       ]
     }
