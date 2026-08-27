@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-27",
+  "updated": "2026-08-28",
   "days": [
     {
       "date": "2026-07-24",
@@ -3655,6 +3655,16 @@
           "fat": 20.4,
           "sat": 3.5,
           "carb": 19.4
+        },
+        {
+          "meal": "Early morning",
+          "t": "24:15",
+          "name": "Salmon (drained wt) 330g",
+          "kcal": 647,
+          "protein": 72.6,
+          "fat": 39.6,
+          "sat": 7.9,
+          "carb": 0
         }
       ]
     }
