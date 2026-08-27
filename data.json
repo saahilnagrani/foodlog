@@ -3624,6 +3624,27 @@
           "fat": 5.2,
           "sat": 0.7,
           "carb": 0.8
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:45",
+          "name": "Tofu bhurji 200g (~150g tofu, onion & tomato masala)",
+          "kcal": 240,
+          "protein": 16.5,
+          "fat": 16,
+          "sat": 2.3,
+          "carb": 7.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu27_bhurji.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:45",
+          "name": "Plain roti x1",
+          "kcal": 120,
+          "protein": 4,
+          "fat": 2,
+          "sat": 0.4,
+          "carb": 22
         }
       ]
     }
