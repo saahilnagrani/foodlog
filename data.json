@@ -3609,6 +3609,23 @@
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed26_chickenpasta.jpg"
         }
       ]
+    },
+    {
+      "date": "2026-08-27",
+      "label": "Thu 27 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:00",
+          "name": "Egg-white omelette (4 egg whites + 1tsp oil)",
+          "kcal": 113,
+          "protein": 14.4,
+          "fat": 5.2,
+          "sat": 0.7,
+          "carb": 0.8
+        }
+      ]
     }
   ]
 }
