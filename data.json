@@ -3677,6 +3677,33 @@
           "carb": 25
         }
       ]
+    },
+    {
+      "date": "2026-08-28",
+      "label": "Fri 28 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "15:49",
+          "name": "Salmon, cooked 154g",
+          "kcal": 302,
+          "protein": 33.9,
+          "fat": 18.5,
+          "sat": 3.7,
+          "carb": 0
+        },
+        {
+          "meal": "Drink",
+          "t": "17:00",
+          "name": "Whey drink (35g ON whey vanilla + 20g Awesome choc&nut + 175ml Oatly Barista + 19g nuts & seeds)",
+          "kcal": 440,
+          "protein": 44.5,
+          "fat": 20.2,
+          "sat": 3.5,
+          "carb": 19.5
+        }
+      ]
     }
   ]
 }
