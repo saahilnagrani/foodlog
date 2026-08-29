@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-29",
+  "updated": "2026-08-30",
   "days": [
     {
       "date": "2026-07-24",
@@ -3752,6 +3752,23 @@
           "fat": 0,
           "sat": 0,
           "carb": 18
+        }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "label": "Sun 30 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Early morning",
+          "t": "24:05",
+          "name": "Whey drink (34g ON whey vanilla + 9g Awesome choc&nut + 100ml Oatly Barista + 15g nuts & seeds)",
+          "kcal": 324,
+          "protein": 35.5,
+          "fat": 14.5,
+          "sat": 2.7,
+          "carb": 13.5
         }
       ]
     }
