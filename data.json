@@ -3756,23 +3756,6 @@
       ]
     },
     {
-      "date": "2026-08-30",
-      "label": "Sun 30 Aug",
-      "workout": "",
-      "items": [
-        {
-          "meal": "Early morning",
-          "t": "24:05",
-          "name": "Whey drink (34g ON whey vanilla + 9g Awesome choc&nut + 100ml Oatly Barista + 15g nuts & seeds)",
-          "kcal": 324,
-          "protein": 35.5,
-          "fat": 14.5,
-          "sat": 2.7,
-          "carb": 13.5
-        }
-      ]
-    },
-    {
       "date": "2026-08-29",
       "label": "Sat 29 Aug",
       "workout": "",
@@ -3866,6 +3849,23 @@
           "fat": 28,
           "sat": 3.5,
           "carb": 47
+        }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "label": "Sun 30 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Early morning",
+          "t": "24:05",
+          "name": "Whey drink (34g ON whey vanilla + 9g Awesome choc&nut + 100ml Oatly Barista + 15g nuts & seeds)",
+          "kcal": 324,
+          "protein": 35.5,
+          "fat": 14.5,
+          "sat": 2.7,
+          "carb": 13.5
         }
       ]
     }
