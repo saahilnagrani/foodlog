@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-31",
+  "updated": "2026-08-30",
   "days": [
     {
       "date": "2026-07-24",
@@ -3841,6 +3841,16 @@
           "carb": 20
         },
         {
+          "meal": "Early morning",
+          "t": "24:05",
+          "name": "Whey drink (34g ON whey vanilla + 9g Awesome choc&nut + 100ml Oatly Barista + 15g nuts & seeds)",
+          "kcal": 324,
+          "protein": 35.5,
+          "fat": 14.5,
+          "sat": 2.7,
+          "carb": 13.5
+        },
+        {
           "meal": "Snack",
           "t": "24:30",
           "name": "Lay's Wavy spicy cheese 85g pack",
@@ -3897,16 +3907,6 @@
           "fat": 18,
           "sat": 3.1,
           "carb": 16.9
-        },
-        {
-          "meal": "Early morning",
-          "t": "24:05",
-          "name": "Whey drink (34g ON whey vanilla + 9g Awesome choc&nut + 100ml Oatly Barista + 15g nuts & seeds)",
-          "kcal": 324,
-          "protein": 35.5,
-          "fat": 14.5,
-          "sat": 2.7,
-          "carb": 13.5
         }
       ]
     }
