@@ -1125,6 +1125,41 @@ const RATE={
   straw:  {u:'g', d:100,k:.32, p:.007,f:.003,s:0,   c:.077},
 };
 const lab=(r,l,d)=>Object.assign({},r,{lab:l},d===undefined?{}:{d:d});
+/* Extra spellings the frequency sort should recognise. Two years of this log
+   were written by hand in chat, so the same food appears as "ON vanilla whey",
+   "ON Gold Standard" and "ON whey vanilla". Each food's own name is always an
+   alias; these are the additions. Deliberately absent: a bare "papad" (three
+   different papads would claim it) and a bare "chicken" (it is inside half the
+   log). Matching is case-insensitive with a word boundary at the START only,
+   so "strawberr" catches the plural while "Apple" stays out of "Pineapple". */
+const QALIAS={
+ 'ON whey (vanilla)':['on vanilla whey','on whey','on gold standard'],
+ 'Clear whey':['clear whey'],
+ 'Awesome protein':['awesome'],
+ 'Oat milk (Oatly)':['oatly','oat milk'],
+ 'Mix nuts & seeds':['mix nuts','nuts & seeds','nuts and seeds'],
+ 'Strawberries':['strawberr'],
+ 'Greek yogurt 0%':['greek yogurt','greek yoghurt'],
+ 'Egg-white omelette':['egg-white omelette','egg white omelette'],
+ 'Scrambled eggs (whole)':['scrambled egg'],
+ 'Egg curry':['egg curry'],
+ 'Chicken curry':['chicken curry'],
+ 'Prawn curry':['prawn curry'],
+ 'Chicken biryani':['biryani'],
+ 'Salmon, cooked':['salmon'],
+ 'Tofu, firm':['tofu'],
+ 'Daal, thick (no water)':['moong dal','daal','dal palak'],
+ 'White rice, cooked':['white rice'],
+ 'Moong sprouts':['moong sprout'],
+ 'Veg salad':['veg salad'],
+ 'Guacamole (no oil)':['guacamole'],
+ 'Plain roti':['plain roti'],
+ 'Ghee roti':['ghee roti'],
+ 'Baat Cheet papad':['baat cheet'],
+ 'Punjabi masala papad':['punjabi masala papad'],
+ 'Dilkhush papad':['dilkhush'],
+ 'Makhana (roasted pack)':['makhana'],
+};
 const QUICK=[
  {n:'Whey drink',             meal:'Drink',    parts:[
     lab(RATE.onwhey ,'ON whey vanilla'),
@@ -1206,16 +1241,29 @@ function qmacros(i,amts){
     o.kcal+=pt.k*a; o.protein+=pt.p*a; o.fat+=pt.f*a; o.sat+=pt.s*a; o.carb+=pt.c*a;});
   return {kcal:Math.round(o.kcal),protein:R1(o.protein),fat:R1(o.fat),sat:R1(o.sat),carb:R1(o.carb)};
 }
-/* How often each quick-add food actually appears in the log. qadd() writes the
-   name as "<q.n> <amount>" or "<q.n> (parts)", so a prefix match counts it -
-   and it also catches the ones written here by hand ("Plain roti x1"). Longest
-   name first so a short name cannot swallow a longer one that starts the same. */
+/* How often each quick-add food actually appears in the log - counting both
+   app adds and the entries written here by hand.
+   Every food a line NAMES gets credited, with no first-match-wins break, because
+   a single line is routinely several foods: "White rice 120g + dal palak 250g +
+   papad 1" is rice AND daal, and the shake line is the drink AND its components.
+   That double-counts a composite against its parts, which is what you want from
+   a "most used" order: if the shake is daily, ON whey really is your top food. */
+let QRE=null;
+function quickRe(){
+  if(QRE)return QRE;
+  const esc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  QRE={};
+  QUICK.forEach(q=>{
+    const al=[q.n].concat(QALIAS[q.n]||[]);
+    QRE[q.n]=new RegExp('\\b(?:'+al.map(esc).join('|')+')','i');
+  });
+  return QRE;
+}
 function quickFreq(){
-  const n={}; QUICK.forEach(q=>n[q.n]=0);
-  const keys=Object.keys(n).sort((a,b)=>b.length-a.length);
+  const n={}, re=quickRe(); QUICK.forEach(q=>n[q.n]=0);
   (rawDays()||[]).forEach(d=>(d.items||[]).forEach(it=>{
     const s=String(it.name||'');
-    for(const k of keys){ if(s.indexOf(k)===0){n[k]++;break;} }
+    QUICK.forEach(q=>{ if(re[q.n].test(s))n[q.n]++; });
   }));
   return n;
 }
