@@ -3907,6 +3907,48 @@
           "fat": 18,
           "sat": 3.1,
           "carb": 16.9
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:28",
+          "name": "Korean fried chicken x4 pieces (Madang)",
+          "kcal": 465,
+          "protein": 27,
+          "fat": 27,
+          "sat": 5.6,
+          "carb": 29,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun30_kfc.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:28",
+          "name": "Korean rice cakes (tteok) x2 pieces, glazed",
+          "kcal": 130,
+          "protein": 2.5,
+          "fat": 2,
+          "sat": 0.3,
+          "carb": 27
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:15",
+          "name": "Ramyeon ~100g with veg + 2 fish cakes",
+          "kcal": 255,
+          "protein": 10,
+          "fat": 10,
+          "sat": 3,
+          "carb": 28
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Mango bingsoo (Madang)",
+          "kcal": 280,
+          "protein": 5,
+          "fat": 8,
+          "sat": 5,
+          "carb": 45,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun30_bingsoo.jpg"
         }
       ]
     }
