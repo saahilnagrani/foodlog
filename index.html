@@ -390,21 +390,12 @@
       </div>
 
       <div class="slabel">Quick add <span id="qhint" style="float:right;text-transform:none;letter-spacing:0;color:#aaa;font-weight:400">tap a food &rarr; enter amount</span></div>
+      <div class="chiprow" id="qsortChips" style="margin-bottom:8px;"></div>
       <input id="qsearch" placeholder="Search foods&hellip;" oninput="buildQuick()"
              style="width:100%;padding:10px;border:1px solid #ddd;border-radius:10px;font-size:14px;background:#fafafa;margin-bottom:8px;">
       <div id="qlist"></div>
 
-      <div class="slabel">Or enter it manually</div>
-      <div class="field"><label>What did you eat?</label><input id="f_name" placeholder="e.g. Clear whey 30g in water"></div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
-        <div class="field"><label>Calories</label><input id="f_kcal" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
-        <div class="field"><label>Protein g</label><input id="f_pro" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
-        <div class="field"><label>Carbs g</label><input id="f_carb" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
-        <div class="field"><label>Total fat g</label><input id="f_fat" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
-        <div class="field"><label>Saturated fat g</label><input id="f_sat" type="text" inputmode="decimal" autocomplete="off" spellcheck="false"></div>
-        <div class="field"><label>Photo (optional)</label><input id="f_img" type="file" accept="image/*"></div>
-      </div>
-      <div class="srow"><button class="sbtn ghost" onclick="closeAdd()">Cancel</button><button class="sbtn primary" onclick="saveFood()">Save</button></div>
+      <div class="srow"><button class="sbtn primary" onclick="closeAdd()">Done</button></div>
     </div>
   </div>
 
@@ -1166,6 +1157,8 @@ const QUICK=[
  {n:'Plain roti',             meal:'Dinner',   parts:[{u:'pc',d:1, k:120, p:4,   f:2,   s:.4,  c:22}]},
  {n:'Ghee roti',              meal:'Dinner',   parts:[{u:'pc',d:1, k:175, p:4.5, f:6,   s:3,   c:26}]},
  {n:'Baat Cheet papad',       meal:'Snack',    parts:[{u:'pc',d:1, k:45,  p:3,   f:.4,  s:.05, c:7.5}]},
+ {n:'Punjabi masala papad',   meal:'Snack',    parts:[{u:'pc',d:1, k:50,  p:3.4, f:.5,  s:.06, c:8.3}]},
+ {n:'Dilkhush papad',         meal:'Snack',    parts:[{u:'pc',d:1, k:34,  p:2,   f:.5,  s:.2,  c:6}]},
  {n:'Makhana (roasted pack)', meal:'Snack',    parts:[{u:'g',d:25, k:5.2, p:.08, f:.28, s:.04, c:.56}]},
  {n:'Apple',                  meal:'Snack',    parts:[{u:'g',d:100,k:.52, p:.003,f:.002,s:0,   c:.14}]},
  {n:'Grapes',                 meal:'Snack',    parts:[{u:'g',d:100,k:.69, p:.006,f:.002,s:0,   c:.18}]},
@@ -1213,10 +1206,40 @@ function qmacros(i,amts){
     o.kcal+=pt.k*a; o.protein+=pt.p*a; o.fat+=pt.f*a; o.sat+=pt.s*a; o.carb+=pt.c*a;});
   return {kcal:Math.round(o.kcal),protein:R1(o.protein),fat:R1(o.fat),sat:R1(o.sat),carb:R1(o.carb)};
 }
+/* How often each quick-add food actually appears in the log. qadd() writes the
+   name as "<q.n> <amount>" or "<q.n> (parts)", so a prefix match counts it -
+   and it also catches the ones written here by hand ("Plain roti x1"). Longest
+   name first so a short name cannot swallow a longer one that starts the same. */
+function quickFreq(){
+  const n={}; QUICK.forEach(q=>n[q.n]=0);
+  const keys=Object.keys(n).sort((a,b)=>b.length-a.length);
+  (rawDays()||[]).forEach(d=>(d.items||[]).forEach(it=>{
+    const s=String(it.name||'');
+    for(const k of keys){ if(s.indexOf(k)===0){n[k]++;break;} }
+  }));
+  return n;
+}
+function qsortPick(v){PREF.qsort=v;savePref();buildQuick();}
+function buildQuickSortChips(){
+  const cur=PREF.qsort==='freq'?'freq':'az';
+  document.getElementById('qsortChips').innerHTML=
+    [['az','A-Z'],['freq','Most used']].map(([k,lab])=>
+      `<button class="chip2 ${cur===k?'on':''}" onclick="qsortPick('${k}')">${lab}</button>`).join('');
+}
 function buildQuick(){
   const term=(document.getElementById('qsearch').value||'').trim().toLowerCase();
   const box=document.getElementById('qlist'); let h='',shown=0;
-  QUICK.forEach((q,i)=>{
+  buildQuickSortChips();
+  /* Sort a copy that remembers each food's real index - every id and handler
+     below is keyed on the position in QUICK, not on display order. */
+  const order=QUICK.map((q,i)=>[q,i]);
+  if(PREF.qsort==='freq'){
+    const f=quickFreq();
+    order.sort((a,b)=>(f[b[0].n]-f[a[0].n]) || a[0].n.localeCompare(b[0].n));
+  }else{
+    order.sort((a,b)=>a[0].n.localeCompare(b[0].n));
+  }
+  order.forEach(([q,i])=>{
     if(term && q.n.toLowerCase().indexOf(term)<0) return;
     shown++;
     const ins=q.parts.map((pt,j)=>
@@ -1320,14 +1343,6 @@ function closeAdd(fromHistory){
   if(ghToken()&&pendingCount())ghPush(true);      /* quiet auto-save; manual button remains for retries */
 }
 function todayISO(){const d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');}
-function saveFood(){
-  const date=selDate||todayISO();
-  const item={meal:selMeal,t:fTime(),name:document.getElementById('f_name').value.trim()||'Food',kcal:+document.getElementById('f_kcal').value||0,protein:+document.getElementById('f_pro').value||0,carb:+document.getElementById('f_carb').value||0,fat:+document.getElementById('f_fat').value||0,sat:+document.getElementById('f_sat').value||0};
-  const file=document.getElementById('f_img').files[0];
-  const finish=()=>{const extra=loadExtra();(extra[date]=extra[date]||[]).push(item);saveExtra(extra);['f_name','f_kcal','f_pro','f_carb','f_fat','f_sat','f_time'].forEach(id=>document.getElementById(id).value='');document.getElementById('f_img').value='';closeAdd();curWeek=weeks.length-1;render();toast('Added to '+labelFor(date));};
-  if(file){const rd=new FileReader();rd.onload=e=>{item.img=e.target.result;finish();};rd.readAsDataURL(file);}else finish();
-}
-
 /* ---------- sync ---------- */
 /* ---------- read-only diagnostic: what does the Android wrapper expose? ---------- */
 function bridgeInfo(){
