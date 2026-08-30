@@ -3860,12 +3860,12 @@
         {
           "meal": "Lunch",
           "t": "15:33",
-          "name": "Gobhi paratha x2",
-          "kcal": 480,
-          "protein": 14,
-          "fat": 12,
-          "sat": 1.5,
-          "carb": 81,
+          "name": "Gobhi paratha x2 (homemade, regular size)",
+          "kcal": 385,
+          "protein": 11.6,
+          "fat": 8.8,
+          "sat": 1,
+          "carb": 66.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun30_gobhiparatha.jpg"
         },
         {
