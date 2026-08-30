@@ -64,6 +64,8 @@
   .qhead{display:flex;align-items:center;gap:10px;padding:12px 2px;cursor:pointer;}
   .qhead .qname{flex:1;min-width:0;font-size:14px;color:#222;}
   .qhead .qsum{font-size:11px;color:#2e7d5b;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap;}
+  .qhead .qcnt{flex:0 0 auto;font-size:10.5px;font-weight:700;color:#8a8a8a;background:#f1f1f1;
+               border-radius:9px;padding:2px 7px;font-variant-numeric:tabular-nums;white-space:nowrap;}
   .qhead .qcar{color:#bbb;font-size:12px;transition:transform .18s;}
   .qrow.open .qhead .qcar{transform:rotate(90deg);}
   .qrow.open .qhead .qname{font-weight:600;}
@@ -1259,13 +1261,19 @@ function quickRe(){
   });
   return QRE;
 }
+let QFREQ=null, QFREQKEY='';
 function quickFreq(){
+  /* Memoised: buildQuick() runs on every keystroke in the search box, and this
+     is ~32 regexes across every logged item. The key changes whenever the file
+     or the not-yet-pushed items do, which is the only way the counts can move. */
+  const key=(DATA&&DATA.updated||'')+'|'+((DATA&&DATA.days||[]).length)+'|'+pendingCount();
+  if(QFREQ && QFREQKEY===key) return QFREQ;
   const n={}, re=quickRe(); QUICK.forEach(q=>n[q.n]=0);
   (rawDays()||[]).forEach(d=>(d.items||[]).forEach(it=>{
     const s=String(it.name||'');
     QUICK.forEach(q=>{ if(re[q.n].test(s))n[q.n]++; });
   }));
-  return n;
+  QFREQ=n; QFREQKEY=key; return n;
 }
 function qsortPick(v){PREF.qsort=v;savePref();buildQuick();}
 function buildQuickSortChips(){
@@ -1280,9 +1288,8 @@ function buildQuick(){
   buildQuickSortChips();
   /* Sort a copy that remembers each food's real index - every id and handler
      below is keyed on the position in QUICK, not on display order. */
-  const order=QUICK.map((q,i)=>[q,i]);
+  const order=QUICK.map((q,i)=>[q,i]), f=quickFreq();
   if(PREF.qsort==='freq'){
-    const f=quickFreq();
     order.sort((a,b)=>(f[b[0].n]-f[a[0].n]) || a[0].n.localeCompare(b[0].n));
   }else{
     order.sort((a,b)=>a[0].n.localeCompare(b[0].n));
@@ -1293,7 +1300,9 @@ function buildQuick(){
     const ins=q.parts.map((pt,j)=>
       `<div class="qin">${q.parts.length>1?`<span class="qlab">${pt.lab}</span>`:''}<span class="qfield"><input id="qi${i}_${j}" type="text" inputmode="decimal" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" placeholder="${pt.d}" oninput="qcalc(${i})"><span class="qunit">${pt.u}</span></span></div>`).join('');
     h+=`<div class="qrow" id="qr${i}">
-      <div class="qhead" onclick="qtoggle(${i})"><span class="qname">${q.n}</span><span class="qsum" id="qs${i}"></span><span class="qcar">&#9654;</span></div>
+      <div class="qhead" onclick="qtoggle(${i})"><span class="qname">${q.n}</span>`
+      +`${f[q.n]?`<span class="qcnt" title="times this appears in your log">&times;${f[q.n]}</span>`:''}`
+      +`<span class="qsum" id="qs${i}"></span><span class="qcar">&#9654;</span></div>
       <div class="qbody"><div class="qins ${q.parts.length>1?'two':'one'}">${ins}</div>
         <div class="qfoot"><span class="qmac" id="qm${i}"></span><button class="qadd" id="qb${i}" onclick="qadd(${i})">Add</button></div>
       </div></div>`;
