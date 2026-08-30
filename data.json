@@ -3889,6 +3889,16 @@
           "carb": 15
         },
         {
+          "meal": "Drink",
+          "t": "19:00",
+          "name": "Whey drink (34g ON whey vanilla + 12g Awesome choc&nut + 125ml Oatly Barista + 19g nuts & seeds + 15g strawberries)",
+          "kcal": 381,
+          "protein": 38.4,
+          "fat": 18,
+          "sat": 3.1,
+          "carb": 16.9
+        },
+        {
           "meal": "Early morning",
           "t": "24:05",
           "name": "Whey drink (34g ON whey vanilla + 9g Awesome choc&nut + 100ml Oatly Barista + 15g nuts & seeds)",
@@ -3897,16 +3907,6 @@
           "fat": 14.5,
           "sat": 2.7,
           "carb": 13.5
-        },
-        {
-          "meal": "Early morning",
-          "t": "24:26",
-          "name": "Whey drink (34g ON whey vanilla + 12g Awesome choc&nut + 125ml Oatly Barista + 19g nuts & seeds + 15g strawberries)",
-          "kcal": 381,
-          "protein": 38.4,
-          "fat": 18,
-          "sat": 3.1,
-          "carb": 16.9
         }
       ]
     }
