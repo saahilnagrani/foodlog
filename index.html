@@ -317,9 +317,11 @@
       <div id="editWhere" class="planday"></div>
       <div class="field"><label>Name</label><input id="e_name"></div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div class="field"><label>Day</label><input id="e_date" type="date"></div>
         <div class="field"><label>Meal</label><select id="e_meal"></select></div>
         <div class="field"><label>Time (24h, 24+ = after midnight)</label>
-          <input id="e_time" type="text" inputmode="numeric" placeholder="21:30" autocomplete="off"></div>
+          <input id="e_time" type="text" inputmode="numeric" placeholder="21:30" autocomplete="off"
+                 oninput="timeMask(this)"></div>
         <div class="field"><label>Calories</label><input id="e_kcal" type="text" inputmode="decimal" autocomplete="off"></div>
         <div class="field"><label>Protein g</label><input id="e_pro" type="text" inputmode="decimal" autocomplete="off"></div>
         <div class="field"><label>Carbs g</label><input id="e_carb" type="text" inputmode="decimal" autocomplete="off"></div>
@@ -616,7 +618,24 @@ function lbInit(){
    Same two stores as delete: a not-yet-pushed item is patched in localStorage,
    one already in data.json is patched through ghCommit. Matched on
    name + time + kcal, never on an index, because the file may have moved on. */
-let EDITROW=null;
+let EDITROW=null, EDITWARNED=false;
+
+/* The phone shows a bare numeric keypad for inputmode="numeric", and that pad
+   has no colon key - so type the digits and the colon places itself. */
+function timeMask(el){
+  const d=String(el.value||'').replace(/\D/g,'').slice(0,4);
+  el.value = d.length>2 ? d.slice(0,2)+':'+d.slice(2) : d;
+}
+/* A 24+ time means the small hours AFTER `date`. If that moment has not
+   happened yet, the item almost certainly belongs to the previous waking day -
+   the classic slip is typing 24:05 the next morning with the day left on Today. */
+function lateDayWarning(date,t){
+  if(!/^\d{1,2}:\d{2}$/.test(t||''))return null;
+  const h=parseInt(t,10); if(h<24)return null;
+  const when=new Date(addDays(date,1)+'T'+String(h-24).padStart(2,'0')+t.slice(t.indexOf(':'))+':00');
+  if(!(when>new Date()))return null;
+  return {prev:addDays(date,-1), clock:String(h-24).padStart(2,'0')+t.slice(t.indexOf(':'))};
+}
 function editRow(n){
   const r=ROWS[n]; if(!r)return;
   closeSwipes(); EDITROW=r;
@@ -628,9 +647,10 @@ function editRow(n){
   document.getElementById('e_carb').value=r.carb;
   document.getElementById('e_fat').value=r.fat;
   document.getElementById('e_sat').value=r.sat;
+  document.getElementById('e_date').value=r.date;
   document.getElementById('editWhere').innerHTML=
     `<b>${labelFor(r.date)}</b> &middot; ${r.src==='local'?'not saved to GitHub yet':'in data.json'}`;
-  document.getElementById('editMsg').textContent='';
+  document.getElementById('editMsg').textContent=''; EDITWARNED=false;
   keepScroll(); histPush();
   document.body.classList.add('modal-open');
   document.getElementById('editBg').classList.add('open');
@@ -650,31 +670,58 @@ function editPatch(){
           kcal:Math.round(numv(g('e_kcal'))), protein:R1(numv(g('e_pro'))),
           fat:R1(numv(g('e_fat'))), sat:R1(numv(g('e_sat'))), carb:R1(numv(g('e_carb')))};
 }
+function editUsePrev(d){document.getElementById('e_date').value=d;EDITWARNED=true;saveEdit();}
 async function saveEdit(){
   const r=EDITROW; if(!r)return;
   const p=editPatch();
   if(!p){document.getElementById('editMsg').textContent='Time must look like 21:30 (or 25:30 for after midnight).';return;}
+  const nd=String(document.getElementById('e_date').value||'').trim()||r.date;
+  const moved=nd!==r.date;
+  const w=lateDayWarning(nd,p.t);
+  if(w && !EDITWARNED){                    /* warn once, then Save again means "I meant it" */
+    EDITWARNED=true;
+    document.getElementById('editMsg').innerHTML=
+      `<b>${p.t} on ${labelFor(nd)}</b> is ${w.clock} on ${labelFor(addDays(nd,1))}, which has not happened yet. `
+      +`If you ate it last night it belongs to ${labelFor(w.prev)}.`
+      +`<div style="margin-top:8px;"><button class="sbtn ghost" onclick="editUsePrev('${w.prev}')">`
+      +`Use ${labelFor(w.prev)}</button></div>`
+      +`<div style="margin-top:6px;opacity:.7;">Or press Save again to keep ${labelFor(nd)}.</div>`;
+    return;
+  }
   const same=it=>it.name===r.name && (it.t||'')===r.t && Math.round(+it.kcal||0)===r.kcal;
   const btn=document.getElementById('e_save'); btn.disabled=true;
   try{
     if(r.src==='local'){
       const x=loadExtra(), arr=x[r.date]||[], i=arr.findIndex(same);
       if(i<0)throw new Error('Could not find that item any more');
-      arr[i]=Object.assign({},arr[i],p); x[r.date]=arr; saveExtra(x);
+      const merged=Object.assign({},arr[i],p);
+      if(moved){
+        arr.splice(i,1);
+        if(arr.length)x[r.date]=arr; else delete x[r.date];
+        (x[nd]=x[nd]||[]).push(merged);
+      }else{arr[i]=merged; x[r.date]=arr;}
+      saveExtra(x);
       render(); refreshPending(); pendingBadge();
-      closeEdit(); toast('Updated '+p.name);
+      closeEdit(); toast(moved?`Moved ${p.name} to ${labelFor(nd)}`:'Updated '+p.name);
     }else{
       document.getElementById('editMsg').textContent='Saving to GitHub…';
       const data=await ghCommit(d=>{
         const day=(d.days||[]).find(x=>x.date===r.date);
         const i=day?day.items.findIndex(same):-1;
         if(i<0)throw new Error('That item is not in data.json any more - pull down to refresh');
-        day.items[i]=Object.assign({},day.items[i],p);
-        day.items=sortItems(day.items);
+        const merged=Object.assign({},day.items[i],p);
+        if(moved){
+          day.items.splice(i,1);        /* keep the old day even if empty: it holds the workout */
+          let to=(d.days||[]).find(x=>x.date===nd);
+          if(!to){to={date:nd,label:labelFor(nd),workout:'',items:[]};d.days.push(to);}
+          to.items.push(merged); to.items=sortItems(to.items);
+          d.days.sort((a,b)=>a.date<b.date?-1:1);
+        }else{day.items[i]=merged; day.items=sortItems(day.items);}
         d.updated=todayISO();
-      },'App: edit "'+r.name+'" on '+r.date);
+      }, moved ? `App: move "${r.name}" from ${r.date} to ${nd}`
+               : 'App: edit "'+r.name+'" on '+r.date);
       DATA=data; buildWeeks(); render();
-      closeEdit(); toast('Updated '+p.name);
+      closeEdit(); toast(moved?`Moved ${p.name} to ${labelFor(nd)}`:'Updated '+p.name);
     }
   }catch(err){document.getElementById('editMsg').textContent=String(err.message||err);}
   finally{btn.disabled=false;}
@@ -1217,7 +1264,19 @@ function qadd(i){
   q.parts.forEach((_,j)=>document.getElementById(`qi${i}_${j}`).value='');
   document.getElementById('qr'+i).classList.remove('open');
   qcalc(i); curWeek=weeks.length-1; render();
-  toast(`${name} → ${labelFor(date)}`);
+  /* Nothing is pushed yet, so a wrong waking day is one tap to fix rather than
+     a warning that blocks the add. */
+  const w=lateDayWarning(date,item.t);
+  if(w) toast(`${item.t} is ${w.clock} tomorrow`,`Move to ${labelFor(w.prev)}`,()=>{
+    const x=loadExtra(), arr=x[date]||[], j=arr.lastIndexOf(item)>=0?arr.lastIndexOf(item):arr.length-1;
+    if(j<0)return;
+    const gone=arr.splice(j,1)[0];
+    if(arr.length)x[date]=arr; else delete x[date];
+    (x[w.prev]=x[w.prev]||[]).push(gone);
+    saveExtra(x); render(); refreshPending(); pendingBadge();
+    toast(`${gone.name} → ${labelFor(w.prev)}`);
+  });
+  else toast(`${name} → ${labelFor(date)}`);
 }
 
 /* ---------- add food ---------- */

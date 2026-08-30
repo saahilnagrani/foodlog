@@ -134,6 +134,13 @@ guessing it badly swamps the food estimate.
   still local it just disappears; if it was already in `data.json` the app
   commits the removal itself (`App: delete "..." from <date>`), so pull before
   your next edit.
+- Editing a food: swipe left, tap Edit. The sheet edits every field **including
+  the day**, so moving an item between waking days is a phone job, not a Claude
+  job. A day change commits as `App: move "..." from <date> to <date>` and the
+  old day object is kept even if it empties, because it holds `workout`.
+  Entering a 24+ time whose clock moment is still in the future is the classic
+  late-night slip (typing `24:05` next morning with the day left on Today), so
+  the app warns and offers the previous day before saving.
 - **Sync to Google Health**: handled on-device by the Android wrapper's
   `HealthBridge`. In a plain desktop browser the button just shows a toast.
 
