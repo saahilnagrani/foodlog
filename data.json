@@ -6,7 +6,7 @@
     "sat": 15,
     "carb": 180
   },
-  "updated": "2026-08-30",
+  "updated": "2026-08-31",
   "days": [
     {
       "date": "2026-07-24",
@@ -3897,6 +3897,16 @@
           "fat": 14.5,
           "sat": 2.7,
           "carb": 13.5
+        },
+        {
+          "meal": "Early morning",
+          "t": "24:26",
+          "name": "Whey drink (34g ON whey vanilla + 12g Awesome choc&nut + 125ml Oatly Barista + 19g nuts & seeds + 15g strawberries)",
+          "kcal": 381,
+          "protein": 38.4,
+          "fat": 18,
+          "sat": 3.1,
+          "carb": 16.9
         }
       ]
     }
