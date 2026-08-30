@@ -3858,6 +3858,37 @@
       "workout": "",
       "items": [
         {
+          "meal": "Lunch",
+          "t": "15:33",
+          "name": "Gobhi paratha x2",
+          "kcal": 480,
+          "protein": 14,
+          "fat": 12,
+          "sat": 1.5,
+          "carb": 81,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun30_gobhiparatha.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:33",
+          "name": "Greek yogurt 165g (0%)",
+          "kcal": 104,
+          "protein": 16.5,
+          "fat": 0.7,
+          "sat": 0,
+          "carb": 7.4
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:33",
+          "name": "Punjabi masala papad x1.8 (roasted)",
+          "kcal": 90,
+          "protein": 6.1,
+          "fat": 0.9,
+          "sat": 0.1,
+          "carb": 15
+        },
+        {
           "meal": "Early morning",
           "t": "24:05",
           "name": "Whey drink (34g ON whey vanilla + 9g Awesome choc&nut + 100ml Oatly Barista + 15g nuts & seeds)",
