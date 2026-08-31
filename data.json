@@ -3981,6 +3981,34 @@
           "carb": 27
         }
       ]
+    },
+    {
+      "date": "2026-08-31",
+      "label": "Mon 31 Aug",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "16:40",
+          "name": "Egg-white omelette (4 egg whites + 1tsp oil)",
+          "kcal": 113,
+          "protein": 14.4,
+          "fat": 5.2,
+          "sat": 0.7,
+          "carb": 0.8
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:40",
+          "name": "Moong sprout salad 100g with onion, tomato & lemon",
+          "kcal": 112,
+          "protein": 7.5,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 20.9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_sprouts.jpg"
+        }
+      ]
     }
   ]
 }
