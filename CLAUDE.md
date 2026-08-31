@@ -38,7 +38,7 @@ which matches `JSON.stringify` exactly: 2-space indent, whole numbers as ints
 ## `data.json` shape
 ```jsonc
 {
-  "targets": { "kcal": 1900, "protein": 150, "fat": 60, "sat": 15, "carb": 180 },
+  "targets": { "kcal": 1900, "protein": 150, "fat": 60, "sat": 15, "carb": 180, "fibre": 30 },
   "updated": "2026-08-04",              // set to today's date on every edit
   "days": [
     {
@@ -54,6 +54,7 @@ which matches `JSON.stringify` exactly: 2-space indent, whole numbers as ints
                                         // day they belong to, don't start a new day at midnight.
           "name": "Clear whey 30g in water",
           "kcal": 367, "protein": 29, "fat": 15, "sat": 2.5, "carb": 32,
+          "fibre": 1,                  // optional; ABSENT means unknown, not zero
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_breakfast.jpg"
         }
       ]
@@ -67,6 +68,14 @@ Notes:
 - Keep `days` sorted oldest → newest.
 - `sat` (saturated fat) is a subset of `fat`; the app draws attention when a
   day's `sat` exceeds the target (15g).
+- `fibre` is **optional and must stay optional**. Items logged before fibre
+  tracking existed have no `fibre` key, and `totals()` counts a day's missing
+  items so every screen prints `13+` rather than a confident `13`. Never write
+  `"fibre": 0` to mean "I didn't work it out" - omit the key. Do write a real
+  `0` for foods that genuinely have none (whey, eggs, meat, fish, oil).
+  **Set `fibre` on every item you add from now on.** Constipation on a
+  high-protein cut is the reason it is tracked: the log was averaging ~15g
+  against a 30g target because whey shakes displaced dal, sprouts and roti.
 
 ## Known tare weights
 The user often weighs food **in** its container and gives the gross weight. Subtract:
@@ -83,7 +92,7 @@ guessing it badly swamps the food estimate.
 
 ## Routine: "here's a photo of what I ate" → update the app
 1. **Estimate macros from the photo(s).** For each dish give `kcal`, `protein`,
-   `fat`, `sat`, `carb`. Use portion cues in the image and the user's known
+   `fat`, `sat`, `carb` and `fibre`. Use portion cues in the image and the user's known
    staples (whey shakes, chicken curry, eggs, etc.). If unsure, estimate and say
    so in the reply — the user often sends a correction ("correct eggs to 2 whole").
 3. **Save the photo** (if the user wants it kept) into `images/` using the naming
@@ -128,8 +137,12 @@ guessing it badly swamps the food estimate.
 
 ## What does NOT need Claude
 - Viewing the log, weekly charts, macros: pure static site.
-- Adding a food by hand: the app's **+ Add food** button (manual macro entry,
-  stored per-device in `localStorage`, not committed here).
+- Adding a food: the app's **+ Add food** button picks from a fixed list of ~32
+  quick-add foods, each with per-gram rates including fibre. The free-text
+  manual-entry form was removed, so anything not on that list has to come
+  through here. Quick adds are stored per-device in `localStorage` until the
+  user taps "Save items to data.json". The list can be sorted A-Z or by
+  most-used, and each food shows how often it appears in the log.
 - Deleting a food: swipe a row left in the app and tap Delete. If the item was
   still local it just disappears; if it was already in `data.json` the app
   commits the removal itself (`App: delete "..." from <date>`), so pull before

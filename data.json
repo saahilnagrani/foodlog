@@ -4,7 +4,8 @@
     "protein": 150,
     "fat": 60,
     "sat": 15,
-    "carb": 180
+    "carb": 180,
+    "fibre": 30
   },
   "updated": "2026-08-31",
   "days": [
@@ -3995,7 +3996,8 @@
           "protein": 14.4,
           "fat": 5.2,
           "sat": 0.7,
-          "carb": 0.8
+          "carb": 0.8,
+          "fibre": 0
         },
         {
           "meal": "Lunch",
@@ -4006,7 +4008,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 20.9,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_sprouts.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_sprouts.jpg",
+          "fibre": 6
         }
       ]
     }
