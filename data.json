@@ -4390,6 +4390,17 @@
           "carb": 27.3,
           "fibre": 1.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_pestopasta.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:45",
+          "name": "Chilli chicken 150g (~100g cooked chicken, cornflour-coated & pan-fried, + capsicum, onion, sauce)",
+          "kcal": 280,
+          "protein": 32.5,
+          "fat": 13,
+          "sat": 2.5,
+          "carb": 10,
+          "fibre": 1
         }
       ]
     }
