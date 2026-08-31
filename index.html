@@ -141,6 +141,14 @@
   body[data-theme="d"] .fstack.over .fseg.red{background:#ff3b3b;}
   /* ===== unified weekly charts (fixed plot area + reference lines) ===== */
   .wk{margin-top:2px;}
+  /* Fat and fibre sit side by side: half the width means the bars, gaps and
+     labels all have to come down or seven days will not fit at 360px. */
+  .prow{display:grid;grid-template-columns:1fr 1fr;column-gap:9px;align-items:start;}
+  .prow > *{min-width:0;}
+  .prow .wk-nums,.prow .wk-plot,.prow .wk-days,.prow .wk-subs{gap:3px;}
+  .prow .wk-nums .wk-n{font-size:8.5px;white-space:nowrap;overflow:hidden;}
+  .prow .wk-days .wk-d{font-size:8px;}
+  .prow .wk-subs .wk-s{font-size:8px;}
   .wk-nums{display:flex;gap:6px;}
   .wk-nums .wk-n{flex:1;text-align:center;font-size:10px;line-height:1.1;padding-bottom:3px;}
   .wk-plot{position:relative;display:flex;gap:6px;align-items:flex-end;}
@@ -782,14 +790,14 @@ function barChart(S,key,max,o){
   let nums='',cols='',days='',lines='';
   S.forEach(x=>{
     const v=x[key],H=Math.max(3,v/max*BM),ov=o.over&&o.over(x);
-    nums+=`<div class="wk-n ${ov?'over':''}">${ov?'&#9650; ':''}${v}</div>`;
+    nums+=`<div class="wk-n ${ov?'over':''}">${ov&&!o.compact?'&#9650; ':''}${o.compact?Math.round(v):v}</div>`;
     if(o.stacked){const sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;cols+=`<div class="wk-col"><div class="wk-bar stack ${ov?'over':''}" style="height:${H}px"><div class="fseg grn" style="height:${uf}%"></div><div class="fseg red" style="height:${sf}%"></div></div></div>`;}
     else cols+=`<div class="wk-col"><div class="wk-bar ${o.cls?o.cls(x):''}" style="height:${H}px"></div></div>`;
     days+=`<div class="wk-d">${x.d}</div>`;
   });
   (o.lines||[]).forEach(l=>{const off=Math.min(BM,l.v/max*BM);lines+=`<div class="wk-line ${l.cls||''}" style="bottom:${off}px"></div>`;});
   let subrow='';
-  if(o.sub){let subs='';S.forEach(x=>{subs+=`<div class="wk-s ${o.subOver&&o.subOver(x)?'over':''}">${o.sub(x)}</div>`;});subrow=`<div class="wk-subs">${subs}</div>`;}
+  if(o.sub){let subs='';S.forEach(x=>{const sv=o.sub(x);subs+=`<div class="wk-s ${o.subOver&&o.subOver(x)?'over':''}">${o.compact?Math.round(sv):sv}</div>`;});subrow=`<div class="wk-subs">${subs}</div>`;}
   return `<div class="wk"><div class="wk-nums">${nums}</div><div class="wk-plot" style="height:${BM}px">${cols}${lines}</div>${subrow}<div class="wk-days">${days}</div></div>`;
 }
 function weekCharts(days){
@@ -799,8 +807,8 @@ function weekCharts(days){
   return {
     cal:barChart(S,'k',maxK,{cls:x=>x.k>T.kcal?'over':'ok',lines:[{v:T.kcal,cls:'target',label:T.kcal}]}),
     pro:barChart(S,'p',maxP,{cls:x=>x.p>=T.protein?'okp':'lowp',lines:[{v:T.protein,cls:'target',label:T.protein}]}),
-    fat:barChart(S,'f',maxF,{stacked:true,over:x=>x.s>T.sat,sub:x=>x.s,subOver:x=>x.s>T.sat,lines:[{v:T.sat,cls:'sat'},{v:T.fat,cls:'target'}]}),
-    fib:barChart(S,'b',maxB,{cls:x=>x.b>=T.fibre?'okp':'lowp',lines:[{v:T.fibre,cls:'target',label:T.fibre}]}),
+    fat:barChart(S,'f',maxF,{compact:true,stacked:true,over:x=>x.s>T.sat,sub:x=>x.s,subOver:x=>x.s>T.sat,lines:[{v:T.sat,cls:'sat'},{v:T.fat,cls:'target'}]}),
+    fib:barChart(S,'b',maxB,{compact:true,cls:x=>x.b>=T.fibre?'okp':'lowp',lines:[{v:T.fibre,cls:'target',label:T.fibre}]}),
     lowFib:S.filter(x=>x.b<T.fibre).length,
     overN:S.filter(x=>x.s>T.sat).length, ndays:S.length
   };
@@ -822,8 +830,10 @@ function renderB(days){
   const W=weekCharts(days);
   let h=`<div class="card"><div class="ctitle"><span class="dchip">Week &middot; Calories</span><span style="font-family:Arial;font-size:10px;color:#666">target 1900</span></div>${W.cal}</div>
     <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Protein</span><span style="font-family:Arial;font-size:10px;color:#666">goal 150</span></div>${W.pro}</div>
-    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fat</span><span style="font-family:Arial;font-size:10px;color:${W.overN?'#e5271b':'#666'}">red# = sat g &middot; ${W.overN}/${W.ndays} over 15g</span></div>${W.fat}</div>
-    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Fibre</span><span style="font-family:Arial;font-size:10px;color:${W.lowFib?'#e5271b':'#666'}">goal ${DATA.targets.fibre} &middot; under on ${W.lowFib}/${W.ndays}d</span></div>${W.fib}</div>`;
+    <div class="prow">
+      <div class="card"><div class="ctitle"><span class="dchip">Fat</span><span style="font-family:Arial;font-size:9px;color:${W.overN?'#e5271b':'#666'}">sat ${W.overN}/${W.ndays}d</span></div>${W.fat}</div>
+      <div class="card"><div class="ctitle"><span class="dchip">Fibre</span><span style="font-family:Arial;font-size:9px;color:${W.lowFib?'#e5271b':'#666'}">under ${W.lowFib}/${W.ndays}d</span></div>${W.fib}</div>
+    </div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d),T=DATA.targets;
     const meals=sortItems(d.items).map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">NO<br>PIC</div>`;
@@ -855,8 +865,10 @@ function renderC(days){
   let h='';
   h+=`<div class="panel"><div class="h">// calories &middot; target 1900</div>${W.cal}</div>`;
   h+=`<div class="panel"><div class="h">// protein &middot; goal 150</div>${W.pro}</div>`;
-  h+=`<div class="panel"><div class="h">// fat &middot; red#=sat g &middot; lines 15/60 &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
-  h+=`<div class="panel"><div class="h">// fibre &middot; goal ${T.fibre} &middot; under on ${W.lowFib}/${W.ndays}d</div>${W.fib}</div>`;
+  h+=`<div class="prow">`
+    +`<div class="panel"><div class="h">// fat &middot; ${W.overN}/${W.ndays}d sat over</div>${W.fat}</div>`
+    +`<div class="panel"><div class="h">// fibre &middot; ${W.lowFib}/${W.ndays}d under ${T.fibre}</div>${W.fib}</div>`
+    +`</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
@@ -899,8 +911,10 @@ function renderD(days){
   if(fd){h+=`<div class="feat">${glyph(180,{items:fd.items.length,protein:featured.p,fat:featured.f,sat:featured.s,kcal:featured.k})}<div class="fday">${fd.label}</div><div class="fk">${featured.k}<span> / 1900 kcal</span></div></div>`;}
   h+=`<div class="panel"><div class="h">Calories &middot; target 1900</div>${W.cal}</div>`;
   h+=`<div class="panel"><div class="h">Protein &middot; goal 150</div>${W.pro}</div>`;
-  h+=`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat g</span> &middot; lines 15/60 &middot; over ${W.overN}/${W.ndays}d</div>${W.fat}</div>`;
-  h+=`<div class="panel"><div class="h">Fibre &middot; goal ${T.fibre} &middot; under on ${W.lowFib}/${W.ndays}d</div>${W.fib}</div>`;
+  h+=`<div class="prow">`
+    +`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat</span> &middot; ${W.overN}/${W.ndays}d over</div>${W.fat}</div>`
+    +`<div class="panel"><div class="h">Fibre &middot; goal ${T.fibre} &middot; ${W.lowFib}/${W.ndays}d under</div>${W.fib}</div>`
+    +`</div>`;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
     const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return swipeRow(it,d.date,`<div class="meal">${im}<div class="nm"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`);}).join('');
