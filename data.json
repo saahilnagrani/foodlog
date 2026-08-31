@@ -4401,6 +4401,17 @@
           "sat": 2.5,
           "carb": 10,
           "fibre": 1
+        },
+        {
+          "meal": "Drink",
+          "t": "23:00",
+          "name": "ON whey (vanilla) 34g in water",
+          "kcal": 132,
+          "protein": 26.3,
+          "fat": 1.6,
+          "sat": 1.1,
+          "carb": 4.4,
+          "fibre": 0
         }
       ]
     }
