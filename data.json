@@ -4010,6 +4010,17 @@
           "carb": 20.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_sprouts.jpg",
           "fibre": 6
+        },
+        {
+          "meal": "Drink",
+          "t": "18:27",
+          "name": "Clear whey 31g",
+          "kcal": 113,
+          "protein": 26,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 1.2,
+          "fibre": 0
         }
       ]
     }
