@@ -4343,7 +4343,7 @@
     {
       "date": "2026-08-31",
       "label": "Mon 31 Aug",
-      "workout": "",
+      "workout": "Full Body C",
       "items": [
         {
           "meal": "Breakfast",
@@ -4378,6 +4378,18 @@
           "sat": 0,
           "carb": 1.2,
           "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:28",
+          "name": "Chicken pesto pasta 200g (105g cooked chicken breast + ~75g pasta + 20g homemade pesto)",
+          "kcal": 389,
+          "protein": 39.9,
+          "fat": 13.6,
+          "sat": 2.9,
+          "carb": 27.3,
+          "fibre": 1.9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_pestopasta.jpg"
         }
       ]
     }
