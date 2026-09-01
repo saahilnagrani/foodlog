@@ -990,7 +990,7 @@ function buildPlan(){
      that is ~60; week 3 adds ~5 work sets at ~2 min each. */
   const w=planWeek();
   const mins = gym ? (w<=2 ? '~60 min' : '~70 min')
-             : planTab==='H' ? '15-20 min'
+             : planTab==='H' ? '20-25 min'
              : planTab==='F' ? '~25 min' : '';
   let h=`<div class="planday"><b>${p.n}</b> &middot; ${p.d}${mins?` &middot; <b>${mins}</b>`:''}</div>`;
   if(gym) h+='<div class="planwarm"><b>Warm up first, 5-8 min.</b> '
@@ -1035,10 +1035,15 @@ function buildPlan(){
      +'loop on your side. Three heights matter: top, middle, bottom.<br><br>'
      +'<b>Resistance.</b> Clip a second tube on when one gets easy, or step further from the anchor. Right weight = the '
      +'last two reps of 15 are hard but your form holds. Check the clip end for wear before each session and never '
-     +'stretch a band past about 2.5x its resting length.</div>'+h;
+     +'stretch a band past about 2.5x its resting length.<br><br>'
+     +'<b>Warm up first, 2-3 min.</b> Shorter than the gym because nothing here is heavy, but this is all shoulder work '
+     +'and cold shoulders is how people tweak them. 30 sec marching on the spot, 10 arm circles each way, 10 wall slides, '
+     +'then 10 band pull-aparts on the lightest band - that last one is the face pull in miniature.</div>'+h;
     h+='<div class="planwarm after"><b>Rest 60 sec between sets</b> - it is all light, high-rep work, nothing here needs more. '
      +'Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days. '
      +'Bands cover every loaded exercise here - no dumbbells needed.<br><br>'
+     +'<br><br><b>Then stretch, 3 min</b>, 30 sec each while still warm: chest in a doorway, triceps overhead, lats, '
+     +'neck and upper traps each side. On Thursday add a calf stretch per side after the calf raises.<br><br>'
      +'<b>&#9654; video</b> opens a YouTube <i>search</i>, not one chosen video, so it can never go dead. '
      +'It loads inside this app and replaces the log - <b>pull down to refresh to come back</b>.</div>';
   }
