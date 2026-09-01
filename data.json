@@ -4544,6 +4544,28 @@
           "sat": 0.2,
           "carb": 6,
           "fibre": 0.6
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:29",
+          "name": "Greek yogurt 0% 160g",
+          "kcal": 101,
+          "protein": 16,
+          "fat": 0.8,
+          "sat": 0,
+          "carb": 7.2,
+          "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:29",
+          "name": "White rice, cooked 90g",
+          "kcal": 117,
+          "protein": 2.3,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 25.2,
+          "fibre": 0.4
         }
       ]
     }
