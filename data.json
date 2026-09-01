@@ -4477,6 +4477,17 @@
           "sat": 0.5,
           "carb": 14.4,
           "fibre": 1.2
+        },
+        {
+          "meal": "Snack",
+          "t": "18:29",
+          "name": "Strawberries 56g",
+          "kcal": 18,
+          "protein": 0.4,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 4.3,
+          "fibre": 1.1
         }
       ]
     }
