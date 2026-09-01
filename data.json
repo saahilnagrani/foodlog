@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-01",
+  "updated": "2026-09-02",
   "days": [
     {
       "date": "2026-07-24",
@@ -4577,6 +4577,28 @@
           "sat": 2.4,
           "carb": 20.2,
           "fibre": 2.3
+        },
+        {
+          "meal": "Early morning",
+          "t": "27:46",
+          "name": "Punjabi masala papad 1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9
+        },
+        {
+          "meal": "Early morning",
+          "t": "27:46",
+          "name": "Dilkhush papad 1",
+          "kcal": 34,
+          "protein": 2,
+          "fat": 0.5,
+          "sat": 0.2,
+          "carb": 6,
+          "fibre": 0.6
         }
       ]
     }
