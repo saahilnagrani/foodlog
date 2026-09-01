@@ -4424,6 +4424,17 @@
           "sat": 2.9,
           "carb": 16.7,
           "fibre": 2.8
+        },
+        {
+          "meal": "Early morning",
+          "t": "28:21",
+          "name": "Punjabi masala papad 1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9
         }
       ]
     }
