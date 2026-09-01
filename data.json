@@ -4441,7 +4441,7 @@
     {
       "date": "2026-09-01",
       "label": "Tue 1 Sep",
-      "workout": "",
+      "workout": "Home B",
       "items": [
         {
           "meal": "Lunch",
@@ -4499,6 +4499,51 @@
           "sat": 0,
           "carb": 4.4,
           "fibre": 4
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:34",
+          "name": "Daal palak 222g (chana dal + spinach)",
+          "kcal": 263,
+          "protein": 12.7,
+          "fat": 7.6,
+          "sat": 0.9,
+          "carb": 35.6,
+          "fibre": 7.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue1_daalpalak.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:34",
+          "name": "White rice, cooked 100g",
+          "kcal": 130,
+          "protein": 2.6,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 28,
+          "fibre": 0.4
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:34",
+          "name": "Punjabi masala papad x1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:34",
+          "name": "Dilkhush papad x1",
+          "kcal": 34,
+          "protein": 2,
+          "fat": 0.5,
+          "sat": 0.2,
+          "carb": 6,
+          "fibre": 0.6
         }
       ]
     }
