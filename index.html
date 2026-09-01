@@ -1167,6 +1167,7 @@ const RATE={
   oatly:  {u:'ml',d:100,k:.6,  p:.01, f:.03, s:.003,c:.067,b:.008},
   nuts:   {u:'g', d:20, k:6.6, p:.18, f:.61, s:.068,c:.136,b:.07},
   straw:  {u:'g', d:100,k:.32, p:.007,f:.003,s:0,   c:.077,b:.02},
+  iso100: {u:'g', d:33, k:3.636,p:.758,f:.030,s:0,  c:.091,b:0},   /* fibre "<1g", counted as 0 */
 };
 const lab=(r,l,d)=>Object.assign({},r,{lab:l},d===undefined?{}:{d:d});
 /* Extra spellings the frequency sort should recognise. Two years of this log
@@ -1179,6 +1180,7 @@ const lab=(r,l,d)=>Object.assign({},r,{lab:l},d===undefined?{}:{d:d});
 const QALIAS={
  'ON whey (vanilla)':['on vanilla whey','on whey','on gold standard'],
  'Clear whey':['clear whey'],
+ 'Dymatize ISO100 mocha (caffeine)':['iso100','iso 100','dymatize'],
  'Awesome protein':['awesome'],
  'Oat milk (Oatly)':['oatly','oat milk'],
  'Mix nuts & seeds':['mix nuts','nuts & seeds','nuts and seeds'],
@@ -1208,11 +1210,13 @@ const QALIAS={
 const QUICK=[
  {n:'Whey drink',             meal:'Drink',    parts:[
     lab(RATE.onwhey ,'ON whey vanilla'),
+    lab(RATE.iso100 ,'ISO100 mocha'),
     lab(RATE.awesome,'Awesome choc&nut'),
     lab(RATE.clear  ,'Clear whey str&lime'),
     lab(RATE.oatly  ,'Oatly Barista'),
     lab(RATE.nuts   ,'nuts & seeds', 10),
     lab(RATE.straw  ,'strawberries', 50)]},
+ {n:'Dymatize ISO100 mocha (caffeine)',meal:'Snack',parts:[RATE.iso100]},
  {n:'Clear whey',             meal:'Snack',    parts:[RATE.clear]},
  {n:'ON whey (vanilla)',      meal:'Snack',    parts:[RATE.onwhey]},
  {n:'Awesome protein',        meal:'Snack',    parts:[RATE.awesome]},
