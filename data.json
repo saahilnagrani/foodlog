@@ -4601,6 +4601,24 @@
           "fibre": 0.6
         }
       ]
+    },
+    {
+      "date": "2026-09-02",
+      "label": "Wed 2 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "09:33",
+          "name": "Whey drink (23g ON whey vanilla + 17g ISO100 mocha + 150ml Oatly Barista + 20g nuts & seeds + 75g strawberries)",
+          "kcal": 397,
+          "protein": 36.3,
+          "fat": 18.5,
+          "sat": 2.5,
+          "carb": 23.1,
+          "fibre": 4.1
+        }
+      ]
     }
   ]
 }
