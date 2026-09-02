@@ -4655,13 +4655,13 @@
         {
           "meal": "Dinner",
           "t": "23:21",
-          "name": "Prawn curry ~140g (est. ~60g prawns + tomato-onion masala)",
-          "kcal": 144,
-          "protein": 18.9,
-          "fat": 5.4,
-          "sat": 0.8,
-          "carb": 4.3,
-          "fibre": 0.8,
+          "name": "Prawn curry 210g (110g cooked prawns + 100g tomato-onion masala)",
+          "kcal": 233,
+          "protein": 27.7,
+          "fat": 9.9,
+          "sat": 1.7,
+          "carb": 8.9,
+          "fibre": 1.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_prawncurry.jpg"
         },
         {
