@@ -4674,6 +4674,17 @@
           "sat": 1,
           "carb": 32,
           "fibre": 3.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:45",
+          "name": "Moong sprouts 43g",
+          "kcal": 58,
+          "protein": 4.1,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 10.8,
+          "fibre": 2.6
         }
       ]
     }
