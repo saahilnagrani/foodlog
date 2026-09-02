@@ -4640,6 +4640,17 @@
           "carb": 27,
           "fibre": 4.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_chillitofu.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "21:26",
+          "name": "Banana 1 (pre-workout)",
+          "kcal": 105,
+          "protein": 1.3,
+          "fat": 0.4,
+          "sat": 0,
+          "carb": 27,
+          "fibre": 3.1
         }
       ]
     }
