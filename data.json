@@ -4616,7 +4616,7 @@
     {
       "date": "2026-09-02",
       "label": "Wed 2 Sep",
-      "workout": "",
+      "workout": "Full Body A",
       "items": [
         {
           "meal": "Breakfast",
@@ -4651,6 +4651,29 @@
           "sat": 0,
           "carb": 27,
           "fibre": 3.1
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:21",
+          "name": "Prawn curry ~140g (est. ~60g prawns + tomato-onion masala)",
+          "kcal": 144,
+          "protein": 18.9,
+          "fat": 5.4,
+          "sat": 0.8,
+          "carb": 4.3,
+          "fibre": 0.8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_prawncurry.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:21",
+          "name": "Plain paratha x1",
+          "kcal": 200,
+          "protein": 5.5,
+          "fat": 6,
+          "sat": 1,
+          "carb": 32,
+          "fibre": 3.5
         }
       ]
     }
