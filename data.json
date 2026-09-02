@@ -4696,6 +4696,17 @@
           "sat": 0,
           "carb": 9,
           "fibre": 2.6
+        },
+        {
+          "meal": "Early morning",
+          "t": "25:39",
+          "name": "HON Foods Isabgol (Organic) 5g",
+          "kcal": 18,
+          "protein": 0,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 4.4,
+          "fibre": 4
         }
       ]
     }
