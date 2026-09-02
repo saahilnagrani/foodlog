@@ -11,17 +11,18 @@
   .sheet img,.sheet input,.sheet select,.sheet textarea{max-width:100%;}
   body{padding-bottom:110px;transition:background .2s;}
   /* ---- shell (theme-neutralish) ---- */
-  #topbar{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;}
+  #tophead{position:sticky;top:0;z-index:30;}
+  #topbar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;}
   .wknav{display:flex;align-items:center;gap:8px;}
   .wkbtn{border:none;cursor:pointer;font-weight:800;font-size:16px;width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;}
   .wklabel{font-weight:700;font-size:13px;white-space:nowrap;}
   .gear{border:none;cursor:pointer;width:36px;height:36px;border-radius:10px;font-size:17px;display:flex;align-items:center;justify-content:center;}
   #view{max-width:480px;margin:0 auto;padding:4px 16px 0;}
-  #logsearch{max-width:480px;margin:0 auto;padding:8px 16px 0;position:relative;}
+  #logsearch{max-width:480px;margin:0 auto;padding:0 16px 10px;position:relative;}
   #logsearch input{width:100%;box-sizing:border-box;padding:9px 36px 9px 12px;border:1px solid rgba(128,128,128,.4);border-radius:10px;
                    font-size:14px;background:rgba(128,128,128,.10);color:inherit;font-family:inherit;}
   #logsearch input:focus{outline:none;border-color:rgba(128,128,128,.8);}
-  #logsearch button{position:absolute;right:22px;top:11px;border:0;background:none;color:inherit;opacity:.55;font-size:20px;line-height:1;padding:2px 6px;cursor:pointer;}
+  #logsearch button{position:absolute;right:22px;top:3px;border:0;background:none;color:inherit;opacity:.55;font-size:20px;line-height:1;padding:2px 6px;cursor:pointer;}
   .srch{padding:2px 0 90px;}
   .sr-h{font-size:12px;opacity:.6;margin:10px 0 6px;}
   .sr-day{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.55;margin:16px 0 2px;}
@@ -50,7 +51,6 @@
     .wkbtn{width:30px;height:30px;font-size:15px;}
     .wklabel{font-size:12px;}
     .gear{width:30px;height:30px;font-size:15px;}
-    .gear svg{width:15px;height:15px;}
     .modebtn{padding:8px 6px;font-size:10.5px;}
     #topbar .tbr{gap:4px !important;}
     #topbar{padding:12px 6px;}
@@ -137,7 +137,7 @@
   .lbwrap{padding:0 8px 40px;}
   .lightbox img#lbimg{display:block;width:100%;height:auto;max-width:100%;border-radius:8px;background:#111;object-fit:contain;}
   .lbnote{color:#888;font-size:12px;padding:18px 6px;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
-  body.modal-open #topbar{display:none;}
+  body.modal-open #tophead{display:none;}
   /* week-mode toggle */
   .modebtn{border:none;cursor:pointer;font-size:11px;font-weight:800;padding:8px 11px;border-radius:9px;white-space:nowrap;}
   body[data-theme="b"] .modebtn{background:#7fd0ff;border:3px solid #111;color:#111;}
@@ -226,6 +226,7 @@
   .swipe-del{background:#c0271b;}
 
   /* ===================== BRUTALIST (b) ===================== */
+  body[data-theme="b"] #tophead{background:#e9dcc0;border-bottom:3px solid #111;}
   body[data-theme="b"]{background:#e9dcc0;color:#111;font-family:var(--bfont,'Archivo Black',Arial,sans-serif);}
   body[data-theme="b"] .wkbtn{background:#111;color:#f5e9c9;}
   body[data-theme="b"] .wklabel{border:3px solid #111;background:#fff;padding:6px 10px;box-shadow:3px 3px 0 #111;font-family:Arial;font-weight:900;}
@@ -267,6 +268,7 @@
   @keyframes bwob{0%,100%{transform:rotate(-2deg)}25%{transform:rotate(4deg)}50%{transform:rotate(-4deg)}75%{transform:rotate(3deg)}}
 
   /* ===================== TERMINAL (c) ===================== */
+  body[data-theme="c"] #tophead{background:#040705;border-bottom:1px solid #1f8f5e;}
   body[data-theme="c"]{background:#040705;color:#b8f7d6;font-family:var(--cfont,'JetBrains Mono',monospace);
     background-image:linear-gradient(#12251b 1px,transparent 1px),linear-gradient(90deg,#12251b 1px,transparent 1px);background-size:22px 22px;}
   body[data-theme="c"] .wkbtn{background:transparent;border:1px solid #1f8f5e;color:#3dffa0;}
@@ -298,6 +300,7 @@
   body[data-theme="c"] .sync{margin-top:9px;border:1px solid #3dffa0;color:#3dffa0;text-align:center;padding:9px;font-size:11px;letter-spacing:1px;background:rgba(61,255,160,.06);cursor:pointer;}
 
   /* ===================== BLOOM (d) ===================== */
+  body[data-theme="d"] #tophead{background:#121022;border-bottom:1px solid rgba(255,255,255,.07);}
   body[data-theme="d"]{background:radial-gradient(120% 70% at 50% -8%,#161428 0%,#0a0a12 55%) fixed;color:#e8e6f0;font-family:var(--dfont,'Space Grotesk',sans-serif);}
   body[data-theme="d"] .wkbtn{background:rgba(255,255,255,.06);color:#cdbcff;}
   body[data-theme="d"] .wklabel{color:#cbc8e0;}
@@ -335,13 +338,15 @@
 </style></head>
 <body data-theme="b" data-motion="bars">
   <script>try{var _p=JSON.parse(localStorage.getItem('foodlog_prefs_v1'));if(_p&&_p.theme){document.body.dataset.theme=_p.theme;if(_p.motion&&_p.motion[_p.theme])document.body.dataset.motion=_p.motion[_p.theme];}}catch(e){}</script>
+  <div id="tophead">
   <div id="topbar">
     <div class="wknav"><button class="wkbtn" onclick="stepWeek(-1)">&#8249;</button><span class="wklabel" id="wklabel">This week</span><button class="wkbtn" onclick="stepWeek(1)">&#8250;</button></div>
-    <div class="tbr" style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="modebtn" onclick="openPlan()" aria-label="Training plan">Plan</button><button class="gear" onclick="lsToggle()" aria-label="Search the log" title="Search"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button><button class="gear" onclick="openSettings()">&#9881;</button></div>
+    <div class="tbr" style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="modebtn" onclick="openPlan()" aria-label="Training plan">Plan</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
   </div>
   <div id="logsearch" hidden><input id="ls" placeholder="Search the log&hellip;" autocomplete="off" autocorrect="off"
        autocapitalize="off" spellcheck="false" enterkeyhint="search" oninput="lsInput()"><button id="lsx" type="button"
        aria-label="Clear search" onclick="lsClear()" hidden>&times;</button></div>
+  </div>
   <div id="view"></div>
   <button class="fab" id="fab" onclick="fabTap()">+ Add food</button>
 
@@ -584,7 +589,7 @@ function render(){
    set, render() draws matches across EVERY day instead of the week, and
    each hit goes through swipeRow() so Edit and Delete work from a result.
    Every space-separated word must appear somewhere in the name. */
-let LS='';
+let LS='', PULLED=false;
 function lsShow(){
   const w=document.getElementById('logsearch'); if(!w.hidden)return;
   w.hidden=false; document.getElementById('lsx').hidden=false; window.scrollTo(0,0);
@@ -609,8 +614,12 @@ function lsToggle(){document.getElementById('logsearch').hidden?lsShow():lsHide(
   document.addEventListener('touchmove',e=>{
     if(!armed||y0===null)return;
     const dy=e.touches[0].clientY-y0, dx=Math.abs(e.touches[0].clientX-x0);
+    if(dy>=12 && dx<dy){try{sessionStorage.setItem('foodlog_pull',String(Date.now()));}catch(x){}}
     if(dy>=70 && dx<dy/2){armed=false; lsShow();}
   },{passive:true});
+  /* after a native pull-to-refresh reload, honour the pull */
+  try{const t=+sessionStorage.getItem('foodlog_pull')||0; sessionStorage.removeItem('foodlog_pull');
+      if(t && Date.now()-t<30000){PULLED=true; setTimeout(lsShow,300);}   /* 30s: a slow reload must not lose the pull */}catch(x){}
   document.addEventListener('touchend',()=>{armed=false;y0=null;},{passive:true});
 })();
 function lsInput(){
