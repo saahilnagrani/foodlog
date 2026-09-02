@@ -4628,6 +4628,18 @@
           "sat": 2.5,
           "carb": 23.1,
           "fibre": 4.1
+        },
+        {
+          "meal": "Lunch",
+          "t": "18:47",
+          "name": "Chilli tofu ~170g (est. ~100g tofu, cornflour-coated & pan-fried, + onion, tomato, masala)",
+          "kcal": 235,
+          "protein": 9.5,
+          "fat": 15,
+          "sat": 1.8,
+          "carb": 16.5,
+          "fibre": 2.7,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_chillitofu.jpg"
         }
       ]
     }
