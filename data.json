@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-02",
+  "updated": "2026-09-03",
   "days": [
     {
       "date": "2026-07-24",
@@ -4685,6 +4685,17 @@
           "sat": 0,
           "carb": 10.8,
           "fibre": 2.6
+        },
+        {
+          "meal": "Drink",
+          "t": "25:04",
+          "name": "Clear whey 40g",
+          "kcal": 146,
+          "protein": 33.6,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 1.6,
+          "fibre": 0
         }
       ]
     }
