@@ -4599,6 +4599,17 @@
           "sat": 0.2,
           "carb": 6,
           "fibre": 0.6
+        },
+        {
+          "meal": "Snack",
+          "t": "27:48",
+          "name": "Bikaji Tana Tan namkeen 40g",
+          "kcal": 212,
+          "protein": 5.6,
+          "fat": 14,
+          "sat": 4.4,
+          "carb": 16,
+          "fibre": 1.7
         }
       ]
     },
