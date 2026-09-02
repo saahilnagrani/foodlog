@@ -17,6 +17,21 @@
   .wklabel{font-weight:700;font-size:13px;white-space:nowrap;}
   .gear{border:none;cursor:pointer;width:36px;height:36px;border-radius:10px;font-size:17px;display:flex;align-items:center;justify-content:center;}
   #view{max-width:480px;margin:0 auto;padding:4px 16px 0;}
+  #logsearch{max-width:480px;margin:0 auto;padding:8px 16px 0;position:relative;}
+  #logsearch input{width:100%;box-sizing:border-box;padding:9px 36px 9px 12px;border:1px solid rgba(128,128,128,.4);border-radius:10px;
+                   font-size:14px;background:rgba(128,128,128,.10);color:inherit;font-family:inherit;}
+  #logsearch input:focus{outline:none;border-color:rgba(128,128,128,.8);}
+  #logsearch button{position:absolute;right:22px;top:11px;border:0;background:none;color:inherit;opacity:.55;font-size:20px;line-height:1;padding:2px 6px;cursor:pointer;}
+  .srch{padding:2px 0 90px;}
+  .sr-h{font-size:12px;opacity:.6;margin:10px 0 6px;}
+  .sr-day{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.55;margin:16px 0 2px;}
+  .sr-row{display:flex;align-items:center;gap:10px;padding:8px 0;border-top:1px solid rgba(128,128,128,.22);}
+  .sr-row img{width:38px;height:38px;border-radius:7px;object-fit:cover;flex:0 0 auto;}
+  .sr-b{flex:1;min-width:0;}
+  .sr-n{font-size:13px;line-height:1.3;}
+  .sr-m{font-size:11px;opacity:.6;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
+  .sr-none{opacity:.6;padding:22px 0;font-size:13px;}
+  body.modal-open #logsearch{display:none;}
   .fab{position:fixed;right:16px;left:auto;transform:none;bottom:22px;z-index:70;border:none;font-weight:800;font-size:15px;padding:14px 24px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.45);cursor:pointer;}
   .fab.closing{width:56px;height:56px;padding:0;border-radius:50%;font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;}
   /* Settings/Add render as a full in-flow screen (robust in WebView, no floating overlay) */
@@ -319,6 +334,9 @@
     <div class="wknav"><button class="wkbtn" onclick="stepWeek(-1)">&#8249;</button><span class="wklabel" id="wklabel">This week</span><button class="wkbtn" onclick="stepWeek(1)">&#8250;</button></div>
     <div style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="modebtn" onclick="openPlan()" aria-label="Training plan">Plan</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
   </div>
+  <div id="logsearch"><input id="ls" placeholder="Search the log&hellip;" autocomplete="off" autocorrect="off"
+       autocapitalize="off" spellcheck="false" enterkeyhint="search" oninput="lsInput()"><button id="lsx" type="button"
+       aria-label="Clear search" onclick="lsClear()" hidden>&times;</button></div>
   <div id="view"></div>
   <button class="fab" id="fab" onclick="fabTap()">+ Add food</button>
 
@@ -549,12 +567,48 @@ function render(){
   const days=wk?[...wk.days]:[];
   const view=document.getElementById('view');
   ROWS=[];                                  /* rebuilt by swipeRow() below */
+  if(LS){view.innerHTML=renderSearch(LS);return;}   /* search replaces the week view */
   if(PREF.theme==='b')view.innerHTML=renderB(days);
   else if(PREF.theme==='c')view.innerHTML=renderC(days);
   else view.innerHTML=renderD(days);
   applyMotion();
   chartsGrow();
 }
+/* ---------- search the whole log ----------
+   Lives outside #view so a re-render never eats the input. While a term is
+   set, render() draws matches across EVERY day instead of the week, and
+   each hit goes through swipeRow() so Edit and Delete work from a result.
+   Every space-separated word must appear somewhere in the name. */
+let LS='';
+function lsInput(){
+  LS=document.getElementById('ls').value.trim();
+  document.getElementById('lsx').hidden=!LS;
+  render(); if(LS)window.scrollTo(0,0);
+}
+function lsClear(){
+  const el=document.getElementById('ls'); el.value=''; LS='';
+  document.getElementById('lsx').hidden=true; render(); el.blur();
+}
+function renderSearch(term){
+  const toks=term.toLowerCase().split(/\s+/).filter(Boolean);
+  let h='',n=0;
+  rawDays().slice().reverse().forEach(d=>{
+    const hits=sortItems(d.items).filter(it=>{const s=String(it.name||'').toLowerCase();return toks.every(t=>s.indexOf(t)>=0);});
+    if(!hits.length)return;
+    h+=`<div class="sr-day">${d.label}${d.workout?' &middot; '+d.workout:''}</div>`;
+    hits.forEach(it=>{
+      n++;
+      const src=imgSrc(it);
+      const im=src?`<img src="${src}" alt="" onclick="return lb('${src}','${jq(it.name)}')">`:'';
+      const fb=(it.fibre===undefined||it.fibre===null)?'fibre ?':R(it.fibre)+'g fibre';
+      h+=swipeRow(it,d.date,`<div class="sr-row">${im}<div class="sr-b"><div class="sr-n">${it.name}</div>`
+        +`<div class="sr-m">${it.t?tf(it.t)+' &middot; ':''}${Math.round(it.kcal)} kcal &middot; ${R(it.protein)}g P &middot; ${R(it.fat)}g F &middot; ${fb}</div></div></div>`);
+    });
+  });
+  return `<div class="srch"><div class="sr-h">${n} match${n===1?'':'es'} for &ldquo;${jq(term)}&rdquo;</div>`
+    +(h||'<div class="sr-none">Nothing in the log matches that.</div>')+'</div>';
+}
+
 /* ---------- swipe a food row left to reveal Delete ----------
    Every meal row in every theme is wrapped by swipeRow(). ROWS is rebuilt on
    each render() and holds just enough to find the item again in its store:
