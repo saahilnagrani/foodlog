@@ -4873,14 +4873,15 @@
         },
         {
           "meal": "Dinner",
-          "t": "22:42",
+          "t": "23:19",
           "name": "Moong daal + tofu cheela x2 (1/3 of a batch: 80g dry daal + 160g tofu, ~4.5 tsp oil)",
           "kcal": 224,
           "protein": 12.9,
           "fat": 11.6,
           "sat": 1.7,
           "carb": 16.7,
-          "fibre": 5
+          "fibre": 5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_cheela.jpg"
         }
       ]
     }
