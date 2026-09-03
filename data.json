@@ -4848,6 +4848,17 @@
           "sat": 0.2,
           "carb": 6,
           "fibre": 0.6
+        },
+        {
+          "meal": "Snack",
+          "t": "18:49",
+          "name": "Whey drink (10g ON whey vanilla + 34g ISO100 mocha + 150ml Oatly Barista + 17g nuts & seeds)",
+          "kcal": 365,
+          "protein": 38.1,
+          "fat": 16.4,
+          "sat": 1.9,
+          "carb": 16.7,
+          "fibre": 2.4
         }
       ]
     }
