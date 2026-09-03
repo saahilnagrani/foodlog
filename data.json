@@ -4792,6 +4792,17 @@
           "sat": 1.6,
           "carb": 0.4,
           "fibre": 0
+        },
+        {
+          "meal": "Lunch",
+          "t": "11:04",
+          "name": "Whey drink (30g ON whey vanilla + 11g Awesome choc&nut + 180ml Oatly Barista + 16g nuts & seeds + 70g strawberries)",
+          "kcal": 393,
+          "protein": 35.1,
+          "fat": 17.7,
+          "sat": 2.9,
+          "carb": 23.9,
+          "fibre": 4.4
         }
       ]
     }
