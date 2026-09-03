@@ -4803,6 +4803,51 @@
           "sat": 2.9,
           "carb": 23.9,
           "fibre": 4.4
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:54",
+          "name": "Moong daal, thick 320g",
+          "kcal": 432,
+          "protein": 20.8,
+          "fat": 12.8,
+          "sat": 1.9,
+          "carb": 56,
+          "fibre": 9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_daalrice.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:54",
+          "name": "White rice, cooked 120g",
+          "kcal": 156,
+          "protein": 3.1,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 33.6,
+          "fibre": 0.5
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:54",
+          "name": "Punjabi masala papad x1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:54",
+          "name": "Dilkhush papad x1",
+          "kcal": 34,
+          "protein": 2,
+          "fat": 0.5,
+          "sat": 0.2,
+          "carb": 6,
+          "fibre": 0.6
         }
       ]
     }
