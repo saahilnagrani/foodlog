@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-03",
+  "updated": "2026-09-04",
   "days": [
     {
       "date": "2026-07-24",
@@ -4882,6 +4882,30 @@
           "carb": 16.7,
           "fibre": 5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_cheela.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "28:00",
+          "name": "Zaatar manakeesh, whole (Zaatar w Zeit, ~190g)",
+          "kcal": 450,
+          "protein": 12,
+          "fat": 16,
+          "sat": 2.5,
+          "carb": 64,
+          "fibre": 4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_zaatar.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "28:00",
+          "name": "Kashkawan cheese manakeesh, whole (Zaatar w Zeit, ~190g)",
+          "kcal": 520,
+          "protein": 23,
+          "fat": 22,
+          "sat": 12,
+          "carb": 58,
+          "fibre": 2.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_kashkawan.jpg"
         }
       ]
     }
