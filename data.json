@@ -4908,6 +4908,35 @@
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_kashkawan.jpg"
         }
       ]
+    },
+    {
+      "date": "2026-09-04",
+      "label": "Fri 4 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Snack",
+          "t": "16:24",
+          "name": "Egg-white omelette (4 egg whites + 1tsp oil)",
+          "kcal": 113,
+          "protein": 14.4,
+          "fat": 5.2,
+          "sat": 0.7,
+          "carb": 0.8,
+          "fibre": 0
+        },
+        {
+          "meal": "Drink",
+          "t": "16:24",
+          "name": "Whey drink (32g ON whey vanilla + 13g Awesome choc&nut + 200ml Oatly Barista + 18g nuts & seeds + 74g strawberries)",
+          "kcal": 434,
+          "protein": 38.5,
+          "fat": 19.8,
+          "sat": 3.2,
+          "carb": 26.1,
+          "fibre": 4.9
+        }
+      ]
     }
   ]
 }
