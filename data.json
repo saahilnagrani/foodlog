@@ -4956,7 +4956,8 @@
           "fat": 3.2,
           "sat": 0.6,
           "carb": 47,
-          "fibre": 3
+          "fibre": 3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri4_momos.jpg"
         },
         {
           "meal": "Dinner",
