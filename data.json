@@ -4935,6 +4935,39 @@
           "sat": 3.2,
           "carb": 26.1,
           "fibre": 4.9
+        },
+        {
+          "meal": "Snack",
+          "t": "19:00",
+          "name": "Moong daal + tofu cheela x2 (same batch as Thursday)",
+          "kcal": 224,
+          "protein": 12.9,
+          "fat": 11.6,
+          "sat": 1.7,
+          "carb": 16.7,
+          "fibre": 5
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:08",
+          "name": "Chicken momos x7, 162g (steamed; 500g breast in 42, maida+wheat wrappers)",
+          "kcal": 304,
+          "protein": 26,
+          "fat": 3,
+          "sat": 0.6,
+          "carb": 42,
+          "fibre": 2.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:08",
+          "name": "Red chilli & tomato chutney ~30g",
+          "kcal": 30,
+          "protein": 0.5,
+          "fat": 1.5,
+          "sat": 0.2,
+          "carb": 3.5,
+          "fibre": 1
         }
       ]
     }
