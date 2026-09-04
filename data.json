@@ -4979,6 +4979,17 @@
           "sat": 0.4,
           "carb": 24,
           "fibre": 1.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:58",
+          "name": "Chicken momos x3, 84g (3rd serving)",
+          "kcal": 146,
+          "protein": 11.6,
+          "fat": 1.9,
+          "sat": 0.3,
+          "carb": 21,
+          "fibre": 1.3
         }
       ]
     }
