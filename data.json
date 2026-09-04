@@ -4950,13 +4950,13 @@
         {
           "meal": "Dinner",
           "t": "21:00",
-          "name": "Chicken momos x7, 162g (steamed; 500g breast in 42, maida+wheat wrappers)",
-          "kcal": 304,
-          "protein": 26,
-          "fat": 3,
+          "name": "Chicken momos x7, 188g (steamed; 500g breast in 42, maida+wheat wrappers)",
+          "kcal": 327,
+          "protein": 27,
+          "fat": 3.2,
           "sat": 0.6,
-          "carb": 42,
-          "fibre": 2.5
+          "carb": 47,
+          "fibre": 3
         },
         {
           "meal": "Dinner",
@@ -4973,11 +4973,11 @@
           "meal": "Dinner",
           "t": "23:53",
           "name": "Chicken momos x4, 100g (2nd serving)",
-          "kcal": 188,
-          "protein": 16,
-          "fat": 1.9,
+          "kcal": 172,
+          "protein": 15,
+          "fat": 1.8,
           "sat": 0.4,
-          "carb": 26,
+          "carb": 24,
           "fibre": 1.5
         }
       ]
