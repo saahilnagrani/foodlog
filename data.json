@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-04",
+  "updated": "2026-09-05",
   "days": [
     {
       "date": "2026-07-24",
@@ -5013,6 +5013,50 @@
           "sat": 0,
           "carb": 27,
           "fibre": 3.1
+        },
+        {
+          "meal": "Early morning",
+          "t": "25:39",
+          "name": "Greek yogurt 0% 115g",
+          "kcal": 72,
+          "protein": 11.5,
+          "fat": 0.6,
+          "sat": 0,
+          "carb": 5.2,
+          "fibre": 0
+        },
+        {
+          "meal": "Early morning",
+          "t": "25:39",
+          "name": "White rice, cooked 100g",
+          "kcal": 130,
+          "protein": 2.6,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 28,
+          "fibre": 0.4
+        },
+        {
+          "meal": "Early morning",
+          "t": "25:39",
+          "name": "Dilkhush papad 1",
+          "kcal": 34,
+          "protein": 2,
+          "fat": 0.5,
+          "sat": 0.2,
+          "carb": 6,
+          "fibre": 0.6
+        },
+        {
+          "meal": "Early morning",
+          "t": "25:39",
+          "name": "Punjabi masala papad 1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9
         }
       ]
     }
