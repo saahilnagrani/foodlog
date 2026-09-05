@@ -5177,6 +5177,28 @@
           "carb": 4.5,
           "fibre": 0.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat5_tikka.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "25:23",
+          "name": "Finn's salt & vinegar chips 85g",
+          "kcal": 434,
+          "protein": 5.5,
+          "fat": 25,
+          "sat": 2.5,
+          "carb": 50,
+          "fibre": 3.5
+        },
+        {
+          "meal": "Snack",
+          "t": "25:23",
+          "name": "Lay's Mexican pineapple jalapeno 45g",
+          "kcal": 241,
+          "protein": 3,
+          "fat": 15,
+          "sat": 2,
+          "carb": 24,
+          "fibre": 1.5
         }
       ]
     }
