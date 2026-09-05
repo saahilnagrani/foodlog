@@ -5181,24 +5181,24 @@
         {
           "meal": "Snack",
           "t": "25:23",
-          "name": "Finn's salt & vinegar chips 85g",
-          "kcal": 434,
-          "protein": 5.5,
-          "fat": 25,
-          "sat": 2.5,
-          "carb": 50,
-          "fibre": 3.5
+          "name": "Finn's salt & vinegar chips 85g (from label)",
+          "kcal": 433,
+          "protein": 5.4,
+          "fat": 26.4,
+          "sat": 8.7,
+          "carb": 42.9,
+          "fibre": 3.6
         },
         {
           "meal": "Snack",
           "t": "25:23",
-          "name": "Lay's Mexican pineapple jalapeno 45g",
-          "kcal": 241,
-          "protein": 3,
-          "fat": 15,
-          "sat": 2,
-          "carb": 24,
-          "fibre": 1.5
+          "name": "Lay's Mexican pineapple jalapeno 45g (from label)",
+          "kcal": 238,
+          "protein": 3.1,
+          "fat": 15.3,
+          "sat": 6.8,
+          "carb": 21.6,
+          "fibre": 1.8
         }
       ]
     }
