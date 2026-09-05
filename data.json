@@ -5147,11 +5147,11 @@
         {
           "meal": "Dinner",
           "t": "21:18",
-          "name": "Peri peri chicken tikka 74g (Bombay Canteen)",
-          "kcal": 133,
-          "protein": 20,
-          "fat": 5,
-          "sat": 1.2,
+          "name": "Peri peri chicken tikka 74g, thigh (Bombay Canteen)",
+          "kcal": 167,
+          "protein": 18.5,
+          "fat": 9.6,
+          "sat": 2.8,
           "carb": 2,
           "fibre": 0.3
         },
@@ -5169,11 +5169,11 @@
         {
           "meal": "Dinner",
           "t": "21:20",
-          "name": "Peri peri chicken tikka 100g breast + sauce (Bombay Canteen, 2nd serving)",
-          "kcal": 215,
-          "protein": 30.5,
-          "fat": 9,
-          "sat": 2.5,
+          "name": "Peri peri chicken tikka 100g thigh + sauce (Bombay Canteen, 2nd serving)",
+          "kcal": 265,
+          "protein": 25.5,
+          "fat": 16,
+          "sat": 4.8,
           "carb": 4.5,
           "fibre": 0.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat5_tikka.jpg"
