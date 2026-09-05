@@ -5057,6 +5057,59 @@
           "sat": 0.1,
           "carb": 8.3,
           "fibre": 0.9
+        },
+        {
+          "meal": "Snack",
+          "t": "28:37",
+          "name": "Cream cheese waffles x2 (takeaway)",
+          "kcal": 480,
+          "protein": 8,
+          "fat": 20,
+          "sat": 10,
+          "carb": 64,
+          "fibre": 2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri4_waffles.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "28:37",
+          "name": "Peanut butter ~45g",
+          "kcal": 265,
+          "protein": 11,
+          "fat": 22.5,
+          "sat": 4.5,
+          "carb": 9,
+          "fibre": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "label": "Sat 5 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "15:58",
+          "name": "Aloo pyaaz paratha x2, 150g",
+          "kcal": 345,
+          "protein": 8,
+          "fat": 12,
+          "sat": 2,
+          "carb": 52,
+          "fibre": 5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat5_paratha.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "15:58",
+          "name": "Greek yogurt 0% 210g (130g + 80g)",
+          "kcal": 132,
+          "protein": 21,
+          "fat": 0.9,
+          "sat": 0,
+          "carb": 9.5,
+          "fibre": 0
         }
       ]
     }
