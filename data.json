@@ -5165,6 +5165,18 @@
           "sat": 1,
           "carb": 15,
           "fibre": 1
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:20",
+          "name": "Peri peri chicken tikka, 3 pieces ~110g with sauce (Bombay Canteen, 2nd serving, est.)",
+          "kcal": 195,
+          "protein": 24.5,
+          "fat": 8,
+          "sat": 2,
+          "carb": 3,
+          "fibre": 0.3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat5_tikka.jpg"
         }
       ]
     }
