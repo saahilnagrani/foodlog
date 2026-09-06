@@ -5239,6 +5239,29 @@
           "sat": 0,
           "carb": 27,
           "fibre": 3.1
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:38",
+          "name": "Salmon, cooked 154g",
+          "kcal": 302,
+          "protein": 33.9,
+          "fat": 18.5,
+          "sat": 3.7,
+          "carb": 0,
+          "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:38",
+          "name": "Hamour fillet 75g, spice-crusted & pan-fried",
+          "kcal": 135,
+          "protein": 18.5,
+          "fat": 6,
+          "sat": 0.9,
+          "carb": 2,
+          "fibre": 0.3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun6_hamour.jpg"
         }
       ]
     }
