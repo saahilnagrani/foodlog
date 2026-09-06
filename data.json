@@ -5073,13 +5073,13 @@
         {
           "meal": "Snack",
           "t": "28:37",
-          "name": "Peanut butter ~45g",
-          "kcal": 265,
-          "protein": 11,
-          "fat": 22.5,
-          "sat": 4.5,
-          "carb": 9,
-          "fibre": 3
+          "name": "Peanut butter 45g (from label)",
+          "kcal": 288,
+          "protein": 10.8,
+          "fat": 23,
+          "sat": 3.6,
+          "carb": 9.5,
+          "fibre": 1.4
         }
       ]
     },
