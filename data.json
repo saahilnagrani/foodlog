@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-06",
+  "updated": "2026-09-07",
   "days": [
     {
       "date": "2026-07-24",
@@ -5285,6 +5285,57 @@
           "carb": 25,
           "fibre": 1.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun6_friedrice.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-07",
+      "label": "Mon 7 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "15:51",
+          "name": "Whey drink (15g ON whey vanilla + 17g ISO100 mocha + 100ml Oatly Barista)",
+          "kcal": 180,
+          "protein": 25.5,
+          "fat": 4.2,
+          "sat": 0.8,
+          "carb": 10.2,
+          "fibre": 0.8
+        },
+        {
+          "meal": "Snack",
+          "t": "16:04",
+          "name": "Sambazon scoopable acai 36g",
+          "kcal": 40,
+          "protein": 0.2,
+          "fat": 0.7,
+          "sat": 0.2,
+          "carb": 7.9,
+          "fibre": 0.6
+        },
+        {
+          "meal": "Snack",
+          "t": "16:04",
+          "name": "Plein Soleil frozen mango chunks 30g",
+          "kcal": 18,
+          "protein": 0.2,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 4.5,
+          "fibre": 0.5
+        },
+        {
+          "meal": "Snack",
+          "t": "16:04",
+          "name": "Greek yogurt 0% 60g",
+          "kcal": 38,
+          "protein": 6,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 2.7,
+          "fibre": 0
         }
       ]
     }
