@@ -5350,17 +5350,6 @@
         },
         {
           "meal": "Dinner",
-          "t": "22:45",
-          "name": "Samyang Buldak spicy ramen, 1 pack (140g)",
-          "kcal": 530,
-          "protein": 11,
-          "fat": 17,
-          "sat": 8,
-          "carb": 85,
-          "fibre": 3
-        },
-        {
-          "meal": "Dinner",
           "t": "23:00",
           "name": "Egg-white omelette (4 egg whites + 1tsp oil)",
           "kcal": 113,
@@ -5380,6 +5369,17 @@
           "sat": 2.5,
           "carb": 17.2,
           "fibre": 2.4
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:45",
+          "name": "Samyang Buldak spicy ramen, 1 pack (140g)",
+          "kcal": 530,
+          "protein": 11,
+          "fat": 17,
+          "sat": 8,
+          "carb": 85,
+          "fibre": 3
         }
       ]
     }
