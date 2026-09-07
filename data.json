@@ -5360,6 +5360,17 @@
           "fibre": 3
         },
         {
+          "meal": "Dinner",
+          "t": "23:00",
+          "name": "Egg-white omelette (4 egg whites + 1tsp oil)",
+          "kcal": 113,
+          "protein": 14.4,
+          "fat": 5.2,
+          "sat": 0.7,
+          "carb": 0.8,
+          "fibre": 0
+        },
+        {
           "meal": "Drink",
           "t": "23:05",
           "name": "Whey drink (28g ON whey vanilla + 13g ISO100 mocha + 150ml Oatly Barista + 17g nuts & seeds)",
@@ -5369,17 +5380,6 @@
           "sat": 2.5,
           "carb": 17.2,
           "fibre": 2.4
-        },
-        {
-          "meal": "Early morning",
-          "t": "25:17",
-          "name": "Egg-white omelette (4 egg whites + 1tsp oil)",
-          "kcal": 113,
-          "protein": 14.4,
-          "fat": 5.2,
-          "sat": 0.7,
-          "carb": 0.8,
-          "fibre": 0
         }
       ]
     }
