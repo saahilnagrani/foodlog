@@ -5347,6 +5347,28 @@
           "sat": 0,
           "carb": 2.7,
           "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:45",
+          "name": "Samyang Buldak spicy ramen, 1 pack (140g)",
+          "kcal": 530,
+          "protein": 11,
+          "fat": 17,
+          "sat": 8,
+          "carb": 85,
+          "fibre": 3
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:45",
+          "name": "Chicken breast, cooked ~100g (in the ramen, est.)",
+          "kcal": 160,
+          "protein": 32,
+          "fat": 3.6,
+          "sat": 1,
+          "carb": 0,
+          "fibre": 0
         }
       ]
     }
