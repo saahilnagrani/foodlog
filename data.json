@@ -5295,6 +5295,17 @@
       "items": [
         {
           "meal": "Lunch",
+          "t": "15:00",
+          "name": "Tofu & egg fried rice 200g (peas, onion, leftover)",
+          "kcal": 330,
+          "protein": 12,
+          "fat": 13,
+          "sat": 2.3,
+          "carb": 41.7,
+          "fibre": 2.5
+        },
+        {
+          "meal": "Lunch",
           "t": "15:51",
           "name": "Whey drink (15g ON whey vanilla + 17g ISO100 mocha + 100ml Oatly Barista)",
           "kcal": 180,
