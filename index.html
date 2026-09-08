@@ -221,7 +221,7 @@
   body[data-theme="b"] .wk-bar.stack .fseg.grn{background:#c6f042;} body[data-theme="b"] .wk-bar.stack .fseg.red{background:#ff6b57;}
   body[data-theme="b"] .wk-bar.stack.over .fseg.red{background:#ff1f0f;}
   body[data-theme="b"] .wk-line{border-color:rgba(0,0,0,.5);} body[data-theme="b"] .wk-line.sat{border-color:#e5271b;}
-  body[data-theme="b"] .wk-line.avg,body[data-theme="b"] .wk-line.med,body[data-theme="b"] .lg{border-color:#111;} body[data-theme="b"] .wk-stat{font-family:Arial;font-weight:900;color:#111;}
+  body[data-theme="b"] .wk-line.avg,body[data-theme="b"] .wk-line.med,body[data-theme="b"] .lg{border-color:#111;} body[data-theme="b"] .wk-line.avg.sat,body[data-theme="b"] .lg.sat{border-color:#e5271b;} body[data-theme="b"] .wk-stat{font-family:Arial;font-weight:900;color:#111;}
   body[data-theme="b"] .wk-line span{background:#fff;color:#333;} body[data-theme="b"] .wk-line.sat span{color:#e5271b;}
   body[data-theme="c"] .wk-n{color:#b8f7d6;} body[data-theme="c"] .wk-d{color:#4c7a63;}
   body[data-theme="c"] .wk-n.over{color:#ff5d5d;}
@@ -230,7 +230,7 @@
   body[data-theme="c"] .wk-bar.stack .fseg.grn{background:#3dffa0;} body[data-theme="c"] .wk-bar.stack .fseg.red{background:#ff5d5d;}
   body[data-theme="c"] .wk-bar.stack.over .fseg.red{background:#ff2d2d;}
   body[data-theme="c"] .wk-line{border-color:#4c7a63;} body[data-theme="c"] .wk-line.sat{border-color:#ff5d5d;}
-  body[data-theme="c"] .wk-line.avg,body[data-theme="c"] .wk-line.med,body[data-theme="c"] .lg{border-color:#ffd166;} body[data-theme="c"] .wk-stat{color:#ffd166;}
+  body[data-theme="c"] .wk-line.avg,body[data-theme="c"] .wk-line.med,body[data-theme="c"] .lg{border-color:#ffd166;} body[data-theme="c"] .wk-line.avg.sat,body[data-theme="c"] .lg.sat{border-color:#ff5d5d;} body[data-theme="c"] .wk-stat{color:#ffd166;}
   body[data-theme="c"] .wk-line span{background:#081108;color:#4c7a63;} body[data-theme="c"] .wk-line.sat span{color:#ff5d5d;}
   body[data-theme="d"] .wk-n{color:#8a86a3;} body[data-theme="d"] .wk-d{color:#565273;}
   body[data-theme="d"] .wk-n.over{color:#ff6b6b;}
@@ -240,7 +240,7 @@
   body[data-theme="d"] .wk-bar.stack{border-radius:4px 4px 0 0;} body[data-theme="d"] .wk-bar.stack .fseg.grn{background:#6ee7a0;} body[data-theme="d"] .wk-bar.stack .fseg.red{background:#ff5d5d;}
   body[data-theme="d"] .wk-bar.stack.over .fseg.red{background:#ff3b3b;}
   body[data-theme="d"] .wk-line{border-color:rgba(255,255,255,.3);} body[data-theme="d"] .wk-line.sat{border-color:#ff6b6b;}
-  body[data-theme="d"] .wk-line.avg,body[data-theme="d"] .wk-line.med,body[data-theme="d"] .lg{border-color:#ffd166;} body[data-theme="d"] .wk-stat{color:#d8b95a;}
+  body[data-theme="d"] .wk-line.avg,body[data-theme="d"] .wk-line.med,body[data-theme="d"] .lg{border-color:#ffd166;} body[data-theme="d"] .wk-line.avg.sat,body[data-theme="d"] .lg.sat{border-color:#ff6b6b;} body[data-theme="d"] .wk-stat{color:#d8b95a;}
   body[data-theme="d"] .wk-line span{background:#12102a;color:#8a86a3;} body[data-theme="d"] .wk-line.sat span{color:#ff6b6b;}
   .toast{position:fixed;left:50%;bottom:150px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
   .toast.show{display:block;}
@@ -984,13 +984,14 @@ function barChart(S,key,max,o){
     nums+=`<div class="wk-n ${ov?'over':''}">${ov&&!o.compact?'&#9650; ':''}${o.compact?Math.round(v):v}</div>`;
     if(o.stacked){const sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;cols+=`<div class="wk-col${tap?' tap':''}"${tapx}><div class="wk-bar stack ${ov?'over':''}" style="height:${H}px"><div class="fseg grn" style="height:${uf}%"></div><div class="fseg red" style="height:${sf}%"></div></div></div>`;}
     else cols+=`<div class="wk-col${tap?' tap':''}"${tapx}><div class="wk-bar ${o.cls?o.cls(x):''}" style="height:${H}px"></div></div>`;
-    days+=`<div class="wk-d">${dense?(x.mon||x.dm===1?x.dm:''):x.d}</div>`;
+    /* month view labels by date, never by weekday letter; with ~30 bars only Mondays and the 1st get one */
+    days+=`<div class="wk-d">${tap?(dense?(x.mon||x.dm===1?x.dm:''):x.dm):x.d}</div>`;
   });
   (o.lines||[]).forEach(l=>{if(l.v==null)return;const off=Math.min(BM,l.v/max*BM);lines+=`<div class="wk-line ${l.cls||''}" style="bottom:${off}px"></div>`;});
   let subrow='';
   if(o.sub&&!dense){let subs='';S.forEach(x=>{const sv=o.sub(x);subs+=`<div class="wk-s ${o.subOver&&o.subOver(x)?'over':''}">${o.compact?Math.round(sv):sv}</div>`;});subrow=`<div class="wk-subs">${subs}</div>`;}
   let stat='';
-  if(o.stats){const st=o.stats;stat=`<div class="wk-stat"><span class="lg avg"></span>avg ${st.avg}${o.median?` &nbsp;<span class="lg med"></span>median ${st.med}`:''}</div>`;}
+  if(o.stats){const st=o.stats;stat=`<div class="wk-stat"><span class="lg avg"></span>avg ${st.avg}${o.median?` &nbsp;<span class="lg med"></span>median ${st.med}`:''}${o.stats2?` &nbsp;<span class="lg avg sat"></span>sat ${o.stats2.avg}`:''}</div>`;}
   const dc=dense?' dense':'';
   return `<div class="wk${dc}">${dense?'':`<div class="wk-nums">${nums}</div>`}<div class="wk-plot${dc}" style="height:${BM}px">${cols}${lines}</div>${subrow}<div class="wk-days${dc}">${days}</div>${stat}</div>`;
 }
@@ -1000,12 +1001,12 @@ function weekCharts(days){
         maxB=Math.max(T.fibre,...S.map(x=>x.b),1)*1.12;
   /* average + median on the two big charts, average only on the small pair.
      Today is left out of both while it is still in progress. */
-  const sk=seriesStats(S,'k'), sp=seriesStats(S,'p'), sf=seriesStats(S,'f'), sb=seriesStats(S,'b',x=>x.bq>0);
+  const sk=seriesStats(S,'k'), sp=seriesStats(S,'p'), sf=seriesStats(S,'f'), ss=seriesStats(S,'s'), sb=seriesStats(S,'b',x=>x.bq>0);
   const L=(st,med)=>st?[{v:st.avg,cls:'avg'}].concat(med?[{v:st.med,cls:'med'}]:[]):[];
   return {
     cal:barChart(S,'k',maxK,{cls:x=>x.k>T.kcal?'over':'ok',stats:sk,median:true,lines:[{v:T.kcal,cls:'target',label:T.kcal}].concat(L(sk,true))}),
     pro:barChart(S,'p',maxP,{cls:x=>x.p>=T.protein?'okp':'lowp',stats:sp,median:true,lines:[{v:T.protein,cls:'target',label:T.protein}].concat(L(sp,true))}),
-    fat:barChart(S,'f',maxF,{compact:true,stacked:true,over:x=>x.s>T.sat,sub:x=>x.s,subOver:x=>x.s>T.sat,stats:sf,lines:[{v:T.sat,cls:'sat'},{v:T.fat,cls:'target'}].concat(L(sf))}),
+    fat:barChart(S,'f',maxF,{compact:true,stacked:true,over:x=>x.s>T.sat,sub:x=>x.s,subOver:x=>x.s>T.sat,stats:sf,stats2:ss,lines:[{v:T.sat,cls:'sat'},{v:T.fat,cls:'target'}].concat(L(sf)).concat(ss?[{v:ss.avg,cls:'avg sat'}]:[])}),
     fib:barChart(S,'b',maxB,{compact:true,cls:x=>x.b>=T.fibre?'okp':'lowp',stats:sb,lines:[{v:T.fibre,cls:'target',label:T.fibre}].concat(L(sb))}),
     hint:PREF.span==='month'?'<div class="wk-hint">Tap a bar to open that week.</div>':'',
     lowFib:S.filter(x=>x.b<T.fibre).length,
