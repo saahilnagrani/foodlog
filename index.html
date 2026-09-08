@@ -9,7 +9,19 @@
   html,body{min-height:100%;}
   html{overflow-x:clip;}
   .sheet img,.sheet input,.sheet select,.sheet textarea{max-width:100%;}
-  body{padding-bottom:110px;transition:background .2s;}
+  body{padding-bottom:150px;transition:background .2s;}
+  /* ---- bottom nav: Log / Search / Plan. Always reachable, unlike the pull-down
+     which the Android wrapper's pull-to-refresh swallows. ---- */
+  #bnav{position:fixed;left:0;right:0;bottom:0;z-index:60;display:flex;justify-content:space-around;
+        padding:5px 0 calc(6px + env(safe-area-inset-bottom));}
+  .bn{flex:1;max-width:160px;border:0;background:none;color:inherit;opacity:.5;font-family:inherit;font-size:10.5px;font-weight:700;
+      letter-spacing:.04em;display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 0 3px;cursor:pointer;}
+  .bn svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+  .bn.on{opacity:1;}
+  body.modal-open #bnav{display:none;}
+  body.plan-open #bnav{display:flex;}          /* the Plan sheet keeps the nav so Log/Search are one tap away */
+  body.plan-open .sheet{padding-bottom:120px;min-height:100vh;}
+  body.modal-open{padding-bottom:0;}            /* sheets carry their own bottom padding */
   /* ---- shell (theme-neutralish) ---- */
   #tophead{position:sticky;top:0;z-index:30;}
   #topbar{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;}
@@ -33,13 +45,13 @@
   .sr-m{font-size:11px;opacity:.6;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
   .sr-none{opacity:.6;padding:22px 0;font-size:13px;}
   body.modal-open #logsearch{display:none;}
-  .fab{position:fixed;right:16px;left:auto;transform:none;bottom:22px;z-index:70;border:none;font-weight:800;font-size:15px;padding:14px 24px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.45);cursor:pointer;}
+  .fab{position:fixed;right:16px;left:auto;transform:none;bottom:calc(78px + env(safe-area-inset-bottom));z-index:70;border:none;font-weight:800;font-size:15px;padding:14px 24px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.45);cursor:pointer;}
   .fab.closing{width:56px;height:56px;padding:0;border-radius:50%;font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;}
   /* Settings/Add render as a full in-flow screen (robust in WebView, no floating overlay) */
   .sheet-bg{display:none;}
   .sheet-bg.open{display:block;}
   body.modal-open #view, body.modal-open .fab{display:none;}
-  body.add-open .fab{display:flex;}
+  body.add-open .fab{display:flex;bottom:calc(22px + env(safe-area-inset-bottom));}   /* nav is hidden there, sit low */
   .sheet{max-width:480px;overflow-x:clip;margin:0 auto;padding:16px 16px 60px;background:#fff;color:#111;min-height:calc(100vh - 56px);font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
   .sheet .close{float:right;border:none;background:#eee;width:32px;height:32px;border-radius:8px;font-size:18px;cursor:pointer;color:#333;}
   .sheet h3{font-size:15px;margin-bottom:12px;}
@@ -210,7 +222,7 @@
   body[data-theme="d"] .wk-bar.stack.over .fseg.red{background:#ff3b3b;}
   body[data-theme="d"] .wk-line{border-color:rgba(255,255,255,.3);} body[data-theme="d"] .wk-line.sat{border-color:#ff6b6b;}
   body[data-theme="d"] .wk-line span{background:#12102a;color:#8a86a3;} body[data-theme="d"] .wk-line.sat span{color:#ff6b6b;}
-  .toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
+  .toast{position:fixed;left:50%;bottom:150px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
   .toast.show{display:block;}
   .toast .tact{margin-left:14px;background:none;border:0;padding:0;font:inherit;font-weight:800;color:#7ef0b0;text-decoration:underline;cursor:pointer;}
   .thumb,.mimg{object-fit:cover;cursor:pointer;background:#ccc;}
@@ -227,6 +239,9 @@
 
   /* ===================== BRUTALIST (b) ===================== */
   body[data-theme="b"] #tophead{background:#e9dcc0;border-bottom:3px solid #111;}
+  body[data-theme="b"] #bnav{background:#e9dcc0;border-top:3px solid #111;color:#111;font-family:Arial;}
+  body[data-theme="b"] .bn.on{opacity:1;}
+  body[data-theme="b"] .bn.on svg{stroke:#3d5cff;stroke-width:2.6;}
   body[data-theme="b"]{background:#e9dcc0;color:#111;font-family:var(--bfont,'Archivo Black',Arial,sans-serif);}
   body[data-theme="b"] .wkbtn{background:#111;color:#f5e9c9;}
   body[data-theme="b"] .wklabel{border:3px solid #111;background:#fff;padding:6px 10px;box-shadow:3px 3px 0 #111;font-family:Arial;font-weight:900;}
@@ -269,6 +284,7 @@
 
   /* ===================== TERMINAL (c) ===================== */
   body[data-theme="c"] #tophead{background:#040705;border-bottom:1px solid #1f8f5e;}
+  body[data-theme="c"] #bnav{background:#040705;border-top:1px solid #1f8f5e;color:#3dffa0;}
   body[data-theme="c"]{background:#040705;color:#b8f7d6;font-family:var(--cfont,'JetBrains Mono',monospace);
     background-image:linear-gradient(#12251b 1px,transparent 1px),linear-gradient(90deg,#12251b 1px,transparent 1px);background-size:22px 22px;}
   body[data-theme="c"] .wkbtn{background:transparent;border:1px solid #1f8f5e;color:#3dffa0;}
@@ -301,6 +317,7 @@
 
   /* ===================== BLOOM (d) ===================== */
   body[data-theme="d"] #tophead{background:#121022;border-bottom:1px solid rgba(255,255,255,.07);}
+  body[data-theme="d"] #bnav{background:#121022;border-top:1px solid rgba(255,255,255,.07);color:#cdbcff;}
   body[data-theme="d"]{background:radial-gradient(120% 70% at 50% -8%,#161428 0%,#0a0a12 55%) fixed;color:#e8e6f0;font-family:var(--dfont,'Space Grotesk',sans-serif);}
   body[data-theme="d"] .wkbtn{background:rgba(255,255,255,.06);color:#cdbcff;}
   body[data-theme="d"] .wklabel{color:#cbc8e0;}
@@ -341,7 +358,7 @@
   <div id="tophead">
   <div id="topbar">
     <div class="wknav"><button class="wkbtn" onclick="stepWeek(-1)">&#8249;</button><span class="wklabel" id="wklabel">This week</span><button class="wkbtn" onclick="stepWeek(1)">&#8250;</button></div>
-    <div class="tbr" style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="modebtn" onclick="openPlan()" aria-label="Training plan">Plan</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
+    <div class="tbr" style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
   </div>
   <div id="logsearch" hidden><input id="ls" placeholder="Search the log&hellip;" autocomplete="off" autocorrect="off"
        autocapitalize="off" spellcheck="false" enterkeyhint="search" oninput="lsInput()"><button id="lsx" type="button"
@@ -349,6 +366,11 @@
   </div>
   <div id="view"></div>
   <button class="fab" id="fab" onclick="fabTap()">+ Add food</button>
+  <nav id="bnav" aria-label="Sections">
+    <button class="bn on" id="bn_log" onclick="bnavGo('log')"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Log</button>
+    <button class="bn" id="bn_search" onclick="bnavGo('search')"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>Search</button>
+    <button class="bn" id="bn_plan" onclick="bnavGo('plan')"><svg viewBox="0 0 24 24"><path d="M3 12h2M19 12h2M6 8h3v8H6zM15 8h3v8h-3zM9 12h6"/></svg>Plan</button>
+  </nav>
 
   <div class="sheet-bg" id="editBg">
     <div class="sheet">
@@ -590,20 +612,38 @@ function render(){
    each hit goes through swipeRow() so Edit and Delete work from a result.
    Every space-separated word must appear somewhere in the name. */
 let LS='', PULLED=false;
+function lsFocus(){const el=document.getElementById('ls'); try{el.focus({preventScroll:true});}catch(e){el.focus();}}
 function lsShow(){
-  const w=document.getElementById('logsearch'); if(!w.hidden)return;
+  const w=document.getElementById('logsearch'); if(!w.hidden){lsFocus();return;}
   w.hidden=false; document.getElementById('lsx').hidden=false; window.scrollTo(0,0);
-  const el=document.getElementById('ls'); try{el.focus({preventScroll:true});}catch(e){el.focus();}
+  lsFocus(); bnavSet();
 }
 function lsHide(){
   const w=document.getElementById('logsearch'), el=document.getElementById('ls');
   el.value=''; el.blur(); document.getElementById('lsx').hidden=true;
-  const had=!!LS; LS=''; w.hidden=true; if(had)render();
+  const had=!!LS; LS=''; w.hidden=true; if(had)render(); bnavSet();
 }
 function lsToggle(){document.getElementById('logsearch').hidden?lsShow():lsHide();}
-/* Pull down from the top of the page to reveal it. On the phone the wrapper's
-   native pull-to-refresh usually wins this gesture, which is why the top-bar
-   button exists too; in a browser this is the natural way in. */
+/* ---------- bottom nav ----------
+   Log = the week view, Search = the log search bar, Plan = the training plan
+   sheet. The Plan sheet keeps the nav visible (body.plan-open) so the other two
+   tabs close it; every other sheet hides the nav like it hides the top bar. */
+function bnavSet(){
+  const plan=document.body.classList.contains('plan-open');
+  const srch=!plan && !document.getElementById('logsearch').hidden;
+  const cur=plan?'plan':srch?'search':'log';
+  ['log','search','plan'].forEach(k=>document.getElementById('bn_'+k).classList.toggle('on',k===cur));
+}
+function bnavGo(k){
+  const plan=document.body.classList.contains('plan-open');
+  if(k==='plan'){ if(plan)window.scrollTo(0,0); else openPlan(); return; }
+  if(plan)closePlan();
+  if(k==='search'){ lsShow(); return; }
+  lsHide(); window.scrollTo(0,0);
+}
+/* Pull down from the top of the page also reveals it. On the phone the wrapper's
+   native pull-to-refresh usually wins this gesture, which is why the Search tab
+   in the bottom nav exists; in a browser the pull is the natural way in. */
 (function(){
   let y0=null, armed=false;
   document.addEventListener('touchstart',e=>{
@@ -1146,15 +1186,15 @@ function openPlan(){
   keepScroll(); histPush();
   planTab=({1:'A',3:'B',5:'C'})[new Date().getDay()]||planTab;   /* Mon/Wed/Fri open on that day's session */
   buildPlan();
-  document.body.classList.add('modal-open');
+  document.body.classList.add('modal-open','plan-open');
   document.getElementById('planBg').classList.add('open');
-  window.scrollTo(0,0);
+  window.scrollTo(0,0); bnavSet();
 }
 function closePlan(fromHistory){
   if(!fromHistory)histPop();
   document.getElementById('planBg').classList.remove('open');
-  document.body.classList.remove('modal-open');
-  restoreScroll();
+  document.body.classList.remove('modal-open','plan-open');
+  restoreScroll(); bnavSet();
 }
 function openSettings(){keepScroll();histPush();document.getElementById('bridge_out').textContent='';document.getElementById('gh_tok').value=ghToken();refreshPending();ghStatus('');buildSettings();document.body.classList.add('modal-open');document.getElementById('settingsBg').classList.add('open');window.scrollTo(0,0);}
 function closeSettings(fromHistory){if(!fromHistory)histPop();document.getElementById('settingsBg').classList.remove('open');document.body.classList.remove('modal-open');restoreScroll();}

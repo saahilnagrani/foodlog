@@ -136,7 +136,10 @@ guessing it badly swamps the food estimate.
    the live site (and the phone app) update.
 
 ## What does NOT need Claude
-- Viewing the log, weekly charts, macros: pure static site.
+- Viewing the log, weekly charts, macros: pure static site. A fixed bottom nav
+  switches between **Log**, **Search** (the whole-log search bar) and **Plan**
+  (the training-plan sheet). The nav exists because the Android wrapper's
+  pull-to-refresh swallows the pull-down gesture that also opens search.
 - Adding a food: the app's **+ Add food** button picks from a fixed list of ~32
   quick-add foods, each with per-gram rates including fibre. The free-text
   manual-entry form was removed, so anything not on that list has to come
