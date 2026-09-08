@@ -74,6 +74,10 @@
   .planwarm{font-size:12px;line-height:1.6;color:#4a4a4a;background:#fafafa;border:1px solid #ececec;border-left:3px solid #bdbdbd;border-radius:8px;padding:9px 11px;margin:0 0 14px;}
   .planwarm b{color:#111;}
   .planwarm.after{margin:14px 0 0;border-left-color:#38618c;}
+  .planwarm ul{margin:3px 0 0 17px;padding:0;}
+  .planwarm li{margin:2px 0;padding-left:2px;}
+  .planwarm .pw-s+.pw-s{margin-top:9px;}
+  .planramp,#planTabs{clear:both;}              /* keep clear of the floated close button */
   .planday b{color:#111;}
   table.plan{width:100%;border-collapse:collapse;font-size:13px;}
   table.plan th{text-align:left;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#888;padding:0 0 6px;font-weight:700;}
@@ -1125,13 +1129,16 @@ function buildPlan(){
              : planTab==='H' ? '20-25 min'
              : planTab==='F' ? '~25 min' : '';
   let h=`<div class="planday"><b>${p.n}</b> &middot; ${p.d}${mins?` &middot; <b>${mins}</b>`:''}</div>`;
-  if(gym) h+='<div class="planwarm"><b>Warm up first, 5-8 min.</b> '
-    +'3-5 min easy cardio, warm but not sweating. Then 10 bodyweight squats, 10 hip hinges, '
-    +'10 arm circles each way, 10 wall slides. Then ramp the FIRST lift only: ~50% x10, ~75% x5 '
-    +'(tag these W in Hevy). No static stretching before lifting - it makes you weaker for the session.<br><br>'
-    +'<b>Set the rest timer per exercise in Hevy</b> to the times in the table - Hevy defaults every exercise to 1 min, '
-    +'which is too short for the heavy ones. A minute is not enough to recover for a hard set of 10, so sets 2 and 3 '
-    +'lose reps and you do less total work. Long rests on the compounds, short on the small stuff.</div>';
+  if(gym) h+=planBlock('',[
+    ['Warm up first, 5-8 min.',[
+      '3-5 min easy cardio, warm but not sweating.',
+      '10 bodyweight squats, 10 hip hinges, 10 arm circles each way, 10 wall slides.',
+      'Ramp the FIRST lift only: ~50% &times; 10, ~75% &times; 5 (tag these W in Hevy).',
+      'No static stretching before lifting - it makes you weaker for the session.']],
+    ['Set the rest timer per exercise in Hevy.',[
+      'Use the times in the table. Hevy defaults every exercise to 1 min, which is too short for the heavy ones.',
+      'A minute is not enough to recover for a hard set of 10, so sets 2 and 3 lose reps and you do less total work.',
+      'Long rests on the compounds, short on the small stuff.']]]);
   h+='<table class="plan"><tr><th>Exercise</th><th style="text-align:right">Sets &times; reps</th></tr>';
   p.ex.forEach(([ex,sets,reps,note,vid,rest])=>{
     /* A YouTube SEARCH url, never a specific video: search results cannot rot,
@@ -1145,41 +1152,64 @@ function buildPlan(){
       +`${rest?`<span class="rest">rest ${rest}</span>`:''}</td></tr>`;
   });
   h+='</table>';
-  if(gym) h+='<div class="planwarm after"><b>Then finish.</b> 15 min incline treadmill, brisk, always after '
-    +'the weights and never before. Then static stretches 30 sec each while you are still warm - quads, '
-    +'hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.<br><br>'
-    +'<b>Where the '+mins+' goes:</b> ~8 warm-up, ~'+(w<=2?'32':'42')+' lifting, 15 treadmill, ~5 stretching. '
-    +'Your logged Full Body A on 24 Aug came in at 56 min with a short treadmill.</div>';
+  if(gym) h+=planBlock('after',[
+    ['Then finish.',[
+      '15 min incline treadmill, brisk, always after the weights and never before.',
+      'Static stretches 30 sec each while you are still warm: quads, hamstrings, chest doorway, lats.',
+      '60-sec hip-flexor lunge stretch per side.']],
+    ['Where the '+mins+' goes.',[
+      '~8 warm-up, ~'+(w<=2?'32':'42')+' lifting, 15 treadmill, ~5 stretching.',
+      'Your logged Full Body A on 24 Aug came in at 56 min with a short treadmill.']]]);
   if(planTab==='F'){
-    h='<div class="planwarm"><b>Warm up first, 3 min.</b> No treadmill at home, so 1-2 min marching on the spot, '
-     +'stairs or 20 jumping jacks until warm. Then 10 bodyweight squats, 10 hip hinges, 10 arm circles each way, '
-     +'10 wall slides. Make the FIRST set of the squat and the push-ups noticeably easier than the rest. '
-     +'No static stretching before.<br><br><b>Rest 60-90 sec between sets.</b> Keep it moving - this one is about '
-     +'not missing the week, not about maximum output.</div>'+h;
-    h+='<div class="planwarm after"><b>Then cool down, 4 min.</b> Static stretches 30 sec each while still warm - '
-     +'quads, hamstrings, chest doorway, lats - and a 60-sec hip-flexor lunge stretch per side.<br><br>'
-     +'This keeps the week off zero. It is <b>not</b> a replacement for the session you missed - no hinge, '
-     +'no calf, no rear delt. The missed letter still happens on your next gym day.</div>';
+    h=planBlock('',[
+      ['Warm up first, 3 min.',[
+        'No treadmill at home: 1-2 min marching on the spot, stairs or 20 jumping jacks until warm.',
+        '10 bodyweight squats, 10 hip hinges, 10 arm circles each way, 10 wall slides.',
+        'Make the FIRST set of the squat and the push-ups noticeably easier than the rest.',
+        'No static stretching before.']],
+      ['Rest 60-90 sec between sets.',[
+        'Keep it moving - this one is about not missing the week, not about maximum output.']]])+h;
+    h+=planBlock('after',[
+      ['Then cool down, 4 min.',[
+        'Static stretches 30 sec each while still warm: quads, hamstrings, chest doorway, lats.',
+        '60-sec hip-flexor lunge stretch per side.']],
+      ['What this session is.',[
+        'It keeps the week off zero.',
+        'It is <b>not</b> a replacement for the session you missed: no hinge, no calf, no rear delt.',
+        'The missed letter still happens on your next gym day.']]]);
   }
   if(planTab==='H'){
-    h='<div class="planwarm"><b>Door anchor.</b> Foam ball through the gap on the HINGE side at the height you want, '
-     +'then close the door. Use a door that opens away from you so pulling can never swing it open. Clip bands to the '
-     +'loop on your side. Three heights matter: top, middle, bottom.<br><br>'
-     +'<b>Resistance.</b> Clip a second tube on when one gets easy, or step further from the anchor. Right weight = the '
-     +'last two reps of 15 are hard but your form holds. Check the clip end for wear before each session and never '
-     +'stretch a band past about 2.5x its resting length.<br><br>'
-     +'<b>Warm up first, 2-3 min.</b> Shorter than the gym because nothing here is heavy, but this is all shoulder work '
-     +'and cold shoulders is how people tweak them. 30 sec marching on the spot, 10 arm circles each way, 10 wall slides, '
-     +'then 10 band pull-aparts on the lightest band - that last one is the face pull in miniature.</div>'+h;
-    h+='<div class="planwarm after"><b>Rest 60 sec between sets</b> - it is all light, high-rep work, nothing here needs more. '
-     +'Optional but scheduled. Never leg-heavy, so they do not interfere with the gym days. '
-     +'Bands cover every loaded exercise here - no dumbbells needed.<br><br>'
-     +'<br><br><b>Then stretch, 3 min</b>, 30 sec each while still warm: chest in a doorway, triceps overhead, lats, '
-     +'neck and upper traps each side. On Thursday add a calf stretch per side after the calf raises.<br><br>'
-     +'<b>&#9654; video</b> opens a YouTube <i>search</i>, not one chosen video, so it can never go dead. '
-     +'It loads inside this app and replaces the log - <b>pull down to refresh to come back</b>.</div>';
+    h=planBlock('',[
+      ['Door anchor.',[
+        'Foam ball through the gap on the HINGE side at the height you want, then close the door.',
+        'Use a door that opens away from you so pulling can never swing it open.',
+        'Clip bands to the loop on your side. Three heights matter: top, middle, bottom.']],
+      ['Resistance.',[
+        'Clip a second tube on when one gets easy, or step further from the anchor.',
+        'Right weight = the last two reps of 15 are hard but your form holds.',
+        'Check the clip end for wear before each session, and never stretch a band past about 2.5x its resting length.']],
+      ['Warm up first, 2-3 min.',[
+        'Shorter than the gym because nothing here is heavy, but this is all shoulder work and cold shoulders is how people tweak them.',
+        '30 sec marching on the spot, 10 arm circles each way, 10 wall slides.',
+        '10 band pull-aparts on the lightest band - the face pull in miniature.']]])+h;
+    h+=planBlock('after',[
+      ['Rest 60 sec between sets.',[
+        'It is all light, high-rep work, nothing here needs more.',
+        'Optional but scheduled. Never leg-heavy, so it does not interfere with the gym days.',
+        'Bands cover every loaded exercise here - no dumbbells needed.']],
+      ['Then stretch, 3 min.',[
+        '30 sec each while still warm: chest in a doorway, triceps overhead, lats, neck and upper traps each side.',
+        'On Thursday add a calf stretch per side after the calf raises.']],
+      ['Videos.',[
+        '<b>&#9654; video</b> opens a YouTube <i>search</i>, not one chosen video, so it can never go dead.',
+        'It loads inside this app and replaces the log - <b>pull down to refresh to come back</b>.']]]);
   }
   document.getElementById('planBody').innerHTML=h;
+}
+/* the grey boxes before and after the exercise table: [[heading,[bullets]],...] */
+function planBlock(cls,secs){
+  return `<div class="planwarm${cls?' '+cls:''}">`+secs.map(([t,items])=>
+    `<div class="pw-s"><b>${t}</b><ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul></div>`).join('')+'</div>';
 }
 function planPick(k){planTab=k;buildPlan();}
 function openPlan(){
