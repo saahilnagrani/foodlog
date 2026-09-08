@@ -5380,6 +5380,28 @@
           "sat": 8,
           "carb": 85,
           "fibre": 3
+        },
+        {
+          "meal": "Snack",
+          "t": "27:45",
+          "name": "Papa John's Nashville chicken sandwich",
+          "kcal": 750,
+          "protein": 39,
+          "fat": 32,
+          "sat": 8,
+          "carb": 78,
+          "fibre": 3
+        },
+        {
+          "meal": "Snack",
+          "t": "27:45",
+          "name": "Papa John's garlic parmesan breadsticks x3",
+          "kcal": 450,
+          "protein": 12,
+          "fat": 15,
+          "sat": 5,
+          "carb": 63,
+          "fibre": 2
         }
       ]
     }
