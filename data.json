@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-09",
+  "updated": "2026-09-08",
   "days": [
     {
       "date": "2026-07-24",
@@ -5476,6 +5476,51 @@
           "sat": 2.6,
           "carb": 23.4,
           "fibre": 3.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:24",
+          "name": "Prawn curry 142g (82g cooked prawns + 60g tomato-onion masala)",
+          "kcal": 155,
+          "protein": 20.4,
+          "fat": 6.1,
+          "sat": 1.1,
+          "carb": 5.3,
+          "fibre": 0.7,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue8_prawnparatha.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:24",
+          "name": "Plain paratha 40g",
+          "kcal": 116,
+          "protein": 3.2,
+          "fat": 3.5,
+          "sat": 0.6,
+          "carb": 18.5,
+          "fibre": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:24",
+          "name": "Pyaaz paratha 75g",
+          "kcal": 175,
+          "protein": 4,
+          "fat": 6,
+          "sat": 1,
+          "carb": 26,
+          "fibre": 2.6
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:24",
+          "name": "Greek yogurt 0% 100g (jeera powder)",
+          "kcal": 63,
+          "protein": 10,
+          "fat": 0.5,
+          "sat": 0,
+          "carb": 4.5,
+          "fibre": 0
         }
       ]
     }
