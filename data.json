@@ -5404,6 +5404,69 @@
           "fibre": 2
         }
       ]
+    },
+    {
+      "date": "2026-09-08",
+      "label": "Tue 8 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Dinner",
+          "t": "20:04",
+          "name": "Daal palak 290g",
+          "kcal": 343,
+          "protein": 16.6,
+          "fat": 10,
+          "sat": 1.2,
+          "carb": 46.5,
+          "fibre": 10,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue8_daalpalak.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:04",
+          "name": "Cooked brown rice 145g",
+          "kcal": 178,
+          "protein": 3.8,
+          "fat": 1.5,
+          "sat": 0.3,
+          "carb": 33,
+          "fibre": 2.6
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:04",
+          "name": "Green chilli pickle ~20g",
+          "kcal": 30,
+          "protein": 0.3,
+          "fat": 2.5,
+          "sat": 0.3,
+          "carb": 1.5,
+          "fibre": 0.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:04",
+          "name": "Dilkhush papad, 1",
+          "kcal": 34,
+          "protein": 2,
+          "fat": 0.5,
+          "sat": 0.2,
+          "carb": 6,
+          "fibre": 0.6
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:04",
+          "name": "Punjabi masala papad, 1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9
+        }
+      ]
     }
   ]
 }
