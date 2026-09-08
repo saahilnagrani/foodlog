@@ -195,6 +195,19 @@
   .wk-days{display:flex;gap:6px;margin-top:5px;}
   .wk-days .wk-d{flex:1;text-align:center;font-size:9px;}
   .wk-line{position:absolute;left:0;right:0;height:0;border-top:1px dashed;pointer-events:none;}
+  .wk-line.avg{border-top-style:solid;border-top-width:1.5px;}
+  .wk-line.med{border-top-style:dotted;border-top-width:2px;}
+  .wk-stat{font-size:9px;margin-top:5px;opacity:.8;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
+  .prow .wk-stat{font-size:8px;}
+  .lg{display:inline-block;width:12px;border-top:1.5px solid;vertical-align:middle;margin:0 4px 2px 0;}
+  .lg.med{border-top-style:dotted;border-top-width:2px;}
+  /* month view: ~30 bars */
+  .wk-plot.dense,.wk-days.dense{gap:1px;}
+  .wk-days.dense .wk-d{font-size:7.5px;overflow:visible;}
+  .wk-col.tap{cursor:pointer;}
+  .wk-hint{font-size:11px;opacity:.55;text-align:center;margin:10px 0 4px;}
+  body[data-theme="b"] .wk-hint{font-family:Arial;font-weight:700;}
+  body[data-theme="b"] .dense .wk-bar{border-width:1px;}
   .wk-subs{display:flex;gap:6px;margin-top:4px;}
   .wk-subs .wk-s{flex:1;text-align:center;font-size:9px;line-height:1;}
   body[data-theme="b"] .wk-s{font-family:Arial;font-weight:900;color:#9a8f7a;} body[data-theme="b"] .wk-s.over{color:#e5271b;}
@@ -208,6 +221,7 @@
   body[data-theme="b"] .wk-bar.stack .fseg.grn{background:#c6f042;} body[data-theme="b"] .wk-bar.stack .fseg.red{background:#ff6b57;}
   body[data-theme="b"] .wk-bar.stack.over .fseg.red{background:#ff1f0f;}
   body[data-theme="b"] .wk-line{border-color:rgba(0,0,0,.5);} body[data-theme="b"] .wk-line.sat{border-color:#e5271b;}
+  body[data-theme="b"] .wk-line.avg,body[data-theme="b"] .wk-line.med,body[data-theme="b"] .lg{border-color:#111;} body[data-theme="b"] .wk-stat{font-family:Arial;font-weight:900;color:#111;}
   body[data-theme="b"] .wk-line span{background:#fff;color:#333;} body[data-theme="b"] .wk-line.sat span{color:#e5271b;}
   body[data-theme="c"] .wk-n{color:#b8f7d6;} body[data-theme="c"] .wk-d{color:#4c7a63;}
   body[data-theme="c"] .wk-n.over{color:#ff5d5d;}
@@ -216,6 +230,7 @@
   body[data-theme="c"] .wk-bar.stack .fseg.grn{background:#3dffa0;} body[data-theme="c"] .wk-bar.stack .fseg.red{background:#ff5d5d;}
   body[data-theme="c"] .wk-bar.stack.over .fseg.red{background:#ff2d2d;}
   body[data-theme="c"] .wk-line{border-color:#4c7a63;} body[data-theme="c"] .wk-line.sat{border-color:#ff5d5d;}
+  body[data-theme="c"] .wk-line.avg,body[data-theme="c"] .wk-line.med,body[data-theme="c"] .lg{border-color:#ffd166;} body[data-theme="c"] .wk-stat{color:#ffd166;}
   body[data-theme="c"] .wk-line span{background:#081108;color:#4c7a63;} body[data-theme="c"] .wk-line.sat span{color:#ff5d5d;}
   body[data-theme="d"] .wk-n{color:#8a86a3;} body[data-theme="d"] .wk-d{color:#565273;}
   body[data-theme="d"] .wk-n.over{color:#ff6b6b;}
@@ -225,6 +240,7 @@
   body[data-theme="d"] .wk-bar.stack{border-radius:4px 4px 0 0;} body[data-theme="d"] .wk-bar.stack .fseg.grn{background:#6ee7a0;} body[data-theme="d"] .wk-bar.stack .fseg.red{background:#ff5d5d;}
   body[data-theme="d"] .wk-bar.stack.over .fseg.red{background:#ff3b3b;}
   body[data-theme="d"] .wk-line{border-color:rgba(255,255,255,.3);} body[data-theme="d"] .wk-line.sat{border-color:#ff6b6b;}
+  body[data-theme="d"] .wk-line.avg,body[data-theme="d"] .wk-line.med,body[data-theme="d"] .lg{border-color:#ffd166;} body[data-theme="d"] .wk-stat{color:#d8b95a;}
   body[data-theme="d"] .wk-line span{background:#12102a;color:#8a86a3;} body[data-theme="d"] .wk-line.sat span{color:#ff6b6b;}
   .toast{position:fixed;left:50%;bottom:150px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
   .toast.show{display:block;}
@@ -362,7 +378,7 @@
   <div id="tophead">
   <div id="topbar">
     <div class="wknav"><button class="wkbtn" onclick="stepWeek(-1)">&#8249;</button><span class="wklabel" id="wklabel">This week</span><button class="wkbtn" onclick="stepWeek(1)">&#8250;</button></div>
-    <div class="tbr" style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
+    <div class="tbr" style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="spanbtn" onclick="toggleSpan()">Week</button><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
   </div>
   <div id="logsearch" hidden><input id="ls" placeholder="Search the log&hellip;" autocomplete="off" autocorrect="off"
        autocapitalize="off" spellcheck="false" enterkeyhint="search" oninput="lsInput()"><button id="lsx" type="button"
@@ -485,7 +501,7 @@ const FONTS={
 };
 const MOTIONS={b:[["Bars fill","bars"],["Pop","pop"],["Slide","slide"],["Wobble","wobble"]],c:[["Bars draw","bars"],["Count up","count"],["Typewriter","type"],["Scanline","scan"]],d:[["Grow","grow"],["Unfurl","unfurl"],["Drift","drift"],["Pulse","pulse"]]};
 const THEMES=[["Brutalist","b"],["Terminal","c"],["Bloom","d"]];
-const DEF={theme:'b',font:{b:0,c:0,d:0},motion:{b:'bars',c:'bars',d:'grow'},weekMode:'cal',dayMode:'wake'};
+const DEF={theme:'b',font:{b:0,c:0,d:0},motion:{b:'bars',c:'bars',d:'grow'},weekMode:'cal',dayMode:'wake',span:'week'};
 let PREF=loadPref();
 function loadPref(){try{return Object.assign(JSON.parse(JSON.stringify(DEF)),JSON.parse(localStorage.getItem(PREF_KEY))||{});}catch(e){return JSON.parse(JSON.stringify(DEF));}}
 function savePref(){localStorage.setItem(PREF_KEY,JSON.stringify(PREF));}
@@ -540,8 +556,24 @@ function allDays(){const base=rawDays();return PREF.dayMode==='cal'?toCalDays(ba
 function carryNote(d){return d.carried?' &middot; +'+d.carried+' late':'';}
 function dayDiff(a,b){const pa=(y=>Date.UTC(y[0],y[1]-1,y[2]))(a.split('-').map(Number)),pb=(y=>Date.UTC(y[0],y[1]-1,y[2]))(b.split('-').map(Number));return Math.round((pb-pa)/86400000);}
 let weeks=[], curWeek=0;
+const MONTHS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function buildWeeks(){
   const days=allDays();
+  /* "weeks" is also the list of months when span=month; every consumer just
+     wants {label, days} plus an index, so the name stays. */
+  if(PREF.span==='month'){
+    if(!days.length){weeks=[];return;}
+    if(PREF.weekMode==='roll'){                        /* 30-day windows ending on the last logged day */
+      const last=days[days.length-1].date, map={};
+      days.forEach(d=>{const idx=Math.floor(dayDiff(d.date,last)/30);(map[idx]=map[idx]||[]).push(d);});
+      weeks=Object.keys(map).map(Number).sort((a,b)=>b-a).map(i=>{const start=addDays(last,-(i*30)-29),end=addDays(last,-(i*30));return {label:`${shortDate(start)} – ${shortDate(end)}`,days:map[i]};});
+    } else {                                           /* calendar months */
+      const map={};days.forEach(d=>{const mk=d.date.slice(0,7);(map[mk]=map[mk]||[]).push(d);});
+      weeks=Object.keys(map).sort().map(mk=>({label:`${MONTHS[+mk.slice(5)-1]} ${mk.slice(0,4)}`,days:map[mk]}));
+    }
+    if(curWeek>=weeks.length)curWeek=weeks.length-1; if(curWeek<0)curWeek=0;
+    return;
+  }
   if(PREF.weekMode==='roll'){
     if(!days.length){weeks=[];return;}
     const last=days[days.length-1].date, map={};
@@ -555,6 +587,14 @@ function buildWeeks(){
 }
 function stepWeek(n){curWeek=Math.max(0,Math.min(weeks.length-1,curWeek+n));render();}
 function toggleWeekMode(){PREF.weekMode=PREF.weekMode==='roll'?'cal':'roll';savePref();buildWeeks();curWeek=weeks.length-1;render();}
+function toggleSpan(){PREF.span=PREF.span==='month'?'week':'month';savePref();buildWeeks();curWeek=weeks.length-1;render();window.scrollTo(0,0);}
+function spanWord(){return PREF.span==='month'?'Month':'Week';}
+/* tapping a bar in month view opens that day's week */
+function jumpToWeek(date){
+  PREF.span='week';savePref();buildWeeks();
+  const i=weeks.findIndex(w=>w.days.some(d=>d.date===date));
+  if(i>=0)curWeek=i; render(); window.scrollTo(0,0);
+}
 
 /* ---- day totals ---- */
 /* b = fibre. bq ("questionable") counts items logged before fibre was tracked;
@@ -586,7 +626,7 @@ function glyph(size,o){const cx=size/2,cy=size/2,petals=Math.max(3,o.items),rMax
 /* ---- weekly aggregates for a week ---- */
 function weekSeries(wd){
   // wd = array of day objects in the week; produce Mon..Sun slots that have data
-  return wd.map(d=>{const t=totals(d);return {d:dow(d.date)[0],date:d.date,k:t.k,p:t.p,f:t.f,s:t.s,b:t.b,bq:t.bq};});
+  return wd.map(d=>{const t=totals(d);return {d:dow(d.date)[0],dm:+d.date.slice(8),mon:dow(d.date)==='Mon',date:d.date,k:t.k,p:t.p,f:t.f,s:t.s,b:t.b,bq:t.bq};});
 }
 
 /* ============ RENDER ============ */
@@ -600,6 +640,7 @@ function render(){
   const wk=weeks[curWeek];
   document.getElementById('wklabel').textContent=wk?wk.label:'No data';
   const mb=document.getElementById('modebtn');if(mb)mb.textContent=PREF.weekMode==='roll'?'Roll':'Cal';
+  const sb=document.getElementById('spanbtn');if(sb)sb.textContent=spanWord();
   const days=wk?[...wk.days]:[];
   const view=document.getElementById('view');
   ROWS=[];                                  /* rebuilt by swipeRow() below */
@@ -920,31 +961,53 @@ function applyMotion(){
 }
 
 /* ---------- unified weekly charts ---------- */
+/* average / median of a series, leaving out today (still being eaten) and
+   anything `skip` rejects (fibre days that are floors, not totals). */
+function seriesStats(S,key,skip){
+  const today=todayISO();
+  const v=S.filter(x=>x.date!==today&&!(skip&&skip(x))).map(x=>+x[key]||0).filter(n=>n>0);
+  if(!v.length)return null;
+  const s=[...v].sort((a,b)=>a-b), n=s.length;
+  return {avg:Math.round(v.reduce((a,b)=>a+b,0)/n), med:Math.round(n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2), n};
+}
 function barChart(S,key,max,o){
   const BM=o.bm||84;
   if(!S.length) return `<div class="wk"><div class="wk-n" style="text-align:left;color:#888">no data yet</div></div>`;
+  /* dense = month view: too many bars for a number each, so labels go on
+     Mondays only, the numbers row and sat sub-row are dropped, and each bar is
+     a tap target that opens its week. */
+  const dense=S.length>10, tap=PREF.span==='month';
   let nums='',cols='',days='',lines='';
   S.forEach(x=>{
     const v=x[key],H=Math.max(3,v/max*BM),ov=o.over&&o.over(x);
+    const tapx=tap?` onclick="jumpToWeek('${x.date}')"`:'';
     nums+=`<div class="wk-n ${ov?'over':''}">${ov&&!o.compact?'&#9650; ':''}${o.compact?Math.round(v):v}</div>`;
-    if(o.stacked){const sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;cols+=`<div class="wk-col"><div class="wk-bar stack ${ov?'over':''}" style="height:${H}px"><div class="fseg grn" style="height:${uf}%"></div><div class="fseg red" style="height:${sf}%"></div></div></div>`;}
-    else cols+=`<div class="wk-col"><div class="wk-bar ${o.cls?o.cls(x):''}" style="height:${H}px"></div></div>`;
-    days+=`<div class="wk-d">${x.d}</div>`;
+    if(o.stacked){const sf=x.f>0?x.s/x.f*100:0,uf=x.f>0?(x.f-x.s)/x.f*100:0;cols+=`<div class="wk-col${tap?' tap':''}"${tapx}><div class="wk-bar stack ${ov?'over':''}" style="height:${H}px"><div class="fseg grn" style="height:${uf}%"></div><div class="fseg red" style="height:${sf}%"></div></div></div>`;}
+    else cols+=`<div class="wk-col${tap?' tap':''}"${tapx}><div class="wk-bar ${o.cls?o.cls(x):''}" style="height:${H}px"></div></div>`;
+    days+=`<div class="wk-d">${dense?(x.mon||x.dm===1?x.dm:''):x.d}</div>`;
   });
-  (o.lines||[]).forEach(l=>{const off=Math.min(BM,l.v/max*BM);lines+=`<div class="wk-line ${l.cls||''}" style="bottom:${off}px"></div>`;});
+  (o.lines||[]).forEach(l=>{if(l.v==null)return;const off=Math.min(BM,l.v/max*BM);lines+=`<div class="wk-line ${l.cls||''}" style="bottom:${off}px"></div>`;});
   let subrow='';
-  if(o.sub){let subs='';S.forEach(x=>{const sv=o.sub(x);subs+=`<div class="wk-s ${o.subOver&&o.subOver(x)?'over':''}">${o.compact?Math.round(sv):sv}</div>`;});subrow=`<div class="wk-subs">${subs}</div>`;}
-  return `<div class="wk"><div class="wk-nums">${nums}</div><div class="wk-plot" style="height:${BM}px">${cols}${lines}</div>${subrow}<div class="wk-days">${days}</div></div>`;
+  if(o.sub&&!dense){let subs='';S.forEach(x=>{const sv=o.sub(x);subs+=`<div class="wk-s ${o.subOver&&o.subOver(x)?'over':''}">${o.compact?Math.round(sv):sv}</div>`;});subrow=`<div class="wk-subs">${subs}</div>`;}
+  let stat='';
+  if(o.stats){const st=o.stats;stat=`<div class="wk-stat"><span class="lg avg"></span>avg ${st.avg}${o.median?` &nbsp;<span class="lg med"></span>median ${st.med}`:''}</div>`;}
+  const dc=dense?' dense':'';
+  return `<div class="wk${dc}">${dense?'':`<div class="wk-nums">${nums}</div>`}<div class="wk-plot${dc}" style="height:${BM}px">${cols}${lines}</div>${subrow}<div class="wk-days${dc}">${days}</div>${stat}</div>`;
 }
 function weekCharts(days){
   const S=weekSeries(days),T=DATA.targets;
   const maxK=Math.max(T.kcal,...S.map(x=>x.k),1)*1.12, maxP=Math.max(T.protein,...S.map(x=>x.p),1)*1.12, maxF=Math.max(T.fat,...S.map(x=>x.f),1)*1.12,
         maxB=Math.max(T.fibre,...S.map(x=>x.b),1)*1.12;
+  /* average + median on the two big charts, average only on the small pair.
+     Today is left out of both while it is still in progress. */
+  const sk=seriesStats(S,'k'), sp=seriesStats(S,'p'), sf=seriesStats(S,'f'), sb=seriesStats(S,'b',x=>x.bq>0);
+  const L=(st,med)=>st?[{v:st.avg,cls:'avg'}].concat(med?[{v:st.med,cls:'med'}]:[]):[];
   return {
-    cal:barChart(S,'k',maxK,{cls:x=>x.k>T.kcal?'over':'ok',lines:[{v:T.kcal,cls:'target',label:T.kcal}]}),
-    pro:barChart(S,'p',maxP,{cls:x=>x.p>=T.protein?'okp':'lowp',lines:[{v:T.protein,cls:'target',label:T.protein}]}),
-    fat:barChart(S,'f',maxF,{compact:true,stacked:true,over:x=>x.s>T.sat,sub:x=>x.s,subOver:x=>x.s>T.sat,lines:[{v:T.sat,cls:'sat'},{v:T.fat,cls:'target'}]}),
-    fib:barChart(S,'b',maxB,{compact:true,cls:x=>x.b>=T.fibre?'okp':'lowp',lines:[{v:T.fibre,cls:'target',label:T.fibre}]}),
+    cal:barChart(S,'k',maxK,{cls:x=>x.k>T.kcal?'over':'ok',stats:sk,median:true,lines:[{v:T.kcal,cls:'target',label:T.kcal}].concat(L(sk,true))}),
+    pro:barChart(S,'p',maxP,{cls:x=>x.p>=T.protein?'okp':'lowp',stats:sp,median:true,lines:[{v:T.protein,cls:'target',label:T.protein}].concat(L(sp,true))}),
+    fat:barChart(S,'f',maxF,{compact:true,stacked:true,over:x=>x.s>T.sat,sub:x=>x.s,subOver:x=>x.s>T.sat,stats:sf,lines:[{v:T.sat,cls:'sat'},{v:T.fat,cls:'target'}].concat(L(sf))}),
+    fib:barChart(S,'b',maxB,{compact:true,cls:x=>x.b>=T.fibre?'okp':'lowp',stats:sb,lines:[{v:T.fibre,cls:'target',label:T.fibre}].concat(L(sb))}),
+    hint:PREF.span==='month'?'<div class="wk-hint">Tap a bar to open that week.</div>':'',
     lowFib:S.filter(x=>x.b<T.fibre).length,
     overN:S.filter(x=>x.s>T.sat).length, ndays:S.length
   };
@@ -964,12 +1027,13 @@ function weekChartB(days){
 }
 function renderB(days){
   const W=weekCharts(days);
-  let h=`<div class="card"><div class="ctitle"><span class="dchip">Week &middot; Calories</span><span style="font-family:Arial;font-size:10px;color:#666">target 1900</span></div>${W.cal}</div>
-    <div class="card"><div class="ctitle"><span class="dchip">Week &middot; Protein</span><span style="font-family:Arial;font-size:10px;color:#666">goal 150</span></div>${W.pro}</div>
+  let h=`<div class="card"><div class="ctitle"><span class="dchip">${spanWord()} &middot; Calories</span><span style="font-family:Arial;font-size:10px;color:#666">target 1900</span></div>${W.cal}</div>
+    <div class="card"><div class="ctitle"><span class="dchip">${spanWord()} &middot; Protein</span><span style="font-family:Arial;font-size:10px;color:#666">goal 150</span></div>${W.pro}</div>
     <div class="prow">
       <div class="card"><div class="ctitle"><span class="dchip">Fat</span><span style="font-family:Arial;font-size:9px;color:${W.overN?'#e5271b':'#666'}">sat ${W.overN}/${W.ndays}d</span></div>${W.fat}</div>
       <div class="card"><div class="ctitle"><span class="dchip">Fibre</span><span style="font-family:Arial;font-size:9px;color:${W.lowFib?'#e5271b':'#666'}">under ${W.lowFib}/${W.ndays}d</span></div>${W.fib}</div>
-    </div>`;
+    </div>${W.hint}`;
+  if(PREF.span==='month')return h;                 /* month view is charts only */
   [...days].reverse().forEach(d=>{
     const t=totals(d),T=DATA.targets;
     const meals=sortItems(d.items).map((it,i)=>{const src=imgSrc(it);const thumb=src?`<img class="thumb" src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:`<div class="noimg">NO<br>PIC</div>`;
@@ -1004,7 +1068,8 @@ function renderC(days){
   h+=`<div class="prow">`
     +`<div class="panel"><div class="h">// fat &middot; ${W.overN}/${W.ndays}d sat over</div>${W.fat}</div>`
     +`<div class="panel"><div class="h">// fibre &middot; ${W.lowFib}/${W.ndays}d under ${T.fibre}</div>${W.fib}</div>`
-    +`</div>`;
+    +`</div>`+W.hint;
+  if(PREF.span==='month')return h;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const id=d.date.replace(/-/g,'_');
     h+=`<div class="dhead" data-full="${id}.log">${id}.log ${d.workout?`<span class="wk">[${d.workout.toLowerCase().replace(/ /g,'_')}]</span>`:''}</div>`;
@@ -1050,7 +1115,8 @@ function renderD(days){
   h+=`<div class="prow">`
     +`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat</span> &middot; ${W.overN}/${W.ndays}d over</div>${W.fat}</div>`
     +`<div class="panel"><div class="h">Fibre &middot; goal ${T.fibre} &middot; ${W.lowFib}/${W.ndays}d under</div>${W.fib}</div>`
-    +`</div>`;
+    +`</div>`+W.hint;
+  if(PREF.span==='month')return h;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
     const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return swipeRow(it,d.date,`<div class="meal">${im}<div class="nm"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`);}).join('');

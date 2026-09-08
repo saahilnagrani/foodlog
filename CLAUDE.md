@@ -136,7 +136,14 @@ guessing it badly swamps the food estimate.
    the live site (and the phone app) update.
 
 ## What does NOT need Claude
-- Viewing the log, weekly charts, macros: pure static site. A fixed bottom nav
+- Viewing the log, weekly charts, macros: pure static site. The top bar's
+  **Week/Month** button switches the charts between a week and a month (the
+  Cal/Roll button then means calendar month or last 30 days). Month view is
+  charts only: no per-bar numbers, Mondays labelled, the day list hidden, and
+  tapping a bar opens that week. Every chart draws an **average** line (solid)
+  and the two big ones a **median** line (dotted); today is excluded from both
+  while it is still being eaten, and fibre days containing pre-fibre items are
+  excluded because they are floors. A fixed bottom nav
   switches between **Log**, **Search** (the whole-log search bar) and **Plan**
   (the training-plan sheet). The nav exists because the Android wrapper's
   pull-to-refresh swallows the pull-down gesture that also opens search.
