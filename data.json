@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-08",
+  "updated": "2026-09-09",
   "days": [
     {
       "date": "2026-07-24",
@@ -5521,6 +5521,24 @@
           "sat": 0,
           "carb": 4.5,
           "fibre": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "label": "Wed 9 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Snack",
+          "t": "17:48",
+          "name": "Whey drink (30g ON whey vanilla + 12g ISO100 mocha + 200ml Oatly Barista + 16g nuts & seeds)",
+          "kcal": 385,
+          "protein": 37.2,
+          "fat": 17.6,
+          "sat": 2.6,
+          "carb": 20.5,
+          "fibre": 2.7
         }
       ]
     }
