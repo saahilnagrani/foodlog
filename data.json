@@ -5584,6 +5584,18 @@
           "sat": 0,
           "carb": 20.9,
           "fibre": 6
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:50",
+          "name": "Chilli chicken 160g (110g cooked chicken breast + coating, onion & tomato masala)",
+          "kcal": 300,
+          "protein": 36,
+          "fat": 13.8,
+          "sat": 2.6,
+          "carb": 10.5,
+          "fibre": 1.1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed9_chillichicken.jpg"
         }
       ]
     }
