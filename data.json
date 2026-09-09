@@ -5539,6 +5539,50 @@
           "sat": 2.6,
           "carb": 20.5,
           "fibre": 2.7
+        },
+        {
+          "meal": "Snack",
+          "t": "19:30",
+          "name": "Pyaaz paratha x1 (~75g)",
+          "kcal": 175,
+          "protein": 4,
+          "fat": 6,
+          "sat": 1,
+          "carb": 26,
+          "fibre": 2.6
+        },
+        {
+          "meal": "Snack",
+          "t": "19:30",
+          "name": "Greek yogurt 0% 110g",
+          "kcal": 69,
+          "protein": 11,
+          "fat": 0.5,
+          "sat": 0,
+          "carb": 5,
+          "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:37",
+          "name": "Daal palak ~290g",
+          "kcal": 343,
+          "protein": 16.6,
+          "fat": 10,
+          "sat": 1.2,
+          "carb": 46.5,
+          "fibre": 10
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:37",
+          "name": "Moong sprout salad ~100g",
+          "kcal": 60,
+          "protein": 4.5,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 10,
+          "fibre": 3.5
         }
       ]
     }
