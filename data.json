@@ -5564,18 +5564,19 @@
         },
         {
           "meal": "Dinner",
-          "t": "20:37",
-          "name": "Daal palak ~290g",
-          "kcal": 343,
-          "protein": 16.6,
-          "fat": 10,
-          "sat": 1.2,
-          "carb": 46.5,
-          "fibre": 10
+          "t": "20:40",
+          "name": "Daal palak 360g",
+          "kcal": 426,
+          "protein": 20.6,
+          "fat": 12.4,
+          "sat": 1.5,
+          "carb": 57.7,
+          "fibre": 12.4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed9_daalpalak.jpg"
         },
         {
           "meal": "Dinner",
-          "t": "20:37",
+          "t": "20:40",
           "name": "Moong sprout salad ~100g with onion & tomato",
           "kcal": 112,
           "protein": 7.5,
