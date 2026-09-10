@@ -5605,6 +5605,18 @@
       "workout": "",
       "items": [
         {
+          "meal": "Lunch",
+          "t": "15:14",
+          "name": "Chicken pasta 234g (276g plated, 42g chicken left; ~75g cooked chicken breast + ~125g spaghetti + creamy masala sauce)",
+          "kcal": 384,
+          "protein": 31.5,
+          "fat": 8.9,
+          "sat": 3,
+          "carb": 41.5,
+          "fibre": 3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_chickenpasta.jpg"
+        },
+        {
           "meal": "Snack",
           "t": "16:03",
           "name": "Whey drink (30g ON whey vanilla + 12g ISO100 mocha + 150ml Oatly Barista + 18g nuts & seeds + 95g strawberries)",
