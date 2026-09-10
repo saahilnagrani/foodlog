@@ -5607,14 +5607,25 @@
         {
           "meal": "Lunch",
           "t": "15:14",
-          "name": "Chicken pasta 234g (276g plated, 42g chicken left; ~75g cooked chicken breast + ~125g spaghetti + creamy masala sauce)",
-          "kcal": 384,
-          "protein": 31.5,
-          "fat": 8.9,
-          "sat": 3,
-          "carb": 41.5,
-          "fibre": 3,
+          "name": "Chicken pasta 276g (~90g cooked chicken breast + ~145g spaghetti + creamy masala sauce)",
+          "kcal": 453,
+          "protein": 37.7,
+          "fat": 10.6,
+          "sat": 3.5,
+          "carb": 48,
+          "fibre": 3.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_chickenpasta.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:28",
+          "name": "Chicken pieces in masala 42g (2nd serving)",
+          "kcal": 72,
+          "protein": 11.4,
+          "fat": 2.2,
+          "sat": 0.7,
+          "carb": 0.6,
+          "fibre": 0.1
         },
         {
           "meal": "Snack",
