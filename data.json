@@ -5637,6 +5637,73 @@
           "sat": 2.6,
           "carb": 24.8,
           "fibre": 4.4
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:23",
+          "name": "Matar tofu 120g",
+          "kcal": 160,
+          "protein": 10.4,
+          "fat": 9,
+          "sat": 1.4,
+          "carb": 7.6,
+          "fibre": 2.4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_matartofu.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:23",
+          "name": "Plain paratha x2 (~55g each)",
+          "kcal": 320,
+          "protein": 8.8,
+          "fat": 9.6,
+          "sat": 1.6,
+          "carb": 51,
+          "fibre": 5.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:23",
+          "name": "Greek yogurt 0% 115g",
+          "kcal": 72,
+          "protein": 11.5,
+          "fat": 0.6,
+          "sat": 0,
+          "carb": 5.2,
+          "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:23",
+          "name": "Haldiram masala boondi 15g",
+          "kcal": 86,
+          "protein": 2,
+          "fat": 5.3,
+          "sat": 0.6,
+          "carb": 7.5,
+          "fibre": 0.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:23",
+          "name": "Punjabi masala papad, 1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:23",
+          "name": "Dilkhush papad, half",
+          "kcal": 17,
+          "protein": 1,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 3,
+          "fibre": 0.3
         }
       ]
     }
