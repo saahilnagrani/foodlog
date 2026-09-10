@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-09",
+  "updated": "2026-09-10",
   "days": [
     {
       "date": "2026-07-24",
@@ -5596,6 +5596,24 @@
           "carb": 10.5,
           "fibre": 1.1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed9_chillichicken.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "label": "Thu 10 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Snack",
+          "t": "16:03",
+          "name": "Whey drink (30g ON whey vanilla + 12g ISO100 mocha + 150ml Oatly Barista + 18g nuts & seeds + 95g strawberries)",
+          "kcal": 399,
+          "protein": 37.7,
+          "fat": 17.6,
+          "sat": 2.6,
+          "carb": 24.8,
+          "fibre": 4.4
         }
       ]
     }
