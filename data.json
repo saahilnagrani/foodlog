@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-10",
+  "updated": "2026-09-11",
   "days": [
     {
       "date": "2026-07-24",
@@ -5716,6 +5716,39 @@
           "carb": 15,
           "fibre": 0.8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_watermelon.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "28:50",
+          "name": "Lay's French cheese chips 45g (label)",
+          "kcal": 238,
+          "protein": 3.1,
+          "fat": 15.3,
+          "sat": 6.8,
+          "carb": 21.6,
+          "fibre": 1.8
+        },
+        {
+          "meal": "Snack",
+          "t": "28:50",
+          "name": "Hunter's sea salt & black pepper chips 40g (label)",
+          "kcal": 195,
+          "protein": 3,
+          "fat": 10.7,
+          "sat": 1.1,
+          "carb": 23.9,
+          "fibre": 2.2
+        },
+        {
+          "meal": "Snack",
+          "t": "28:50",
+          "name": "Mr Makhana pudina party 75g (label)",
+          "kcal": 386,
+          "protein": 5.7,
+          "fat": 20.9,
+          "sat": 5.2,
+          "carb": 43.7,
+          "fibre": 3
         }
       ]
     }
