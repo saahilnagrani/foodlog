@@ -5801,6 +5801,74 @@
           "sat": 2.9,
           "carb": 21.2,
           "fibre": 2.9
+        },
+        {
+          "meal": "Drink",
+          "t": "20:30",
+          "name": "Frozen mango margarita x3 (1 coupe + 2 rocks glass, ~180ml each)",
+          "kcal": 750,
+          "protein": 1.5,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 85,
+          "fibre": 1.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_margarita.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:15",
+          "name": "Buffalo chicken wings x5 (fried, hot sauce & butter)",
+          "kcal": 475,
+          "protein": 35,
+          "fat": 33,
+          "sat": 9,
+          "carb": 8,
+          "fibre": 0
+        },
+        {
+          "meal": "Drink",
+          "t": "22:00",
+          "name": "Soju x3 shots (~150ml)",
+          "kcal": 200,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 9,
+          "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:45",
+          "name": "Mango bingsoo",
+          "kcal": 280,
+          "protein": 5,
+          "fat": 8,
+          "sat": 5,
+          "carb": 45,
+          "fibre": 1.5
+        },
+        {
+          "meal": "Snack",
+          "t": "24:01",
+          "name": "Raspberry vanilla cheesecake, half (~75g)",
+          "kcal": 250,
+          "protein": 4,
+          "fat": 16,
+          "sat": 9,
+          "carb": 22,
+          "fibre": 0.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_cheesecake.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "25:00",
+          "name": "Watermelon 200g",
+          "kcal": 60,
+          "protein": 1.2,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 15,
+          "fibre": 0.8
         }
       ]
     }
