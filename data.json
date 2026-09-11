@@ -5817,12 +5817,12 @@
         {
           "meal": "Dinner",
           "t": "21:15",
-          "name": "Buffalo chicken wings x5 (fried, hot sauce & butter)",
-          "kcal": 475,
-          "protein": 35,
-          "fat": 33,
-          "sat": 9,
-          "carb": 8,
+          "name": "Buffalo chicken wings x5 split pieces (fried, hot sauce & butter)",
+          "kcal": 380,
+          "protein": 25,
+          "fat": 27,
+          "sat": 7.5,
+          "carb": 7,
           "fibre": 0
         },
         {
