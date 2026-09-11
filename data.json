@@ -5760,13 +5760,13 @@
         {
           "meal": "Lunch",
           "t": "14:58",
-          "name": "Chicken curry ~190g (~120g cooked chicken breast + ~70g gravy, not weighed)",
-          "kcal": 278,
-          "protein": 38.5,
-          "fat": 10.3,
-          "sat": 2.2,
-          "carb": 5.5,
-          "fibre": 0.9,
+          "name": "Chicken curry 190g (135g cooked chicken breast + 55g gravy)",
+          "kcal": 286,
+          "protein": 43,
+          "fat": 9.6,
+          "sat": 2.1,
+          "carb": 4.3,
+          "fibre": 0.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_chickencurry.jpg"
         },
         {
