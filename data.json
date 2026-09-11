@@ -5751,6 +5751,47 @@
           "fibre": 3
         }
       ]
+    },
+    {
+      "date": "2026-09-11",
+      "label": "Fri 11 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:58",
+          "name": "Chicken curry ~190g (~120g cooked chicken breast + ~70g gravy, not weighed)",
+          "kcal": 278,
+          "protein": 38.5,
+          "fat": 10.3,
+          "sat": 2.2,
+          "carb": 5.5,
+          "fibre": 0.9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_chickencurry.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:58",
+          "name": "Plain paratha x1 (~55g)",
+          "kcal": 160,
+          "protein": 4.4,
+          "fat": 4.8,
+          "sat": 0.8,
+          "carb": 25.5,
+          "fibre": 2.8
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:58",
+          "name": "Green chilli pickle ~15g",
+          "kcal": 22,
+          "protein": 0.2,
+          "fat": 1.9,
+          "sat": 0.2,
+          "carb": 1.1,
+          "fibre": 0.4
+        }
+      ]
     }
   ]
 }
