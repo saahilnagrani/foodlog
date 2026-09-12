@@ -5920,6 +5920,29 @@
           "sat": 1,
           "carb": 31.5,
           "fibre": 3.4
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:44",
+          "name": "Poha 87g cooked (605g gross in 518g bowl)",
+          "kcal": 179,
+          "protein": 3.7,
+          "fat": 7.1,
+          "sat": 1,
+          "carb": 25,
+          "fibre": 1.2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat12_poha.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:44",
+          "name": "Bikaneri bhujia 66g (label rate)",
+          "kcal": 378,
+          "protein": 8.3,
+          "fat": 25.9,
+          "sat": 8.1,
+          "carb": 27.9,
+          "fibre": 2.6
         }
       ]
     }
