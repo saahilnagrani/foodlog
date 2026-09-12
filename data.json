@@ -5943,6 +5943,17 @@
           "sat": 8.1,
           "carb": 27.9,
           "fibre": 2.6
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:05",
+          "name": "Poha 35g cooked (2nd serving)",
+          "kcal": 72,
+          "protein": 1.5,
+          "fat": 2.9,
+          "sat": 0.4,
+          "carb": 10.1,
+          "fibre": 0.5
         }
       ]
     }
