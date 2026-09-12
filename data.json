@@ -5878,6 +5878,17 @@
       "workout": "",
       "items": [
         {
+          "meal": "Drink",
+          "t": "20:00",
+          "name": "Whey drink (32g ON whey vanilla + 11g ISO100 mocha + 150ml Oatly Barista + 17g nuts & seeds + 100g strawberries)",
+          "kcal": 398,
+          "protein": 38.4,
+          "fat": 17,
+          "sat": 2.6,
+          "carb": 25.2,
+          "fibre": 4.4
+        },
+        {
           "meal": "Dinner",
           "t": "21:20",
           "name": "Moong sprout salad 100g with onion & tomato",
