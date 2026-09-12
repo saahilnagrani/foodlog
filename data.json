@@ -5954,6 +5954,17 @@
           "sat": 0.4,
           "carb": 10.1,
           "fibre": 0.5
+        },
+        {
+          "meal": "Snack",
+          "t": "23:40",
+          "name": "Cheesecake Factory Godiva chocolate cheesecake ~28g",
+          "kcal": 115,
+          "protein": 1.6,
+          "fat": 7.5,
+          "sat": 4.5,
+          "carb": 11,
+          "fibre": 0.5
         }
       ]
     }
