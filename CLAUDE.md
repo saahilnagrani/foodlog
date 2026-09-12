@@ -86,6 +86,7 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 | deep steel bowl (egg curry, 10 Aug) | 353 g |
 | large salad bowl (watermelon & feta, 19 Aug) | 833 g |
 | clear glass mixing bowl (daal palak, 9 Sep; about twice the shaker's width) | **590 g** |
+| dark blue ceramic bowl (poha, 12 Sep) | **518 g** |
 
 If a gross weight arrives for a container that isn't listed, estimate it but say so,
 and ask for the empty weight — the container is usually most of the gross figure, so
