@@ -6028,6 +6028,29 @@
           "sat": 0.7,
           "carb": 1,
           "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:56",
+          "name": "Salmon, cooked 288g (spice-rubbed, pan-seared)",
+          "kcal": 565,
+          "protein": 63.4,
+          "fat": 34.6,
+          "sat": 6.9,
+          "carb": 0,
+          "fibre": 0,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun13_salmon.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:56",
+          "name": "Moong sprout salad 100g with onion & tomato",
+          "kcal": 112,
+          "protein": 7.5,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 20.9,
+          "fibre": 6
         }
       ]
     }
