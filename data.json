@@ -5978,6 +5978,36 @@
           "fibre": 0
         }
       ]
+    },
+    {
+      "date": "2026-09-13",
+      "label": "Sun 13 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "15:28",
+          "name": "Poha 140g cooked (658g gross in 518g bowl)",
+          "kcal": 288,
+          "protein": 6,
+          "fat": 11.4,
+          "sat": 1.6,
+          "carb": 40.2,
+          "fibre": 1.9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun13_poha.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:28",
+          "name": "Bikaji bikaneri bhujia 31g (label rate)",
+          "kcal": 177,
+          "protein": 3.9,
+          "fat": 12.2,
+          "sat": 3.8,
+          "carb": 13.1,
+          "fibre": 1.2
+        }
+      ]
     }
   ]
 }
