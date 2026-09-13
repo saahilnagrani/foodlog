@@ -5999,13 +5999,13 @@
         {
           "meal": "Lunch",
           "t": "15:28",
-          "name": "Bikaji bikaneri bhujia 31g (label rate)",
-          "kcal": 177,
-          "protein": 3.9,
-          "fat": 12.2,
-          "sat": 3.8,
-          "carb": 13.1,
-          "fibre": 1.2
+          "name": "Bikaji bikaneri bhujia 45g (31g + 14g, label rate)",
+          "kcal": 257,
+          "protein": 5.6,
+          "fat": 17.6,
+          "sat": 5.5,
+          "carb": 19,
+          "fibre": 1.8
         },
         {
           "meal": "Snack",
