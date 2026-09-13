@@ -6006,6 +6006,28 @@
           "sat": 3.8,
           "carb": 13.1,
           "fibre": 1.2
+        },
+        {
+          "meal": "Snack",
+          "t": "16:09",
+          "name": "Scrambled eggs (whole) (1 eggs)",
+          "kcal": 72,
+          "protein": 6.3,
+          "fat": 4.8,
+          "sat": 1.6,
+          "carb": 0.4,
+          "fibre": 0
+        },
+        {
+          "meal": "Snack",
+          "t": "16:09",
+          "name": "Egg-white omelette (5 egg whites + 1tsp oil)",
+          "kcal": 130,
+          "protein": 18,
+          "fat": 5.3,
+          "sat": 0.7,
+          "carb": 1,
+          "fibre": 0
         }
       ]
     }
