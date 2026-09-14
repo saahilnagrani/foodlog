@@ -6106,7 +6106,7 @@
         },
         {
           "meal": "Lunch",
-          "t": "16:00",
+          "t": "14:30",
           "name": "Papa John's Nashville chicken sandwich (GST)",
           "kcal": 750,
           "protein": 39,
@@ -6117,36 +6117,39 @@
         },
         {
           "meal": "Dinner",
-          "t": "18:30",
-          "name": "Etihad EY326 side salad with dressing (~80g, estimated)",
-          "kcal": 90,
-          "protein": 2,
+          "t": "15:44",
+          "name": "Etihad EY326 roasted sweet potato & chickpea salad (~90g)",
+          "kcal": 120,
+          "protein": 3,
+          "fat": 4,
+          "sat": 0.5,
+          "carb": 18,
+          "fibre": 3.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_flightsalad.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "15:51",
+          "name": "Etihad EY326 dessert: almond flakes + syrup fruit pieces + a little of the cream (base left)",
+          "kcal": 150,
+          "protein": 3,
           "fat": 6,
-          "sat": 1,
-          "carb": 7,
-          "fibre": 2
+          "sat": 1.5,
+          "carb": 20,
+          "fibre": 1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_flightdessert.jpg"
         },
         {
           "meal": "Dinner",
-          "t": "18:45",
-          "name": "Etihad EY326 dessert, ~2/3 eaten (estimated)",
-          "kcal": 180,
-          "protein": 2.5,
-          "fat": 8,
-          "sat": 5,
-          "carb": 25,
-          "fibre": 0.5
-        },
-        {
-          "meal": "Dinner",
-          "t": "22:00",
-          "name": "Papa John's Spicy Chicken Ranch Papadia (IST, in taxi; estimated)",
-          "kcal": 800,
-          "protein": 42,
-          "fat": 36,
+          "t": "21:01",
+          "name": "Papa John's Spicy Chicken Ranch Papadia, whole, + some garlic & ranch dip (IST, in taxi)",
+          "kcal": 850,
+          "protein": 43,
+          "fat": 40,
           "sat": 13,
-          "carb": 75,
-          "fibre": 3
+          "carb": 76,
+          "fibre": 3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_papadia.jpg"
         },
         {
           "meal": "Dinner",
