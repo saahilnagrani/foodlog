@@ -6142,12 +6142,12 @@
         {
           "meal": "Dinner",
           "t": "21:01",
-          "name": "Papa John's Spicy Chicken Ranch Papadia, whole, + some garlic & ranch dip (IST, in taxi)",
-          "kcal": 850,
-          "protein": 43,
-          "fat": 40,
-          "sat": 13,
-          "carb": 76,
+          "name": "Papa John's Spicy Chicken Ranch Papadia, whole, + half a buffalo dip cup (IST, in taxi)",
+          "kcal": 815,
+          "protein": 42,
+          "fat": 37.5,
+          "sat": 12.5,
+          "carb": 75,
           "fibre": 3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_papadia.jpg"
         },
