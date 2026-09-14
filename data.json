@@ -6130,12 +6130,12 @@
         {
           "meal": "Dinner",
           "t": "15:51",
-          "name": "Etihad EY326 dessert: almond flakes + syrup fruit pieces + a little of the cream (base left)",
-          "kcal": 150,
-          "protein": 3,
-          "fat": 6,
-          "sat": 1.5,
-          "carb": 20,
+          "name": "Etihad EY326 dessert: 2 small mild gulab jamun + almond flakes + a little of the cream (base left)",
+          "kcal": 185,
+          "protein": 3.5,
+          "fat": 8,
+          "sat": 2.5,
+          "carb": 24,
           "fibre": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_flightdessert.jpg"
         },
