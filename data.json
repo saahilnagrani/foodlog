@@ -6073,25 +6073,25 @@
         {
           "meal": "Breakfast",
           "t": "11:37",
-          "name": "Chicken curry ~441g (771g gross in 330g glass container; ~220g cooked chicken breast + ~220g gravy, split estimated)",
-          "kcal": 616,
-          "protein": 72,
-          "fat": 27,
-          "sat": 5.5,
-          "carb": 17,
-          "fibre": 2.6,
+          "name": "Prawn curry 233g eaten (771g - 538g left; ~120g cooked prawns + ~113g tomato-onion masala)",
+          "kcal": 259,
+          "protein": 30.3,
+          "fat": 11.1,
+          "sat": 1.9,
+          "carb": 10,
+          "fibre": 1.4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_chickencurry.jpg"
         },
         {
           "meal": "Breakfast",
           "t": "11:37",
-          "name": "Plain paratha x2 (~55g each)",
-          "kcal": 320,
-          "protein": 8.8,
-          "fat": 9.6,
-          "sat": 1.6,
-          "carb": 51,
-          "fibre": 5.5
+          "name": "Plain paratha x1.5 (~55g each)",
+          "kcal": 240,
+          "protein": 6.6,
+          "fat": 7.2,
+          "sat": 1.2,
+          "carb": 38,
+          "fibre": 4.1
         }
       ]
     }
