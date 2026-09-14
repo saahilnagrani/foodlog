@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-13",
+  "updated": "2026-09-14",
   "days": [
     {
       "date": "2026-07-24",
@@ -6062,6 +6062,36 @@
           "sat": 0,
           "carb": 27,
           "fibre": 3.1
+        }
+      ]
+    },
+    {
+      "date": "2026-09-14",
+      "label": "Mon 14 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "11:37",
+          "name": "Chicken curry ~441g (771g gross in 330g glass container; ~220g cooked chicken breast + ~220g gravy, split estimated)",
+          "kcal": 616,
+          "protein": 72,
+          "fat": 27,
+          "sat": 5.5,
+          "carb": 17,
+          "fibre": 2.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_chickencurry.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:37",
+          "name": "Plain paratha x2 (~55g each)",
+          "kcal": 320,
+          "protein": 8.8,
+          "fat": 9.6,
+          "sat": 1.6,
+          "carb": 51,
+          "fibre": 5.5
         }
       ]
     }
