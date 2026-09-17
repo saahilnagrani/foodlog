@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-14",
+  "updated": "2026-09-17",
   "days": [
     {
       "date": "2026-07-24",
@@ -6161,6 +6161,170 @@
           "sat": 0.4,
           "carb": 32,
           "fibre": 3.3
+        }
+      ]
+    },
+    {
+      "date": "2026-09-16",
+      "label": "Wed 16 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "09:05",
+          "name": "Kadhi kachori x1 (Ajmer street stall)",
+          "kcal": 300,
+          "protein": 6,
+          "fat": 17,
+          "sat": 3,
+          "carb": 32,
+          "fibre": 2.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_kachori.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:16",
+          "name": "Sindhi koki x2.5 (homemade, ~65g each)",
+          "kcal": 575,
+          "protein": 13,
+          "fat": 22,
+          "sat": 5,
+          "carb": 82,
+          "fibre": 9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_koki.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:16",
+          "name": "Mango pickle ~15g",
+          "kcal": 30,
+          "protein": 0.3,
+          "fat": 2.5,
+          "sat": 0.3,
+          "carb": 2,
+          "fibre": 0.5
+        },
+        {
+          "meal": "Breakfast",
+          "t": "11:16",
+          "name": "Chai, small cup, no sugar (~80ml)",
+          "kcal": 30,
+          "protein": 1.5,
+          "fat": 1.5,
+          "sat": 1,
+          "carb": 2.5,
+          "fibre": 0
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:00",
+          "name": "Plain roti x2 (~40g each)",
+          "kcal": 240,
+          "protein": 7,
+          "fat": 4,
+          "sat": 1,
+          "carb": 46,
+          "fibre": 5
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:00",
+          "name": "Dahi ~150g (full-fat)",
+          "kcal": 95,
+          "protein": 5,
+          "fat": 5,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 0
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:00",
+          "name": "Bhujia ~30g",
+          "kcal": 172,
+          "protein": 3.8,
+          "fat": 11.8,
+          "sat": 3.7,
+          "carb": 12.7,
+          "fibre": 1.2
+        },
+        {
+          "meal": "Snack",
+          "t": "17:00",
+          "name": "Apple, 8 slices (~150g)",
+          "kcal": 78,
+          "protein": 0.4,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 21,
+          "fibre": 3.6
+        },
+        {
+          "meal": "Drink",
+          "t": "18:00",
+          "name": "Epigamia Turbo coffee protein shake 250ml (label)",
+          "kcal": 138,
+          "protein": 25,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 9,
+          "fibre": 0
+        },
+        {
+          "meal": "Snack",
+          "t": "19:00",
+          "name": "Banana 1",
+          "kcal": 105,
+          "protein": 1.3,
+          "fat": 0.35,
+          "sat": 0,
+          "carb": 27,
+          "fibre": 3.1
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:19",
+          "name": "Chicken tikka x12 pieces (~270g, Kebabs & Curries Co, priced as thigh)",
+          "kcal": 620,
+          "protein": 65,
+          "fat": 38,
+          "sat": 11,
+          "carb": 5,
+          "fibre": 0.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_tikka.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:19",
+          "name": "Mint chutney ~40g",
+          "kcal": 40,
+          "protein": 1.5,
+          "fat": 2.5,
+          "sat": 1,
+          "carb": 3,
+          "fibre": 0.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:19",
+          "name": "Rumali roti x1",
+          "kcal": 150,
+          "protein": 4.5,
+          "fat": 1.5,
+          "sat": 0.3,
+          "carb": 30,
+          "fibre": 1
+        },
+        {
+          "meal": "Snack",
+          "t": "23:30",
+          "name": "The Baker's Dozen carrot walnut cake 30g (label)",
+          "kcal": 124,
+          "protein": 2.7,
+          "fat": 6.9,
+          "sat": 2.7,
+          "carb": 12.6,
+          "fibre": 1.8
         }
       ]
     }
