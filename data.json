@@ -6433,6 +6433,57 @@
           "fibre": 1.8
         }
       ]
+    },
+    {
+      "date": "2026-09-17",
+      "label": "Thu 17 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "09:50",
+          "name": "Kulhad adrak chai, no sugar (~120ml)",
+          "kcal": 45,
+          "protein": 2.2,
+          "fat": 2.2,
+          "sat": 1.4,
+          "carb": 3.5,
+          "fibre": 0
+        },
+        {
+          "meal": "Breakfast",
+          "t": "09:50",
+          "name": "The Baker's Dozen carrot walnut cake 90g (label)",
+          "kcal": 372,
+          "protein": 8.1,
+          "fat": 20.7,
+          "sat": 8.1,
+          "carb": 37.8,
+          "fibre": 5.4
+        },
+        {
+          "meal": "Snack",
+          "t": "10:31",
+          "name": "Khaman 100g with green chutney (Maan Ji Chaat, Ajmer)",
+          "kcal": 195,
+          "protein": 6.5,
+          "fat": 7.5,
+          "sat": 0.8,
+          "carb": 26,
+          "fibre": 3
+        },
+        {
+          "meal": "Snack",
+          "t": "10:31",
+          "name": "Samosa x1 with kadhi (Maan Ji Chaat, Ajmer)",
+          "kcal": 320,
+          "protein": 6.5,
+          "fat": 17,
+          "sat": 3.5,
+          "carb": 33,
+          "fibre": 3
+        }
+      ]
     }
   ]
 }
