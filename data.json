@@ -6482,6 +6482,40 @@
           "sat": 3.5,
           "carb": 33,
           "fibre": 3
+        },
+        {
+          "meal": "Lunch",
+          "t": "22:52",
+          "name": "Moong dal khichdi ~300g (estimated, not weighed)",
+          "kcal": 330,
+          "protein": 11,
+          "fat": 9,
+          "sat": 2,
+          "carb": 50,
+          "fibre": 5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu17_khichdi.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "22:52",
+          "name": "Amul Masti dahi ~150g",
+          "kcal": 90,
+          "protein": 5,
+          "fat": 4.5,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 0
+        },
+        {
+          "meal": "Lunch",
+          "t": "22:52",
+          "name": "Roasted papad x1",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.05,
+          "carb": 7.5,
+          "fibre": 0.8
         }
       ]
     }
