@@ -6165,6 +6165,112 @@
       ]
     },
     {
+      "date": "2026-09-15",
+      "label": "Tue 15 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "10:00",
+          "name": "Poha 200g cooked (from memory)",
+          "kcal": 412,
+          "protein": 8.5,
+          "fat": 16.3,
+          "sat": 2.3,
+          "carb": 57.5,
+          "fibre": 2.8
+        },
+        {
+          "meal": "Breakfast",
+          "t": "10:00",
+          "name": "Bhujia ~30g",
+          "kcal": 172,
+          "protein": 3.8,
+          "fat": 11.8,
+          "sat": 3.7,
+          "carb": 12.7,
+          "fibre": 1.2
+        },
+        {
+          "meal": "Drink",
+          "t": "13:00",
+          "name": "Epigamia Turbo coffee protein shake 250ml (label)",
+          "kcal": 138,
+          "protein": 25,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 9,
+          "fibre": 0
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:30",
+          "name": "Plain roti x2 (~40g each)",
+          "kcal": 240,
+          "protein": 7,
+          "fat": 4,
+          "sat": 1,
+          "carb": 46,
+          "fibre": 5
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:30",
+          "name": "Methi aloo sabji ~150g",
+          "kcal": 180,
+          "protein": 3.5,
+          "fat": 9,
+          "sat": 1.2,
+          "carb": 22,
+          "fibre": 4
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Pav bhaji, 1 pav + bhaji (Chai & Kaapi, Ajmer)",
+          "kcal": 330,
+          "protein": 7,
+          "fat": 14,
+          "sat": 6,
+          "carb": 44,
+          "fibre": 4
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Mexican bhel, half serving (Chai & Kaapi)",
+          "kcal": 170,
+          "protein": 3.5,
+          "fat": 7,
+          "sat": 1.5,
+          "carb": 24,
+          "fibre": 2.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Indori masala sandwich, half (Chai & Kaapi)",
+          "kcal": 200,
+          "protein": 5,
+          "fat": 8,
+          "sat": 4,
+          "carb": 27,
+          "fibre": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "French fries, regular (Chai & Kaapi)",
+          "kcal": 370,
+          "protein": 4.5,
+          "fat": 18,
+          "sat": 3,
+          "carb": 47,
+          "fibre": 4
+        }
+      ]
+    },
+    {
       "date": "2026-09-16",
       "label": "Wed 16 Sep",
       "workout": "",
