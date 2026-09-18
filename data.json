@@ -6527,23 +6527,23 @@
         {
           "meal": "Lunch",
           "t": "13:58",
-          "name": "Matar paneer ~150g (small katori, estimated)",
-          "kcal": 210,
-          "protein": 9,
-          "fat": 14,
-          "sat": 7,
-          "carb": 10,
+          "name": "Matar paneer, small katori with 2 paneer cubes (~130g)",
+          "kcal": 150,
+          "protein": 7,
+          "fat": 9.5,
+          "sat": 5,
+          "carb": 9,
           "fibre": 2.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_matarpaneer.jpg"
         },
         {
           "meal": "Lunch",
           "t": "13:58",
-          "name": "Plain roti x2 (~40g each)",
-          "kcal": 240,
+          "name": "Ghee roti x2 (~40g each + ghee)",
+          "kcal": 320,
           "protein": 7,
-          "fat": 4,
-          "sat": 1,
+          "fat": 13,
+          "sat": 7,
           "carb": 46,
           "fibre": 5
         },
@@ -6557,6 +6557,40 @@
           "sat": 0,
           "carb": 2,
           "fibre": 0.5
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:58",
+          "name": "Dahi, 1 katori (~150g)",
+          "kcal": 90,
+          "protein": 5,
+          "fat": 4.5,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 0
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:58",
+          "name": "Bhujia ~30g",
+          "kcal": 172,
+          "protein": 3.8,
+          "fat": 11.8,
+          "sat": 3.7,
+          "carb": 12.7,
+          "fibre": 1.2
+        },
+        {
+          "meal": "Snack",
+          "t": "15:25",
+          "name": "Tandoori soya chaap masala, 4 of 6 pieces (~160g), very little gravy",
+          "kcal": 375,
+          "protein": 21.5,
+          "fat": 21,
+          "sat": 5.5,
+          "carb": 30,
+          "fibre": 3.2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_chaap.jpg"
         }
       ]
     }
