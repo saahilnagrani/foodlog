@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-17",
+  "updated": "2026-09-18",
   "days": [
     {
       "date": "2026-07-24",
@@ -6516,6 +6516,47 @@
           "sat": 0.05,
           "carb": 7.5,
           "fibre": 0.8
+        }
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "label": "Fri 18 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "13:58",
+          "name": "Matar paneer ~150g (small katori, estimated)",
+          "kcal": 210,
+          "protein": 9,
+          "fat": 14,
+          "sat": 7,
+          "carb": 10,
+          "fibre": 2.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_matarpaneer.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:58",
+          "name": "Plain roti x2 (~40g each)",
+          "kcal": 240,
+          "protein": 7,
+          "fat": 4,
+          "sat": 1,
+          "carb": 46,
+          "fibre": 5
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:58",
+          "name": "Cucumber ~60g",
+          "kcal": 10,
+          "protein": 0.4,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 2,
+          "fibre": 0.5
         }
       ]
     }
