@@ -6591,6 +6591,51 @@
           "carb": 30,
           "fibre": 3.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_chaap.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:42",
+          "name": "Tandoori soya chaap masala, last 2 pieces (~80g) + ~60g gravy (about half the tub left)",
+          "kcal": 265,
+          "protein": 12,
+          "fat": 17,
+          "sat": 5.2,
+          "carb": 20,
+          "fibre": 2.4
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:42",
+          "name": "White rice ~150g cooked",
+          "kcal": 195,
+          "protein": 4,
+          "fat": 0.4,
+          "sat": 0,
+          "carb": 43,
+          "fibre": 0.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_daalchawal.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:42",
+          "name": "Yellow dal, 1 katori (~200ml, ghee tadka)",
+          "kcal": 180,
+          "protein": 9,
+          "fat": 6,
+          "sat": 2.5,
+          "carb": 22,
+          "fibre": 5
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:42",
+          "name": "Roasted papad, half",
+          "kcal": 23,
+          "protein": 1.5,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 3.8,
+          "fibre": 0.4
         }
       ]
     }
