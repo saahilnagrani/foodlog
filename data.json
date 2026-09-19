@@ -6700,6 +6700,17 @@
       "workout": "",
       "items": [
         {
+          "meal": "Breakfast",
+          "t": "09:30",
+          "name": "Epigamia Turbo Alphonso mango protein yogurt 140g (label)",
+          "kcal": 98,
+          "protein": 15,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 9,
+          "fibre": 0
+        },
+        {
           "meal": "Snack",
           "t": "10:09",
           "name": "Seviyan kheer ~200g, ~4g sugar, with 3 pecans (estimated)",
