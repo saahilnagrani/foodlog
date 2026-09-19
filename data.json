@@ -6662,13 +6662,35 @@
         {
           "meal": "Drink",
           "t": "24:30",
-          "name": "The Whole Truth whey cold coffee sachet + 100ml Raw Pressery almond milk + 5 pecans",
-          "kcal": 224,
-          "protein": 27.3,
+          "name": "The Whole Truth cold coffee whey sachet 35g (label) + 100ml Raw Pressery almond milk + 5 pecans",
+          "kcal": 230,
+          "protein": 27,
+          "fat": 10.1,
+          "sat": 1.2,
+          "carb": 8.8,
+          "fibre": 2.8
+        },
+        {
+          "meal": "Snack",
+          "t": "26:00",
+          "name": "Pahadia namkeen ~100g",
+          "kcal": 530,
+          "protein": 12,
+          "fat": 32,
+          "sat": 8,
+          "carb": 48,
+          "fibre": 4
+        },
+        {
+          "meal": "Snack",
+          "t": "26:00",
+          "name": "Mithi maani ~50g (Sindhi sweet roti, ghee & sugar)",
+          "kcal": 215,
+          "protein": 3,
           "fat": 9,
-          "sat": 1.6,
-          "carb": 7.5,
-          "fibre": 2
+          "sat": 5.5,
+          "carb": 32,
+          "fibre": 1.5
         },
         {
           "meal": "Snack",
