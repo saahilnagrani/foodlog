@@ -6693,6 +6693,25 @@
           "fibre": 1.5
         }
       ]
+    },
+    {
+      "date": "2026-09-19",
+      "label": "Sat 19 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Snack",
+          "t": "10:09",
+          "name": "Seviyan kheer ~200g with 3 pecans (estimated)",
+          "kcal": 295,
+          "protein": 7.4,
+          "fat": 11.6,
+          "sat": 4.8,
+          "carb": 41,
+          "fibre": 1.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kheer.jpg"
+        }
+      ]
     }
   ]
 }
