@@ -6744,6 +6744,29 @@
           "sat": 7,
           "carb": 46,
           "fibre": 5
+        },
+        {
+          "meal": "Snack",
+          "t": "19:26",
+          "name": "Aloo kachori x1 (large, ~100g, street)",
+          "kcal": 330,
+          "protein": 5,
+          "fat": 19,
+          "sat": 3.5,
+          "carb": 35,
+          "fibre": 3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kachori.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "19:26",
+          "name": "Dal kachori x1 (small, ~60g, street)",
+          "kcal": 220,
+          "protein": 4.5,
+          "fat": 13,
+          "sat": 2.5,
+          "carb": 22,
+          "fibre": 2
         }
       ]
     }
