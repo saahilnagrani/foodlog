@@ -6702,12 +6702,12 @@
         {
           "meal": "Snack",
           "t": "10:09",
-          "name": "Seviyan kheer ~200g with 3 pecans (estimated)",
-          "kcal": 295,
+          "name": "Seviyan kheer ~200g, ~4g sugar, with 3 pecans (estimated)",
+          "kcal": 230,
           "protein": 7.4,
           "fat": 11.6,
           "sat": 4.8,
-          "carb": 41,
+          "carb": 25,
           "fibre": 1.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kheer.jpg"
         }
