@@ -6790,6 +6790,17 @@
           "sat": 1.5,
           "carb": 16,
           "fibre": 0.3
+        },
+        {
+          "meal": "Drink",
+          "t": "18:00",
+          "name": "The Whole Truth cold coffee whey sachet 35g (label) + 200ml full-cream milk",
+          "kcal": 264,
+          "protein": 31.3,
+          "fat": 8.1,
+          "sat": 4.9,
+          "carb": 15.9,
+          "fibre": 1.6
         }
       ]
     }
