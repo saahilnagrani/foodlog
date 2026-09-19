@@ -6691,28 +6691,6 @@
           "sat": 5.5,
           "carb": 32,
           "fibre": 1.5
-        },
-        {
-          "meal": "Snack",
-          "t": "26:00",
-          "name": "Pahadia namkeen ~100g",
-          "kcal": 530,
-          "protein": 12,
-          "fat": 32,
-          "sat": 8,
-          "carb": 48,
-          "fibre": 4
-        },
-        {
-          "meal": "Snack",
-          "t": "26:00",
-          "name": "Mithi maani ~50g (Sindhi sweet roti, ghee & sugar)",
-          "kcal": 215,
-          "protein": 3,
-          "fat": 9,
-          "sat": 5.5,
-          "carb": 32,
-          "fibre": 1.5
         }
       ]
     }
