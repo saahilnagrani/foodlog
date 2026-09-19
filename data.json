@@ -6756,6 +6756,40 @@
           "carb": 35,
           "fibre": 3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kachori.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:57",
+          "name": "Curd rice ~250g, tempered (estimated)",
+          "kcal": 300,
+          "protein": 8,
+          "fat": 8,
+          "sat": 4,
+          "carb": 46,
+          "fibre": 1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_curdrice.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:57",
+          "name": "Roasted papad x1",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.05,
+          "carb": 7.5,
+          "fibre": 0.8
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:57",
+          "name": "Fried papad chips (kheechiya), ~8 pieces ~25g",
+          "kcal": 130,
+          "protein": 1,
+          "fat": 7,
+          "sat": 1.5,
+          "carb": 16,
+          "fibre": 0.3
         }
       ]
     }
