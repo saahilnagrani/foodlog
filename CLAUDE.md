@@ -12,7 +12,14 @@ calorie/macro numbers and writing them into `data.json`. That is the routine job
 ## Files
 - `index.html` — the entire app (renders from `data.json`, fetched at load with
   cache-busting). Don't rewrite it to do a meal update; it reads the data, it
-  isn't the data.
+  isn't the data. Two themes: Brutalist (`b`, default) and Terminal (`c`).
+- `sw.js` — service worker that makes the app work offline. Network-first for
+  `index.html` and `data.json` with the cached copy as fallback (the page then
+  shows "Offline · log as of …" under the top bar); Google Fonts cached after
+  first use; meal photos cached as viewed plus the last 30 days, which the page
+  requests after `data.json` loads. Saving, editing and deleting need the
+  network and say so. Bump `V` in `sw.js` only when the worker's own logic
+  changes - content updates flow through network-first on their own.
 - `data.json` — **the source of truth for the food log.** This is what you edit.
 - `images/` — meal photos, referenced by URL from `data.json`.
 - `tools/fmt_data.py` — the one definition of `data.json`'s on-disk format.

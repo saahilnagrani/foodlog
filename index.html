@@ -3,7 +3,7 @@
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Food Log</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Anton&family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Bricolage+Grotesque:wght@700;800&family=JetBrains+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;600&family=Space+Mono:wght@400;700&family=Fira+Code:wght@400;600&family=VT323&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Anton&family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Bricolage+Grotesque:wght@700;800&family=JetBrains+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;600&family=Space+Mono:wght@400;700&family=Fira+Code:wght@400;600&family=VT323&display=swap" rel="stylesheet">
 <style>
   *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
   html,body{min-height:100%;}
@@ -45,6 +45,11 @@
   .sr-m{font-size:11px;opacity:.6;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
   .sr-none{opacity:.6;padding:22px 0;font-size:13px;}
   body.modal-open #logsearch{display:none;}
+  #offline{max-width:480px;margin:0 auto;padding:0 16px 8px;font-size:11px;opacity:.75;}
+  body[data-theme="b"] #offline{font-family:Arial;font-weight:900;color:#a33;}
+  body[data-theme="c"] #offline{color:#ffd166;}
+  body.modal-open #offline{display:none;}
+  .noimg.imgoff{width:38px;height:38px;flex:0 0 auto;display:flex;align-items:center;justify-content:center;font-size:8px;text-align:center;opacity:.6;border:1px dashed currentColor;border-radius:7px;}
   .fab{position:fixed;right:16px;left:auto;transform:none;bottom:calc(78px + env(safe-area-inset-bottom));z-index:70;border:none;font-weight:800;font-size:15px;padding:14px 24px;border-radius:999px;box-shadow:0 8px 24px rgba(0,0,0,.45);cursor:pointer;}
   .fab.closing{width:56px;height:56px;padding:0;border-radius:50%;font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;}
   /* Settings/Add render as a full in-flow screen (robust in WebView, no floating overlay) */
@@ -158,7 +163,6 @@
   .modebtn{border:none;cursor:pointer;font-size:11px;font-weight:800;padding:8px 11px;border-radius:9px;white-space:nowrap;}
   body[data-theme="b"] .modebtn{background:#7fd0ff;border:3px solid #111;color:#111;}
   body[data-theme="c"] .modebtn{background:transparent;border:1px solid #1f8f5e;color:#3dffa0;font-family:inherit;}
-  body[data-theme="d"] .modebtn{background:rgba(255,255,255,.06);color:#cdbcff;}
   /* terminal grid inside content + bar transitions + scanline */
   body[data-theme="c"] #view{background-image:linear-gradient(#0e1f17 1px,transparent 1px),linear-gradient(90deg,#0e1f17 1px,transparent 1px);background-size:22px 22px;}
   body[data-theme="c"] .spk .b, body[data-theme="c"] .fstack{transition:height .8s cubic-bezier(.2,.9,.3,1);}
@@ -173,8 +177,6 @@
   body[data-theme="b"] .fstack.over .fseg.red{background:#ff1f0f;}
   body[data-theme="c"] .n.satover{color:#ff5d5d;}
   body[data-theme="c"] .fstack.over .fseg.red{background:#ff2d2d;}
-  body[data-theme="d"] .spk .n.satover{color:#ff6b6b;font-weight:600;}
-  body[data-theme="d"] .fstack.over .fseg.red{background:#ff3b3b;}
   /* ===== unified weekly charts (fixed plot area + reference lines) ===== */
   .wk{margin-top:2px;}
   /* Fat and fibre sit side by side: half the width means the bars, gaps and
@@ -212,7 +214,6 @@
   .wk-subs .wk-s{flex:1;text-align:center;font-size:9px;line-height:1;}
   body[data-theme="b"] .wk-s{font-family:Arial;font-weight:900;color:#9a8f7a;} body[data-theme="b"] .wk-s.over{color:#e5271b;}
   body[data-theme="c"] .wk-s{color:#4c7a63;} body[data-theme="c"] .wk-s.over{color:#ff5d5d;}
-  body[data-theme="d"] .wk-s{color:#565273;} body[data-theme="d"] .wk-s.over{color:#ff6b6b;}
   body[data-theme="b"] .wk-n,body[data-theme="b"] .wk-d{font-family:Arial;font-weight:900;color:#111;}
   body[data-theme="b"] .wk-n.over{color:#e5271b;}
   body[data-theme="b"] .wk-bar{border:3px solid #111;}
@@ -232,16 +233,6 @@
   body[data-theme="c"] .wk-line{border-color:#4c7a63;} body[data-theme="c"] .wk-line.sat{border-color:#ff5d5d;}
   body[data-theme="c"] .wk-line.avg,body[data-theme="c"] .wk-line.med,body[data-theme="c"] .lg{border-color:#ffd166;} body[data-theme="c"] .wk-line.avg.sat,body[data-theme="c"] .lg.sat{border-color:#ff5d5d;} body[data-theme="c"] .wk-stat{color:#ffd166;}
   body[data-theme="c"] .wk-line span{background:#081108;color:#4c7a63;} body[data-theme="c"] .wk-line.sat span{color:#ff5d5d;}
-  body[data-theme="d"] .wk-n{color:#8a86a3;} body[data-theme="d"] .wk-d{color:#565273;}
-  body[data-theme="d"] .wk-n.over{color:#ff6b6b;}
-  body[data-theme="d"] .wk-bar{border-radius:4px 4px 0 0;}
-  body[data-theme="d"] .wk-bar.ok{background:#6ee7a0;} body[data-theme="d"] .wk-bar.over{background:#ff8a7a;}
-  body[data-theme="d"] .wk-bar.okp{background:#7db8ff;} body[data-theme="d"] .wk-bar.lowp{background:#3c5a80;}
-  body[data-theme="d"] .wk-bar.stack{border-radius:4px 4px 0 0;} body[data-theme="d"] .wk-bar.stack .fseg.grn{background:#6ee7a0;} body[data-theme="d"] .wk-bar.stack .fseg.red{background:#ff5d5d;}
-  body[data-theme="d"] .wk-bar.stack.over .fseg.red{background:#ff3b3b;}
-  body[data-theme="d"] .wk-line{border-color:rgba(255,255,255,.3);} body[data-theme="d"] .wk-line.sat{border-color:#ff6b6b;}
-  body[data-theme="d"] .wk-line.avg,body[data-theme="d"] .wk-line.med,body[data-theme="d"] .lg{border-color:#ffd166;} body[data-theme="d"] .wk-line.avg.sat,body[data-theme="d"] .lg.sat{border-color:#ff6b6b;} body[data-theme="d"] .wk-stat{color:#d8b95a;}
-  body[data-theme="d"] .wk-line span{background:#12102a;color:#8a86a3;} body[data-theme="d"] .wk-line.sat span{color:#ff6b6b;}
   .toast{position:fixed;left:50%;bottom:150px;transform:translateX(-50%);padding:11px 16px;border-radius:11px;font-size:13px;z-index:90;display:none;max-width:90%;text-align:center;background:#0b3b26;color:#c9f5db;border:1px solid #2e7d54;}
   .toast.show{display:block;}
   .toast .tact{margin-left:14px;background:none;border:0;padding:0;font:inherit;font-weight:800;color:#7ef0b0;text-decoration:underline;cursor:pointer;}
@@ -336,42 +327,6 @@
   body[data-theme="c"] .sync{margin-top:9px;border:1px solid #3dffa0;color:#3dffa0;text-align:center;padding:9px;font-size:11px;letter-spacing:1px;background:rgba(61,255,160,.06);cursor:pointer;}
 
   /* ===================== BLOOM (d) ===================== */
-  body[data-theme="d"] #tophead{background:#121022;border-bottom:1px solid rgba(255,255,255,.07);}
-  body[data-theme="d"] #bnav{background:#121022;border-top:1px solid rgba(255,255,255,.07);color:#cdbcff;}
-  body[data-theme="d"]{background:radial-gradient(120% 70% at 50% -8%,#161428 0%,#0a0a12 55%) fixed;color:#e8e6f0;font-family:var(--dfont,'Space Grotesk',sans-serif);}
-  body[data-theme="d"] .wkbtn{background:rgba(255,255,255,.06);color:#cdbcff;}
-  body[data-theme="d"] .wklabel{color:#cbc8e0;}
-  body[data-theme="d"] .gear{background:rgba(255,255,255,.06);color:#cdbcff;}
-  body[data-theme="d"] .fab{background:rgba(140,110,255,.16);color:#cdbcff;border:1px solid rgba(185,166,255,.5);}
-  body[data-theme="d"] .panel{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:12px 12px 8px;margin-bottom:13px;}
-  body[data-theme="d"] .panel .h{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#565273;margin-bottom:10px;}
-  body[data-theme="d"] .spk{display:flex;align-items:flex-end;gap:6px;height:52px;}
-  body[data-theme="d"] .spk .c{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;}
-  body[data-theme="d"] .spk .n{font-size:9px;color:#8a86a3;margin-bottom:3px;}
-  body[data-theme="d"] .spk .b{width:70%;border-radius:3px 3px 0 0;background:#6ee7a0;} body[data-theme="d"] .spk .b.hi{background:#ff8a7a;} body[data-theme="d"] .spk .b.pro{background:#7db8ff;} body[data-theme="d"] .spk .b.pun{background:#3c5a80;}
-  body[data-theme="d"] .fstack{width:70%;display:flex;flex-direction:column;justify-content:flex-end;border-radius:3px 3px 0 0;overflow:hidden;}
-  body[data-theme="d"] .fseg.red{background:#ff5d5d;} body[data-theme="d"] .fseg.grn{background:#6ee7a0;}
-  body[data-theme="d"] .spk .d{font-size:9px;color:#565273;margin-top:4px;}
-  body[data-theme="d"] .drow{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:12px;margin-bottom:12px;display:flex;gap:12px;}
-  body[data-theme="d"] .drow .gl{flex:0 0 auto;} body[data-theme="d"] .drow .info{flex:1;min-width:0;}
-  body[data-theme="d"] .drow .dl{display:flex;justify-content:space-between;align-items:baseline;}
-  body[data-theme="d"] .drow .dl .nm{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#8a86a3;} body[data-theme="d"] .drow .dl .kc{font-size:16px;font-weight:500;} body[data-theme="d"] .drow .dl .kc.over{color:#ff8a7a;} body[data-theme="d"] .drow .dl .kc small{font-size:11px;color:#565273;}
-  body[data-theme="d"] .drow .dmac{font-size:11px;color:#8a86a3;margin:5px 0 6px;} body[data-theme="d"] .drow .dmac .sat{color:#ff8a7a;}
-  body[data-theme="d"] .meal{display:flex;align-items:center;gap:8px;padding:5px 0;border-top:1px solid rgba(255,255,255,.05);font-size:12px;}
-  body[data-theme="d"] .meal img{width:34px;height:34px;border-radius:7px;flex:0 0 auto;} body[data-theme="d"] .meal .nm{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;} body[data-theme="d"] .meal .nm small{color:#565273;text-transform:uppercase;font-size:9px;} body[data-theme="d"] .meal .mv{color:#8a86a3;font-size:11px;white-space:nowrap;}
-  body[data-theme="d"] .feat{display:flex;flex-direction:column;align-items:center;margin:8px 0;}
-  body[data-theme="d"] .fday{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a86a3;margin-top:4px;} body[data-theme="d"] .fk{font-size:38px;font-weight:300;} body[data-theme="d"] .fk span{font-size:13px;color:#8a86a3;}
-  body[data-theme="d"] .bloomsvg{transform-origin:center;}
-  body[data-theme="d"] .petal{transform-box:fill-box;transform-origin:center;} body[data-theme="d"] .core{transform-box:fill-box;transform-origin:center;}
-  body[data-theme="d"] .sync{margin-top:8px;border:1px solid rgba(185,166,255,.4);color:#cdbcff;text-align:center;padding:11px;border-radius:12px;font-size:12px;background:rgba(140,110,255,.08);cursor:pointer;}
-  body[data-theme="d"][data-motion="grow"] .bloomsvg{animation:dgrow .7s cubic-bezier(.2,1.2,.3,1) both;}
-  body[data-theme="d"][data-motion="unfurl"] .petal{animation:dunfurl .6s ease both;}
-  body[data-theme="d"][data-motion="drift"] .bloomsvg{animation:ddrift 4.5s ease-in-out infinite;}
-  body[data-theme="d"][data-motion="pulse"] .core{animation:dpulse 1.7s ease-in-out infinite;}
-  @keyframes dgrow{from{transform:scale(.2);opacity:0}to{transform:scale(1);opacity:1}}
-  @keyframes dunfurl{from{transform:scale(0) rotate(-35deg);opacity:0}to{transform:scale(1) rotate(0);opacity:.85}}
-  @keyframes ddrift{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
-  @keyframes dpulse{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
 </style></head>
 <body data-theme="b" data-motion="bars">
   <script>try{var _p=JSON.parse(localStorage.getItem('foodlog_prefs_v1'));if(_p&&_p.theme){document.body.dataset.theme=_p.theme;if(_p.motion&&_p.motion[_p.theme])document.body.dataset.motion=_p.motion[_p.theme];}}catch(e){}</script>
@@ -380,6 +335,7 @@
     <div class="wknav"><button class="wkbtn" onclick="stepWeek(-1)">&#8249;</button><span class="wklabel" id="wklabel">This week</span><button class="wkbtn" onclick="stepWeek(1)">&#8250;</button></div>
     <div class="tbr" style="display:flex;gap:8px;align-items:center;"><button class="modebtn" id="spanbtn" onclick="toggleSpan()">Week</button><button class="modebtn" id="modebtn" onclick="toggleWeekMode()">Cal</button><button class="gear" onclick="openSettings()">&#9881;</button></div>
   </div>
+  <div id="offline" hidden></div>
   <div id="logsearch" hidden><input id="ls" placeholder="Search the log&hellip;" autocomplete="off" autocorrect="off"
        autocapitalize="off" spellcheck="false" enterkeyhint="search" oninput="lsInput()"><button id="lsx" type="button"
        aria-label="Clear search" onclick="lsClear()" hidden>&times;</button></div>
@@ -496,14 +452,15 @@ let DATA=null;
 const PREF_KEY='foodlog_prefs_v1', EXTRA_KEY='foodlog_extra_v1';
 const FONTS={
   b:[["Archivo Black","'Archivo Black',sans-serif"],["Anton","'Anton',sans-serif"],["Syne","'Syne',sans-serif"],["Space Grotesk","'Space Grotesk',sans-serif"],["Bricolage","'Bricolage Grotesque',sans-serif"],["System","'Arial Black',Arial,sans-serif"]],
-  c:[["JetBrains","'JetBrains Mono',monospace"],["IBM Plex","'IBM Plex Mono',monospace"],["Space Mono","'Space Mono',monospace"],["Fira Code","'Fira Code',monospace"],["VT323","'VT323',monospace"],["System","ui-monospace,Menlo,monospace"]],
-  d:[["Space Grotesk","'Space Grotesk',sans-serif"],["Syne","'Syne',sans-serif"],["Fraunces","'Fraunces',serif"],["Outfit","'Outfit',sans-serif"],["System","-apple-system,'Segoe UI',sans-serif"]]
+  c:[["JetBrains","'JetBrains Mono',monospace"],["IBM Plex","'IBM Plex Mono',monospace"],["Space Mono","'Space Mono',monospace"],["Fira Code","'Fira Code',monospace"],["VT323","'VT323',monospace"],["System","ui-monospace,Menlo,monospace"]]
 };
-const MOTIONS={b:[["Bars fill","bars"],["Pop","pop"],["Slide","slide"],["Wobble","wobble"]],c:[["Bars draw","bars"],["Count up","count"],["Typewriter","type"],["Scanline","scan"]],d:[["Grow","grow"],["Unfurl","unfurl"],["Drift","drift"],["Pulse","pulse"]]};
-const THEMES=[["Brutalist","b"],["Terminal","c"],["Bloom","d"]];
-const DEF={theme:'b',font:{b:0,c:0,d:0},motion:{b:'bars',c:'bars',d:'grow'},weekMode:'cal',dayMode:'wake',span:'week'};
+const MOTIONS={b:[["Bars fill","bars"],["Pop","pop"],["Slide","slide"],["Wobble","wobble"]],c:[["Bars draw","bars"],["Count up","count"],["Typewriter","type"],["Scanline","scan"]]};
+const THEMES=[["Brutalist","b"],["Terminal","c"]];
+const DEF={theme:'b',font:{b:0,c:0},motion:{b:'bars',c:'bars'},weekMode:'cal',dayMode:'wake',span:'week'};
 let PREF=loadPref();
-function loadPref(){try{return Object.assign(JSON.parse(JSON.stringify(DEF)),JSON.parse(localStorage.getItem(PREF_KEY))||{});}catch(e){return JSON.parse(JSON.stringify(DEF));}}
+function loadPref(){let p;try{p=Object.assign(JSON.parse(JSON.stringify(DEF)),JSON.parse(localStorage.getItem(PREF_KEY))||{});}catch(e){p=JSON.parse(JSON.stringify(DEF));}
+  if(!FONTS[p.theme])p.theme='b';            /* the Bloom theme was removed; phones set to it land on Brutalist */
+  return p;}
 function savePref(){localStorage.setItem(PREF_KEY,JSON.stringify(PREF));}
 function loadExtra(){try{return JSON.parse(localStorage.getItem(EXTRA_KEY))||{};}catch(e){return {};}}
 function saveExtra(x){localStorage.setItem(EXTRA_KEY,JSON.stringify(x));}
@@ -617,12 +574,6 @@ function mlab(it){const m=mabbr(it.meal);return it.t?(m?m+' &middot; ':'')+tf(it
 /* escape a string so it is safe inside onclick="lb('...')" */
 function jq(s){return String(s==null?'':s).replace(/\\/g,'\\\\').replace(/'/g,"\\'").replace(/"/g,'&quot;').replace(/</g,'&lt;');}
 
-/* ---- BLOOM glyph ---- */
-function glyph(size,o){const cx=size/2,cy=size/2,petals=Math.max(3,o.items),rMax=size*0.46,r=size*0.15+(Math.min(o.protein,170)/170)*(rMax-size*0.15);
-  const satR=o.fat>0?Math.min(1,o.sat/Math.max(o.fat,1)):0,hue=140-140*Math.min(1,satR*2.3),col=`hsl(${hue} 70% 56%)`,col2=`hsl(${hue} 68% 44%)`,core=size*0.06+(Math.min(o.kcal,2600)/2600)*size*0.10;
-  let ps='';for(let i=0;i<petals;i++){const a=(i/petals)*Math.PI*2,ex=cx+Math.cos(a)*r,ey=cy+Math.sin(a)*r,w=size*0.11,h=r*0.72,deg=a*180/Math.PI+90;ps+=`<ellipse class="petal" style="animation-delay:${i*70}ms" cx="${ex}" cy="${ey}" rx="${w}" ry="${h*0.5}" fill="${col}" opacity="0.82" transform="rotate(${deg} ${ex} ${ey})"/>`;}
-  return `<svg class="bloomsvg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}"><g>${ps}</g><circle class="core" cx="${cx}" cy="${cy}" r="${core}" fill="${col2}"/><circle cx="${cx}" cy="${cy}" r="${core*0.5}" fill="#fff" opacity=".9"/></svg>`;}
-
 /* ---- weekly aggregates for a week ---- */
 function weekSeries(wd){
   // wd = array of day objects in the week; produce Mon..Sun slots that have data
@@ -645,9 +596,7 @@ function render(){
   const view=document.getElementById('view');
   ROWS=[];                                  /* rebuilt by swipeRow() below */
   if(LS){view.innerHTML=renderSearch(LS);return;}   /* search replaces the week view */
-  if(PREF.theme==='b')view.innerHTML=renderB(days);
-  else if(PREF.theme==='c')view.innerHTML=renderC(days);
-  else view.innerHTML=renderD(days);
+  view.innerHTML=PREF.theme==='c'?renderC(days):renderB(days);
   applyMotion();
   chartsGrow();
 }
@@ -957,7 +906,6 @@ function applyMotion(){
   const t=PREF.theme,m=PREF.motion[t];
   if(t==='b'){ if(m==='bars')fillB(); else setFullB(); }
   else if(t==='c'){ playC(m); }
-  // d handled by CSS classes (data-motion)
 }
 
 /* ---------- unified weekly charts ---------- */
@@ -1102,28 +1050,6 @@ function playC(m){
   document.querySelectorAll('#view .spk .b,#view .fstack').forEach(b=>b.style.height='0');
   requestAnimationFrame(()=>requestAnimationFrame(cBarsFull));
   cAnim(1100,p=>document.querySelectorAll('#view .track').forEach(el=>el.innerHTML=cbar(Math.round((+el.dataset.pct)*p),el.dataset.over==='1')),cTracksFull);
-}
-
-/* ---------- BLOOM ---------- */
-function renderD(days){
-  const T=DATA.targets,W=weekCharts(days);
-  const featured=days.length?totals(days[days.length-1]):{k:0,p:0,f:0,s:0,u:0,c:0};
-  const fd=days.length?days[days.length-1]:null;
-  let h='';
-  if(fd){h+=`<div class="feat">${glyph(180,{items:fd.items.length,protein:featured.p,fat:featured.f,sat:featured.s,kcal:featured.k})}<div class="fday">${fd.label}</div><div class="fk">${featured.k}<span> / 1900 kcal</span></div></div>`;}
-  h+=`<div class="panel"><div class="h">Calories &middot; target 1900</div>${W.cal}</div>`;
-  h+=`<div class="panel"><div class="h">Protein &middot; goal 150</div>${W.pro}</div>`;
-  h+=`<div class="prow">`
-    +`<div class="panel"><div class="h">Fat &middot; <span style="color:#ff8a7a">red = sat</span> &middot; ${W.overN}/${W.ndays}d over</div>${W.fat}</div>`
-    +`<div class="panel"><div class="h">Fibre &middot; goal ${T.fibre} &middot; ${W.lowFib}/${W.ndays}d under</div>${W.fib}</div>`
-    +`</div>`+W.hint;
-  if(PREF.span==='month')return h;
-  [...days].reverse().forEach(d=>{
-    const t=totals(d);const g=glyph(80,{items:d.items.length,protein:t.p,fat:t.f,sat:t.s,kcal:t.k});
-    const meals=sortItems(d.items).map(it=>{const src=imgSrc(it);const im=src?`<img src="${src}" onclick="return lb('${src}','${jq(it.name)}')">`:'';return swipeRow(it,d.date,`<div class="meal">${im}<div class="nm"><small>${mabbr(it.meal)}${it.t?' '+tf(it.t):''}</small> ${it.name}</div><div class="mv">${Math.round(it.kcal)} &middot; ${R(it.protein)}P</div></div>`);}).join('');
-    h+=`<div class="drow"><div class="gl">${g}</div><div class="info"><div class="dl"><span class="nm">${d.label}${d.workout?' &middot; '+d.workout:''}${carryNote(d)}</span><span class="kc ${t.k>T.kcal?'over':''}">${t.k} <small>kcal</small></span></div><div class="dmac">${t.p}g P &middot; ${t.f}g fat <span class="sat">(${t.s} sat)</span> &middot; ${t.c}g C &middot; <span class="${t.b<T.fibre?'sat':''}" title="${t.bq?t.bq+' item(s) logged before fibre was tracked':''}">${fibStr(t)}g fibre</span></div>${meals}<div class="sync" onclick="syncDay('${d.date}')">Sync to Google Health</div></div></div>`;
-  });
-  return h;
 }
 
 /* ---------- settings ---------- */
@@ -1346,6 +1272,7 @@ function mergeExtras(data,extra){
 /* read data.json from GitHub, let `mutate` change it, write it back as one commit.
    Always works from a fresh GET so we never clobber a change made elsewhere. */
 async function ghCommit(mutate,message){
+  if(!navigator.onLine)throw new Error('Offline - try again when connected. Nothing was changed.');
   const tok=ghToken();
   if(!tok)throw new Error('No GitHub token on this device. Add one in Settings.');
   const api=`https://api.github.com/repos/${GH_REPO}/contents/${GH_FILE}`;
@@ -1362,6 +1289,7 @@ async function ghCommit(mutate,message){
 }
 async function ghPush(quiet,msg){
   if(!ghToken()){if(!quiet)ghStatus('Add a token first.');return;}
+  if(!navigator.onLine){ghStatus('Offline - your quick adds stay on this phone until you are connected.');if(!quiet)toast('Offline - kept on this device');return;}
   const n=pendingCount();
   if(!n){if(!quiet)ghStatus('Nothing new to save.');return;}
   const btn=document.getElementById('gh_push'); btn.disabled=true; ghStatus('Saving '+n+' item(s)…');
@@ -1849,8 +1777,37 @@ function restoreScroll(){const y=SCROLLY;window.scrollTo(0,y);
   requestAnimationFrame(()=>window.scrollTo(0,y));setTimeout(()=>window.scrollTo(0,y),60);}
 
 /* ---------- boot ---------- */
-async function boot(){try{const r=await fetch('data.json?cb='+Date.now(),{cache:'no-store'});if(r.ok)DATA=await r.json();else throw 0;}catch(e){DATA=SEED;}
-  buildWeeks();curWeek=weeks.length-1;render();}
+let OFFLINE_AT='';                       /* when the cached data.json was fetched, if that is what we are showing */
+async function boot(){try{const r=await fetch('data.json?cb='+Date.now(),{cache:'no-store'});if(r.ok){DATA=await r.json();OFFLINE_AT=r.headers.get('x-foodlog-offline')?(r.headers.get('x-foodlog-cached-at')||'?'):'';}else throw 0;}catch(e){DATA=SEED;}
+  buildWeeks();curWeek=weeks.length-1;render();offlineLine();keepPhotos();}
+/* ---------- offline ----------
+   sw.js keeps index.html, data.json, the fonts and recent photos. Here we
+   register it, say when the log on screen is a cached copy, keep the last
+   30 days of photos, and nag about quick adds that are still only on the phone. */
+if('serviceWorker' in navigator){try{navigator.serviceWorker.register('sw.js').catch(()=>{});}catch(e){}}
+function offlineLine(){
+  const el=document.getElementById('offline'); if(!el)return;
+  const off=!navigator.onLine||!!OFFLINE_AT;
+  if(!off){el.hidden=true;return;}
+  let when='';
+  if(OFFLINE_AT&&OFFLINE_AT!=='?'){const d=new Date(OFFLINE_AT);when=' &middot; log as of '+d.toLocaleDateString(undefined,{weekday:'short',day:'numeric',month:'short'})+', '+d.toLocaleTimeString(undefined,{hour:'2-digit',minute:'2-digit'});}
+  const n=pendingCount();
+  el.innerHTML='Offline'+when+(n?` &middot; ${n} quick add${n>1?'s':''} not saved yet`:'');
+  el.hidden=false;
+}
+function keepPhotos(){
+  if(!('serviceWorker' in navigator)||!DATA||!DATA.days||!DATA.days.length)return;
+  const last=DATA.days[DATA.days.length-1].date, from=addDays(last,-30), urls=[];
+  DATA.days.forEach(d=>{if(d.date>=from)d.items.forEach(it=>{if(it.img)urls.push(it.img);});});
+  navigator.serviceWorker.ready.then(reg=>{if(reg.active)reg.active.postMessage({type:'photos',urls});}).catch(()=>{});
+}
+window.addEventListener('online',()=>{OFFLINE_AT='';offlineLine();const n=pendingCount();
+  if(n)toast(n+' quick add'+(n>1?'s':'')+' not saved yet','Save',()=>{openSettings();ghPush();});
+  else boot();});
+window.addEventListener('offline',offlineLine);
+/* a photo that is not cached shows a placeholder instead of a broken image */
+document.addEventListener('error',e=>{const t=e.target;if(!(t&&t.tagName==='IMG')||t.id==='lbimg'||t.closest('#lb'))return;
+  const d=document.createElement('div');d.className='noimg imgoff';d.innerHTML='NO<br>PIC';d.title='Photo not available offline';t.replaceWith(d);},true);
 window.appRefresh=async function(){const y=window.scrollY;await boot();window.scrollTo(0,y);};
 swipeInit(); lbInit();
 boot();
