@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-18",
+  "updated": "2026-09-19",
   "days": [
     {
       "date": "2026-07-24",
@@ -6658,6 +6658,17 @@
           "sat": 2.5,
           "carb": 22,
           "fibre": 5
+        },
+        {
+          "meal": "Drink",
+          "t": "24:30",
+          "name": "The Whole Truth whey cold coffee sachet + 100ml Raw Pressery almond milk + 5 pecans",
+          "kcal": 224,
+          "protein": 27.3,
+          "fat": 9,
+          "sat": 1.6,
+          "carb": 7.5,
+          "fibre": 2
         }
       ]
     }
