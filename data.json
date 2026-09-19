@@ -6721,6 +6721,29 @@
           "carb": 25,
           "fibre": 1.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kheer.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:18",
+          "name": "Lauki-aloo sabzi, small katori (~120g, estimated)",
+          "kcal": 110,
+          "protein": 2.5,
+          "fat": 6,
+          "sat": 0.8,
+          "carb": 12,
+          "fibre": 2.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_sabziroti.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:18",
+          "name": "Plain roti x2 (~40g each, looks like a stack of two)",
+          "kcal": 240,
+          "protein": 7,
+          "fat": 4,
+          "sat": 1,
+          "carb": 46,
+          "fibre": 5
         }
       ]
     }
