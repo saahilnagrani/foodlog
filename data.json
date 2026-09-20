@@ -6842,6 +6842,40 @@
           "sat": 0.05,
           "carb": 7.5,
           "fibre": 0.8
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:04",
+          "name": "Curry, 1 katori ~150g (looks like chicken; priced as homestyle chicken curry, estimated)",
+          "kcal": 210,
+          "protein": 18,
+          "fat": 12,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun20_currysev.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:04",
+          "name": "Plain roti x2 (~40g each)",
+          "kcal": 240,
+          "protein": 7,
+          "fat": 4,
+          "sat": 1,
+          "carb": 46,
+          "fibre": 5
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:04",
+          "name": "Sev / gathiya namkeen ~25g",
+          "kcal": 135,
+          "protein": 3,
+          "fat": 9,
+          "sat": 1.5,
+          "carb": 11,
+          "fibre": 1
         }
       ]
     }
