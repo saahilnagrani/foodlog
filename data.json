@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "days": [
     {
       "date": "2026-07-24",
@@ -6801,6 +6801,47 @@
           "sat": 4.9,
           "carb": 15.9,
           "fibre": 1.6
+        }
+      ]
+    },
+    {
+      "date": "2026-09-20",
+      "label": "Sun 20 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "09:31",
+          "name": "Stuffed parathas x2 (one methi-matar, one pyaaz; ~90g each, ghee; estimated)",
+          "kcal": 520,
+          "protein": 12,
+          "fat": 20,
+          "sat": 6,
+          "carb": 72,
+          "fibre": 8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun20_parathas.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "09:31",
+          "name": "Dahi, 1 katori (~150g) with jeera",
+          "kcal": 90,
+          "protein": 5,
+          "fat": 4.5,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 0
+        },
+        {
+          "meal": "Breakfast",
+          "t": "09:31",
+          "name": "Roasted papad x1",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.05,
+          "carb": 7.5,
+          "fibre": 0.8
         }
       ]
     }
