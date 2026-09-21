@@ -6965,13 +6965,13 @@
         {
           "meal": "Lunch",
           "t": "14:24",
-          "name": "Aloo-paneer sabzi, small katori (~120g, estimated)",
-          "kcal": 180,
-          "protein": 6,
-          "fat": 12,
-          "sat": 5,
-          "carb": 12,
-          "fibre": 2,
+          "name": "Methi aloo sabzi, 1.5 katoris (~180g, estimated)",
+          "kcal": 218,
+          "protein": 4.2,
+          "fat": 10.5,
+          "sat": 1.5,
+          "carb": 27,
+          "fibre": 4.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_aloopaneer.jpg"
         },
         {
@@ -6988,13 +6988,13 @@
         {
           "meal": "Lunch",
           "t": "14:24",
-          "name": "Plain roti x1 (~40g)",
-          "kcal": 120,
-          "protein": 3.5,
-          "fat": 2,
-          "sat": 0.5,
-          "carb": 23,
-          "fibre": 2.5
+          "name": "Ghee roti x2.5 (~40g each + ghee)",
+          "kcal": 400,
+          "protein": 8.8,
+          "fat": 16.3,
+          "sat": 8.8,
+          "carb": 57.5,
+          "fibre": 6.3
         }
       ]
     }
