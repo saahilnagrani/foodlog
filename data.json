@@ -6944,6 +6944,25 @@
           "fibre": 0.8
         }
       ]
+    },
+    {
+      "date": "2026-09-21",
+      "label": "Mon 21 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "10:57",
+          "name": "Pyaaz kachori, 3/4 (~75g) with kadhi ~80g",
+          "kcal": 308,
+          "protein": 5.3,
+          "fat": 17.8,
+          "sat": 3.3,
+          "carb": 31,
+          "fibre": 2.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_kadhikachori.jpg"
+        }
+      ]
     }
   ]
 }
