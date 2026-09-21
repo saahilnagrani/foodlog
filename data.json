@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "days": [
     {
       "date": "2026-07-24",
@@ -6876,6 +6876,72 @@
           "sat": 3,
           "carb": 22,
           "fibre": 2
+        },
+        {
+          "meal": "Drink",
+          "t": "18:00",
+          "name": "Epigamia Turbo coffee protein shake 250ml (label)",
+          "kcal": 138,
+          "protein": 25,
+          "fat": 0.2,
+          "sat": 0,
+          "carb": 9,
+          "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:30",
+          "name": "Kadhi kachori x1 (Shankar Chaat, Ajmer)",
+          "kcal": 300,
+          "protein": 6,
+          "fat": 17,
+          "sat": 3,
+          "carb": 32,
+          "fibre": 2.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:30",
+          "name": "Aloo tikki with chhole, half plate (Shankar Chaat)",
+          "kcal": 190,
+          "protein": 5,
+          "fat": 9,
+          "sat": 1.5,
+          "carb": 22,
+          "fibre": 3.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:30",
+          "name": "Yellow pulao ~200g (estimated)",
+          "kcal": 300,
+          "protein": 6,
+          "fat": 9,
+          "sat": 2,
+          "carb": 48,
+          "fibre": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:30",
+          "name": "Dahi, 1 katori (~150g)",
+          "kcal": 90,
+          "protein": 5,
+          "fat": 4.5,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:30",
+          "name": "Roasted papad x1",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.05,
+          "carb": 7.5,
+          "fibre": 0.8
         }
       ]
     }
