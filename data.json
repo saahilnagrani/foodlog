@@ -7006,24 +7006,24 @@
         {
           "meal": "Breakfast",
           "t": "09:05",
-          "name": "Plain paratha x1 (~70g, ghee; estimated)",
-          "kcal": 230,
-          "protein": 5,
-          "fat": 9,
-          "sat": 4,
-          "carb": 32,
-          "fibre": 3.5,
+          "name": "Plain paratha x3 (~70g each, ghee; estimated)",
+          "kcal": 690,
+          "protein": 15,
+          "fat": 27,
+          "sat": 12,
+          "carb": 96,
+          "fibre": 10.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_parathadahi.jpg"
         },
         {
           "meal": "Breakfast",
           "t": "09:05",
-          "name": "Dahi, small katori (~120g) with jeera",
-          "kcal": 72,
-          "protein": 4,
-          "fat": 3.6,
-          "sat": 2.4,
-          "carb": 4.8,
+          "name": "Dahi, 2.5 small katoris (~300g) with jeera",
+          "kcal": 180,
+          "protein": 10,
+          "fat": 9,
+          "sat": 6,
+          "carb": 12,
           "fibre": 0
         }
       ]
