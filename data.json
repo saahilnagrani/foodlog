@@ -7070,6 +7070,40 @@
           "sat": 6,
           "carb": 12,
           "fibre": 0
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Aloo tamatar rasa, 1 katori (~150g, estimated)",
+          "kcal": 110,
+          "protein": 2,
+          "fat": 4,
+          "sat": 0.5,
+          "carb": 17,
+          "fibre": 2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_aloorasa.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Sukhe masala aloo, a few pieces (~40g)",
+          "kcal": 60,
+          "protein": 1,
+          "fat": 3,
+          "sat": 0.4,
+          "carb": 8,
+          "fibre": 1
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Plain roti x2 (~40g each)",
+          "kcal": 240,
+          "protein": 7,
+          "fat": 4,
+          "sat": 1,
+          "carb": 46,
+          "fibre": 5
         }
       ]
     }
