@@ -6995,6 +6995,51 @@
           "sat": 8.8,
           "carb": 57.5,
           "fibre": 6.3
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:17",
+          "name": "Afghani soya chaap, 3 servings (~210g, cream marinade)",
+          "kcal": 630,
+          "protein": 25,
+          "fat": 46,
+          "sat": 18,
+          "carb": 38,
+          "fibre": 3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_chaap.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:17",
+          "name": "Veg soya chaap masala, 3 servings (~210g)",
+          "kcal": 460,
+          "protein": 27,
+          "fat": 25,
+          "sat": 6,
+          "carb": 38,
+          "fibre": 4
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:17",
+          "name": "Rumali roti x1",
+          "kcal": 150,
+          "protein": 4.5,
+          "fat": 1.5,
+          "sat": 0.3,
+          "carb": 30,
+          "fibre": 1
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:17",
+          "name": "Ghee roti x1.5 (~40g each + ghee)",
+          "kcal": 240,
+          "protein": 5.3,
+          "fat": 9.8,
+          "sat": 5.3,
+          "carb": 34.5,
+          "fibre": 3.8
         }
       ]
     },
