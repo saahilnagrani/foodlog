@@ -7116,6 +7116,18 @@
           "carb": 72,
           "fibre": 8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_acharichaap.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:42",
+          "name": "Mixed dal ~190g (tadka)",
+          "kcal": 200,
+          "protein": 10.5,
+          "fat": 6.7,
+          "sat": 2.3,
+          "carb": 24.7,
+          "fibre": 5.7,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_mixeddal.jpg"
         }
       ]
     }
