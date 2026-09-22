@@ -7104,6 +7104,18 @@
           "sat": 10.5,
           "carb": 69,
           "fibre": 7.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "18:10",
+          "name": "Achari soya chaap ~400g (430g gross, ~30g takeaway box; whole box, adjust if any left)",
+          "kcal": 920,
+          "protein": 52,
+          "fat": 52,
+          "sat": 16,
+          "carb": 72,
+          "fibre": 8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_acharichaap.jpg"
         }
       ]
     }
