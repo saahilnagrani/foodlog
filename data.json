@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "days": [
     {
       "date": "2026-07-24",
@@ -7128,6 +7128,25 @@
           "carb": 24.7,
           "fibre": 5.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_mixeddal.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "label": "Wed 23 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "08:35",
+          "name": "Onion masala sandwich x1 (2 slices white bread, butter, toasted; estimated)",
+          "kcal": 260,
+          "protein": 6,
+          "fat": 10,
+          "sat": 5,
+          "carb": 36,
+          "fibre": 2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_masalasandwich.jpg"
         }
       ]
     }
