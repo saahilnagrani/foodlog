@@ -7192,6 +7192,17 @@
           "sat": 7,
           "carb": 46,
           "fibre": 5
+        },
+        {
+          "meal": "Drink",
+          "t": "10:30",
+          "name": "The Whole Truth cold coffee whey sachet 35g (label) + 100ml Raw Pressery almond milk",
+          "kcal": 181,
+          "protein": 26.4,
+          "fat": 5.1,
+          "sat": 0.8,
+          "carb": 7.8,
+          "fibre": 2.1
         }
       ]
     }
