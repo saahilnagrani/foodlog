@@ -7219,13 +7219,13 @@
         {
           "meal": "Dinner",
           "t": "21:35",
-          "name": "White rice ~150g (370g gross on a steel thali, plate weight guessed ~220g)",
-          "kcal": 195,
-          "protein": 4,
-          "fat": 0.4,
+          "name": "White rice 190g (370g gross on 180g steel thali)",
+          "kcal": 247,
+          "protein": 5.1,
+          "fat": 0.5,
           "sat": 0,
-          "carb": 43,
-          "fibre": 0.6
+          "carb": 54.5,
+          "fibre": 0.8
         }
       ]
     }
