@@ -7139,14 +7139,25 @@
         {
           "meal": "Breakfast",
           "t": "08:35",
-          "name": "Onion masala sandwich x1 (2 slices white bread, butter, toasted; estimated)",
-          "kcal": 260,
-          "protein": 6,
-          "fat": 10,
-          "sat": 5,
-          "carb": 36,
-          "fibre": 2,
+          "name": "Onion masala sandwich x3 (2 slices white bread each, butter, toasted; estimated)",
+          "kcal": 780,
+          "protein": 18,
+          "fat": 30,
+          "sat": 15,
+          "carb": 108,
+          "fibre": 6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_masalasandwich.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "08:35",
+          "name": "Bikaji bikaneri bhujia 15g (label rate)",
+          "kcal": 86,
+          "protein": 1.9,
+          "fat": 5.9,
+          "sat": 1.8,
+          "carb": 6.3,
+          "fibre": 0.6
         }
       ]
     }
