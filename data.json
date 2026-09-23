@@ -7203,6 +7203,29 @@
           "sat": 0.8,
           "carb": 7.8,
           "fibre": 2.1
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:35",
+          "name": "Dahi kadhi 120g",
+          "kcal": 100,
+          "protein": 3,
+          "fat": 5,
+          "sat": 1.5,
+          "carb": 10,
+          "fibre": 1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_kadhichawal.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:35",
+          "name": "White rice ~150g (370g gross on a steel thali, plate weight guessed ~220g)",
+          "kcal": 195,
+          "protein": 4,
+          "fat": 0.4,
+          "sat": 0,
+          "carb": 43,
+          "fibre": 0.6
         }
       ]
     }
