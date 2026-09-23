@@ -7158,6 +7158,40 @@
           "sat": 1.8,
           "carb": 6.3,
           "fibre": 0.6
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:54",
+          "name": "Dal, 1 katori (~150g, thin; estimated)",
+          "kcal": 120,
+          "protein": 6,
+          "fat": 4,
+          "sat": 1.5,
+          "carb": 15,
+          "fibre": 3.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_dalroti.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:54",
+          "name": "Boondi raita, 1 katori (~150g)",
+          "kcal": 130,
+          "protein": 5,
+          "fat": 6,
+          "sat": 3,
+          "carb": 14,
+          "fibre": 0.8
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:54",
+          "name": "Plain roti x2 (~40g each)",
+          "kcal": 240,
+          "protein": 7,
+          "fat": 4,
+          "sat": 1,
+          "carb": 46,
+          "fibre": 5
         }
       ]
     }
