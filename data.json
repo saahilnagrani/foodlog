@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "days": [
     {
       "date": "2026-07-24",
@@ -7226,6 +7226,36 @@
           "sat": 0,
           "carb": 54.5,
           "fibre": 0.8
+        }
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "label": "Thu 24 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "08:51",
+          "name": "Poha 260g cooked (2 servings)",
+          "kcal": 535,
+          "protein": 11.1,
+          "fat": 21.2,
+          "sat": 3,
+          "carb": 74.7,
+          "fibre": 3.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_poha.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "08:51",
+          "name": "Bikaji bikaneri bhujia 50g (label rate)",
+          "kcal": 286,
+          "protein": 6.2,
+          "fat": 19.6,
+          "sat": 6.1,
+          "carb": 21.1,
+          "fibre": 2
         }
       ]
     }
