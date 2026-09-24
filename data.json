@@ -7260,13 +7260,13 @@
         {
           "meal": "Lunch",
           "t": "13:56",
-          "name": "Lauki-tamatar sabzi, 1 katori (~120g, estimated)",
-          "kcal": 85,
-          "protein": 1.8,
-          "fat": 5,
-          "sat": 0.7,
-          "carb": 8,
-          "fibre": 2,
+          "name": "Lauki-tamatar sabzi 140g",
+          "kcal": 99,
+          "protein": 2.1,
+          "fat": 5.8,
+          "sat": 0.8,
+          "carb": 9.3,
+          "fibre": 2.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_laukiroti.jpg"
         },
         {
@@ -7283,24 +7283,13 @@
         {
           "meal": "Lunch",
           "t": "13:56",
-          "name": "Plain roti x1 (~40g)",
-          "kcal": 120,
-          "protein": 3.5,
-          "fat": 2,
-          "sat": 0.5,
-          "carb": 23,
-          "fibre": 2.5
-        },
-        {
-          "meal": "Lunch",
-          "t": "13:56",
-          "name": "Sliced onion ~30g",
-          "kcal": 12,
-          "protein": 0.3,
-          "fat": 0,
-          "sat": 0,
-          "carb": 3,
-          "fibre": 0.5
+          "name": "Ghee roti x2.5 (~40g each + ghee)",
+          "kcal": 400,
+          "protein": 8.8,
+          "fat": 16.3,
+          "sat": 8.8,
+          "carb": 57.5,
+          "fibre": 6.3
         }
       ]
     }
