@@ -7256,6 +7256,51 @@
           "sat": 6.1,
           "carb": 21.1,
           "fibre": 2
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Lauki-tamatar sabzi, 1 katori (~120g, estimated)",
+          "kcal": 85,
+          "protein": 1.8,
+          "fat": 5,
+          "sat": 0.7,
+          "carb": 8,
+          "fibre": 2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_laukiroti.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Boondi raita, 1 katori (~150g)",
+          "kcal": 130,
+          "protein": 5,
+          "fat": 6,
+          "sat": 3,
+          "carb": 14,
+          "fibre": 0.8
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Plain roti x1 (~40g)",
+          "kcal": 120,
+          "protein": 3.5,
+          "fat": 2,
+          "sat": 0.5,
+          "carb": 23,
+          "fibre": 2.5
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Sliced onion ~30g",
+          "kcal": 12,
+          "protein": 0.3,
+          "fat": 0,
+          "sat": 0,
+          "carb": 3,
+          "fibre": 0.5
         }
       ]
     }
