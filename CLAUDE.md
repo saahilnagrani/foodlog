@@ -95,6 +95,8 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 | clear glass mixing bowl (daal palak, 9 Sep; about twice the shaker's width) | **590 g** |
 | dark blue ceramic bowl (poha, 12 Sep) | **518 g** |
 | steel thali at the Ajmer house (kadhi chawal, 23 Sep) | **180 g** |
+| deep steel rice katori, Ajmer (25 Sep) | **150 g** |
+| small steel dal katori, Ajmer (25 Sep) | **60 g** |
 
 If a gross weight arrives for a container that isn't listed, estimate it but say so,
 and ask for the empty weight — the container is usually most of the gross figure, so
