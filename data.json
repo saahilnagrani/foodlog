@@ -7421,6 +7421,40 @@
           "sat": 2.2,
           "carb": 11,
           "fibre": 0
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:33",
+          "name": "Turai sabzi 100g",
+          "kcal": 70,
+          "protein": 1.5,
+          "fat": 4.5,
+          "sat": 0.6,
+          "carb": 6,
+          "fibre": 2,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_turairoti.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:33",
+          "name": "Boondi raita 105g",
+          "kcal": 91,
+          "protein": 3.5,
+          "fat": 4.2,
+          "sat": 2.1,
+          "carb": 9.8,
+          "fibre": 0.6
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:33",
+          "name": "Roti x2 (~40g each; ghee unknown)",
+          "kcal": 240,
+          "protein": 7,
+          "fat": 4,
+          "sat": 1,
+          "carb": 46,
+          "fibre": 5
         }
       ]
     }
