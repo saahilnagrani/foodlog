@@ -7290,6 +7290,107 @@
           "sat": 8.8,
           "carb": 57.5,
           "fibre": 6.3
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Paneer tikka pizza, 1 slice",
+          "kcal": 260,
+          "protein": 10,
+          "fat": 11,
+          "sat": 5.5,
+          "carb": 30,
+          "fibre": 1.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_pizza.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Palak patta chaat, 2 pieces",
+          "kcal": 160,
+          "protein": 3.5,
+          "fat": 9,
+          "sat": 2.5,
+          "carb": 16,
+          "fibre": 1.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Dahi kabab, 2 pieces (shallow-fried)",
+          "kcal": 200,
+          "protein": 7,
+          "fat": 12,
+          "sat": 6,
+          "carb": 16,
+          "fibre": 0.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Pudina paratha, half",
+          "kcal": 130,
+          "protein": 3,
+          "fat": 5,
+          "sat": 2.5,
+          "carb": 18,
+          "fibre": 1.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Butter tandoori roti, half",
+          "kcal": 90,
+          "protein": 2.5,
+          "fat": 3,
+          "sat": 1.8,
+          "carb": 13,
+          "fibre": 1.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Plain naan, half",
+          "kcal": 130,
+          "protein": 4,
+          "fat": 3,
+          "sat": 1.2,
+          "carb": 22,
+          "fibre": 0.8
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Lachha paneer (restaurant, ~120g)",
+          "kcal": 320,
+          "protein": 13,
+          "fat": 25,
+          "sat": 13,
+          "carb": 9,
+          "fibre": 1.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_lachhapaneer.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Tadka dal, 2 servings (~300g)",
+          "kcal": 300,
+          "protein": 15,
+          "fat": 11,
+          "sat": 4,
+          "carb": 36,
+          "fibre": 8
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Dal makhani, 1 serving (~150g)",
+          "kcal": 260,
+          "protein": 9,
+          "fat": 16,
+          "sat": 9,
+          "carb": 20,
+          "fibre": 5
         }
       ]
     },
