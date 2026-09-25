@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-24",
+  "updated": "2026-09-25",
   "days": [
     {
       "date": "2026-07-24",
@@ -7290,6 +7290,36 @@
           "sat": 8.8,
           "carb": 57.5,
           "fibre": 6.3
+        }
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "label": "Fri 25 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "08:46",
+          "name": "Buttered toast x1 (white bread)",
+          "kcal": 110,
+          "protein": 2.5,
+          "fat": 4.5,
+          "sat": 2.5,
+          "carb": 15,
+          "fibre": 0.8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_toastchai.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "08:46",
+          "name": "Chai with milk, 1 mug (~200ml, sugar unknown)",
+          "kcal": 90,
+          "protein": 3,
+          "fat": 3.5,
+          "sat": 2.2,
+          "carb": 11,
+          "fibre": 0
         }
       ]
     }
