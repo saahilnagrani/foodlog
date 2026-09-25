@@ -7301,13 +7301,13 @@
         {
           "meal": "Breakfast",
           "t": "08:46",
-          "name": "Buttered toast x1 (white bread)",
-          "kcal": 110,
-          "protein": 2.5,
-          "fat": 4.5,
-          "sat": 2.5,
-          "carb": 15,
-          "fibre": 0.8,
+          "name": "Buttered toast x3 (white bread)",
+          "kcal": 330,
+          "protein": 7.5,
+          "fat": 13.5,
+          "sat": 7.5,
+          "carb": 45,
+          "fibre": 2.4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_toastchai.jpg"
         },
         {
