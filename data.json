@@ -7361,13 +7361,13 @@
         {
           "meal": "Dinner",
           "t": "21:00",
-          "name": "Lachha paneer (restaurant, ~120g)",
-          "kcal": 320,
-          "protein": 13,
-          "fat": 25,
-          "sat": 13,
-          "carb": 9,
-          "fibre": 1.5,
+          "name": "Lachha paneer (restaurant, ~80g)",
+          "kcal": 213,
+          "protein": 8.7,
+          "fat": 16.7,
+          "sat": 8.7,
+          "carb": 6,
+          "fibre": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_lachhapaneer.jpg"
         },
         {
