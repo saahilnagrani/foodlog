@@ -7455,6 +7455,18 @@
           "sat": 1,
           "carb": 46,
           "fibre": 5
+        },
+        {
+          "meal": "Snack",
+          "t": "14:01",
+          "name": "Moong sprouts 45g, plain",
+          "kcal": 14,
+          "protein": 1.4,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 2.7,
+          "fibre": 0.8,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_sprouts.jpg"
         }
       ]
     }
