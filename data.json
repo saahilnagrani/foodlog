@@ -7543,6 +7543,40 @@
           "sat": 1,
           "carb": 30,
           "fibre": 6.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "14:19",
+          "name": "Masala pulao ~120g (estimated)",
+          "kcal": 180,
+          "protein": 3.3,
+          "fat": 4.8,
+          "sat": 0.9,
+          "carb": 31,
+          "fibre": 0.9,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat26_pulaosabziroti.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "14:19",
+          "name": "Lauki-tamatar sabzi ~100g (estimated)",
+          "kcal": 70,
+          "protein": 1.5,
+          "fat": 4.5,
+          "sat": 0.6,
+          "carb": 6,
+          "fibre": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "14:19",
+          "name": "Roti x1 (~40g; ghee unknown)",
+          "kcal": 120,
+          "protein": 3.5,
+          "fat": 2,
+          "sat": 0.5,
+          "carb": 23,
+          "fibre": 2.5
         }
       ]
     }
