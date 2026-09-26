@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-25",
+  "updated": "2026-09-26",
   "days": [
     {
       "date": "2026-07-24",
@@ -7513,6 +7513,36 @@
           "carb": 36,
           "fibre": 4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_chaap.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-09-26",
+      "label": "Sat 26 Sep",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:09",
+          "name": "Masala pulao ~200g (estimated)",
+          "kcal": 300,
+          "protein": 5.5,
+          "fat": 8,
+          "sat": 1.5,
+          "carb": 52,
+          "fibre": 1.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat26_pulaodalpalak.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:09",
+          "name": "Dal palak ~200g (estimated)",
+          "kcal": 230,
+          "protein": 11,
+          "fat": 7,
+          "sat": 1,
+          "carb": 30,
+          "fibre": 6.5
         }
       ]
     }
