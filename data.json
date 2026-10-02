@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-09-28",
+  "updated": "2026-10-02",
   "days": [
     {
       "date": "2026-07-24",
@@ -7664,6 +7664,25 @@
           "carb": 78,
           "fibre": 4.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon28_pizza.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "label": "Fri 2 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Dinner",
+          "t": "14:14",
+          "name": "Chicken biryani 260g (2 drumsticks 100g with bone, ~65g meat + 160g rice)",
+          "kcal": 475,
+          "protein": 22.6,
+          "fat": 20.6,
+          "sat": 6.2,
+          "carb": 48,
+          "fibre": 1.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri2_biryani.jpg"
         }
       ]
     }
