@@ -7713,6 +7713,17 @@
           "carb": 42.5,
           "fibre": 4.1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat3_tofunoodles.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:33",
+          "name": "Matar tofu 59g (2nd serving)",
+          "kcal": 77,
+          "protein": 5.1,
+          "fat": 4.4,
+          "sat": 0.7,
+          "carb": 3.7,
+          "fibre": 1.2
         }
       ]
     }
