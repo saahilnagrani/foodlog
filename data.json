@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-10-02",
+  "updated": "2026-10-03",
   "days": [
     {
       "date": "2026-07-24",
@@ -7683,6 +7683,24 @@
           "carb": 48,
           "fibre": 1.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri2_biryani.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "label": "Sat 3 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Breakfast",
+          "t": "12:30",
+          "name": "Whey drink (31g ON whey vanilla + 13g ISO100 mocha + 200ml Oatly Barista + 18g nuts & seeds + 100g strawberries)",
+          "kcal": 429,
+          "protein": 40.2,
+          "fat": 17.6,
+          "sat": 2.8,
+          "carb": 27.9,
+          "fibre": 5.2
         }
       ]
     }
