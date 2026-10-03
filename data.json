@@ -7780,6 +7780,28 @@
           "sat": 0,
           "carb": 27,
           "fibre": 3.1
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:48",
+          "name": "Hakka noodles 125g (2nd serving)",
+          "kcal": 188,
+          "protein": 5,
+          "fat": 6.2,
+          "sat": 0.9,
+          "carb": 28.8,
+          "fibre": 1.9
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:48",
+          "name": "Veg manchurian, 4 balls with gravy 150g (2nd serving)",
+          "kcal": 240,
+          "protein": 5.3,
+          "fat": 12,
+          "sat": 1.5,
+          "carb": 27,
+          "fibre": 3
         }
       ]
     }
