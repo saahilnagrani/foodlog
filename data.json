@@ -7701,6 +7701,18 @@
           "sat": 2.8,
           "carb": 27.9,
           "fibre": 5.2
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:23",
+          "name": "Matar tofu ~140g + noodles ~128g (268g, scale tared)",
+          "kcal": 360,
+          "protein": 17,
+          "fat": 16,
+          "sat": 2.5,
+          "carb": 38,
+          "fibre": 4,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat3_tofunoodles.jpg"
         }
       ]
     }
