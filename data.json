@@ -7689,7 +7689,7 @@
     {
       "date": "2026-10-03",
       "label": "Sat 3 Oct",
-      "workout": "",
+      "workout": "Home A",
       "items": [
         {
           "meal": "Breakfast",
@@ -7705,13 +7705,13 @@
         {
           "meal": "Lunch",
           "t": "14:23",
-          "name": "Matar tofu ~140g + noodles ~128g (268g, scale tared)",
-          "kcal": 360,
-          "protein": 17,
-          "fat": 16,
-          "sat": 2.5,
-          "carb": 38,
-          "fibre": 4,
+          "name": "Noodles 163g + matar tofu 105g (268g total)",
+          "kcal": 365,
+          "protein": 15.7,
+          "fat": 14.4,
+          "sat": 2.2,
+          "carb": 42.5,
+          "fibre": 4.1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat3_tofunoodles.jpg"
         }
       ]
