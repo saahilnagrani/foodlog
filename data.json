@@ -7900,6 +7900,17 @@
           "sat": 2.7,
           "carb": 20.5,
           "fibre": 2.8
+        },
+        {
+          "meal": "Snack",
+          "t": "26:35",
+          "name": "Haldiram's mint lachha 120g (label)",
+          "kcal": 651,
+          "protein": 10.3,
+          "fat": 34.3,
+          "sat": 10.3,
+          "carb": 72,
+          "fibre": 0
         }
       ]
     }
