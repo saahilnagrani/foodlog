@@ -7813,13 +7813,13 @@
         {
           "meal": "Lunch",
           "t": "11:33",
-          "name": "Chilli chicken 241g (scale tared; ~170g cooked chicken breast + coating & masala, assumed)",
-          "kcal": 462,
-          "protein": 56,
-          "fat": 21.1,
+          "name": "Chilli chicken 241g (scale tared; ~165g cooked chicken breast + coating, onion & ~100ml Heinz zero-sugar ketchup)",
+          "kcal": 470,
+          "protein": 56.5,
+          "fat": 21,
           "sat": 3.9,
-          "carb": 15.6,
-          "fibre": 1.6,
+          "carb": 19,
+          "fibre": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_chillichicken.jpg"
         }
       ]
