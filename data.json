@@ -7846,6 +7846,17 @@
           "fibre": 1.5
         },
         {
+          "meal": "Snack",
+          "t": "18:49",
+          "name": "Bikaji mast masala chips 40g (label)",
+          "kcal": 224,
+          "protein": 2.8,
+          "fat": 14.4,
+          "sat": 5.6,
+          "carb": 20.8,
+          "fibre": 1.6
+        },
+        {
           "meal": "Dinner",
           "t": "19:29",
           "name": "Chilli chicken 173g (2nd serving, with ketchup)",
@@ -7880,15 +7891,15 @@
           "fibre": 0
         },
         {
-          "meal": "Snack",
-          "t": "18:49",
-          "name": "Bikaji mast masala chips 40g (label)",
-          "kcal": 224,
-          "protein": 2.8,
-          "fat": 14.4,
-          "sat": 5.6,
-          "carb": 20.8,
-          "fibre": 1.6
+          "meal": "Dinner",
+          "t": "23:04",
+          "name": "Whey drink (29g ON whey vanilla + 12g ISO100 mocha + 200ml Oatly Barista + 17g nuts & seeds)",
+          "kcal": 388,
+          "protein": 36.6,
+          "fat": 18.1,
+          "sat": 2.7,
+          "carb": 20.5,
+          "fibre": 2.8
         }
       ]
     }
