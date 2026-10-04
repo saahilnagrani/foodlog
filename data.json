@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-10-03",
+  "updated": "2026-10-04",
   "days": [
     {
       "date": "2026-07-24",
@@ -7802,6 +7802,25 @@
           "sat": 1.5,
           "carb": 27,
           "fibre": 3
+        }
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "label": "Sun 4 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "11:33",
+          "name": "Chilli chicken 241g (scale tared; ~170g cooked chicken breast + coating & masala, assumed)",
+          "kcal": 462,
+          "protein": 56,
+          "fat": 21.1,
+          "sat": 3.9,
+          "carb": 15.6,
+          "fibre": 1.6,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_chillichicken.jpg"
         }
       ]
     }
