@@ -7821,6 +7821,29 @@
           "carb": 19,
           "fibre": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_chillichicken.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:56",
+          "name": "Poha 149g cooked (scale tared)",
+          "kcal": 307,
+          "protein": 6.3,
+          "fat": 12.2,
+          "sat": 1.7,
+          "carb": 42.8,
+          "fibre": 2.1,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_poha.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:56",
+          "name": "Bikaji Tana Tan 48g (label rate)",
+          "kcal": 269,
+          "protein": 5.3,
+          "fat": 17.3,
+          "sat": 5.3,
+          "carb": 22.1,
+          "fibre": 1.7
         }
       ]
     }
