@@ -7844,6 +7844,40 @@
           "sat": 4.4,
           "carb": 20.6,
           "fibre": 1.5
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:29",
+          "name": "Chilli chicken 173g (2nd serving, with ketchup)",
+          "kcal": 337,
+          "protein": 40.6,
+          "fat": 15.1,
+          "sat": 2.8,
+          "carb": 13.6,
+          "fibre": 1.4
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:29",
+          "name": "Onion paratha 34g",
+          "kcal": 95,
+          "protein": 2.3,
+          "fat": 3.4,
+          "sat": 0.8,
+          "carb": 14,
+          "fibre": 1.5,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_parathayogurt.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:29",
+          "name": "Greek yogurt 0% 137g",
+          "kcal": 86,
+          "protein": 13.7,
+          "fat": 0.7,
+          "sat": 0,
+          "carb": 6.2,
+          "fibre": 0
         }
       ]
     }
