@@ -7941,6 +7941,17 @@
           "sat": 2.8,
           "carb": 49,
           "fibre": 5.2
+        },
+        {
+          "meal": "Lunch",
+          "t": "12:39",
+          "name": "Chokhi Dhani green chilli pickle 24g (label)",
+          "kcal": 60,
+          "protein": 0,
+          "fat": 0.6,
+          "sat": 0,
+          "carb": 2.4,
+          "fibre": 1.2
         }
       ]
     }
