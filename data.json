@@ -7956,12 +7956,12 @@
         {
           "meal": "Dinner",
           "t": "13:44",
-          "name": "Shake Shack smashed onion burger, double, 218g",
-          "kcal": 620,
-          "protein": 36,
-          "fat": 36,
-          "sat": 15,
-          "carb": 36,
+          "name": "Shake Shack smashed onion burger, single, 218g",
+          "kcal": 480,
+          "protein": 24,
+          "fat": 26,
+          "sat": 10,
+          "carb": 37,
           "fibre": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_shakeshack.jpg"
         }
