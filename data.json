@@ -8624,6 +8624,18 @@
           "fibre": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_shakeshack.jpg",
           "sodium": 1152
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:39",
+          "name": "Whey drink (30g ON whey vanilla + 14g ISO100 mocha + 200ml Oatly Barista + 17g nuts & seeds + 75g strawberries)",
+          "kcal": 423,
+          "protein": 39.4,
+          "fat": 18.5,
+          "sat": 2.7,
+          "carb": 26.6,
+          "fibre": 4.3,
+          "sodium": 278
         }
       ]
     }
