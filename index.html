@@ -366,6 +366,7 @@
         <div class="field"><label>Total fat g</label><input id="e_fat" type="text" inputmode="decimal" autocomplete="off"></div>
         <div class="field"><label>Saturated fat g</label><input id="e_sat" type="text" inputmode="decimal" autocomplete="off"></div>
         <div class="field"><label>Fibre g</label><input id="e_fib" type="text" inputmode="decimal" autocomplete="off" placeholder="blank = unknown"></div>
+        <div class="field"><label>Sodium mg</label><input id="e_sod" type="text" inputmode="numeric" autocomplete="off" placeholder="blank = unknown"></div>
       </div>
       <div id="editMsg" class="planday" style="margin-top:10px;"></div>
       <div class="srow"><button class="sbtn ghost" onclick="closeEdit()">Cancel</button><button class="sbtn primary" id="e_save" onclick="saveEdit()">Save</button></div>
@@ -445,7 +446,7 @@
   <div class="toast" id="toast"></div>
 
 <script>
-const SEED={targets:{kcal:1900,protein:150,fat:60,sat:15,carb:180,fibre:30},updated:"",days:[]};
+const SEED={targets:{kcal:1900,protein:150,fat:60,sat:15,carb:180,fibre:30,sodium:2300},updated:"",days:[]};
 const IMGB="https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_breakfast.jpg";
 const IMGD="https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed29_dinner.jpg";
 let DATA=null;
@@ -557,10 +558,15 @@ function jumpToWeek(date){
 /* b = fibre. bq ("questionable") counts items logged before fibre was tracked;
    those read as 0, so a day carrying any of them is a floor, not a total, and
    every renderer prints a "+" after the number to say so. */
-function totals(d){const k=Math.round(sum(d.items,'kcal')),p=R(sum(d.items,'protein')),f=R(sum(d.items,'fat')),s=R(sum(d.items,'sat')),c=R(sum(d.items,'carb')),b=R(sum(d.items,'fibre'));
+/* n = sodium in mg, same rule as fibre: absent means unknown, nq counts those,
+   and the number prints with a "+" when the day has any. */
+function totals(d){const k=Math.round(sum(d.items,'kcal')),p=R(sum(d.items,'protein')),f=R(sum(d.items,'fat')),s=R(sum(d.items,'sat')),c=R(sum(d.items,'carb')),b=R(sum(d.items,'fibre')),n=Math.round(sum(d.items,'sodium'));
   const bq=d.items.filter(it=>it.fibre===undefined||it.fibre===null).length;
-  return {k,p,f,s,u:R(f-s),c,b,bq};}
+  const nq=d.items.filter(it=>it.sodium===undefined||it.sodium===null).length;
+  return {k,p,f,s,u:R(f-s),c,b,bq,n,nq};}
 function fibStr(t){return t.b+(t.bq?'+':'');}
+function sodStr(t){return t.n+(t.nq?'+':'');}
+function sodTarget(){return (DATA&&DATA.targets&&DATA.targets.sodium)||2300;}
 function imgSrc(it){return it.img||'';}
 /* time handling: it.t is 24h "HH:MM". displayed 12h, rows sorted by it. */
 const MEALORD={'Early morning':'04:00','Breakfast':'08:30','Snack':'11:00','Lunch':'13:30','Drink':'16:00','Dinner':'20:00'};
@@ -577,7 +583,7 @@ function jq(s){return String(s==null?'':s).replace(/\\/g,'\\\\').replace(/'/g,"\
 /* ---- weekly aggregates for a week ---- */
 function weekSeries(wd){
   // wd = array of day objects in the week; produce Mon..Sun slots that have data
-  return wd.map(d=>{const t=totals(d);return {d:dow(d.date)[0],dm:+d.date.slice(8),mon:dow(d.date)==='Mon',date:d.date,k:t.k,p:t.p,f:t.f,s:t.s,b:t.b,bq:t.bq};});
+  return wd.map(d=>{const t=totals(d);return {d:dow(d.date)[0],dm:+d.date.slice(8),mon:dow(d.date)==='Mon',date:d.date,k:t.k,p:t.p,f:t.f,s:t.s,b:t.b,bq:t.bq,n:t.n,nq:t.nq};});
 }
 
 /* ============ RENDER ============ */
@@ -673,8 +679,9 @@ function renderSearch(term){
       const src=imgSrc(it);
       const im=src?`<img src="${src}" alt="" onclick="return lb('${src}','${jq(it.name)}')">`:'';
       const fb=(it.fibre===undefined||it.fibre===null)?'fibre ?':R(it.fibre)+'g fibre';
+      const na=(it.sodium===undefined||it.sodium===null)?'':' &middot; '+Math.round(it.sodium)+'mg Na';
       h+=swipeRow(it,d.date,`<div class="sr-row">${im}<div class="sr-b"><div class="sr-n">${it.name}</div>`
-        +`<div class="sr-m">${it.t?tf(it.t)+' &middot; ':''}${Math.round(it.kcal)} kcal &middot; ${R(it.protein)}g P &middot; ${R(it.fat)}g F &middot; ${fb}</div></div></div>`);
+        +`<div class="sr-m">${it.t?tf(it.t)+' &middot; ':''}${Math.round(it.kcal)} kcal &middot; ${R(it.protein)}g P &middot; ${R(it.fat)}g F &middot; ${fb}${na}</div></div></div>`);
     });
   });
   return `<div class="srch"><div class="sr-h">${n} match${n===1?'':'es'} for &ldquo;${jq(term)}&rdquo;</div>`
@@ -693,7 +700,7 @@ function swipeRow(it,date,html){
   const n=ROWS.length;
   ROWS.push({date:it._date0||date,src:it._local?'local':'repo',name:it.name,t:it._t0!==undefined?it._t0:(it.t||''),kcal:Math.round(+it.kcal||0),
              meal:it.meal||'Snack',protein:+it.protein||0,fat:+it.fat||0,sat:+it.sat||0,carb:+it.carb||0,
-             fibre:(it.fibre===undefined||it.fibre===null)?'':+it.fibre,img:it.img||''});
+             fibre:(it.fibre===undefined||it.fibre===null)?'':+it.fibre,sodium:(it.sodium===undefined||it.sodium===null)?'':+it.sodium,img:it.img||''});
   return `<div class="swipe"><div class="swipe-in">${html}`
     +`<button class="swipe-edit" type="button" onclick="editRow(${n})">Edit</button>`
     +`<button class="swipe-del" type="button" onclick="delRow(${n})">Delete</button></div></div>`;
@@ -785,6 +792,7 @@ function editRow(n){
   document.getElementById('e_fat').value=r.fat;
   document.getElementById('e_sat').value=r.sat;
   document.getElementById('e_fib').value=r.fibre===''?'':r.fibre;
+  document.getElementById('e_sod').value=r.sodium===''?'':r.sodium;
   document.getElementById('e_date').value=r.date;
   document.getElementById('editWhere').innerHTML=
     `<b>${labelFor(r.date)}</b> &middot; ${r.src==='local'?'not saved to GitHub yet':'in data.json'}`;
@@ -808,7 +816,8 @@ function editPatch(){
           kcal:Math.round(numv(g('e_kcal'))), protein:R1(numv(g('e_pro'))),
           fat:R1(numv(g('e_fat'))), sat:R1(numv(g('e_sat'))), carb:R1(numv(g('e_carb'))),
           /* blank stays blank: an unknown fibre must not become a confident 0 */
-          fibre:String(g('e_fib').value||'').trim()===''?undefined:R1(numv(g('e_fib')))};
+          fibre:String(g('e_fib').value||'').trim()===''?undefined:R1(numv(g('e_fib'))),
+          sodium:String(g('e_sod').value||'').trim()===''?undefined:Math.round(numv(g('e_sod')))};
 }
 function editUsePrev(d){document.getElementById('e_date').value=d;EDITWARNED=true;saveEdit();}
 async function saveEdit(){
@@ -946,18 +955,19 @@ function barChart(S,key,max,o){
 function weekCharts(days){
   const S=weekSeries(days),T=DATA.targets;
   const maxK=Math.max(T.kcal,...S.map(x=>x.k),1)*1.12, maxP=Math.max(T.protein,...S.map(x=>x.p),1)*1.12, maxF=Math.max(T.fat,...S.map(x=>x.f),1)*1.12,
-        maxB=Math.max(T.fibre,...S.map(x=>x.b),1)*1.12;
+        maxB=Math.max(T.fibre,...S.map(x=>x.b),1)*1.12, TN=sodTarget(), maxN=Math.max(TN,...S.map(x=>x.n),1)*1.12;
   /* average + median on the two big charts, average only on the small pair.
      Today is left out of both while it is still in progress. */
-  const sk=seriesStats(S,'k'), sp=seriesStats(S,'p'), sf=seriesStats(S,'f'), ss=seriesStats(S,'s'), sb=seriesStats(S,'b',x=>x.bq>0);
+  const sk=seriesStats(S,'k'), sp=seriesStats(S,'p'), sf=seriesStats(S,'f'), ss=seriesStats(S,'s'), sb=seriesStats(S,'b',x=>x.bq>0), sn=seriesStats(S,'n',x=>x.nq>0);
   const L=(st,med)=>st?[{v:st.avg,cls:'avg'}].concat(med?[{v:st.med,cls:'med'}]:[]):[];
   return {
     cal:barChart(S,'k',maxK,{cls:x=>x.k>T.kcal?'over':'ok',stats:sk,median:true,lines:[{v:T.kcal,cls:'target',label:T.kcal}].concat(L(sk,true))}),
     pro:barChart(S,'p',maxP,{cls:x=>x.p>=T.protein?'okp':'lowp',stats:sp,median:true,lines:[{v:T.protein,cls:'target',label:T.protein}].concat(L(sp,true))}),
     fat:barChart(S,'f',maxF,{compact:true,stacked:true,over:x=>x.s>T.sat,sub:x=>x.s,subOver:x=>x.s>T.sat,stats:sf,stats2:ss,lines:[{v:T.sat,cls:'sat'},{v:T.fat,cls:'target'}].concat(L(sf)).concat(ss?[{v:ss.avg,cls:'avg sat'}]:[])}),
     fib:barChart(S,'b',maxB,{compact:true,cls:x=>x.b>=T.fibre?'okp':'lowp',stats:sb,lines:[{v:T.fibre,cls:'target',label:T.fibre}].concat(L(sb))}),
+    sod:barChart(S,'n',maxN,{compact:true,cls:x=>x.n>TN?'over':'ok',over:x=>x.n>TN,stats:sn,median:true,lines:[{v:TN,cls:'target',label:TN}].concat(L(sn,true))}),
     hint:PREF.span==='month'?'<div class="wk-hint">Tap a bar to open that week.</div>':'',
-    lowFib:S.filter(x=>x.b<T.fibre).length,
+    lowFib:S.filter(x=>x.b<T.fibre).length, overSod:S.filter(x=>x.n>TN).length,
     overN:S.filter(x=>x.s>T.sat).length, ndays:S.length
   };
 }
@@ -981,7 +991,8 @@ function renderB(days){
     <div class="prow">
       <div class="card"><div class="ctitle"><span class="dchip">Fat</span><span style="font-family:Arial;font-size:9px;color:${W.overN?'#e5271b':'#666'}">sat ${W.overN}/${W.ndays}d</span></div>${W.fat}</div>
       <div class="card"><div class="ctitle"><span class="dchip">Fibre</span><span style="font-family:Arial;font-size:9px;color:${W.lowFib?'#e5271b':'#666'}">under ${W.lowFib}/${W.ndays}d</span></div>${W.fib}</div>
-    </div>${W.hint}`;
+    </div>
+    <div class="card"><div class="ctitle"><span class="dchip">${spanWord()} &middot; Sodium mg</span><span style="font-family:Arial;font-size:10px;color:${W.overSod?'#e5271b':'#666'}">over ${sodTarget()}: ${W.overSod}/${W.ndays}d</span></div>${W.sod}</div>${W.hint}`;
   if(PREF.span==='month')return h;                 /* month view is charts only */
   [...days].reverse().forEach(d=>{
     const t=totals(d),T=DATA.targets;
@@ -996,6 +1007,7 @@ function renderB(days){
         <div class="block"><div class="h"><span>Fat</span><span>${t.f} / ${T.fat} g</span></div><div class="track"><div class="seg sat" data-w="${sw}"></div><div class="seg uns" data-w="${uw}"></div></div>
           <div class="mini"><span class="cchip r">SAT ${t.s}</span><span class="cchip g">UNSAT ${t.u}</span><span class="cchip b">CARB ${t.c}</span></div></div>
         <div class="block"><div class="h"><span>Fibre</span><span>${fibStr(t)} / ${T.fibre} g</span></div><div class="track"><div class="seg pro" data-w="${Math.min(100,t.b/T.fibre*100)}"></div></div></div>
+        <div class="block"><div class="h"><span>Sodium</span><span class="${t.n>sodTarget()?'over':''}">${sodStr(t)} / ${sodTarget()} mg</span></div><div class="track"><div class="seg ${t.n>sodTarget()?'sat':'uns'}" data-w="${Math.min(100,t.n/sodTarget()*100)}"></div></div></div>
       </div>
       <div class="sync" onclick="syncDay('${d.date}')">&darr; SYNC TO GOOGLE HEALTH</div></div>`;
   });
@@ -1017,7 +1029,8 @@ function renderC(days){
   h+=`<div class="prow">`
     +`<div class="panel"><div class="h">// fat &middot; ${W.overN}/${W.ndays}d sat over</div>${W.fat}</div>`
     +`<div class="panel"><div class="h">// fibre &middot; ${W.lowFib}/${W.ndays}d under ${T.fibre}</div>${W.fib}</div>`
-    +`</div>`+W.hint;
+    +`</div>`
+    +`<div class="panel"><div class="h">// sodium mg &middot; ${W.overSod}/${W.ndays}d over ${sodTarget()}</div>${W.sod}</div>`+W.hint;
   if(PREF.span==='month')return h;
   [...days].reverse().forEach(d=>{
     const t=totals(d);const id=d.date.replace(/-/g,'_');
@@ -1030,6 +1043,8 @@ function renderC(days){
     h+=`<div class="metric"><div class="l"><span class="name">carbs</span><span class="rd">${num(t.c)} g</span></div><div class="track" data-pct="${cp}" data-over="0">${cbar(cp)}</div></div>`;
     const bp=Math.round(Math.min(100,t.b/T.fibre*100));
     h+=`<div class="metric"><div class="l"><span class="name">fibre</span><span class="rd ${t.b<T.fibre?'hi':'ok'}">${fibStr(t)} / ${T.fibre} g</span></div><div class="track" data-pct="${bp}" data-over="0">${cbar(bp)}</div></div>`;
+    const np=Math.round(Math.min(100,t.n/sodTarget()*100)), nover=t.n>sodTarget();
+    h+=`<div class="metric"><div class="l"><span class="name">sodium</span><span class="rd ${nover?'hi':'ok'}">${sodStr(t)} / ${sodTarget()} mg</span></div><div class="track" data-pct="${np}" data-over="${nover?1:0}">${cbar(np,nover)}</div></div>`;
     h+=`<div class="sync" onclick="syncDay('${d.date}')">[ push &rarr; google_health ]</div>`;
   });
   return h;
@@ -1260,6 +1275,7 @@ function mergeExtras(data,extra){
       const o={meal:it.meal||'Snack',t:it.t||'',name:it.name||'Food',
                kcal:Math.round(+it.kcal||0),protein:+it.protein||0,fat:+it.fat||0,sat:+it.sat||0,carb:+it.carb||0};
       if(it.fibre!==undefined&&it.fibre!==null&&it.fibre!=='')o.fibre=+it.fibre;
+      if(it.sodium!==undefined&&it.sodium!==null&&it.sodium!=='')o.sodium=Math.round(+it.sodium);
       if(it.img && String(it.img).slice(0,5)!=='data:') o.img=it.img;   /* never push base64 photos */
       day.items.push(o);
     });
@@ -1310,21 +1326,21 @@ function refreshPending(){const e=document.getElementById('gh_pend');if(e){const
    Each food has 1 or 2 PARTS. A part = {lab, u(unit), d(default), k,p,f,s,c PER 1 UNIT}.
    Two-part foods let you enter the components you actually weigh
    (e.g. chicken curry = cooked chicken + gravy poured over it).            */
-const OIL ={lab:'oil', u:'tsp', d:1, k:45, p:0,   f:5,    s:.7,   c:0,    b:0};
-const GRVY={lab:'gravy',u:'g',  d:85,k:1.12,p:.02,f:.082, s:.013, c:.082,b:.012};
-const CHIK={lab:'chicken',u:'g',d:150,k:1.6,p:.32,f:.036, s:.0105,c:0,   b:0};
-const EWHT={lab:'egg whites',u:'pc',d:4,k:17,p:3.6,f:.06, s:0,    c:.2,  b:0};
+const OIL ={lab:'oil', u:'tsp', d:1, k:45, p:0,   f:5,    s:.7,   c:0,    b:0,  n:0};
+const GRVY={lab:'gravy',u:'g',  d:85,k:1.12,p:.02,f:.082, s:.013, c:.082,b:.012,n:4};    /* ~1g salt per 250g curry */
+const CHIK={lab:'chicken',u:'g',d:150,k:1.6,p:.32,f:.036, s:.0105,c:0,   b:0,  n:2.5};
+const EWHT={lab:'egg whites',u:'pc',d:4,k:17,p:3.6,f:.06, s:0,    c:.2,  b:0,  n:55};
 /* Per-unit rates defined once, so the standalone rows and the combined
    "Whey drink" below can never drift apart. lab() tags a copy for the
    multi-part rows, where each component needs its own caption. */
 const RATE={
-  onwhey: {u:'g', d:34, k:3.87,p:.774,f:.048,s:.032,c:.129,b:0},
-  awesome:{u:'g', d:35, k:3.69,p:.61, f:.084,s:.03, c:.036,b:.043},
-  clear:  {u:'g', d:30, k:3.64,p:.84, f:.004,s:0,   c:.04,b:0},
-  oatly:  {u:'ml',d:100,k:.6,  p:.01, f:.03, s:.003,c:.067,b:.008},
-  nuts:   {u:'g', d:20, k:6.6, p:.18, f:.61, s:.068,c:.136,b:.07},
-  straw:  {u:'g', d:100,k:.32, p:.007,f:.003,s:0,   c:.077,b:.02},
-  iso100: {u:'g', d:33, k:3.636,p:.758,f:.030,s:0,  c:.091,b:0},   /* fibre "<1g", counted as 0 */
+  onwhey: {u:'g', d:34, k:3.87,p:.774,f:.048,s:.032,c:.129,b:0,   n:4.2},   /* 130mg / 31g scoop */
+  awesome:{u:'g', d:35, k:3.69,p:.61, f:.084,s:.03, c:.036,b:.043,n:3},
+  clear:  {u:'g', d:30, k:3.64,p:.84, f:.004,s:0,   c:.04,b:0,    n:3.3},
+  oatly:  {u:'ml',d:100,k:.6,  p:.01, f:.03, s:.003,c:.067,b:.008,n:.4},    /* 0.1g salt / 100ml */
+  nuts:   {u:'g', d:20, k:6.6, p:.18, f:.61, s:.068,c:.136,b:.07, n:.1},    /* unsalted mix */
+  straw:  {u:'g', d:100,k:.32, p:.007,f:.003,s:0,   c:.077,b:.02, n:.01},
+  iso100: {u:'g', d:33, k:3.636,p:.758,f:.030,s:0,  c:.091,b:0,   n:5},     /* 160mg / 32g scoop; fibre "<1g", counted as 0 */
 };
 const lab=(r,l,d)=>Object.assign({},r,{lab:l},d===undefined?{}:{d:d});
 /* Extra spellings the frequency sort should recognise. Two years of this log
@@ -1368,6 +1384,8 @@ const QALIAS={
  'Sambazon scoopable acai':['acai'],
  'Bikaji Tana Tan namkeen':['tana tan','bikaji'],
  'HON Foods Isabgol (Organic)':['isabgol','psyllium'],
+ 'Sprite Zero with black salt & chaat masala':['sprite'],
+ 'Lipton zero sugar ice tea (mango)':['lipton','ice tea','iced tea'],
 };
 const QUICK=[
  {n:'Whey drink',             meal:'Drink',    parts:[
@@ -1385,37 +1403,39 @@ const QUICK=[
  {n:'Oat milk (Oatly)',       meal:'Snack',    parts:[RATE.oatly]},
  {n:'Mix nuts & seeds',       meal:'Snack',    parts:[RATE.nuts]},
  {n:'Egg-white omelette',     meal:'Breakfast',parts:[EWHT, OIL]},
- {n:'Scrambled eggs (whole)', meal:'Breakfast',parts:[{lab:'eggs',u:'pc',d:2,k:72,p:6.3,f:4.8,s:1.6,c:.4,b:0}, OIL]},
- {n:'Egg curry',              meal:'Dinner',   parts:[{lab:'egg whites',u:'pc',d:6,k:17,p:3.6,f:.06,s:0,c:.2,b:.012}, GRVY]},
+ {n:'Scrambled eggs (whole)', meal:'Breakfast',parts:[{lab:'eggs',u:'pc',d:2,k:72,p:6.3,f:4.8,s:1.6,c:.4,b:0,n:70}, OIL]},
+ {n:'Egg curry',              meal:'Dinner',   parts:[{lab:'egg whites',u:'pc',d:6,k:17,p:3.6,f:.06,s:0,c:.2,b:.012,n:55}, GRVY]},
  {n:'Chicken curry',          meal:'Lunch',    parts:[CHIK, GRVY]},
- {n:'Chicken, cooked (plain)',meal:'Lunch',    parts:[{u:'g',d:150,k:1.6,p:.32, f:.036,s:.0105,c:0,b:0}]},
- {n:'Prawn curry',            meal:'Lunch',    parts:[{lab:'prawns',u:'g',d:150,k:1.1,p:.234,f:.015,s:.004,c:.006,b:0}, GRVY]},
- {n:'Salmon, cooked',         meal:'Dinner',   parts:[{u:'g',d:150,k:1.96,p:.22,f:.12, s:.024,c:0,b:0}]},
- {n:'Tofu, firm',             meal:'Dinner',   parts:[{u:'g',d:100,k:1.2, p:.12, f:.07, s:.01, c:.02,b:.012}]},
- {n:'Daal, thick (no water)', meal:'Lunch',    parts:[{u:'g',d:200,k:1.35,p:.065,f:.04, s:.006,c:.175,b:.028}]},
- {n:'White rice, cooked',     meal:'Lunch',    parts:[{u:'g',d:130,k:1.3, p:.026,f:.003,s:.001,c:.28,b:.004}]},
- {n:'Chicken biryani',        meal:'Lunch',    parts:[{u:'g',d:240,k:1.71,p:.155,f:.052,s:.016,c:.15,b:.015}]},
- {n:'Greek yogurt 0%',        meal:'Snack',    parts:[{u:'g',d:150,k:.63, p:.10, f:.005,s:0,   c:.045,b:0}]},
- {n:'Moong sprouts',          meal:'Lunch',    parts:[{u:'g',d:60, k:1.36,p:.096,f:.005,s:0,   c:.25,b:.06}]},
- {n:'Moong sprout salad (onion & tomato)',meal:'Lunch',parts:[{u:'g',d:100,k:1.12,p:.075,f:.003,s:0,c:.209,b:.06}]},
- {n:'Veg salad',              meal:'Lunch',    parts:[{u:'g',d:150,k:.25, p:.01, f:.002,s:0,   c:.05,b:.015}]},
- {n:'Guacamole (no oil)',     meal:'Snack',    parts:[{u:'g',d:100,k:1.21,p:.017,f:.105,s:.015,c:.083,b:.067}]},
- {n:'Peanut butter',           meal:'Snack',    parts:[{u:'g',d:16, k:6.4, p:.24, f:.51, s:.08, c:.21, b:.03}]},
- {n:'Cooking oil',            meal:'Lunch',    parts:[{u:'tsp',d:1,k:45, p:0,   f:5,   s:.7,  c:0,b:0}]},
- {n:'Plain roti',             meal:'Dinner',   parts:[{u:'pc',d:1, k:120, p:4,   f:2,   s:.4,  c:22,b:3.5}]},
- {n:'Ghee roti',              meal:'Dinner',   parts:[{u:'pc',d:1, k:175, p:4.5, f:6,   s:3,   c:26,b:3.5}]},
- {n:'Baat Cheet papad',       meal:'Snack',    parts:[{u:'pc',d:1, k:45,  p:3,   f:.4,  s:.05, c:7.5,b:.8}]},
- {n:'Punjabi masala papad',   meal:'Snack',    parts:[{u:'pc',d:1, k:50,  p:3.4, f:.5,  s:.06, c:8.3,b:.9}]},
- {n:'Dilkhush papad',         meal:'Snack',    parts:[{u:'pc',d:1, k:34,  p:2,   f:.5,  s:.2,  c:6,b:.6}]},
- {n:'HON Foods Isabgol (Organic)',meal:'Drink', parts:[{u:'g',d:10, k:3.5, p:0,   f:.01, s:0,   c:.88, b:.8}]},
- {n:'Bikaji Tana Tan namkeen',  meal:'Snack',    parts:[{u:'g',d:30, k:5.3, p:.14, f:.35, s:.11, c:.40, b:.042}]},
- {n:'Makhana (roasted pack)', meal:'Snack',    parts:[{u:'g',d:25, k:5.2, p:.08, f:.28, s:.04, c:.56,b:.05}]},
- {n:'Apple',                  meal:'Snack',    parts:[{u:'g',d:100,k:.52, p:.003,f:.002,s:0,   c:.14,b:.024}]},
- {n:'Grapes',                 meal:'Snack',    parts:[{u:'g',d:100,k:.69, p:.006,f:.002,s:0,   c:.18,b:.009}]},
+ {n:'Chicken, cooked (plain)',meal:'Lunch',    parts:[{u:'g',d:150,k:1.6,p:.32, f:.036,s:.0105,c:0,b:0,n:2.5}]},
+ {n:'Prawn curry',            meal:'Lunch',    parts:[{lab:'prawns',u:'g',d:150,k:1.1,p:.234,f:.015,s:.004,c:.006,b:0,n:4}, GRVY]},
+ {n:'Salmon, cooked',         meal:'Dinner',   parts:[{u:'g',d:150,k:1.96,p:.22,f:.12, s:.024,c:0,b:0,n:2.5}]},
+ {n:'Tofu, firm',             meal:'Dinner',   parts:[{u:'g',d:100,k:1.2, p:.12, f:.07, s:.01, c:.02,b:.012,n:.1}]},
+ {n:'Daal, thick (no water)', meal:'Lunch',    parts:[{u:'g',d:200,k:1.35,p:.065,f:.04, s:.006,c:.175,b:.028,n:3}]},
+ {n:'White rice, cooked',     meal:'Lunch',    parts:[{u:'g',d:130,k:1.3, p:.026,f:.003,s:.001,c:.28,b:.004,n:.02}]},
+ {n:'Chicken biryani',        meal:'Lunch',    parts:[{u:'g',d:240,k:1.71,p:.155,f:.052,s:.016,c:.15,b:.015,n:4}]},
+ {n:'Greek yogurt 0%',        meal:'Snack',    parts:[{u:'g',d:150,k:.63, p:.10, f:.005,s:0,   c:.045,b:0,n:.42}]},
+ {n:'Moong sprouts',          meal:'Lunch',    parts:[{u:'g',d:60, k:1.36,p:.096,f:.005,s:0,   c:.25,b:.06,n:.1}]},
+ {n:'Moong sprout salad (onion & tomato)',meal:'Lunch',parts:[{u:'g',d:100,k:1.12,p:.075,f:.003,s:0,c:.209,b:.06,n:2}]},
+ {n:'Veg salad',              meal:'Lunch',    parts:[{u:'g',d:150,k:.25, p:.01, f:.002,s:0,   c:.05,b:.015,n:.3}]},
+ {n:'Guacamole (no oil)',     meal:'Snack',    parts:[{u:'g',d:100,k:1.21,p:.017,f:.105,s:.015,c:.083,b:.067,n:2}]},
+ {n:'Peanut butter',           meal:'Snack',    parts:[{u:'g',d:16, k:6.4, p:.24, f:.51, s:.08, c:.21, b:.03,n:4}]},
+ {n:'Cooking oil',            meal:'Lunch',    parts:[{u:'tsp',d:1,k:45, p:0,   f:5,   s:.7,  c:0,b:0,n:0}]},
+ {n:'Plain roti',             meal:'Dinner',   parts:[{u:'pc',d:1, k:120, p:4,   f:2,   s:.4,  c:22,b:3.5,n:150}]},
+ {n:'Ghee roti',              meal:'Dinner',   parts:[{u:'pc',d:1, k:175, p:4.5, f:6,   s:3,   c:26,b:3.5,n:150}]},
+ {n:'Baat Cheet papad',       meal:'Snack',    parts:[{u:'pc',d:1, k:45,  p:3,   f:.4,  s:.05, c:7.5,b:.8,n:250}]},
+ {n:'Punjabi masala papad',   meal:'Snack',    parts:[{u:'pc',d:1, k:50,  p:3.4, f:.5,  s:.06, c:8.3,b:.9,n:300}]},
+ {n:'Dilkhush papad',         meal:'Snack',    parts:[{u:'pc',d:1, k:34,  p:2,   f:.5,  s:.2,  c:6,b:.6,n:200}]},
+ {n:'HON Foods Isabgol (Organic)',meal:'Drink', parts:[{u:'g',d:10, k:3.5, p:0,   f:.01, s:0,   c:.88, b:.8,n:0}]},
+ {n:'Bikaji Tana Tan namkeen',  meal:'Snack',    parts:[{u:'g',d:30, k:5.3, p:.14, f:.35, s:.11, c:.40, b:.042,n:9}]},
+ {n:'Makhana (roasted pack)', meal:'Snack',    parts:[{u:'g',d:25, k:5.2, p:.08, f:.28, s:.04, c:.56,b:.05,n:5}]},
+ {n:'Apple',                  meal:'Snack',    parts:[{u:'g',d:100,k:.52, p:.003,f:.002,s:0,   c:.14,b:.024,n:.01}]},
+ {n:'Grapes',                 meal:'Snack',    parts:[{u:'g',d:100,k:.69, p:.006,f:.002,s:0,   c:.18,b:.009,n:.02}]},
  {n:'Strawberries',           meal:'Snack',    parts:[RATE.straw]},
- {n:'Plein Soleil frozen mango chunks',meal:'Snack',parts:[{u:'g',d:100,k:.6, p:.008,f:.004,s:.001,c:.15, b:.016}]},
- {n:'Sambazon scoopable acai', meal:'Snack',    parts:[{u:'g',d:100,k:1.11,p:.006,f:.019,s:.005,c:.22, b:.017}]},
- {n:'Banana',                 meal:'Snack',    parts:[{u:'pc',d:1,k:105, p:1.3,  f:.35, s:0,   c:27,  b:3.1}]}
+ {n:'Plein Soleil frozen mango chunks',meal:'Snack',parts:[{u:'g',d:100,k:.6, p:.008,f:.004,s:.001,c:.15, b:.016,n:.01}]},
+ {n:'Sambazon scoopable acai', meal:'Snack',    parts:[{u:'g',d:100,k:1.11,p:.006,f:.019,s:.005,c:.22, b:.017,n:.05}]},
+ {n:'Banana',                 meal:'Snack',    parts:[{u:'pc',d:1,k:105, p:1.3,  f:.35, s:0,   c:27,  b:3.1,n:1}]},
+ {n:'Sprite Zero with black salt & chaat masala',meal:'Drink',parts:[{u:'pc',d:1,k:8,p:0,f:0,s:0,c:1,b:0,n:620}]},   /* 330ml can 35mg + ~1g kala namak + 1g chaat masala */
+ {n:'Lipton zero sugar ice tea (mango)',meal:'Drink',parts:[{u:'ml',d:500,k:.01,p:0,f:0,s:0,c:.002,b:0,n:.1}]}
 ];
 const R1=n=>Math.round(n*10)/10;
 let selDate='', selMeal='Snack';
@@ -1453,10 +1473,13 @@ function fTime(){
 function numv(el){if(!el)return 0;const v=String(el.value||'').replace(',','.').replace(/[^0-9.]/g,'');const n=parseFloat(v);return isFinite(n)&&n>0?n:0;}
 function qamts(i){return QUICK[i].parts.map((_,j)=>numv(document.getElementById(`qi${i}_${j}`)));}
 function qmacros(i,amts){
-  let o={kcal:0,protein:0,fat:0,sat:0,carb:0,fibre:0};
+  let o={kcal:0,protein:0,fat:0,sat:0,carb:0,fibre:0,sodium:0}, naKnown=true;
   QUICK[i].parts.forEach((pt,j)=>{const a=amts[j]||0;
-    o.kcal+=pt.k*a; o.protein+=pt.p*a; o.fat+=pt.f*a; o.sat+=pt.s*a; o.carb+=pt.c*a; o.fibre+=(pt.b||0)*a;});
-  return {kcal:Math.round(o.kcal),protein:R1(o.protein),fat:R1(o.fat),sat:R1(o.sat),carb:R1(o.carb),fibre:R1(o.fibre)};
+    o.kcal+=pt.k*a; o.protein+=pt.p*a; o.fat+=pt.f*a; o.sat+=pt.s*a; o.carb+=pt.c*a; o.fibre+=(pt.b||0)*a;
+    if(a>0){ if(pt.n===undefined)naKnown=false; else o.sodium+=pt.n*a; }});
+  const out={kcal:Math.round(o.kcal),protein:R1(o.protein),fat:R1(o.fat),sat:R1(o.sat),carb:R1(o.carb),fibre:R1(o.fibre)};
+  if(naKnown)out.sodium=Math.round(o.sodium);     /* a part with no figure leaves the item's sodium unknown */
+  return out;
 }
 /* How often each quick-add food actually appears in the log - counting both
    app adds and the entries written here by hand.

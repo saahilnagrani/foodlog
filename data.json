@@ -5,7 +5,8 @@
     "fat": 60,
     "sat": 15,
     "carb": 180,
-    "fibre": 30
+    "fibre": 30,
+    "sodium": 2300
   },
   "updated": "2026-10-05",
   "days": [
@@ -23,7 +24,8 @@
           "fat": 15,
           "sat": 2.5,
           "carb": 32,
-          "fibre": 3.2
+          "fibre": 3.2,
+          "sodium": 404
         },
         {
           "meal": "Lunch",
@@ -34,7 +36,8 @@
           "fat": 23,
           "sat": 7,
           "carb": 28,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 570
         },
         {
           "meal": "Snack",
@@ -45,7 +48,8 @@
           "fat": 7,
           "sat": 1.5,
           "carb": 5,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 198
         },
         {
           "meal": "Dinner",
@@ -56,7 +60,8 @@
           "fat": 12,
           "sat": 3,
           "carb": 100,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 1148
         }
       ]
     },
@@ -74,7 +79,8 @@
           "fat": 23,
           "sat": 6,
           "carb": 48,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 1128
         },
         {
           "meal": "Snack",
@@ -85,7 +91,8 @@
           "fat": 13,
           "sat": 2.5,
           "carb": 22,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 314
         },
         {
           "meal": "Snack",
@@ -96,7 +103,8 @@
           "fat": 12,
           "sat": 2,
           "carb": 75,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 399
         },
         {
           "meal": "Snack",
@@ -107,7 +115,8 @@
           "fat": 7,
           "sat": 1.5,
           "carb": 6,
-          "fibre": 1.4
+          "fibre": 1.4,
+          "sodium": 198
         },
         {
           "meal": "Dinner",
@@ -118,7 +127,8 @@
           "fat": 49,
           "sat": 22,
           "carb": 60,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 1000
         },
         {
           "meal": "Drink",
@@ -129,7 +139,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 9,
-          "fibre": 0.2
+          "fibre": 0.2,
+          "sodium": 13
         }
       ]
     },
@@ -147,7 +158,8 @@
           "fat": 21,
           "sat": 5.5,
           "carb": 6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 429
         },
         {
           "meal": "Lunch",
@@ -158,7 +170,8 @@
           "fat": 16,
           "sat": 5,
           "carb": 18,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 8
         },
         {
           "meal": "Snack",
@@ -169,7 +182,8 @@
           "fat": 10,
           "sat": 2,
           "carb": 14,
-          "fibre": 2.2
+          "fibre": 2.2,
+          "sodium": 297
         },
         {
           "meal": "Dinner",
@@ -180,7 +194,8 @@
           "fat": 13,
           "sat": 4,
           "carb": 24,
-          "fibre": 4.5
+          "fibre": 4.5,
+          "sodium": 498
         }
       ]
     },
@@ -198,7 +213,8 @@
           "fat": 10,
           "sat": 2,
           "carb": 20,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 280
         },
         {
           "meal": "Lunch",
@@ -209,7 +225,8 @@
           "fat": 11,
           "sat": 1.5,
           "carb": 53,
-          "fibre": 9.3
+          "fibre": 9.3,
+          "sodium": 2282
         },
         {
           "meal": "Snack",
@@ -220,7 +237,8 @@
           "fat": 0.7,
           "sat": 0.5,
           "carb": 2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 121
         },
         {
           "meal": "Dinner",
@@ -231,7 +249,8 @@
           "fat": 27,
           "sat": 8.5,
           "carb": 25,
-          "fibre": 4.5
+          "fibre": 4.5,
+          "sodium": 798
         }
       ]
     },
@@ -249,7 +268,8 @@
           "fat": 41,
           "sat": 7,
           "carb": 33,
-          "fibre": 3.9
+          "fibre": 3.9,
+          "sodium": 842
         },
         {
           "meal": "Lunch",
@@ -260,7 +280,8 @@
           "fat": 30,
           "sat": 8.5,
           "carb": 25,
-          "fibre": 5.7
+          "fibre": 5.7,
+          "sodium": 2048
         },
         {
           "meal": "Dinner",
@@ -271,7 +292,8 @@
           "fat": 30,
           "sat": 5,
           "carb": 2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 528
         }
       ]
     },
@@ -289,7 +311,8 @@
           "fat": 38,
           "sat": 20,
           "carb": 70,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 1200
         },
         {
           "meal": "Lunch",
@@ -300,7 +323,8 @@
           "fat": 2,
           "sat": 0.5,
           "carb": 32,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 140
         },
         {
           "meal": "Snack",
@@ -311,7 +335,8 @@
           "fat": 17,
           "sat": 3,
           "carb": 30,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 435
         },
         {
           "meal": "Dinner",
@@ -323,7 +348,8 @@
           "sat": 5,
           "carb": 68,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed29_dinner.jpg",
-          "fibre": 8.5
+          "fibre": 8.5,
+          "sodium": 1132
         },
         {
           "meal": "Snack",
@@ -334,7 +360,8 @@
           "fat": 0.7,
           "sat": 0.5,
           "carb": 2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 127
         }
       ]
     },
@@ -353,7 +380,8 @@
           "sat": 3,
           "carb": 23,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_breakfast.jpg",
-          "fibre": 4.2
+          "fibre": 4.2,
+          "sodium": 369
         },
         {
           "meal": "Lunch",
@@ -365,7 +393,8 @@
           "sat": 1,
           "carb": 12,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_lunch.jpg",
-          "fibre": 2.2
+          "fibre": 2.2,
+          "sodium": 620
         },
         {
           "meal": "Dinner",
@@ -377,7 +406,8 @@
           "sat": 2.5,
           "carb": 8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_dinner.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 540
         },
         {
           "meal": "Dinner",
@@ -388,7 +418,8 @@
           "fat": 4,
           "sat": 0.6,
           "carb": 3,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 288
         },
         {
           "meal": "Snack",
@@ -399,7 +430,8 @@
           "fat": 0.7,
           "sat": 0.5,
           "carb": 2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 127
         }
       ]
     },
@@ -417,7 +449,8 @@
           "fat": 3,
           "sat": 0.7,
           "carb": 15,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 605
         },
         {
           "meal": "Early morning",
@@ -428,7 +461,8 @@
           "fat": 5.5,
           "sat": 2.1,
           "carb": 5,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 33
         },
         {
           "meal": "Early morning",
@@ -439,7 +473,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 1,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 50
         },
         {
           "meal": "Lunch",
@@ -451,7 +486,8 @@
           "sat": 11.5,
           "carb": 46,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri31_lunch.jpg",
-          "fibre": 6.5
+          "fibre": 6.5,
+          "sodium": 570
         },
         {
           "meal": "Snack",
@@ -463,7 +499,8 @@
           "sat": 0.5,
           "carb": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri31_whey.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 134
         },
         {
           "meal": "Dinner",
@@ -475,7 +512,8 @@
           "sat": 5.9,
           "carb": 51,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri31_dinner.jpg",
-          "fibre": 11.2
+          "fibre": 11.2,
+          "sodium": 726
         },
         {
           "meal": "Dinner",
@@ -487,7 +525,8 @@
           "sat": 0,
           "carb": 36,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri31_fruit.jpg",
-          "fibre": 3.6
+          "fibre": 3.6,
+          "sodium": 5
         },
         {
           "meal": "Snack",
@@ -498,7 +537,8 @@
           "fat": 2.5,
           "sat": 1.5,
           "carb": 6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 264
         }
       ]
     },
@@ -517,7 +557,8 @@
           "sat": 1.2,
           "carb": 5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_eggs.jpg",
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 560
         },
         {
           "meal": "Breakfast",
@@ -529,7 +570,8 @@
           "sat": 3.4,
           "carb": 22,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_manakeesh.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 300
         },
         {
           "meal": "Snack",
@@ -541,7 +583,8 @@
           "sat": 1.5,
           "carb": 6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_shakefruit.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 264
         },
         {
           "meal": "Snack",
@@ -552,7 +595,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 25.4,
-          "fibre": 4.9
+          "fibre": 4.9,
+          "sodium": 3
         },
         {
           "meal": "Snack",
@@ -564,7 +608,8 @@
           "sat": 0.7,
           "carb": 3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_whey2.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 132
         },
         {
           "meal": "Dinner",
@@ -576,7 +621,8 @@
           "sat": 6.9,
           "carb": 0,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat1_dinner.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 701
         },
         {
           "meal": "Dinner",
@@ -587,7 +633,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 7,
-          "fibre": 6.8
+          "fibre": 6.8,
+          "sodium": 48
         },
         {
           "meal": "Dinner",
@@ -598,7 +645,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 6.5,
-          "fibre": 1.7
+          "fibre": 1.7,
+          "sodium": 36
         },
         {
           "meal": "Drink",
@@ -609,7 +657,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 1,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 50
         },
         {
           "meal": "Snack",
@@ -620,7 +669,8 @@
           "fat": 2.3,
           "sat": 0.9,
           "carb": 5.5,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 75
         },
         {
           "meal": "Snack",
@@ -631,7 +681,8 @@
           "fat": 0.5,
           "sat": 0.1,
           "carb": 6.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 220
         },
         {
           "meal": "Snack",
@@ -642,7 +693,8 @@
           "fat": 14.9,
           "sat": 2.5,
           "carb": 47.6,
-          "fibre": 3.8
+          "fibre": 3.8,
+          "sodium": 783
         }
       ]
     },
@@ -661,7 +713,8 @@
           "sat": 2.2,
           "carb": 1.8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_eggs.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 678
         },
         {
           "meal": "Snack",
@@ -673,7 +726,8 @@
           "sat": 1.6,
           "carb": 11.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_whey.jpg",
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 302
         },
         {
           "meal": "Dinner",
@@ -685,7 +739,8 @@
           "sat": 2.2,
           "carb": 6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_currymeal.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 615
         },
         {
           "meal": "Dinner",
@@ -697,7 +752,8 @@
           "sat": 0.1,
           "carb": 15.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun2_sprouts.jpg",
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 100
         },
         {
           "meal": "Drink",
@@ -708,7 +764,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 40
         },
         {
           "meal": "Dinner",
@@ -719,7 +776,8 @@
           "fat": 81,
           "sat": 18,
           "carb": 79,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 1416
         },
         {
           "meal": "Snack",
@@ -730,7 +788,8 @@
           "fat": 18,
           "sat": 5,
           "carb": 48,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 675
         },
         {
           "meal": "Snack",
@@ -741,7 +800,8 @@
           "fat": 32,
           "sat": 11,
           "carb": 68,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 420
         }
       ]
     },
@@ -759,7 +819,8 @@
           "fat": 1.2,
           "sat": 0.7,
           "carb": 3,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 132
         },
         {
           "meal": "Lunch",
@@ -771,7 +832,8 @@
           "sat": 7.5,
           "carb": 105,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_sandwich.jpg",
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 2016
         },
         {
           "meal": "Lunch",
@@ -782,7 +844,8 @@
           "fat": 12.8,
           "sat": 8,
           "carb": 18,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 210
         },
         {
           "meal": "Drink",
@@ -793,7 +856,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 18,
-          "fibre": 0.2
+          "fibre": 0.2,
+          "sodium": 20
         },
         {
           "meal": "Dinner",
@@ -805,7 +869,8 @@
           "sat": 2.3,
           "carb": 25,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_curry.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 720
         },
         {
           "meal": "Snack",
@@ -816,7 +881,8 @@
           "fat": 1.2,
           "sat": 0.7,
           "carb": 3,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 132
         },
         {
           "meal": "Snack",
@@ -828,7 +894,8 @@
           "sat": 5,
           "carb": 60,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_mcd_a.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 1334
         },
         {
           "meal": "Snack",
@@ -840,7 +907,8 @@
           "sat": 5,
           "carb": 39.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_mcd_b.jpg",
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 245
         },
         {
           "meal": "Drink",
@@ -852,7 +920,8 @@
           "sat": 0,
           "carb": 49,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon3_mcd_c.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 620
         }
       ]
     },
@@ -870,7 +939,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 0.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 105
         },
         {
           "meal": "Breakfast",
@@ -881,7 +951,8 @@
           "fat": 14,
           "sat": 3.7,
           "carb": 1.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 912
         },
         {
           "meal": "Lunch",
@@ -893,7 +964,8 @@
           "sat": 6.4,
           "carb": 18,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue4_shawarma.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 1177
         },
         {
           "meal": "Snack",
@@ -904,7 +976,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 0.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 105
         },
         {
           "meal": "Snack",
@@ -916,7 +989,8 @@
           "sat": 4.3,
           "carb": 11.4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue4_cashews.jpg",
-          "fibre": 1.3
+          "fibre": 1.3,
+          "sodium": 229
         },
         {
           "meal": "Drink",
@@ -927,7 +1001,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 0,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 0
         }
       ]
     },
@@ -946,7 +1021,8 @@
           "sat": 1.65,
           "carb": 21.8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_broth.jpg",
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 256
         },
         {
           "meal": "Lunch",
@@ -958,7 +1034,8 @@
           "sat": 1,
           "carb": 4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_pumpkinsoup.jpg",
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 35
         },
         {
           "meal": "Lunch",
@@ -970,7 +1047,8 @@
           "sat": 10.3,
           "carb": 31.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fish.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 574
         },
         {
           "meal": "Lunch",
@@ -982,7 +1060,8 @@
           "sat": 1.8,
           "carb": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fishcurry.jpg",
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 112
         },
         {
           "meal": "Lunch",
@@ -994,7 +1073,8 @@
           "sat": 13.7,
           "carb": 49.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_fondant.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 215
         },
         {
           "meal": "Snack",
@@ -1005,7 +1085,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 0.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 105
         },
         {
           "meal": "Drink",
@@ -1017,7 +1098,8 @@
           "sat": 0,
           "carb": 16,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_greenfizz.jpg",
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 16
         },
         {
           "meal": "Dinner",
@@ -1029,7 +1111,8 @@
           "sat": 3.2,
           "carb": 12,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_tofu.jpg",
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 312
         },
         {
           "meal": "Dinner",
@@ -1041,7 +1124,8 @@
           "sat": 2.8,
           "carb": 23,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_cauliflower.jpg",
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 240
         },
         {
           "meal": "Dinner",
@@ -1053,7 +1137,8 @@
           "sat": 6.3,
           "carb": 11.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_chicken.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 426
         },
         {
           "meal": "Dinner",
@@ -1065,7 +1150,8 @@
           "sat": 2.3,
           "carb": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_pestochicken.jpg",
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 264
         },
         {
           "meal": "Dinner",
@@ -1077,7 +1163,8 @@
           "sat": 18,
           "carb": 39,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed5_cheesecake.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 210
         },
         {
           "meal": "Drink",
@@ -1088,7 +1175,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 1,
-          "fibre": 0.2
+          "fibre": 0.2,
+          "sodium": 12
         }
       ]
     },
@@ -1107,7 +1195,8 @@
           "sat": 0.2,
           "carb": 48,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_fruitplatter.jpg",
-          "fibre": 7
+          "fibre": 7,
+          "sodium": 6
         },
         {
           "meal": "DRK",
@@ -1118,7 +1207,8 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 43,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 190
         },
         {
           "meal": "BRK",
@@ -1130,7 +1220,8 @@
           "sat": 6,
           "carb": 61,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_hoppersplain.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 1126
         },
         {
           "meal": "BRK",
@@ -1141,7 +1232,8 @@
           "fat": 10,
           "sat": 7.5,
           "carb": 3,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 232
         },
         {
           "meal": "BRK",
@@ -1152,7 +1244,8 @@
           "fat": 6,
           "sat": 4.5,
           "carb": 10,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 165
         },
         {
           "meal": "BRK",
@@ -1164,7 +1257,8 @@
           "sat": 5.7,
           "carb": 14.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_seenisambol.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 140
         },
         {
           "meal": "BRK",
@@ -1176,7 +1270,8 @@
           "sat": 3.6,
           "carb": 48,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_chiafruit.jpg",
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 370
         },
         {
           "meal": "LUN",
@@ -1188,7 +1283,8 @@
           "sat": 9,
           "carb": 5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_grilledwhite.jpg",
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 450
         },
         {
           "meal": "LUN",
@@ -1200,7 +1296,8 @@
           "sat": 15.1,
           "carb": 4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_chickencurry.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 38
         },
         {
           "meal": "LUN",
@@ -1212,7 +1309,8 @@
           "sat": 5,
           "carb": 9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_daalcurry.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 165
         },
         {
           "meal": "LUN",
@@ -1224,7 +1322,8 @@
           "sat": 7.4,
           "carb": 4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_polsambol.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 90
         },
         {
           "meal": "LUN",
@@ -1236,7 +1335,8 @@
           "sat": 14.5,
           "carb": 36,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_passionfruit.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 178
         },
         {
           "meal": "DNR",
@@ -1248,7 +1348,8 @@
           "sat": 8,
           "carb": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_muttoncurry.jpg",
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 495
         },
         {
           "meal": "DNR",
@@ -1259,7 +1360,8 @@
           "fat": 4,
           "sat": 2.5,
           "carb": 42,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 11
         },
         {
           "meal": "DNR",
@@ -1270,7 +1372,8 @@
           "fat": 4.5,
           "sat": 3.5,
           "carb": 9,
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 176
         },
         {
           "meal": "DNR",
@@ -1282,7 +1385,8 @@
           "sat": 8.5,
           "carb": 16,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_daalcurry2.jpg",
-          "fibre": 3.4
+          "fibre": 3.4,
+          "sodium": 285
         },
         {
           "meal": "DNR",
@@ -1293,7 +1397,8 @@
           "fat": 2,
           "sat": 1.7,
           "carb": 2,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 30
         },
         {
           "meal": "DNR",
@@ -1304,7 +1409,8 @@
           "fat": 1.2,
           "sat": 1,
           "carb": 1,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 16
         },
         {
           "meal": "DNR",
@@ -1316,7 +1422,8 @@
           "sat": 2.7,
           "carb": 14,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu6_kiripeni.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 77
         },
         {
           "meal": "DNR",
@@ -1327,7 +1434,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 27,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 55
         }
       ]
     },
@@ -1346,7 +1454,8 @@
           "sat": 0,
           "carb": 29,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_fruitplatter.jpg",
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 4
         },
         {
           "meal": "DRK",
@@ -1358,7 +1467,8 @@
           "sat": 0,
           "carb": 25,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_beetrootcelery.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 110
         },
         {
           "meal": "BRK",
@@ -1369,7 +1479,8 @@
           "fat": 14.5,
           "sat": 6.3,
           "carb": 47.5,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 468
         },
         {
           "meal": "BRK",
@@ -1381,7 +1492,8 @@
           "sat": 3.2,
           "carb": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_scrambledegg.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 304
         },
         {
           "meal": "BRK",
@@ -1392,7 +1504,8 @@
           "fat": 4,
           "sat": 0.5,
           "carb": 4,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 60
         },
         {
           "meal": "LUN",
@@ -1404,7 +1517,8 @@
           "sat": 2.3,
           "carb": 18.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_gardensalad.jpg",
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 294
         },
         {
           "meal": "LUN",
@@ -1416,7 +1530,8 @@
           "sat": 0.7,
           "carb": 45,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_grilledprawns.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 498
         },
         {
           "meal": "LUN",
@@ -1428,7 +1543,8 @@
           "sat": 12.5,
           "carb": 0.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_garlicbutter.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 180
         },
         {
           "meal": "LUN",
@@ -1440,7 +1556,8 @@
           "sat": 8.3,
           "carb": 54,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_minidate.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 176
         },
         {
           "meal": "LUN",
@@ -1452,7 +1569,8 @@
           "sat": 0,
           "carb": 27,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_passionfruit.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 55
         },
         {
           "meal": "DRK",
@@ -1463,7 +1581,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 7,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 10
         },
         {
           "meal": "DNR",
@@ -1475,7 +1594,8 @@
           "sat": 2.6,
           "carb": 8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_seafoodtimbale.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 276
         },
         {
           "meal": "DNR",
@@ -1487,7 +1607,8 @@
           "sat": 1.5,
           "carb": 27,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_creamsoup.jpg",
-          "fibre": 1.8
+          "fibre": 1.8,
+          "sodium": 198
         },
         {
           "meal": "DNR",
@@ -1498,7 +1619,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 9,
-          "fibre": 0.2
+          "fibre": 0.2,
+          "sodium": 18
         },
         {
           "meal": "DNR",
@@ -1510,7 +1632,8 @@
           "sat": 7.1,
           "carb": 8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_chickentikka.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 1260
         },
         {
           "meal": "DNR",
@@ -1522,7 +1645,8 @@
           "sat": 2.5,
           "carb": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_grilledchicken.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 306
         },
         {
           "meal": "DRK",
@@ -1533,7 +1657,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 1,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 12
         },
         {
           "meal": "DNR",
@@ -1545,7 +1670,8 @@
           "sat": 9.9,
           "carb": 21,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_tiramisupastry.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 128
         },
         {
           "meal": "DNR",
@@ -1557,7 +1683,8 @@
           "sat": 2,
           "carb": 34,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri7_passionfruit2.jpg",
-          "fibre": 1.3
+          "fibre": 1.3,
+          "sodium": 85
         }
       ]
     },
@@ -1576,7 +1703,8 @@
           "sat": 0,
           "carb": 27,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_fruitplatter.jpg",
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 3
         },
         {
           "meal": "DRK",
@@ -1587,7 +1715,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 13,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 60
         },
         {
           "meal": "BRK",
@@ -1599,7 +1728,8 @@
           "sat": 6.2,
           "carb": 18.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_scrambledeggs.jpg",
-          "fibre": 1.8
+          "fibre": 1.8,
+          "sodium": 399
         },
         {
           "meal": "BRK",
@@ -1610,7 +1740,8 @@
           "fat": 9.5,
           "sat": 3.2,
           "carb": 0.3,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 120
         },
         {
           "meal": "BRK",
@@ -1622,7 +1753,8 @@
           "sat": 3.7,
           "carb": 46,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_pancakeschocolat.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 152
         },
         {
           "meal": "LUN",
@@ -1634,7 +1766,8 @@
           "sat": 0.9,
           "carb": 14,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_gardensalad.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 144
         },
         {
           "meal": "LUN",
@@ -1646,7 +1779,8 @@
           "sat": 2.8,
           "carb": 2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_marinatedspiced.jpg",
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 510
         },
         {
           "meal": "LUN",
@@ -1657,7 +1791,8 @@
           "fat": 3.8,
           "sat": 2.2,
           "carb": 33,
-          "fibre": 0.7
+          "fibre": 0.7,
+          "sodium": 360
         },
         {
           "meal": "DRK",
@@ -1668,7 +1803,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 22,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 95
         },
         {
           "meal": "LUN",
@@ -1680,7 +1816,8 @@
           "sat": 4,
           "carb": 17,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_blackforest.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 70
         },
         {
           "meal": "LUN",
@@ -1691,7 +1828,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 27,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 55
         },
         {
           "meal": "DNR",
@@ -1703,7 +1841,8 @@
           "sat": 4.4,
           "carb": 43,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_fishmasala.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 633
         },
         {
           "meal": "SNK",
@@ -1715,7 +1854,8 @@
           "sat": 21,
           "carb": 140,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat8_tandoorichicken.jpg",
-          "fibre": 12
+          "fibre": 12,
+          "sodium": 2976
         }
       ]
     },
@@ -1733,7 +1873,8 @@
           "fat": 10.3,
           "sat": 2.3,
           "carb": 1.6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 650
         },
         {
           "meal": "LUN",
@@ -1745,7 +1886,8 @@
           "sat": 2.1,
           "carb": 51.8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_pohabowls.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 556
         },
         {
           "meal": "LUN",
@@ -1757,7 +1899,8 @@
           "sat": 4.5,
           "carb": 22.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_crunchymasala.jpg",
-          "fibre": 4.5
+          "fibre": 4.5,
+          "sodium": 360
         },
         {
           "meal": "DNR",
@@ -1768,7 +1911,8 @@
           "fat": 18.6,
           "sat": 4,
           "carb": 49,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 648
         },
         {
           "meal": "DNR",
@@ -1780,7 +1924,8 @@
           "sat": 6.4,
           "carb": 27.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_koreanfried.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 557
         },
         {
           "meal": "DNR",
@@ -1792,7 +1937,8 @@
           "sat": 1.2,
           "carb": 9.1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun9_chillitofu.jpg",
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 204
         }
       ]
     },
@@ -1811,7 +1957,8 @@
           "sat": 0.7,
           "carb": 4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon10_omelette.jpg",
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 352
         },
         {
           "meal": "Breakfast",
@@ -1822,7 +1969,8 @@
           "fat": 2.9,
           "sat": 1.05,
           "carb": 1.3,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 142
         },
         {
           "meal": "Breakfast",
@@ -1833,7 +1981,8 @@
           "fat": 13.5,
           "sat": 1.5,
           "carb": 3,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 145
         },
         {
           "meal": "Lunch",
@@ -1845,7 +1994,8 @@
           "sat": 1.5,
           "carb": 38,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon10_dalrice.jpg",
-          "fibre": 8.8
+          "fibre": 8.8,
+          "sodium": 428
         },
         {
           "meal": "Lunch",
@@ -1856,7 +2006,8 @@
           "fat": 0.3,
           "sat": 0.1,
           "carb": 34,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 8
         },
         {
           "meal": "Lunch",
@@ -1868,7 +2019,8 @@
           "sat": 1.3,
           "carb": 6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon10_tofu.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 156
         },
         {
           "meal": "Lunch",
@@ -1880,7 +2032,8 @@
           "sat": 0,
           "carb": 2.4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon10_kimchi.jpg",
-          "fibre": 1.1
+          "fibre": 1.1,
+          "sodium": 12
         },
         {
           "meal": "Dinner",
@@ -1892,7 +2045,8 @@
           "sat": 1.5,
           "carb": 7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon10_eggcurry.jpg",
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 640
         },
         {
           "meal": "Dinner",
@@ -1903,7 +2057,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 0.7,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 112
         },
         {
           "meal": "Snack",
@@ -1914,7 +2069,8 @@
           "fat": 3,
           "sat": 2,
           "carb": 8,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 264
         },
         {
           "meal": "Snack",
@@ -1925,7 +2081,8 @@
           "fat": 0.8,
           "sat": 0.1,
           "carb": 15,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 495
         },
         {
           "meal": "Snack",
@@ -1936,7 +2093,8 @@
           "fat": 9,
           "sat": 0.7,
           "carb": 2.4,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 95
         },
         {
           "meal": "Drink",
@@ -1947,7 +2105,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 0,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 620
         }
       ]
     },
@@ -1966,7 +2125,8 @@
           "sat": 0.7,
           "carb": 4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_omelette.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 400
         },
         {
           "meal": "Breakfast",
@@ -1978,7 +2138,8 @@
           "sat": 0,
           "carb": 18,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_fruit.jpg",
-          "fibre": 1.9
+          "fibre": 1.9,
+          "sodium": 2
         },
         {
           "meal": "Breakfast",
@@ -1990,7 +2151,8 @@
           "sat": 1.1,
           "carb": 4.4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_shake.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 145
         },
         {
           "meal": "Breakfast",
@@ -2001,7 +2163,8 @@
           "fat": 13.5,
           "sat": 1.5,
           "carb": 3,
-          "fibre": 1.55
+          "fibre": 1.55,
+          "sodium": 145
         },
         {
           "meal": "Dinner",
@@ -2012,7 +2175,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 2.5,
-          "fibre": 0.7
+          "fibre": 0.7,
+          "sodium": 14
         },
         {
           "meal": "Dinner",
@@ -2023,7 +2187,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 12.5,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 82
         },
         {
           "meal": "Dinner",
@@ -2034,7 +2199,8 @@
           "fat": 0.3,
           "sat": 0.1,
           "carb": 37,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 8
         },
         {
           "meal": "Dinner",
@@ -2046,7 +2212,8 @@
           "sat": 1.1,
           "carb": 42,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_daalpalak.jpg",
-          "fibre": 9
+          "fibre": 9,
+          "sodium": 465
         },
         {
           "meal": "Dinner",
@@ -2057,7 +2224,8 @@
           "fat": 0.4,
           "sat": 0.05,
           "carb": 7.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 248
         },
         {
           "meal": "Dinner",
@@ -2069,7 +2237,8 @@
           "sat": 3.6,
           "carb": 0,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_salmon.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 349
         },
         {
           "meal": "Snack",
@@ -2081,7 +2250,8 @@
           "sat": 0,
           "carb": 2.4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue11_bedtimewhey.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 237
         },
         {
           "meal": "Snack",
@@ -2092,7 +2262,8 @@
           "fat": 0.4,
           "sat": 0.05,
           "carb": 7.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 248
         },
         {
           "meal": "Snack",
@@ -2103,7 +2274,8 @@
           "fat": 6.1,
           "sat": 0.7,
           "carb": 1.4,
-          "fibre": 0.7
+          "fibre": 0.7,
+          "sodium": 66
         }
       ]
     },
@@ -2121,7 +2293,8 @@
           "fat": 5,
           "sat": 0.7,
           "carb": 4,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 400
         },
         {
           "meal": "Breakfast",
@@ -2132,7 +2305,8 @@
           "fat": 4,
           "sat": 1.4,
           "carb": 9.4,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 195
         },
         {
           "meal": "Breakfast",
@@ -2143,7 +2317,8 @@
           "fat": 12.3,
           "sat": 1.4,
           "carb": 2.7,
-          "fibre": 1.4
+          "fibre": 1.4,
+          "sodium": 132
         },
         {
           "meal": "Lunch",
@@ -2155,7 +2330,8 @@
           "sat": 0,
           "carb": 12,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_salad.jpg",
-          "fibre": 2.3
+          "fibre": 2.3,
+          "sodium": 72
         },
         {
           "meal": "Lunch",
@@ -2167,7 +2343,8 @@
           "sat": 3,
           "carb": 26,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_roti.jpg",
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 210
         },
         {
           "meal": "Lunch",
@@ -2179,7 +2356,8 @@
           "sat": 4.2,
           "carb": 14,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_chickencurry.jpg",
-          "fibre": 2.3
+          "fibre": 2.3,
+          "sodium": 825
         },
         {
           "meal": "Snack",
@@ -2191,7 +2369,8 @@
           "sat": 3.1,
           "carb": 16,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_dessert.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 153
         },
         {
           "meal": "Dinner",
@@ -2203,7 +2382,8 @@
           "sat": 1.7,
           "carb": 37,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_cheela.jpg",
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 390
         },
         {
           "meal": "Dinner",
@@ -2214,7 +2394,8 @@
           "fat": 1.5,
           "sat": 0.2,
           "carb": 3,
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 25
         },
         {
           "meal": "Snack",
@@ -2226,7 +2407,8 @@
           "sat": 11,
           "carb": 55,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_burger.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 1728
         },
         {
           "meal": "Snack",
@@ -2238,7 +2420,8 @@
           "sat": 3,
           "carb": 47,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed12_fries.jpg",
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 836
         }
       ]
     },
@@ -2256,7 +2439,8 @@
           "fat": 4,
           "sat": 1.4,
           "carb": 9.4,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 195
         },
         {
           "meal": "Lunch",
@@ -2267,7 +2451,8 @@
           "fat": 0.3,
           "sat": 0.1,
           "carb": 34,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 8
         },
         {
           "meal": "Lunch",
@@ -2279,7 +2464,8 @@
           "sat": 1.6,
           "carb": 6.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu13_prawncurry.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 376
         },
         {
           "meal": "Snack",
@@ -2291,7 +2477,8 @@
           "sat": 0,
           "carb": 15.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu13_fruit.jpg",
-          "fibre": 1.7
+          "fibre": 1.7,
+          "sodium": 2
         },
         {
           "meal": "Dinner",
@@ -2303,7 +2490,8 @@
           "sat": 2,
           "carb": 11,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu13_matartofu.jpg",
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 345
         },
         {
           "meal": "Dinner",
@@ -2314,7 +2502,8 @@
           "fat": 3,
           "sat": 0.6,
           "carb": 33,
-          "fibre": 5.3
+          "fibre": 5.3,
+          "sodium": 216
         },
         {
           "meal": "Snack",
@@ -2325,7 +2514,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 120
         },
         {
           "meal": "Dinner",
@@ -2337,7 +2527,8 @@
           "sat": 2.7,
           "carb": 23,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu13_biryani.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 428
         },
         {
           "meal": "Dinner",
@@ -2348,7 +2539,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 2.5,
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 20
         },
         {
           "meal": "Snack",
@@ -2359,7 +2551,8 @@
           "fat": 2.8,
           "sat": 0.4,
           "carb": 7.8,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 130
         },
         {
           "meal": "Snack",
@@ -2370,7 +2563,8 @@
           "fat": 0.4,
           "sat": 0.05,
           "carb": 7.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 248
         },
         {
           "meal": "Snack",
@@ -2381,7 +2575,8 @@
           "fat": 11,
           "sat": 1.2,
           "carb": 2.5,
-          "fibre": 1.25
+          "fibre": 1.25,
+          "sodium": 119
         },
         {
           "meal": "Snack",
@@ -2392,7 +2587,8 @@
           "fat": 18.8,
           "sat": 1.3,
           "carb": 3.6,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 185
         }
       ]
     },
@@ -2410,7 +2606,8 @@
           "fat": 4.7,
           "sat": 1.5,
           "carb": 11.3,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 219
         },
         {
           "meal": "Breakfast",
@@ -2421,7 +2618,8 @@
           "fat": 9.8,
           "sat": 1.1,
           "carb": 2.2,
-          "fibre": 1.1
+          "fibre": 1.1,
+          "sodium": 106
         },
         {
           "meal": "Breakfast",
@@ -2432,7 +2630,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 4.8,
-          "fibre": 1.3
+          "fibre": 1.3,
+          "sodium": 1
         },
         {
           "meal": "Lunch",
@@ -2444,7 +2643,8 @@
           "sat": 3.9,
           "carb": 36,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_biryani.jpg",
-          "fibre": 3.6
+          "fibre": 3.6,
+          "sodium": 615
         },
         {
           "meal": "Lunch",
@@ -2455,7 +2655,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 2.5,
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 20
         },
         {
           "meal": "Drink",
@@ -2466,7 +2667,8 @@
           "fat": 3,
           "sat": 2,
           "carb": 5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 30
         },
         {
           "meal": "Snack",
@@ -2478,7 +2680,8 @@
           "sat": 6.1,
           "carb": 25.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_namban.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 559
         },
         {
           "meal": "Snack",
@@ -2490,7 +2693,8 @@
           "sat": 9.6,
           "carb": 35.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_mangosando.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 420
         },
         {
           "meal": "Dinner",
@@ -2502,7 +2706,8 @@
           "sat": 0.5,
           "carb": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri14_prawnnoodles.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 90
         },
         {
           "meal": "Dinner",
@@ -2513,7 +2718,8 @@
           "fat": 4.5,
           "sat": 0.9,
           "carb": 15,
-          "fibre": 1.4
+          "fibre": 1.4,
+          "sodium": 168
         }
       ]
     },
@@ -2532,7 +2738,8 @@
           "sat": 0.8,
           "carb": 1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat15_eggs.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 362
         },
         {
           "meal": "Breakfast",
@@ -2543,7 +2750,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 8.4,
-          "fibre": 1.4
+          "fibre": 1.4,
+          "sodium": 32
         },
         {
           "meal": "Breakfast",
@@ -2555,7 +2763,8 @@
           "sat": 2.8,
           "carb": 41,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat15_pbsandwich.jpg",
-          "fibre": 4.5
+          "fibre": 4.5,
+          "sodium": 804
         },
         {
           "meal": "Lunch",
@@ -2566,7 +2775,8 @@
           "fat": 12.8,
           "sat": 3.9,
           "carb": 45,
-          "fibre": 3.3
+          "fibre": 3.3,
+          "sodium": 579
         },
         {
           "meal": "Lunch",
@@ -2577,7 +2787,8 @@
           "fat": 0.8,
           "sat": 0,
           "carb": 7.2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 71
         },
         {
           "meal": "Snack",
@@ -2588,7 +2799,8 @@
           "fat": 5.5,
           "sat": 2,
           "carb": 13.4,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 287
         },
         {
           "meal": "Snack",
@@ -2599,7 +2811,8 @@
           "fat": 13.5,
           "sat": 1.5,
           "carb": 3,
-          "fibre": 1.55
+          "fibre": 1.55,
+          "sodium": 145
         },
         {
           "meal": "Snack",
@@ -2610,7 +2823,8 @@
           "fat": 17,
           "sat": 9,
           "carb": 28,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 139
         },
         {
           "meal": "Snack",
@@ -2621,7 +2835,8 @@
           "fat": 11.9,
           "sat": 1.8,
           "carb": 9,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 209
         }
       ]
     },
@@ -2639,7 +2854,8 @@
           "fat": 17,
           "sat": 9,
           "carb": 28,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 139
         },
         {
           "meal": "Lunch",
@@ -2650,7 +2866,8 @@
           "fat": 13.5,
           "sat": 2.1,
           "carb": 8,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 252
         },
         {
           "meal": "Lunch",
@@ -2661,7 +2878,8 @@
           "fat": 2,
           "sat": 0.4,
           "carb": 22,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 144
         },
         {
           "meal": "Lunch",
@@ -2672,7 +2890,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 15,
-          "fibre": 3.6
+          "fibre": 3.6,
+          "sodium": 180
         },
         {
           "meal": "Snack",
@@ -2683,7 +2902,8 @@
           "fat": 5,
           "sat": 1.7,
           "carb": 12.1,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 245
         },
         {
           "meal": "Snack",
@@ -2694,7 +2914,8 @@
           "fat": 13.5,
           "sat": 1.5,
           "carb": 3,
-          "fibre": 1.55
+          "fibre": 1.55,
+          "sodium": 145
         },
         {
           "meal": "Dinner",
@@ -2706,7 +2927,8 @@
           "sat": 5,
           "carb": 50.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun16_salmonpasta.jpg",
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 924
         },
         {
           "meal": "Snack",
@@ -2717,7 +2939,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 1.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 152
         }
       ]
     },
@@ -2735,7 +2958,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 0.4,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 109
         },
         {
           "meal": "Breakfast",
@@ -2746,7 +2970,8 @@
           "fat": 4.8,
           "sat": 1.5,
           "carb": 11.6,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 228
         },
         {
           "meal": "Breakfast",
@@ -2757,7 +2982,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 6.8,
-          "fibre": 1.8
+          "fibre": 1.8,
+          "sodium": 1
         },
         {
           "meal": "Breakfast",
@@ -2768,7 +2994,8 @@
           "fat": 14.1,
           "sat": 1.6,
           "carb": 3.1,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 152
         },
         {
           "meal": "Lunch",
@@ -2779,7 +3006,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 5,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 30
         },
         {
           "meal": "Lunch",
@@ -2790,7 +3018,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 16.5,
-          "fibre": 3.7
+          "fibre": 3.7,
+          "sodium": 107
         },
         {
           "meal": "Lunch",
@@ -2801,7 +3030,8 @@
           "fat": 8,
           "sat": 1.5,
           "carb": 7,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 640
         },
         {
           "meal": "Dinner",
@@ -2813,7 +3043,8 @@
           "sat": 2.9,
           "carb": 7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon17_chickencurry.jpg",
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 564
         },
         {
           "meal": "Dinner",
@@ -2824,7 +3055,8 @@
           "fat": 9,
           "sat": 4.5,
           "carb": 39,
-          "fibre": 5.3
+          "fibre": 5.3,
+          "sodium": 316
         },
         {
           "meal": "Snack",
@@ -2835,7 +3067,8 @@
           "fat": 7,
           "sat": 1,
           "carb": 14,
-          "fibre": 1.3
+          "fibre": 1.3,
+          "sodium": 286
         }
       ]
     },
@@ -2854,7 +3087,8 @@
           "sat": 1.5,
           "carb": 8.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue18_guacomelette.jpg",
-          "fibre": 6.7
+          "fibre": 6.7,
+          "sodium": 121
         },
         {
           "meal": "Breakfast",
@@ -2865,7 +3099,8 @@
           "fat": 5,
           "sat": 0.7,
           "carb": 4,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 400
         },
         {
           "meal": "Lunch",
@@ -2876,7 +3111,8 @@
           "fat": 0.4,
           "sat": 0.1,
           "carb": 37,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 8
         },
         {
           "meal": "Lunch",
@@ -2888,7 +3124,8 @@
           "sat": 1.1,
           "carb": 31.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue18_daalchawal.jpg",
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 364
         },
         {
           "meal": "Lunch",
@@ -2899,7 +3136,8 @@
           "fat": 0.3,
           "sat": 0.1,
           "carb": 28,
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 6
         },
         {
           "meal": "Lunch",
@@ -2910,7 +3148,8 @@
           "fat": 7.5,
           "sat": 1.1,
           "carb": 32.7,
-          "fibre": 5.2
+          "fibre": 5.2,
+          "sodium": 378
         },
         {
           "meal": "Snack",
@@ -2921,7 +3160,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 120
         },
         {
           "meal": "Dinner",
@@ -2933,7 +3173,8 @@
           "sat": 1.2,
           "carb": 46.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue18_daalparatha.jpg",
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 361
         },
         {
           "meal": "Dinner",
@@ -2944,7 +3185,8 @@
           "fat": 0.9,
           "sat": 0,
           "carb": 8.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 84
         },
         {
           "meal": "Snack",
@@ -2955,7 +3197,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 1.9,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 193
         },
         {
           "meal": "Snack",
@@ -2966,7 +3209,8 @@
           "fat": 19,
           "sat": 4,
           "carb": 39,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 468
         },
         {
           "meal": "Snack",
@@ -2977,7 +3221,8 @@
           "fat": 17,
           "sat": 10,
           "carb": 74,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 490
         }
       ]
     },
@@ -2996,7 +3241,8 @@
           "sat": 1.7,
           "carb": 16.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_shake.jpg",
-          "fibre": 1.8
+          "fibre": 1.8,
+          "sodium": 271
         },
         {
           "meal": "Breakfast",
@@ -3007,7 +3253,8 @@
           "fat": 7.3,
           "sat": 0.8,
           "carb": 1.6,
-          "fibre": 0.85
+          "fibre": 0.85,
+          "sodium": 79
         },
         {
           "meal": "Breakfast",
@@ -3019,7 +3266,8 @@
           "sat": 3.5,
           "carb": 5.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_wmfeta.jpg",
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 3
         },
         {
           "meal": "Lunch",
@@ -3031,7 +3279,8 @@
           "sat": 1.5,
           "carb": 40.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_noodles.jpg",
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 417
         },
         {
           "meal": "Lunch",
@@ -3043,7 +3292,8 @@
           "sat": 1.8,
           "carb": 16.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_chillitofu.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 344
         },
         {
           "meal": "Drink",
@@ -3054,7 +3304,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 148
         },
         {
           "meal": "Dinner",
@@ -3066,7 +3317,8 @@
           "sat": 5.2,
           "carb": 0.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed19_salmon.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 494
         },
         {
           "meal": "Dinner",
@@ -3077,7 +3329,8 @@
           "fat": 8.6,
           "sat": 2.7,
           "carb": 21.5,
-          "fibre": 2.7
+          "fibre": 2.7,
+          "sodium": 452
         },
         {
           "meal": "Snack",
@@ -3088,7 +3341,8 @@
           "fat": 0.8,
           "sat": 0.1,
           "carb": 15,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 495
         }
       ]
     },
@@ -3107,7 +3361,8 @@
           "sat": 0.6,
           "carb": 2.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_omelette.jpg",
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 378
         },
         {
           "meal": "Lunch",
@@ -3119,7 +3374,8 @@
           "sat": 0,
           "carb": 5.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_yogurt.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 51
         },
         {
           "meal": "Lunch",
@@ -3131,7 +3387,8 @@
           "sat": 3.8,
           "carb": 31.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_biryani.jpg",
-          "fibre": 3.8
+          "fibre": 3.8,
+          "sodium": 639
         },
         {
           "meal": "Drink",
@@ -3142,7 +3399,8 @@
           "fat": 4.5,
           "sat": 1.6,
           "carb": 1.9,
-          "fibre": 2.3
+          "fibre": 2.3,
+          "sodium": 216
         },
         {
           "meal": "Drink",
@@ -3153,7 +3411,8 @@
           "fat": 9.2,
           "sat": 1,
           "carb": 2,
-          "fibre": 1.05
+          "fibre": 1.05,
+          "sodium": 99
         },
         {
           "meal": "Drink",
@@ -3164,7 +3423,8 @@
           "fat": 6,
           "sat": 0.6,
           "carb": 13.4,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 60
         },
         {
           "meal": "Drink",
@@ -3175,7 +3435,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 3.1,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 0
         },
         {
           "meal": "Dinner",
@@ -3187,7 +3448,8 @@
           "sat": 1.1,
           "carb": 54.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_prawnpasta.jpg",
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 293
         },
         {
           "meal": "Dinner",
@@ -3198,7 +3460,8 @@
           "fat": 5.2,
           "sat": 0.7,
           "carb": 36.5,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 418
         },
         {
           "meal": "Snack",
@@ -3209,7 +3472,8 @@
           "fat": 15,
           "sat": 3,
           "carb": 33,
-          "fibre": 3.8
+          "fibre": 3.8,
+          "sodium": 601
         },
         {
           "meal": "Snack",
@@ -3221,7 +3485,8 @@
           "sat": 2.4,
           "carb": 54.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu20_poha.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 530
         }
       ]
     },
@@ -3240,7 +3505,8 @@
           "sat": 0,
           "carb": 23.4,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_sprouts.jpg",
-          "fibre": 5.2
+          "fibre": 5.2,
+          "sodium": 151
         },
         {
           "meal": "Lunch",
@@ -3252,7 +3518,8 @@
           "sat": 2.1,
           "carb": 23.7,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_biryani.jpg",
-          "fibre": 1.7
+          "fibre": 1.7,
+          "sodium": 302
         },
         {
           "meal": "Lunch",
@@ -3264,7 +3531,8 @@
           "sat": 0,
           "carb": 6.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_rawveg.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 30
         },
         {
           "meal": "Lunch",
@@ -3275,7 +3543,8 @@
           "fat": 1.6,
           "sat": 0.2,
           "carb": 1.2,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 18
         },
         {
           "meal": "Lunch",
@@ -3287,7 +3556,8 @@
           "sat": 2.1,
           "carb": 1.1,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_scrambled.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 512
         },
         {
           "meal": "Drink",
@@ -3299,7 +3569,8 @@
           "sat": 2.1,
           "carb": 30.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_acaishake.jpg",
-          "fibre": 5.8
+          "fibre": 5.8,
+          "sodium": 447
         },
         {
           "meal": "Dinner",
@@ -3311,7 +3582,8 @@
           "sat": 2,
           "carb": 84.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_paratha.jpg",
-          "fibre": 9
+          "fibre": 9,
+          "sodium": 624
         },
         {
           "meal": "Dinner",
@@ -3322,7 +3594,8 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 48
         },
         {
           "meal": "Dinner",
@@ -3333,7 +3606,8 @@
           "fat": 5.6,
           "sat": 0.7,
           "carb": 2,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 360
         },
         {
           "meal": "Dinner",
@@ -3345,7 +3619,8 @@
           "sat": 6.5,
           "carb": 0.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri21_salmon.jpg",
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 624
         },
         {
           "meal": "Snack",
@@ -3356,7 +3631,8 @@
           "fat": 14,
           "sat": 6.9,
           "carb": 50.8,
-          "fibre": 3.8
+          "fibre": 3.8,
+          "sodium": 783
         }
       ]
     },
@@ -3375,7 +3651,8 @@
           "sat": 2.1,
           "carb": 51.8,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat22_poha.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 556
         },
         {
           "meal": "Lunch",
@@ -3386,7 +3663,8 @@
           "fat": 10.5,
           "sat": 1.2,
           "carb": 15,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 376
         },
         {
           "meal": "Snack",
@@ -3397,7 +3675,8 @@
           "fat": 4.1,
           "sat": 1.5,
           "carb": 1.8,
-          "fibre": 2.1
+          "fibre": 2.1,
+          "sodium": 199
         },
         {
           "meal": "Snack",
@@ -3408,7 +3687,8 @@
           "fat": 1.8,
           "sat": 1.2,
           "carb": 4.9,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 162
         },
         {
           "meal": "Snack",
@@ -3419,7 +3699,8 @@
           "fat": 6,
           "sat": 0.6,
           "carb": 13.4,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 60
         },
         {
           "meal": "Snack",
@@ -3430,7 +3711,8 @@
           "fat": 12.2,
           "sat": 1.4,
           "carb": 2.7,
-          "fibre": 1.4
+          "fibre": 1.4,
+          "sodium": 132
         },
         {
           "meal": "Dinner",
@@ -3442,7 +3724,8 @@
           "sat": 1.5,
           "carb": 8.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat22_prawncurry.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 197
         },
         {
           "meal": "Dinner",
@@ -3454,7 +3737,8 @@
           "sat": 10.5,
           "carb": 76,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat22_pjsandwich.jpg",
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 1800
         },
         {
           "meal": "Dinner",
@@ -3465,7 +3749,8 @@
           "fat": 14,
           "sat": 5.5,
           "carb": 37,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 816
         },
         {
           "meal": "Dinner",
@@ -3476,7 +3761,8 @@
           "fat": 8.5,
           "sat": 1.5,
           "carb": 13,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 180
         }
       ]
     },
@@ -3494,7 +3780,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 25,
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 163
         },
         {
           "meal": "Lunch",
@@ -3506,7 +3793,8 @@
           "sat": 9.7,
           "carb": 79.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun23_pavbhaji.jpg",
-          "fibre": 9.3
+          "fibre": 9.3,
+          "sodium": 1142
         },
         {
           "meal": "Snack",
@@ -3517,7 +3805,8 @@
           "fat": 4.4,
           "sat": 2.6,
           "carb": 11.5,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 90
         },
         {
           "meal": "Snack",
@@ -3528,7 +3817,8 @@
           "fat": 1.5,
           "sat": 1,
           "carb": 4,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 132
         },
         {
           "meal": "Snack",
@@ -3539,7 +3829,8 @@
           "fat": 1.7,
           "sat": 0.6,
           "carb": 0.7,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 81
         },
         {
           "meal": "Snack",
@@ -3550,7 +3841,8 @@
           "fat": 6,
           "sat": 0.6,
           "carb": 13.4,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 60
         },
         {
           "meal": "Snack",
@@ -3561,7 +3853,8 @@
           "fat": 6.1,
           "sat": 0.7,
           "carb": 1.4,
-          "fibre": 0.7
+          "fibre": 0.7,
+          "sodium": 66
         },
         {
           "meal": "Snack",
@@ -3572,7 +3865,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 6.2,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 1
         },
         {
           "meal": "Dinner",
@@ -3584,7 +3878,8 @@
           "sat": 2.2,
           "carb": 5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun23_tikka.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 447
         },
         {
           "meal": "Dinner",
@@ -3595,7 +3890,8 @@
           "fat": 6.3,
           "sat": 1.3,
           "carb": 13,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 186
         },
         {
           "meal": "Dinner",
@@ -3606,7 +3902,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 20,
-          "fibre": 4.8
+          "fibre": 4.8,
+          "sodium": 131
         },
         {
           "meal": "Snack",
@@ -3617,7 +3914,8 @@
           "fat": 39.2,
           "sat": 12.2,
           "carb": 42.3,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 1258
         },
         {
           "meal": "Snack",
@@ -3628,7 +3926,8 @@
           "fat": 6.7,
           "sat": 0.9,
           "carb": 47.2,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 406
         },
         {
           "meal": "Drink",
@@ -3639,7 +3938,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.4,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 144
         }
       ]
     },
@@ -3657,7 +3957,8 @@
           "fat": 20.4,
           "sat": 3.3,
           "carb": 26.6,
-          "fibre": 5.1
+          "fibre": 5.1,
+          "sodium": 483
         },
         {
           "meal": "Snack",
@@ -3668,7 +3969,8 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 36,
-          "fibre": 9.5
+          "fibre": 9.5,
+          "sodium": 232
         },
         {
           "meal": "Dinner",
@@ -3680,7 +3982,8 @@
           "sat": 2,
           "carb": 5.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon24_palaktofu.jpg",
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 250
         },
         {
           "meal": "Dinner",
@@ -3692,7 +3995,8 @@
           "sat": 1.6,
           "carb": 16.3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon24_friedrice.jpg",
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 232
         },
         {
           "meal": "Drink",
@@ -3703,7 +4007,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.1,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 112
         },
         {
           "meal": "Dinner",
@@ -3714,7 +4019,8 @@
           "fat": 5.8,
           "sat": 0.8,
           "carb": 2.3,
-          "fibre": 1.1
+          "fibre": 1.1,
+          "sodium": 103
         },
         {
           "meal": "Dinner",
@@ -3725,7 +4031,8 @@
           "fat": 7.9,
           "sat": 1.6,
           "carb": 16.3,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 232
         },
         {
           "meal": "Drink",
@@ -3736,7 +4043,8 @@
           "fat": 3,
           "sat": 1.6,
           "carb": 5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 213
         },
         {
           "meal": "Snack",
@@ -3747,7 +4055,8 @@
           "fat": 10.3,
           "sat": 0.8,
           "carb": 41.8,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 271
         }
       ]
     },
@@ -3765,7 +4074,8 @@
           "fat": 19.9,
           "sat": 3.4,
           "carb": 17.6,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 462
         },
         {
           "meal": "Lunch",
@@ -3777,7 +4087,8 @@
           "sat": 4.4,
           "carb": 6.2,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue25_gdkbox.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 416
         },
         {
           "meal": "Lunch",
@@ -3788,7 +4099,8 @@
           "fat": 1.6,
           "sat": 0.3,
           "carb": 36,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 218
         },
         {
           "meal": "Dinner",
@@ -3799,7 +4111,8 @@
           "fat": 10.3,
           "sat": 2.3,
           "carb": 5.7,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 424
         },
         {
           "meal": "Dinner",
@@ -3810,7 +4123,8 @@
           "fat": 0.9,
           "sat": 0,
           "carb": 9,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 89
         },
         {
           "meal": "Dinner",
@@ -3821,7 +4135,8 @@
           "fat": 9.3,
           "sat": 0.9,
           "carb": 25.2,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 251
         },
         {
           "meal": "Dinner",
@@ -3832,7 +4147,8 @@
           "fat": 0.5,
           "sat": 0.2,
           "carb": 6,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 187
         },
         {
           "meal": "Snack",
@@ -3843,7 +4159,8 @@
           "fat": 10.7,
           "sat": 1.1,
           "carb": 23.9,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 429
         }
       ]
     },
@@ -3861,7 +4178,8 @@
           "fat": 15.2,
           "sat": 2.8,
           "carb": 24.9,
-          "fibre": 4.4
+          "fibre": 4.4,
+          "sodium": 430
         },
         {
           "meal": "Lunch",
@@ -3873,7 +4191,8 @@
           "sat": 0,
           "carb": 20.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed26_sprouts.jpg",
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 134
         },
         {
           "meal": "Lunch",
@@ -3885,7 +4204,8 @@
           "sat": 1.4,
           "carb": 67.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed26_daalchawal.jpg",
-          "fibre": 8.3
+          "fibre": 8.3,
+          "sodium": 612
         },
         {
           "meal": "Lunch",
@@ -3896,7 +4216,8 @@
           "fat": 5.8,
           "sat": 1.1,
           "carb": 27.7,
-          "fibre": 6.4
+          "fibre": 6.4,
+          "sodium": 310
         },
         {
           "meal": "Dinner",
@@ -3907,7 +4228,8 @@
           "fat": 17.7,
           "sat": 3.4,
           "carb": 13.5,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 558
         },
         {
           "meal": "Dinner",
@@ -3918,7 +4240,8 @@
           "fat": 0.2,
           "sat": 0.1,
           "carb": 22.4,
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 5
         },
         {
           "meal": "Dinner",
@@ -3930,7 +4253,8 @@
           "sat": 2.1,
           "carb": 29.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed26_chickenpasta.jpg",
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 568
         }
       ]
     },
@@ -3948,7 +4272,8 @@
           "fat": 5.2,
           "sat": 0.7,
           "carb": 0.8,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 362
         },
         {
           "meal": "Lunch",
@@ -3960,7 +4285,8 @@
           "sat": 2.3,
           "carb": 7.5,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu27_bhurji.jpg",
-          "fibre": 2.6
+          "fibre": 2.6,
+          "sodium": 360
         },
         {
           "meal": "Lunch",
@@ -3971,7 +4297,8 @@
           "fat": 2,
           "sat": 0.4,
           "carb": 22,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 144
         },
         {
           "meal": "Drink",
@@ -3982,7 +4309,8 @@
           "fat": 20.4,
           "sat": 3.5,
           "carb": 19.4,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 471
         },
         {
           "meal": "Dinner",
@@ -3993,7 +4321,8 @@
           "fat": 39.6,
           "sat": 7.9,
           "carb": 0,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 776
         },
         {
           "meal": "Dinner",
@@ -4004,7 +4333,8 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 25,
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 163
         }
       ]
     },
@@ -4022,7 +4352,8 @@
           "fat": 18.5,
           "sat": 3.7,
           "carb": 0,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 362
         },
         {
           "meal": "Drink",
@@ -4033,7 +4364,8 @@
           "fat": 20.2,
           "sat": 3.5,
           "carb": 19.5,
-          "fibre": 3.6
+          "fibre": 3.6,
+          "sodium": 484
         },
         {
           "meal": "Snack",
@@ -4044,7 +4376,8 @@
           "fat": 19,
           "sat": 7,
           "carb": 49,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 198
         },
         {
           "meal": "Snack",
@@ -4055,7 +4388,8 @@
           "fat": 9,
           "sat": 5,
           "carb": 22,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 90
         },
         {
           "meal": "Snack",
@@ -4066,7 +4400,8 @@
           "fat": 8,
           "sat": 1,
           "carb": 26,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 418
         },
         {
           "meal": "Dinner",
@@ -4077,7 +4412,8 @@
           "fat": 26,
           "sat": 8,
           "carb": 47,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 795
         },
         {
           "meal": "Drink",
@@ -4088,7 +4424,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 18,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 19
         }
       ]
     },
@@ -4106,7 +4443,8 @@
           "fat": 8.5,
           "sat": 1.2,
           "carb": 51,
-          "fibre": 5.5
+          "fibre": 5.5,
+          "sodium": 374
         },
         {
           "meal": "Breakfast",
@@ -4117,7 +4455,8 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 4.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 44
         },
         {
           "meal": "Drink",
@@ -4128,7 +4467,8 @@
           "fat": 10.6,
           "sat": 2.2,
           "carb": 6.2,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 278
         },
         {
           "meal": "Drink",
@@ -4139,7 +4479,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 11,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 16
         },
         {
           "meal": "Lunch",
@@ -4150,7 +4491,8 @@
           "fat": 17,
           "sat": 2.5,
           "carb": 31,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 450
         },
         {
           "meal": "Lunch",
@@ -4161,7 +4503,8 @@
           "fat": 6,
           "sat": 1.3,
           "carb": 20,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 248
         },
         {
           "meal": "Dinner",
@@ -4172,7 +4515,8 @@
           "fat": 29,
           "sat": 7.8,
           "carb": 24,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 661
         },
         {
           "meal": "Drink",
@@ -4183,7 +4527,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 20,
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 6
         },
         {
           "meal": "Early morning",
@@ -4194,7 +4539,8 @@
           "fat": 14.5,
           "sat": 2.7,
           "carb": 13.5,
-          "fibre": 2.2
+          "fibre": 2.2,
+          "sodium": 356
         },
         {
           "meal": "Snack",
@@ -4205,7 +4551,8 @@
           "fat": 28,
           "sat": 3.5,
           "carb": 47,
-          "fibre": 3.4
+          "fibre": 3.4,
+          "sodium": 1012
         }
       ]
     },
@@ -4224,7 +4571,8 @@
           "sat": 1,
           "carb": 66.6,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun30_gobhiparatha.jpg",
-          "fibre": 7
+          "fibre": 7,
+          "sodium": 462
         },
         {
           "meal": "Lunch",
@@ -4235,7 +4583,8 @@
           "fat": 0.7,
           "sat": 0,
           "carb": 7.4,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 73
         },
         {
           "meal": "Lunch",
@@ -4246,7 +4595,8 @@
           "fat": 0.9,
           "sat": 0.1,
           "carb": 15,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 495
         },
         {
           "meal": "Drink",
@@ -4257,7 +4607,8 @@
           "fat": 18,
           "sat": 3.1,
           "carb": 16.9,
-          "fibre": 3.2
+          "fibre": 3.2,
+          "sodium": 419
         },
         {
           "meal": "Dinner",
@@ -4269,7 +4620,8 @@
           "sat": 5.6,
           "carb": 29,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun30_kfc.jpg",
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 558
         },
         {
           "meal": "Dinner",
@@ -4280,7 +4632,8 @@
           "fat": 2,
           "sat": 0.3,
           "carb": 27,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 6
         },
         {
           "meal": "Dinner",
@@ -4291,7 +4644,8 @@
           "fat": 10,
           "sat": 3,
           "carb": 28,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 306
         },
         {
           "meal": "Dinner",
@@ -4303,7 +4657,8 @@
           "sat": 5,
           "carb": 45,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun30_bingsoo.jpg",
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 8
         },
         {
           "meal": "Drink",
@@ -4314,7 +4669,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 1.6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 156
         },
         {
           "meal": "Snack",
@@ -4325,7 +4681,8 @@
           "fat": 42,
           "sat": 13.2,
           "carb": 48,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 1399
         },
         {
           "meal": "Snack",
@@ -4336,7 +4693,8 @@
           "fat": 2.5,
           "sat": 0.5,
           "carb": 27,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 192
         }
       ]
     },
@@ -4354,7 +4712,8 @@
           "fat": 5.2,
           "sat": 0.7,
           "carb": 0.8,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 362
         },
         {
           "meal": "Lunch",
@@ -4366,7 +4725,8 @@
           "sat": 0,
           "carb": 20.9,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_sprouts.jpg",
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 134
         },
         {
           "meal": "Drink",
@@ -4377,7 +4737,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 124
         },
         {
           "meal": "Dinner",
@@ -4389,7 +4750,8 @@
           "sat": 2.9,
           "carb": 27.3,
           "fibre": 1.9,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_pestopasta.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_pestopasta.jpg",
+          "sodium": 584
         },
         {
           "meal": "Dinner",
@@ -4401,7 +4763,8 @@
           "sat": 2.5,
           "carb": 10,
           "fibre": 1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_chillichicken.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon31_chillichicken.jpg",
+          "sodium": 442
         },
         {
           "meal": "Dinner",
@@ -4412,7 +4775,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 20.9,
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 134
         },
         {
           "meal": "Drink",
@@ -4423,7 +4787,8 @@
           "fat": 17.2,
           "sat": 2.9,
           "carb": 16.7,
-          "fibre": 2.8
+          "fibre": 2.8,
+          "sodium": 395
         },
         {
           "meal": "Early morning",
@@ -4434,7 +4799,8 @@
           "fat": 0.5,
           "sat": 0.1,
           "carb": 8.3,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 275
         }
       ]
     },
@@ -4453,7 +4819,8 @@
           "sat": 0,
           "carb": 21.7,
           "fibre": 6.2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue1_sprouts.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue1_sprouts.jpg",
+          "sodium": 139
         },
         {
           "meal": "Lunch",
@@ -4465,7 +4832,8 @@
           "sat": 2.9,
           "carb": 11.7,
           "fibre": 1.2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue1_chillichicken.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue1_chillichicken.jpg",
+          "sodium": 518
         },
         {
           "meal": "Lunch",
@@ -4476,7 +4844,8 @@
           "fat": 3.3,
           "sat": 0.5,
           "carb": 14.4,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 148
         },
         {
           "meal": "Snack",
@@ -4487,7 +4856,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 4.3,
-          "fibre": 1.1
+          "fibre": 1.1,
+          "sodium": 1
         },
         {
           "meal": "Drink",
@@ -4498,7 +4868,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 4.4,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 0
         },
         {
           "meal": "Dinner",
@@ -4510,7 +4881,8 @@
           "sat": 0.9,
           "carb": 35.6,
           "fibre": 7.6,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue1_daalpalak.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue1_daalpalak.jpg",
+          "sodium": 394
         },
         {
           "meal": "Dinner",
@@ -4521,7 +4893,8 @@
           "fat": 0.3,
           "sat": 0.1,
           "carb": 28,
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 6
         },
         {
           "meal": "Dinner",
@@ -4532,7 +4905,8 @@
           "fat": 0.5,
           "sat": 0.1,
           "carb": 8.3,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 275
         },
         {
           "meal": "Dinner",
@@ -4543,7 +4917,8 @@
           "fat": 0.5,
           "sat": 0.2,
           "carb": 6,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 187
         },
         {
           "meal": "Dinner",
@@ -4554,7 +4929,8 @@
           "fat": 0.8,
           "sat": 0,
           "carb": 7.2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 71
         },
         {
           "meal": "Dinner",
@@ -4565,7 +4941,8 @@
           "fat": 0.3,
           "sat": 0.1,
           "carb": 25.2,
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 6
         },
         {
           "meal": "Drink",
@@ -4576,7 +4953,8 @@
           "fat": 14.1,
           "sat": 2.4,
           "carb": 20.2,
-          "fibre": 2.3
+          "fibre": 2.3,
+          "sodium": 397
         },
         {
           "meal": "Early morning",
@@ -4587,7 +4965,8 @@
           "fat": 0.5,
           "sat": 0.1,
           "carb": 8.3,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 275
         },
         {
           "meal": "Early morning",
@@ -4598,7 +4977,8 @@
           "fat": 0.5,
           "sat": 0.2,
           "carb": 6,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 187
         },
         {
           "meal": "Snack",
@@ -4609,7 +4989,8 @@
           "fat": 14,
           "sat": 4.4,
           "carb": 16,
-          "fibre": 1.7
+          "fibre": 1.7,
+          "sodium": 466
         }
       ]
     },
@@ -4627,7 +5008,8 @@
           "fat": 18.5,
           "sat": 2.5,
           "carb": 23.1,
-          "fibre": 4.1
+          "fibre": 4.1,
+          "sodium": 437
         },
         {
           "meal": "Lunch",
@@ -4639,7 +5021,8 @@
           "sat": 3,
           "carb": 27,
           "fibre": 4.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_chillitofu.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_chillitofu.jpg",
+          "sodium": 585
         },
         {
           "meal": "Snack",
@@ -4650,7 +5033,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 27,
-          "fibre": 3.1
+          "fibre": 3.1,
+          "sodium": 3
         },
         {
           "meal": "Dinner",
@@ -4662,7 +5046,8 @@
           "sat": 1.7,
           "carb": 8.9,
           "fibre": 1.2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_prawncurry.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_prawncurry.jpg",
+          "sodium": 350
         },
         {
           "meal": "Dinner",
@@ -4673,7 +5058,8 @@
           "fat": 6,
           "sat": 1,
           "carb": 32,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 240
         },
         {
           "meal": "Drink",
@@ -4684,7 +5070,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 1.6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 161
         },
         {
           "meal": "Early morning",
@@ -4695,7 +5082,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 9,
-          "fibre": 2.6
+          "fibre": 2.6,
+          "sodium": 58
         },
         {
           "meal": "Early morning",
@@ -4706,7 +5094,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 4.4,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 0
         },
         {
           "meal": "Early morning",
@@ -4717,7 +5106,8 @@
           "fat": 0.8,
           "sat": 0.3,
           "carb": 9,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 280
         },
         {
           "meal": "Early morning",
@@ -4728,7 +5118,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 20
         },
         {
           "meal": "Snack",
@@ -4740,7 +5131,8 @@
           "sat": 1.1,
           "carb": 56,
           "fibre": 1.8,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_poha.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed2_poha.jpg",
+          "sodium": 483
         },
         {
           "meal": "Snack",
@@ -4751,7 +5143,8 @@
           "fat": 10.5,
           "sat": 3.3,
           "carb": 12,
-          "fibre": 1.3
+          "fibre": 1.3,
+          "sodium": 350
         },
         {
           "meal": "Snack",
@@ -4762,7 +5155,8 @@
           "fat": 35,
           "sat": 11,
           "carb": 40,
-          "fibre": 4.2
+          "fibre": 4.2,
+          "sodium": 1166
         }
       ]
     },
@@ -4780,7 +5174,8 @@
           "fat": 5.3,
           "sat": 0.7,
           "carb": 1,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 416
         },
         {
           "meal": "Breakfast",
@@ -4791,7 +5186,8 @@
           "fat": 4.8,
           "sat": 1.6,
           "carb": 0.4,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 101
         },
         {
           "meal": "Lunch",
@@ -4802,7 +5198,8 @@
           "fat": 17.7,
           "sat": 2.9,
           "carb": 23.9,
-          "fibre": 4.4
+          "fibre": 4.4,
+          "sodium": 432
         },
         {
           "meal": "Lunch",
@@ -4814,7 +5211,8 @@
           "sat": 1.9,
           "carb": 56,
           "fibre": 9,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_daalrice.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_daalrice.jpg",
+          "sodium": 648
         },
         {
           "meal": "Lunch",
@@ -4825,7 +5223,8 @@
           "fat": 0.4,
           "sat": 0.1,
           "carb": 33.6,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 8
         },
         {
           "meal": "Lunch",
@@ -4836,7 +5235,8 @@
           "fat": 0.5,
           "sat": 0.1,
           "carb": 8.3,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 275
         },
         {
           "meal": "Lunch",
@@ -4847,7 +5247,8 @@
           "fat": 0.5,
           "sat": 0.2,
           "carb": 6,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 187
         },
         {
           "meal": "Snack",
@@ -4858,7 +5259,8 @@
           "fat": 16.4,
           "sat": 1.9,
           "carb": 16.7,
-          "fibre": 2.4
+          "fibre": 2.4,
+          "sodium": 402
         },
         {
           "meal": "Dinner",
@@ -4869,7 +5271,8 @@
           "fat": 4.9,
           "sat": 0.7,
           "carb": 21.4,
-          "fibre": 3.4
+          "fibre": 3.4,
+          "sodium": 248
         },
         {
           "meal": "Dinner",
@@ -4881,7 +5284,8 @@
           "sat": 1.7,
           "carb": 16.7,
           "fibre": 5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_cheela.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_cheela.jpg",
+          "sodium": 269
         },
         {
           "meal": "Snack",
@@ -4893,7 +5297,8 @@
           "sat": 2.4,
           "carb": 61.3,
           "fibre": 3.8,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_zaatar.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_zaatar.jpg",
+          "sodium": 646
         },
         {
           "meal": "Snack",
@@ -4905,7 +5310,8 @@
           "sat": 12.6,
           "carb": 61.1,
           "fibre": 2.6,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_kashkawan.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu3_kashkawan.jpg",
+          "sodium": 820
         }
       ]
     },
@@ -4923,7 +5329,8 @@
           "fat": 5.2,
           "sat": 0.7,
           "carb": 0.8,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 362
         },
         {
           "meal": "Drink",
@@ -4934,7 +5341,8 @@
           "fat": 19.8,
           "sat": 3.2,
           "carb": 26.1,
-          "fibre": 4.9
+          "fibre": 4.9,
+          "sodium": 477
         },
         {
           "meal": "Snack",
@@ -4945,7 +5353,8 @@
           "fat": 11.6,
           "sat": 1.7,
           "carb": 16.7,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 269
         },
         {
           "meal": "Dinner",
@@ -4957,7 +5366,8 @@
           "sat": 0.6,
           "carb": 47,
           "fibre": 3,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri4_momos.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri4_momos.jpg",
+          "sodium": 490
         },
         {
           "meal": "Dinner",
@@ -4968,7 +5378,8 @@
           "fat": 1.5,
           "sat": 0.2,
           "carb": 3.5,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 45
         },
         {
           "meal": "Dinner",
@@ -4979,7 +5390,8 @@
           "fat": 1.8,
           "sat": 0.4,
           "carb": 24,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 258
         },
         {
           "meal": "Dinner",
@@ -4990,7 +5402,8 @@
           "fat": 1.9,
           "sat": 0.3,
           "carb": 21,
-          "fibre": 1.3
+          "fibre": 1.3,
+          "sodium": 219
         },
         {
           "meal": "Drink",
@@ -5001,7 +5414,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 4.4,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 0
         },
         {
           "meal": "Snack",
@@ -5012,7 +5426,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 27,
-          "fibre": 3.1
+          "fibre": 3.1,
+          "sodium": 3
         },
         {
           "meal": "Early morning",
@@ -5023,7 +5438,8 @@
           "fat": 0.6,
           "sat": 0,
           "carb": 5.2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 50
         },
         {
           "meal": "Early morning",
@@ -5034,7 +5450,8 @@
           "fat": 0.3,
           "sat": 0.1,
           "carb": 28,
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 6
         },
         {
           "meal": "Early morning",
@@ -5045,7 +5462,8 @@
           "fat": 0.5,
           "sat": 0.2,
           "carb": 6,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 187
         },
         {
           "meal": "Early morning",
@@ -5056,7 +5474,8 @@
           "fat": 0.5,
           "sat": 0.1,
           "carb": 8.3,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 275
         },
         {
           "meal": "Snack",
@@ -5068,7 +5487,8 @@
           "sat": 10,
           "carb": 64,
           "fibre": 2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri4_waffles.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri4_waffles.jpg",
+          "sodium": 240
         },
         {
           "meal": "Snack",
@@ -5079,7 +5499,8 @@
           "fat": 23,
           "sat": 3.6,
           "carb": 9.5,
-          "fibre": 1.4
+          "fibre": 1.4,
+          "sodium": 288
         }
       ]
     },
@@ -5098,7 +5519,8 @@
           "sat": 2,
           "carb": 52,
           "fibre": 5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat5_paratha.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat5_paratha.jpg",
+          "sodium": 414
         },
         {
           "meal": "Breakfast",
@@ -5109,7 +5531,8 @@
           "fat": 0.9,
           "sat": 0,
           "carb": 9.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 92
         },
         {
           "meal": "Snack",
@@ -5120,7 +5543,8 @@
           "fat": 12.2,
           "sat": 1.4,
           "carb": 2.7,
-          "fibre": 1.4
+          "fibre": 1.4,
+          "sodium": 132
         },
         {
           "meal": "Snack",
@@ -5131,7 +5555,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 27,
-          "fibre": 3.1
+          "fibre": 3.1,
+          "sodium": 3
         },
         {
           "meal": "Drink",
@@ -5142,7 +5567,8 @@
           "fat": 18.2,
           "sat": 2.8,
           "carb": 22.8,
-          "fibre": 3.8
+          "fibre": 3.8,
+          "sodium": 443
         },
         {
           "meal": "Drink",
@@ -5153,7 +5579,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 4.4,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 0
         },
         {
           "meal": "Dinner",
@@ -5164,7 +5591,8 @@
           "fat": 9.6,
           "sat": 2.8,
           "carb": 2,
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 250
         },
         {
           "meal": "Dinner",
@@ -5175,7 +5603,8 @@
           "fat": 4,
           "sat": 1,
           "carb": 15,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 77
         },
         {
           "meal": "Dinner",
@@ -5187,7 +5616,8 @@
           "sat": 4.8,
           "carb": 4.5,
           "fibre": 0.3,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat5_tikka.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat5_tikka.jpg",
+          "sodium": 398
         },
         {
           "meal": "Snack",
@@ -5198,7 +5628,8 @@
           "fat": 26.4,
           "sat": 8.7,
           "carb": 42.9,
-          "fibre": 3.6
+          "fibre": 3.6,
+          "sodium": 953
         },
         {
           "meal": "Snack",
@@ -5209,7 +5640,8 @@
           "fat": 15.3,
           "sat": 6.8,
           "carb": 21.6,
-          "fibre": 1.8
+          "fibre": 1.8,
+          "sodium": 524
         }
       ]
     },
@@ -5227,7 +5659,8 @@
           "fat": 12.8,
           "sat": 2.2,
           "carb": 22.9,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 388
         },
         {
           "meal": "Snack",
@@ -5238,7 +5671,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 27,
-          "fibre": 3.1
+          "fibre": 3.1,
+          "sodium": 3
         },
         {
           "meal": "Dinner",
@@ -5249,7 +5683,8 @@
           "fat": 18.5,
           "sat": 3.7,
           "carb": 0,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 362
         },
         {
           "meal": "Dinner",
@@ -5261,7 +5696,8 @@
           "sat": 0.9,
           "carb": 2,
           "fibre": 0.3,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun6_hamour.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun6_hamour.jpg",
+          "sodium": 162
         },
         {
           "meal": "Dinner",
@@ -5272,7 +5708,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 4.4,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 0
         },
         {
           "meal": "Dinner",
@@ -5284,7 +5721,8 @@
           "sat": 1.4,
           "carb": 25,
           "fibre": 1.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun6_friedrice.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun6_friedrice.jpg",
+          "sodium": 297
         }
       ]
     },
@@ -5302,7 +5740,8 @@
           "fat": 13,
           "sat": 2.3,
           "carb": 41.7,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 495
         },
         {
           "meal": "Lunch",
@@ -5313,7 +5752,8 @@
           "fat": 4.2,
           "sat": 0.8,
           "carb": 10.2,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 198
         },
         {
           "meal": "Snack",
@@ -5324,7 +5764,8 @@
           "fat": 0.7,
           "sat": 0.2,
           "carb": 7.9,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 40
         },
         {
           "meal": "Snack",
@@ -5335,7 +5776,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 4.5,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 18
         },
         {
           "meal": "Snack",
@@ -5346,7 +5788,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 2.7,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 27
         },
         {
           "meal": "Dinner",
@@ -5357,7 +5800,8 @@
           "fat": 5.2,
           "sat": 0.7,
           "carb": 0.8,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 362
         },
         {
           "meal": "Drink",
@@ -5368,7 +5812,8 @@
           "fat": 16.6,
           "sat": 2.5,
           "carb": 17.2,
-          "fibre": 2.4
+          "fibre": 2.4,
+          "sodium": 394
         },
         {
           "meal": "Dinner",
@@ -5379,7 +5824,8 @@
           "fat": 17,
           "sat": 8,
           "carb": 85,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 795
         },
         {
           "meal": "Snack",
@@ -5390,7 +5836,8 @@
           "fat": 32,
           "sat": 8,
           "carb": 78,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 1800
         },
         {
           "meal": "Snack",
@@ -5401,7 +5848,8 @@
           "fat": 15,
           "sat": 5,
           "carb": 63,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 1080
         }
       ]
     },
@@ -5420,7 +5868,8 @@
           "sat": 1.2,
           "carb": 46.5,
           "fibre": 10,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue8_daalpalak.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue8_daalpalak.jpg",
+          "sodium": 514
         },
         {
           "meal": "Dinner",
@@ -5431,7 +5880,8 @@
           "fat": 1.5,
           "sat": 0.3,
           "carb": 33,
-          "fibre": 2.6
+          "fibre": 2.6,
+          "sodium": 9
         },
         {
           "meal": "Dinner",
@@ -5442,7 +5892,8 @@
           "fat": 2.5,
           "sat": 0.3,
           "carb": 1.5,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 180
         },
         {
           "meal": "Dinner",
@@ -5453,7 +5904,8 @@
           "fat": 0.5,
           "sat": 0.2,
           "carb": 6,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 187
         },
         {
           "meal": "Dinner",
@@ -5464,7 +5916,8 @@
           "fat": 0.5,
           "sat": 0.1,
           "carb": 8.3,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 275
         },
         {
           "meal": "Drink",
@@ -5475,7 +5928,8 @@
           "fat": 17.6,
           "sat": 2.6,
           "carb": 23.4,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 430
         },
         {
           "meal": "Dinner",
@@ -5487,7 +5941,8 @@
           "sat": 1.1,
           "carb": 5.3,
           "fibre": 0.7,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue8_prawnparatha.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue8_prawnparatha.jpg",
+          "sodium": 232
         },
         {
           "meal": "Dinner",
@@ -5498,7 +5953,8 @@
           "fat": 3.5,
           "sat": 0.6,
           "carb": 18.5,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 139
         },
         {
           "meal": "Dinner",
@@ -5509,7 +5965,8 @@
           "fat": 6,
           "sat": 1,
           "carb": 26,
-          "fibre": 2.6
+          "fibre": 2.6,
+          "sodium": 210
         },
         {
           "meal": "Dinner",
@@ -5520,7 +5977,8 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 4.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 44
         }
       ]
     },
@@ -5538,7 +5996,8 @@
           "fat": 17.6,
           "sat": 2.6,
           "carb": 20.5,
-          "fibre": 2.7
+          "fibre": 2.7,
+          "sodium": 424
         },
         {
           "meal": "Snack",
@@ -5549,7 +6008,8 @@
           "fat": 6,
           "sat": 1,
           "carb": 26,
-          "fibre": 2.6
+          "fibre": 2.6,
+          "sodium": 210
         },
         {
           "meal": "Snack",
@@ -5560,7 +6020,8 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 48
         },
         {
           "meal": "Dinner",
@@ -5572,7 +6033,8 @@
           "sat": 1.5,
           "carb": 57.7,
           "fibre": 12.4,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed9_daalpalak.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed9_daalpalak.jpg",
+          "sodium": 639
         },
         {
           "meal": "Dinner",
@@ -5583,7 +6045,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 20.9,
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 134
         },
         {
           "meal": "Dinner",
@@ -5595,7 +6058,8 @@
           "sat": 2.6,
           "carb": 10.5,
           "fibre": 1.1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed9_chillichicken.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed9_chillichicken.jpg",
+          "sodium": 450
         }
       ]
     },
@@ -5614,7 +6078,8 @@
           "sat": 3.5,
           "carb": 48,
           "fibre": 3.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_chickenpasta.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_chickenpasta.jpg",
+          "sodium": 680
         },
         {
           "meal": "Lunch",
@@ -5625,7 +6090,8 @@
           "fat": 2.2,
           "sat": 0.7,
           "carb": 0.6,
-          "fibre": 0.1
+          "fibre": 0.1,
+          "sodium": 108
         },
         {
           "meal": "Snack",
@@ -5636,7 +6102,8 @@
           "fat": 17.6,
           "sat": 2.6,
           "carb": 24.8,
-          "fibre": 4.4
+          "fibre": 4.4,
+          "sodium": 439
         },
         {
           "meal": "Dinner",
@@ -5648,7 +6115,8 @@
           "sat": 1.4,
           "carb": 7.6,
           "fibre": 2.4,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_matartofu.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_matartofu.jpg",
+          "sodium": 192
         },
         {
           "meal": "Dinner",
@@ -5659,7 +6127,8 @@
           "fat": 9.6,
           "sat": 1.6,
           "carb": 51,
-          "fibre": 5.5
+          "fibre": 5.5,
+          "sodium": 384
         },
         {
           "meal": "Dinner",
@@ -5670,7 +6139,8 @@
           "fat": 0.6,
           "sat": 0,
           "carb": 5.2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 50
         },
         {
           "meal": "Dinner",
@@ -5681,7 +6151,8 @@
           "fat": 5.3,
           "sat": 0.6,
           "carb": 7.5,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 189
         },
         {
           "meal": "Dinner",
@@ -5692,7 +6163,8 @@
           "fat": 0.5,
           "sat": 0.1,
           "carb": 8.3,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 275
         },
         {
           "meal": "Dinner",
@@ -5703,7 +6175,8 @@
           "fat": 0.3,
           "sat": 0.1,
           "carb": 3,
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 94
         },
         {
           "meal": "Dinner",
@@ -5715,7 +6188,8 @@
           "sat": 0,
           "carb": 15,
           "fibre": 0.8,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_watermelon.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu10_watermelon.jpg",
+          "sodium": 2
         },
         {
           "meal": "Snack",
@@ -5726,7 +6200,8 @@
           "fat": 15.3,
           "sat": 6.8,
           "carb": 21.6,
-          "fibre": 1.8
+          "fibre": 1.8,
+          "sodium": 524
         },
         {
           "meal": "Snack",
@@ -5737,7 +6212,8 @@
           "fat": 10.7,
           "sat": 1.1,
           "carb": 23.9,
-          "fibre": 2.2
+          "fibre": 2.2,
+          "sodium": 429
         },
         {
           "meal": "Snack",
@@ -5748,7 +6224,8 @@
           "fat": 20.9,
           "sat": 5.2,
           "carb": 43.7,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 849
         }
       ]
     },
@@ -5767,7 +6244,8 @@
           "sat": 2.1,
           "carb": 4.3,
           "fibre": 0.7,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_chickencurry.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_chickencurry.jpg",
+          "sodium": 429
         },
         {
           "meal": "Lunch",
@@ -5778,7 +6256,8 @@
           "fat": 4.8,
           "sat": 0.8,
           "carb": 25.5,
-          "fibre": 2.8
+          "fibre": 2.8,
+          "sodium": 192
         },
         {
           "meal": "Lunch",
@@ -5789,7 +6268,8 @@
           "fat": 1.9,
           "sat": 0.2,
           "carb": 1.1,
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 132
         },
         {
           "meal": "Dinner",
@@ -5800,7 +6280,8 @@
           "fat": 19.5,
           "sat": 2.9,
           "carb": 21.2,
-          "fibre": 2.9
+          "fibre": 2.9,
+          "sodium": 454
         },
         {
           "meal": "Drink",
@@ -5812,7 +6293,8 @@
           "sat": 0,
           "carb": 85,
           "fibre": 1.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_margarita.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_margarita.jpg",
+          "sodium": 75
         },
         {
           "meal": "Dinner",
@@ -5823,7 +6305,8 @@
           "fat": 27,
           "sat": 7.5,
           "carb": 7,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 912
         },
         {
           "meal": "Drink",
@@ -5834,7 +6317,8 @@
           "fat": 0,
           "sat": 0,
           "carb": 9,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 20
         },
         {
           "meal": "Dinner",
@@ -5845,7 +6329,8 @@
           "fat": 8,
           "sat": 5,
           "carb": 45,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 8
         },
         {
           "meal": "Snack",
@@ -5857,7 +6342,8 @@
           "sat": 9,
           "carb": 22,
           "fibre": 0.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_cheesecake.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri11_cheesecake.jpg",
+          "sodium": 125
         },
         {
           "meal": "Snack",
@@ -5868,7 +6354,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 15,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 2
         }
       ]
     },
@@ -5886,7 +6373,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 20.9,
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 134
         },
         {
           "meal": "Lunch",
@@ -5897,7 +6385,8 @@
           "fat": 10.9,
           "sat": 4.7,
           "carb": 4.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 341
         },
         {
           "meal": "Lunch",
@@ -5908,7 +6397,8 @@
           "fat": 6,
           "sat": 1,
           "carb": 31.5,
-          "fibre": 3.4
+          "fibre": 3.4,
+          "sodium": 236
         },
         {
           "meal": "Drink",
@@ -5919,7 +6409,8 @@
           "fat": 17,
           "sat": 2.6,
           "carb": 25.2,
-          "fibre": 4.4
+          "fibre": 4.4,
+          "sodium": 438
         },
         {
           "meal": "Dinner",
@@ -5931,7 +6422,8 @@
           "sat": 1,
           "carb": 25,
           "fibre": 1.2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat12_poha.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat12_poha.jpg",
+          "sodium": 268
         },
         {
           "meal": "Dinner",
@@ -5942,7 +6434,8 @@
           "fat": 25.9,
           "sat": 8.1,
           "carb": 27.9,
-          "fibre": 2.6
+          "fibre": 2.6,
+          "sodium": 832
         },
         {
           "meal": "Dinner",
@@ -5953,7 +6446,8 @@
           "fat": 2.9,
           "sat": 0.4,
           "carb": 10.1,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 108
         },
         {
           "meal": "Snack",
@@ -5964,7 +6458,8 @@
           "fat": 7.5,
           "sat": 4.5,
           "carb": 11,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 58
         },
         {
           "meal": "Drink",
@@ -5975,7 +6470,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 1.3,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 128
         }
       ]
     },
@@ -5994,7 +6490,8 @@
           "sat": 1.6,
           "carb": 40.2,
           "fibre": 1.9,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun13_poha.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun13_poha.jpg",
+          "sodium": 432
         },
         {
           "meal": "Lunch",
@@ -6005,7 +6502,8 @@
           "fat": 17.6,
           "sat": 5.5,
           "carb": 19,
-          "fibre": 1.8
+          "fibre": 1.8,
+          "sodium": 565
         },
         {
           "meal": "Snack",
@@ -6016,7 +6514,8 @@
           "fat": 4.8,
           "sat": 1.6,
           "carb": 0.4,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 101
         },
         {
           "meal": "Snack",
@@ -6027,7 +6526,8 @@
           "fat": 5.3,
           "sat": 0.7,
           "carb": 1,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 416
         },
         {
           "meal": "Dinner",
@@ -6039,7 +6539,8 @@
           "sat": 6.9,
           "carb": 0,
           "fibre": 0,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun13_salmon.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun13_salmon.jpg",
+          "sodium": 678
         },
         {
           "meal": "Dinner",
@@ -6050,7 +6551,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 20.9,
-          "fibre": 6
+          "fibre": 6,
+          "sodium": 134
         },
         {
           "meal": "Snack",
@@ -6061,7 +6563,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 27,
-          "fibre": 3.1
+          "fibre": 3.1,
+          "sodium": 3
         }
       ]
     },
@@ -6080,7 +6583,8 @@
           "sat": 1.9,
           "carb": 10,
           "fibre": 1.4,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_chickencurry.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_chickencurry.jpg",
+          "sodium": 388
         },
         {
           "meal": "Breakfast",
@@ -6091,7 +6595,8 @@
           "fat": 7.2,
           "sat": 1.2,
           "carb": 38,
-          "fibre": 4.1
+          "fibre": 4.1,
+          "sodium": 288
         },
         {
           "meal": "Drink",
@@ -6102,7 +6607,8 @@
           "fat": 20.2,
           "sat": 2.9,
           "carb": 27.2,
-          "fibre": 4.6
+          "fibre": 4.6,
+          "sodium": 481
         },
         {
           "meal": "Lunch",
@@ -6113,7 +6619,8 @@
           "fat": 32,
           "sat": 8,
           "carb": 78,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 1800
         },
         {
           "meal": "Dinner",
@@ -6125,7 +6632,8 @@
           "sat": 0.5,
           "carb": 18,
           "fibre": 3.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_flightsalad.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_flightsalad.jpg",
+          "sodium": 144
         },
         {
           "meal": "Dinner",
@@ -6137,7 +6645,8 @@
           "sat": 2.5,
           "carb": 24,
           "fibre": 1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_flightdessert.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_flightdessert.jpg",
+          "sodium": 92
         },
         {
           "meal": "Dinner",
@@ -6149,7 +6658,8 @@
           "sat": 12.5,
           "carb": 75,
           "fibre": 3,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_papadia.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon14_papadia.jpg",
+          "sodium": 1956
         },
         {
           "meal": "Dinner",
@@ -6160,7 +6670,8 @@
           "fat": 3.2,
           "sat": 0.4,
           "carb": 32,
-          "fibre": 3.3
+          "fibre": 3.3,
+          "sodium": 272
         }
       ]
     },
@@ -6178,7 +6689,8 @@
           "fat": 16.3,
           "sat": 2.3,
           "carb": 57.5,
-          "fibre": 2.8
+          "fibre": 2.8,
+          "sodium": 618
         },
         {
           "meal": "Breakfast",
@@ -6189,7 +6701,8 @@
           "fat": 11.8,
           "sat": 3.7,
           "carb": 12.7,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 378
         },
         {
           "meal": "Drink",
@@ -6200,7 +6713,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 9,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 152
         },
         {
           "meal": "Lunch",
@@ -6211,7 +6725,8 @@
           "fat": 4,
           "sat": 1,
           "carb": 46,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 288
         },
         {
           "meal": "Lunch",
@@ -6222,7 +6737,8 @@
           "fat": 9,
           "sat": 1.2,
           "carb": 22,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 270
         },
         {
           "meal": "Dinner",
@@ -6233,7 +6749,8 @@
           "fat": 14,
           "sat": 6,
           "carb": 44,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 726
         },
         {
           "meal": "Dinner",
@@ -6244,7 +6761,8 @@
           "fat": 7,
           "sat": 1.5,
           "carb": 24,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 374
         },
         {
           "meal": "Dinner",
@@ -6255,7 +6773,8 @@
           "fat": 8,
           "sat": 4,
           "carb": 27,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 480
         },
         {
           "meal": "Dinner",
@@ -6266,7 +6785,8 @@
           "fat": 18,
           "sat": 3,
           "carb": 47,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 814
         }
       ]
     },
@@ -6285,7 +6805,8 @@
           "sat": 3,
           "carb": 32,
           "fibre": 2.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_kachori.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_kachori.jpg",
+          "sodium": 660
         },
         {
           "meal": "Breakfast",
@@ -6297,7 +6818,8 @@
           "sat": 5,
           "carb": 82,
           "fibre": 9,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_koki.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_koki.jpg",
+          "sodium": 690
         },
         {
           "meal": "Breakfast",
@@ -6308,7 +6830,8 @@
           "fat": 2.5,
           "sat": 0.3,
           "carb": 2,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 1
         },
         {
           "meal": "Breakfast",
@@ -6319,7 +6842,8 @@
           "fat": 1.5,
           "sat": 1,
           "carb": 2.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 15
         },
         {
           "meal": "Lunch",
@@ -6330,7 +6854,8 @@
           "fat": 4,
           "sat": 1,
           "carb": 46,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 288
         },
         {
           "meal": "Lunch",
@@ -6341,7 +6866,8 @@
           "fat": 5,
           "sat": 3,
           "carb": 6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 66
         },
         {
           "meal": "Lunch",
@@ -6352,7 +6878,8 @@
           "fat": 11.8,
           "sat": 3.7,
           "carb": 12.7,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 378
         },
         {
           "meal": "Snack",
@@ -6363,7 +6890,8 @@
           "fat": 0.3,
           "sat": 0,
           "carb": 21,
-          "fibre": 3.6
+          "fibre": 3.6,
+          "sodium": 2
         },
         {
           "meal": "Drink",
@@ -6374,7 +6902,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 9,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 152
         },
         {
           "meal": "Snack",
@@ -6385,7 +6914,8 @@
           "fat": 0.35,
           "sat": 0,
           "carb": 27,
-          "fibre": 3.1
+          "fibre": 3.1,
+          "sodium": 3
         },
         {
           "meal": "Dinner",
@@ -6397,7 +6927,8 @@
           "sat": 11,
           "carb": 5,
           "fibre": 0.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_tikka.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed16_tikka.jpg",
+          "sodium": 930
         },
         {
           "meal": "Dinner",
@@ -6408,7 +6939,8 @@
           "fat": 2.5,
           "sat": 1,
           "carb": 3,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 40
         },
         {
           "meal": "Dinner",
@@ -6419,7 +6951,8 @@
           "fat": 1.5,
           "sat": 0.3,
           "carb": 30,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 180
         },
         {
           "meal": "Snack",
@@ -6430,7 +6963,8 @@
           "fat": 6.9,
           "sat": 2.7,
           "carb": 12.6,
-          "fibre": 1.8
+          "fibre": 1.8,
+          "sodium": 62
         }
       ]
     },
@@ -6448,7 +6982,8 @@
           "fat": 2.2,
           "sat": 1.4,
           "carb": 3.5,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 22
         },
         {
           "meal": "Breakfast",
@@ -6459,7 +6994,8 @@
           "fat": 20.7,
           "sat": 8.1,
           "carb": 37.8,
-          "fibre": 5.4
+          "fibre": 5.4,
+          "sodium": 186
         },
         {
           "meal": "Snack",
@@ -6470,7 +7006,8 @@
           "fat": 7.5,
           "sat": 0.8,
           "carb": 26,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 429
         },
         {
           "meal": "Snack",
@@ -6481,7 +7018,8 @@
           "fat": 17,
           "sat": 3.5,
           "carb": 33,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 704
         },
         {
           "meal": "Lunch",
@@ -6493,7 +7031,8 @@
           "sat": 2,
           "carb": 50,
           "fibre": 5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu17_khichdi.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu17_khichdi.jpg",
+          "sodium": 495
         },
         {
           "meal": "Lunch",
@@ -6504,7 +7043,8 @@
           "fat": 4.5,
           "sat": 3,
           "carb": 6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 63
         },
         {
           "meal": "Lunch",
@@ -6515,7 +7055,8 @@
           "fat": 0.4,
           "sat": 0.05,
           "carb": 7.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 248
         }
       ]
     },
@@ -6534,7 +7075,8 @@
           "sat": 5,
           "carb": 9,
           "fibre": 2.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_matarpaneer.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_matarpaneer.jpg",
+          "sodium": 180
         },
         {
           "meal": "Lunch",
@@ -6545,7 +7087,8 @@
           "fat": 13,
           "sat": 7,
           "carb": 46,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 384
         },
         {
           "meal": "Lunch",
@@ -6556,7 +7099,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 2,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 10
         },
         {
           "meal": "Lunch",
@@ -6567,7 +7111,8 @@
           "fat": 4.5,
           "sat": 3,
           "carb": 6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 63
         },
         {
           "meal": "Lunch",
@@ -6578,7 +7123,8 @@
           "fat": 11.8,
           "sat": 3.7,
           "carb": 12.7,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 378
         },
         {
           "meal": "Snack",
@@ -6590,7 +7136,8 @@
           "sat": 5.5,
           "carb": 30,
           "fibre": 3.2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_chaap.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_chaap.jpg",
+          "sodium": 562
         },
         {
           "meal": "Dinner",
@@ -6601,7 +7148,8 @@
           "fat": 17,
           "sat": 5.2,
           "carb": 20,
-          "fibre": 2.4
+          "fibre": 2.4,
+          "sodium": 398
         },
         {
           "meal": "Dinner",
@@ -6613,7 +7161,8 @@
           "sat": 0,
           "carb": 43,
           "fibre": 0.6,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_daalchawal.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri18_daalchawal.jpg",
+          "sodium": 10
         },
         {
           "meal": "Dinner",
@@ -6624,7 +7173,8 @@
           "fat": 6,
           "sat": 2.5,
           "carb": 22,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 270
         },
         {
           "meal": "Dinner",
@@ -6635,7 +7185,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 3.8,
-          "fibre": 0.4
+          "fibre": 0.4,
+          "sodium": 126
         },
         {
           "meal": "Dinner",
@@ -6646,7 +7197,8 @@
           "fat": 0.4,
           "sat": 0,
           "carb": 43,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 10
         },
         {
           "meal": "Dinner",
@@ -6657,7 +7209,8 @@
           "fat": 6,
           "sat": 2.5,
           "carb": 22,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 270
         },
         {
           "meal": "Drink",
@@ -6668,7 +7221,8 @@
           "fat": 10.1,
           "sat": 1.2,
           "carb": 8.8,
-          "fibre": 2.8
+          "fibre": 2.8,
+          "sodium": 253
         },
         {
           "meal": "Snack",
@@ -6679,7 +7233,8 @@
           "fat": 32,
           "sat": 8,
           "carb": 48,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 1166
         },
         {
           "meal": "Snack",
@@ -6690,7 +7245,8 @@
           "fat": 9,
           "sat": 5.5,
           "carb": 32,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 258
         }
       ]
     },
@@ -6708,7 +7264,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 9,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 108
         },
         {
           "meal": "Snack",
@@ -6720,7 +7277,8 @@
           "sat": 4.8,
           "carb": 25,
           "fibre": 1.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kheer.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kheer.jpg",
+          "sodium": 115
         },
         {
           "meal": "Lunch",
@@ -6732,7 +7290,8 @@
           "sat": 1.3,
           "carb": 16,
           "fibre": 4,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_sabziroti.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_sabziroti.jpg",
+          "sodium": 255
         },
         {
           "meal": "Lunch",
@@ -6743,7 +7302,8 @@
           "fat": 13,
           "sat": 7,
           "carb": 46,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 384
         },
         {
           "meal": "Snack",
@@ -6755,7 +7315,8 @@
           "sat": 3.5,
           "carb": 35,
           "fibre": 3,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kachori.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_kachori.jpg",
+          "sodium": 726
         },
         {
           "meal": "Dinner",
@@ -6767,7 +7328,8 @@
           "sat": 4,
           "carb": 46,
           "fibre": 1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_curdrice.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat19_curdrice.jpg",
+          "sodium": 210
         },
         {
           "meal": "Dinner",
@@ -6778,7 +7340,8 @@
           "fat": 0.4,
           "sat": 0.05,
           "carb": 7.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 248
         },
         {
           "meal": "Dinner",
@@ -6789,7 +7352,8 @@
           "fat": 7,
           "sat": 1.5,
           "carb": 16,
-          "fibre": 0.3
+          "fibre": 0.3,
+          "sodium": 286
         },
         {
           "meal": "Drink",
@@ -6800,7 +7364,8 @@
           "fat": 8.1,
           "sat": 4.9,
           "carb": 15.9,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 290
         }
       ]
     },
@@ -6819,7 +7384,8 @@
           "sat": 9,
           "carb": 64,
           "fibre": 7.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun20_parathas.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun20_parathas.jpg",
+          "sodium": 636
         },
         {
           "meal": "Breakfast",
@@ -6830,7 +7396,8 @@
           "fat": 9,
           "sat": 6,
           "carb": 12,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 126
         },
         {
           "meal": "Breakfast",
@@ -6841,7 +7408,8 @@
           "fat": 0.4,
           "sat": 0.05,
           "carb": 7.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 248
         },
         {
           "meal": "Lunch",
@@ -6853,7 +7421,8 @@
           "sat": 2.3,
           "carb": 22,
           "fibre": 5.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun20_currysev.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun20_currysev.jpg",
+          "sodium": 435
         },
         {
           "meal": "Lunch",
@@ -6864,7 +7433,8 @@
           "fat": 19.5,
           "sat": 10.5,
           "carb": 69,
-          "fibre": 7.5
+          "fibre": 7.5,
+          "sodium": 576
         },
         {
           "meal": "Lunch",
@@ -6875,7 +7445,8 @@
           "fat": 18,
           "sat": 3,
           "carb": 22,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 594
         },
         {
           "meal": "Drink",
@@ -6886,7 +7457,8 @@
           "fat": 0.2,
           "sat": 0,
           "carb": 9,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 152
         },
         {
           "meal": "Dinner",
@@ -6897,7 +7469,8 @@
           "fat": 17,
           "sat": 3,
           "carb": 32,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 660
         },
         {
           "meal": "Dinner",
@@ -6908,7 +7481,8 @@
           "fat": 9,
           "sat": 1.5,
           "carb": 22,
-          "fibre": 3.5
+          "fibre": 3.5,
+          "sodium": 418
         },
         {
           "meal": "Dinner",
@@ -6919,7 +7493,8 @@
           "fat": 9,
           "sat": 2,
           "carb": 48,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 450
         },
         {
           "meal": "Dinner",
@@ -6930,7 +7505,8 @@
           "fat": 4.5,
           "sat": 3,
           "carb": 6,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 63
         },
         {
           "meal": "Dinner",
@@ -6941,7 +7517,8 @@
           "fat": 0.4,
           "sat": 0.05,
           "carb": 7.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 248
         }
       ]
     },
@@ -6960,7 +7537,8 @@
           "sat": 3.3,
           "carb": 31,
           "fibre": 2.6,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_kadhikachori.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_kadhikachori.jpg",
+          "sodium": 678
         },
         {
           "meal": "Lunch",
@@ -6972,7 +7550,8 @@
           "sat": 1.5,
           "carb": 27,
           "fibre": 4.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_aloopaneer.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_aloopaneer.jpg",
+          "sodium": 327
         },
         {
           "meal": "Lunch",
@@ -6983,7 +7562,8 @@
           "fat": 6,
           "sat": 3,
           "carb": 14,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 234
         },
         {
           "meal": "Lunch",
@@ -6994,7 +7574,8 @@
           "fat": 16.3,
           "sat": 8.8,
           "carb": 57.5,
-          "fibre": 6.3
+          "fibre": 6.3,
+          "sodium": 480
         },
         {
           "meal": "Dinner",
@@ -7006,7 +7587,8 @@
           "sat": 18,
           "carb": 38,
           "fibre": 3,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_chaap.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon21_chaap.jpg",
+          "sodium": 945
         },
         {
           "meal": "Dinner",
@@ -7017,7 +7599,8 @@
           "fat": 25,
           "sat": 6,
           "carb": 38,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 690
         },
         {
           "meal": "Dinner",
@@ -7028,7 +7611,8 @@
           "fat": 1.5,
           "sat": 0.3,
           "carb": 30,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 180
         },
         {
           "meal": "Dinner",
@@ -7039,7 +7623,8 @@
           "fat": 9.8,
           "sat": 5.3,
           "carb": 34.5,
-          "fibre": 3.8
+          "fibre": 3.8,
+          "sodium": 288
         }
       ]
     },
@@ -7058,7 +7643,8 @@
           "sat": 12,
           "carb": 96,
           "fibre": 10.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_parathadahi.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_parathadahi.jpg",
+          "sodium": 828
         },
         {
           "meal": "Breakfast",
@@ -7069,7 +7655,8 @@
           "fat": 9,
           "sat": 6,
           "carb": 12,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 126
         },
         {
           "meal": "Lunch",
@@ -7081,7 +7668,8 @@
           "sat": 0.7,
           "carb": 8,
           "fibre": 2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_aloorasa.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_aloorasa.jpg",
+          "sodium": 128
         },
         {
           "meal": "Lunch",
@@ -7092,7 +7680,8 @@
           "fat": 3,
           "sat": 0.4,
           "carb": 8,
-          "fibre": 1
+          "fibre": 1,
+          "sodium": 90
         },
         {
           "meal": "Lunch",
@@ -7103,7 +7692,8 @@
           "fat": 19.5,
           "sat": 10.5,
           "carb": 69,
-          "fibre": 7.5
+          "fibre": 7.5,
+          "sodium": 576
         },
         {
           "meal": "Dinner",
@@ -7115,7 +7705,8 @@
           "sat": 16,
           "carb": 72,
           "fibre": 8,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_acharichaap.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_acharichaap.jpg",
+          "sodium": 5520
         },
         {
           "meal": "Dinner",
@@ -7127,7 +7718,8 @@
           "sat": 2.3,
           "carb": 24.7,
           "fibre": 5.7,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_mixeddal.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue22_mixeddal.jpg",
+          "sodium": 300
         }
       ]
     },
@@ -7146,7 +7738,8 @@
           "sat": 15,
           "carb": 108,
           "fibre": 6,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_masalasandwich.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_masalasandwich.jpg",
+          "sodium": 1872
         },
         {
           "meal": "Breakfast",
@@ -7157,7 +7750,8 @@
           "fat": 5.9,
           "sat": 1.8,
           "carb": 6.3,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 189
         },
         {
           "meal": "Lunch",
@@ -7169,7 +7763,8 @@
           "sat": 3.4,
           "carb": 34,
           "fibre": 8.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_dalroti.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_dalroti.jpg",
+          "sodium": 663
         },
         {
           "meal": "Lunch",
@@ -7180,7 +7775,8 @@
           "fat": 10.3,
           "sat": 4.3,
           "carb": 11.8,
-          "fibre": 0.7
+          "fibre": 0.7,
+          "sodium": 116
         },
         {
           "meal": "Lunch",
@@ -7191,7 +7787,8 @@
           "fat": 13,
           "sat": 7,
           "carb": 46,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 384
         },
         {
           "meal": "Drink",
@@ -7202,7 +7799,8 @@
           "fat": 5.1,
           "sat": 0.8,
           "carb": 7.8,
-          "fibre": 2.1
+          "fibre": 2.1,
+          "sodium": 199
         },
         {
           "meal": "Dinner",
@@ -7214,7 +7812,8 @@
           "sat": 1.5,
           "carb": 10,
           "fibre": 1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_kadhichawal.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed23_kadhichawal.jpg",
+          "sodium": 70
         },
         {
           "meal": "Dinner",
@@ -7225,7 +7824,8 @@
           "fat": 0.5,
           "sat": 0,
           "carb": 54.5,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 12
         }
       ]
     },
@@ -7244,7 +7844,8 @@
           "sat": 3,
           "carb": 74.7,
           "fibre": 3.6,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_poha.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_poha.jpg",
+          "sodium": 802
         },
         {
           "meal": "Breakfast",
@@ -7255,7 +7856,8 @@
           "fat": 19.6,
           "sat": 6.1,
           "carb": 21.1,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 629
         },
         {
           "meal": "Lunch",
@@ -7267,7 +7869,8 @@
           "sat": 0.8,
           "carb": 9.3,
           "fibre": 2.3,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_laukiroti.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_laukiroti.jpg",
+          "sodium": 148
         },
         {
           "meal": "Lunch",
@@ -7278,7 +7881,8 @@
           "fat": 6,
           "sat": 3,
           "carb": 14,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 234
         },
         {
           "meal": "Lunch",
@@ -7289,7 +7893,8 @@
           "fat": 16.3,
           "sat": 8.8,
           "carb": 57.5,
-          "fibre": 6.3
+          "fibre": 6.3,
+          "sodium": 480
         },
         {
           "meal": "Dinner",
@@ -7301,7 +7906,8 @@
           "sat": 5.5,
           "carb": 30,
           "fibre": 1.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_pizza.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_pizza.jpg",
+          "sodium": 624
         },
         {
           "meal": "Dinner",
@@ -7312,7 +7918,8 @@
           "fat": 9,
           "sat": 2.5,
           "carb": 16,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 352
         },
         {
           "meal": "Dinner",
@@ -7323,7 +7930,8 @@
           "fat": 12,
           "sat": 6,
           "carb": 16,
-          "fibre": 0.5
+          "fibre": 0.5,
+          "sodium": 140
         },
         {
           "meal": "Dinner",
@@ -7334,7 +7942,8 @@
           "fat": 5,
           "sat": 2.5,
           "carb": 18,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 156
         },
         {
           "meal": "Dinner",
@@ -7345,7 +7954,8 @@
           "fat": 3,
           "sat": 1.8,
           "carb": 13,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 108
         },
         {
           "meal": "Dinner",
@@ -7356,7 +7966,8 @@
           "fat": 3,
           "sat": 1.2,
           "carb": 22,
-          "fibre": 0.8
+          "fibre": 0.8,
+          "sodium": 156
         },
         {
           "meal": "Dinner",
@@ -7368,7 +7979,8 @@
           "sat": 8.7,
           "carb": 6,
           "fibre": 1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_lachhapaneer.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu24_lachhapaneer.jpg",
+          "sodium": 469
         },
         {
           "meal": "Dinner",
@@ -7379,7 +7991,8 @@
           "fat": 11,
           "sat": 4,
           "carb": 36,
-          "fibre": 8
+          "fibre": 8,
+          "sodium": 450
         },
         {
           "meal": "Dinner",
@@ -7390,7 +8003,8 @@
           "fat": 16,
           "sat": 9,
           "carb": 20,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 390
         }
       ]
     },
@@ -7409,7 +8023,8 @@
           "sat": 7.5,
           "carb": 45,
           "fibre": 2.4,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_toastchai.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_toastchai.jpg",
+          "sodium": 396
         },
         {
           "meal": "Breakfast",
@@ -7420,7 +8035,8 @@
           "fat": 3.5,
           "sat": 2.2,
           "carb": 11,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 45
         },
         {
           "meal": "Lunch",
@@ -7432,7 +8048,8 @@
           "sat": 0.6,
           "carb": 6,
           "fibre": 2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_turairoti.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_turairoti.jpg",
+          "sodium": 105
         },
         {
           "meal": "Lunch",
@@ -7443,7 +8060,8 @@
           "fat": 4.2,
           "sat": 2.1,
           "carb": 9.8,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 164
         },
         {
           "meal": "Lunch",
@@ -7454,7 +8072,8 @@
           "fat": 4,
           "sat": 1,
           "carb": 46,
-          "fibre": 5
+          "fibre": 5,
+          "sodium": 288
         },
         {
           "meal": "Snack",
@@ -7466,7 +8085,8 @@
           "sat": 0,
           "carb": 2.7,
           "fibre": 0.8,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_sprouts.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_sprouts.jpg",
+          "sodium": 17
         },
         {
           "meal": "Dinner",
@@ -7478,7 +8098,8 @@
           "sat": 0,
           "carb": 56.5,
           "fibre": 0.8,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_dalchawal.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_dalchawal.jpg",
+          "sodium": 13
         },
         {
           "meal": "Dinner",
@@ -7489,7 +8110,8 @@
           "fat": 3.3,
           "sat": 1.3,
           "carb": 12.2,
-          "fibre": 2.7
+          "fibre": 2.7,
+          "sodium": 147
         },
         {
           "meal": "Dinner",
@@ -7500,7 +8122,8 @@
           "fat": 0.1,
           "sat": 0,
           "carb": 3,
-          "fibre": 0.9
+          "fibre": 0.9,
+          "sodium": 18
         },
         {
           "meal": "Dinner",
@@ -7512,7 +8135,8 @@
           "sat": 6,
           "carb": 36,
           "fibre": 4,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_chaap.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri25_chaap.jpg",
+          "sodium": 660
         }
       ]
     },
@@ -7531,7 +8155,8 @@
           "sat": 1.5,
           "carb": 52,
           "fibre": 1.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat26_pulaodalpalak.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat26_pulaodalpalak.jpg",
+          "sodium": 450
         },
         {
           "meal": "Lunch",
@@ -7542,7 +8167,8 @@
           "fat": 7,
           "sat": 1,
           "carb": 30,
-          "fibre": 6.5
+          "fibre": 6.5,
+          "sodium": 345
         },
         {
           "meal": "Dinner",
@@ -7554,7 +8180,8 @@
           "sat": 0.9,
           "carb": 31,
           "fibre": 0.9,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat26_pulaosabziroti.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat26_pulaosabziroti.jpg",
+          "sodium": 270
         },
         {
           "meal": "Dinner",
@@ -7565,7 +8192,8 @@
           "fat": 4.5,
           "sat": 0.6,
           "carb": 6,
-          "fibre": 2
+          "fibre": 2,
+          "sodium": 105
         },
         {
           "meal": "Dinner",
@@ -7576,7 +8204,8 @@
           "fat": 2,
           "sat": 0.5,
           "carb": 23,
-          "fibre": 2.5
+          "fibre": 2.5,
+          "sodium": 144
         },
         {
           "meal": "Dinner",
@@ -7588,7 +8217,8 @@
           "sat": 0,
           "carb": 57,
           "fibre": 0.8,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat26_kadhichawal.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat26_kadhichawal.jpg",
+          "sodium": 13
         },
         {
           "meal": "Dinner",
@@ -7599,7 +8229,8 @@
           "fat": 9,
           "sat": 2.5,
           "carb": 16,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 255
         },
         {
           "meal": "Dinner",
@@ -7610,7 +8241,8 @@
           "fat": 3.6,
           "sat": 0.5,
           "carb": 5,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 84
         }
       ]
     },
@@ -7629,7 +8261,8 @@
           "sat": 0.2,
           "carb": 14,
           "fibre": 1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon28_idlisambar.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon28_idlisambar.jpg",
+          "sodium": 112
         },
         {
           "meal": "Breakfast",
@@ -7640,7 +8273,8 @@
           "fat": 8,
           "sat": 1,
           "carb": 24,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 270
         },
         {
           "meal": "Breakfast",
@@ -7651,7 +8285,8 @@
           "fat": 4,
           "sat": 0.6,
           "carb": 18,
-          "fibre": 4
+          "fibre": 4,
+          "sodium": 195
         },
         {
           "meal": "Snack",
@@ -7663,7 +8298,8 @@
           "sat": 14,
           "carb": 78,
           "fibre": 4.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon28_pizza.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon28_pizza.jpg",
+          "sodium": 1800
         }
       ]
     },
@@ -7682,7 +8318,8 @@
           "sat": 6.2,
           "carb": 48,
           "fibre": 1.6,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri2_biryani.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri2_biryani.jpg",
+          "sodium": 712
         }
       ]
     },
@@ -7700,7 +8337,8 @@
           "fat": 17.6,
           "sat": 2.8,
           "carb": 27.9,
-          "fibre": 5.2
+          "fibre": 5.2,
+          "sodium": 472
         },
         {
           "meal": "Lunch",
@@ -7712,7 +8350,8 @@
           "sat": 2.2,
           "carb": 42.5,
           "fibre": 4.1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat3_tofunoodles.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat3_tofunoodles.jpg",
+          "sodium": 548
         },
         {
           "meal": "Lunch",
@@ -7723,7 +8362,8 @@
           "fat": 4.4,
           "sat": 0.7,
           "carb": 3.7,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 92
         },
         {
           "meal": "Dinner",
@@ -7735,7 +8375,8 @@
           "sat": 1.1,
           "carb": 34.5,
           "fibre": 2.2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat3_noodlesmanchurian.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat3_noodlesmanchurian.jpg",
+          "sodium": 338
         },
         {
           "meal": "Dinner",
@@ -7746,7 +8387,8 @@
           "fat": 10.2,
           "sat": 1.3,
           "carb": 23,
-          "fibre": 2.6
+          "fibre": 2.6,
+          "sodium": 308
         },
         {
           "meal": "Dinner",
@@ -7757,7 +8399,8 @@
           "fat": 1.8,
           "sat": 0.3,
           "carb": 7.5,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 78
         },
         {
           "meal": "Dinner",
@@ -7768,7 +8411,8 @@
           "fat": 2.4,
           "sat": 0.3,
           "carb": 5.4,
-          "fibre": 0.6
+          "fibre": 0.6,
+          "sodium": 72
         },
         {
           "meal": "Snack",
@@ -7779,7 +8423,8 @@
           "fat": 0.35,
           "sat": 0,
           "carb": 27,
-          "fibre": 3.1
+          "fibre": 3.1,
+          "sodium": 3
         },
         {
           "meal": "Dinner",
@@ -7790,7 +8435,8 @@
           "fat": 6.2,
           "sat": 0.9,
           "carb": 28.8,
-          "fibre": 1.9
+          "fibre": 1.9,
+          "sodium": 282
         },
         {
           "meal": "Dinner",
@@ -7801,7 +8447,8 @@
           "fat": 12,
           "sat": 1.5,
           "carb": 27,
-          "fibre": 3
+          "fibre": 3,
+          "sodium": 360
         }
       ]
     },
@@ -7820,7 +8467,8 @@
           "sat": 3.9,
           "carb": 19,
           "fibre": 2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_chillichicken.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_chillichicken.jpg",
+          "sodium": 705
         },
         {
           "meal": "Lunch",
@@ -7832,7 +8480,8 @@
           "sat": 1.7,
           "carb": 42.8,
           "fibre": 2.1,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_poha.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_poha.jpg",
+          "sodium": 460
         },
         {
           "meal": "Lunch",
@@ -7843,7 +8492,8 @@
           "fat": 15.1,
           "sat": 4.4,
           "carb": 20.6,
-          "fibre": 1.5
+          "fibre": 1.5,
+          "sodium": 519
         },
         {
           "meal": "Snack",
@@ -7854,7 +8504,8 @@
           "fat": 14.4,
           "sat": 5.6,
           "carb": 20.8,
-          "fibre": 1.6
+          "fibre": 1.6,
+          "sodium": 493
         },
         {
           "meal": "Dinner",
@@ -7865,7 +8516,8 @@
           "fat": 15.1,
           "sat": 2.8,
           "carb": 13.6,
-          "fibre": 1.4
+          "fibre": 1.4,
+          "sodium": 506
         },
         {
           "meal": "Dinner",
@@ -7877,7 +8529,8 @@
           "sat": 0.8,
           "carb": 14,
           "fibre": 1.5,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_parathayogurt.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun4_parathayogurt.jpg",
+          "sodium": 114
         },
         {
           "meal": "Dinner",
@@ -7888,7 +8541,8 @@
           "fat": 0.7,
           "sat": 0,
           "carb": 6.2,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 60
         },
         {
           "meal": "Drink",
@@ -7899,7 +8553,8 @@
           "fat": 18.1,
           "sat": 2.7,
           "carb": 20.5,
-          "fibre": 2.8
+          "fibre": 2.8,
+          "sodium": 427
         },
         {
           "meal": "Snack",
@@ -7910,7 +8565,8 @@
           "fat": 34.3,
           "sat": 10.3,
           "carb": 72,
-          "fibre": 0
+          "fibre": 0,
+          "sodium": 1432
         }
       ]
     },
@@ -7929,7 +8585,8 @@
           "sat": 3.6,
           "carb": 17.2,
           "fibre": 2.7,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_prawncurry.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_prawncurry.jpg",
+          "sodium": 636
         },
         {
           "meal": "Lunch",
@@ -7940,7 +8597,8 @@
           "fat": 12,
           "sat": 2.8,
           "carb": 49,
-          "fibre": 5.2
+          "fibre": 5.2,
+          "sodium": 396
         },
         {
           "meal": "Lunch",
@@ -7951,7 +8609,8 @@
           "fat": 0.6,
           "sat": 0,
           "carb": 2.4,
-          "fibre": 1.2
+          "fibre": 1.2,
+          "sodium": 360
         },
         {
           "meal": "Dinner",
@@ -7963,7 +8622,8 @@
           "sat": 10,
           "carb": 37,
           "fibre": 2,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_shakeshack.jpg"
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_shakeshack.jpg",
+          "sodium": 1152
         }
       ]
     }

@@ -45,7 +45,7 @@ which matches `JSON.stringify` exactly: 2-space indent, whole numbers as ints
 ## `data.json` shape
 ```jsonc
 {
-  "targets": { "kcal": 1900, "protein": 150, "fat": 60, "sat": 15, "carb": 180, "fibre": 30 },
+  "targets": { "kcal": 1900, "protein": 150, "fat": 60, "sat": 15, "carb": 180, "fibre": 30, "sodium": 2300 },
   "updated": "2026-08-04",              // set to today's date on every edit
   "days": [
     {
@@ -62,6 +62,7 @@ which matches `JSON.stringify` exactly: 2-space indent, whole numbers as ints
           "name": "Clear whey 30g in water",
           "kcal": 367, "protein": 29, "fat": 15, "sat": 2.5, "carb": 32,
           "fibre": 1,                  // optional; ABSENT means unknown, not zero
+          "sodium": 320,               // mg, optional, same rule as fibre; an ESTIMATE on cooked food
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu30_breakfast.jpg"
         }
       ]
@@ -83,6 +84,16 @@ Notes:
   **Set `fibre` on every item you add from now on.** Constipation on a
   high-protein cut is the reason it is tracked: the log was averaging ~15g
   against a 30g target because whey shakes displaced dal, sprouts and roti.
+- `sodium` (mg) follows the same optional rule and prints `2100+` when a day
+  has items without it. Unlike fibre it is **mostly estimated**: salt is
+  invisible in a photo, so cooked dishes use typical rates (home curry ~4 mg/g,
+  dal ~3, papad ~250 each, roti ~150, namkeen ~2.2 mg/kcal, takeaway ~2.4
+  mg/kcal) and only labelled packets are exact. The 2026-10-05 backfill filled
+  every older item from those rates (`scratchpad/sodium_backfill.py` logic:
+  category keyword x kcal). Write a figure on every new item; use the label
+  when there is one, otherwise the rate. The daily Sprite Zero with black salt
+  and chaat masala (~620 mg) and the Lipton zero-sugar ice tea (~50 mg) are in
+  the quick-add list and are NOT in the history unless logged.
 
 ## Known tare weights
 The user often weighs food **in** its container and gives the gross weight. Subtract:
@@ -155,12 +166,14 @@ guessing it badly swamps the food estimate.
   tapping a bar opens that week. Every chart draws an **average** line (solid)
   and the two big ones a **median** line (dotted); today is excluded from both
   while it is still being eaten, and fibre days containing pre-fibre items are
-  excluded because they are floors. A fixed bottom nav
+  excluded because they are floors. A fifth, full-width sodium chart sits
+  under the fat/fibre pair with a 2300 mg line. A fixed bottom nav
   switches between **Log**, **Search** (the whole-log search bar) and **Plan**
   (the training-plan sheet). The nav exists because the Android wrapper's
   pull-to-refresh swallows the pull-down gesture that also opens search.
 - Adding a food: the app's **+ Add food** button picks from a fixed list of ~32
-  quick-add foods, each with per-gram rates including fibre. The free-text
+  quick-add foods, each with per-gram rates including fibre and sodium (`n`,
+  mg per unit; an item only gets a sodium figure when every part used has one). The free-text
   manual-entry form was removed, so anything not on that list has to come
   through here. Quick adds are stored per-device in `localStorage` until the
   user taps "Save items to data.json". The list can be sorted A-Z or by
