@@ -7,7 +7,7 @@
     "carb": 180,
     "fibre": 30
   },
-  "updated": "2026-10-04",
+  "updated": "2026-10-05",
   "days": [
     {
       "date": "2026-07-24",
@@ -7911,6 +7911,36 @@
           "sat": 10.3,
           "carb": 72,
           "fibre": 0
+        }
+      ]
+    },
+    {
+      "date": "2026-10-05",
+      "label": "Mon 5 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "12:39",
+          "name": "Prawn curry 376g (706g gross in 330g glass container; ~169g cooked prawns + ~207g masala, split estimated)",
+          "kcal": 424,
+          "protein": 43.7,
+          "fat": 20.3,
+          "sat": 3.6,
+          "carb": 17.2,
+          "fibre": 2.7,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_prawncurry.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "12:39",
+          "name": "Onion paratha x2, 119g",
+          "kcal": 330,
+          "protein": 8,
+          "fat": 12,
+          "sat": 2.8,
+          "carb": 49,
+          "fibre": 5.2
         }
       ]
     }
