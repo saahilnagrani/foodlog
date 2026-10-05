@@ -8636,6 +8636,19 @@
           "carb": 26.6,
           "fibre": 4.3,
           "sodium": 278
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:47",
+          "name": "Chicken pasta: 133g chicken breast in masala + 257g spaghetti in sauce (390g, scale tared)",
+          "kcal": 605,
+          "protein": 46.1,
+          "fat": 20.9,
+          "sat": 4.4,
+          "carb": 60.5,
+          "fibre": 3.6,
+          "sodium": 1042,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_chickenpasta.jpg"
         }
       ]
     }
