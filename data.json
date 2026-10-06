@@ -8660,14 +8660,14 @@
         {
           "meal": "Dinner",
           "t": "15:41",
-          "name": "Moong dal + tofu cheela x3 (batch: 100g dry moong + 135g tofu = 7)",
-          "kcal": 276,
-          "protein": 17.2,
-          "fat": 11,
-          "sat": 1.6,
-          "carb": 28.2,
-          "fibre": 7.5,
-          "sodium": 270
+          "name": "Moong dal + tofu cheela x4 (~75g each; batch: 100g dry moong + 135g tofu = 7)",
+          "kcal": 368,
+          "protein": 23,
+          "fat": 14.7,
+          "sat": 2.1,
+          "carb": 37.5,
+          "fibre": 10.1,
+          "sodium": 360
         },
         {
           "meal": "Dinner",
