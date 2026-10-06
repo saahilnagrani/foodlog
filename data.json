@@ -8717,6 +8717,30 @@
           "fibre": 6.9,
           "sodium": 704,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue6_daalpalakrice.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:33",
+          "name": "Cooked brown rice 101g (2nd serving, scale tared)",
+          "kcal": 124,
+          "protein": 2.6,
+          "fat": 1,
+          "sat": 0.2,
+          "carb": 23.2,
+          "fibre": 1.8,
+          "sodium": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:33",
+          "name": "Daal palak 163g (2nd serving)",
+          "kcal": 193,
+          "protein": 9.3,
+          "fat": 5.6,
+          "sat": 0.7,
+          "carb": 26.1,
+          "fibre": 5.6,
+          "sodium": 570
         }
       ]
     }
