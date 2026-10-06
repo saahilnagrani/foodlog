@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-05",
+  "updated": "2026-10-06",
   "days": [
     {
       "date": "2026-07-24",
@@ -8649,6 +8649,37 @@
           "fibre": 3.6,
           "sodium": 1042,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon5_chickenpasta.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "label": "Tue 6 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Dinner",
+          "t": "15:41",
+          "name": "Moong dal + tofu cheela x3 (batch: 100g dry moong + 135g tofu = 7)",
+          "kcal": 276,
+          "protein": 17.2,
+          "fat": 11,
+          "sat": 1.6,
+          "carb": 28.2,
+          "fibre": 7.5,
+          "sodium": 270
+        },
+        {
+          "meal": "Dinner",
+          "t": "15:41",
+          "name": "Green chutney ~30g",
+          "kcal": 25,
+          "protein": 1,
+          "fat": 1.5,
+          "sat": 0.3,
+          "carb": 2.5,
+          "fibre": 0.8,
+          "sodium": 180
         }
       ]
     }
