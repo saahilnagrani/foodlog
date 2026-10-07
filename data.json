@@ -8752,15 +8752,27 @@
         {
           "meal": "Lunch",
           "t": "14:01",
-          "name": "Moong sprout salad 120g with onion & tomato (450g gross in 330g glass container)",
-          "kcal": 134,
-          "protein": 9,
+          "name": "Moong sprout salad 135g with onion & tomato (450g gross in 315g glass container)",
+          "kcal": 151,
+          "protein": 10.1,
           "fat": 0.4,
           "sat": 0,
-          "carb": 25.1,
-          "fibre": 7.2,
-          "sodium": 240,
+          "carb": 28.2,
+          "fibre": 8.1,
+          "sodium": 270,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed7_sprouts.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:17",
+          "name": "Boiled egg whites x2, from dry egg curry (masala mostly left)",
+          "kcal": 45,
+          "protein": 7.5,
+          "fat": 1.2,
+          "sat": 0.2,
+          "carb": 1,
+          "fibre": 0.2,
+          "sodium": 190
         }
       ]
     }

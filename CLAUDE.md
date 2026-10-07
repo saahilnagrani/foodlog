@@ -100,7 +100,8 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 
 | container | empty weight |
 |---|---|
-| square glass container (the one in the moong-sprout photos) | **330 g** |
+| square glass container, larger (prawn curry 5 Oct) | **330 g** |
+| square glass container, smaller (moong sprouts 7 Oct; looks the same, weigh to tell) | **315 g** |
 | deep steel bowl (egg curry, 10 Aug) | 353 g |
 | large salad bowl (watermelon & feta, 19 Aug) | 833 g |
 | clear glass mixing bowl (daal palak, 9 Sep; about twice the shaker's width) | **590 g** |
