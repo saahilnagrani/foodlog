@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-06",
+  "updated": "2026-10-07",
   "days": [
     {
       "date": "2026-07-24",
@@ -8741,6 +8741,26 @@
           "carb": 26.1,
           "fibre": 5.6,
           "sodium": 570
+        }
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "label": "Wed 7 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:01",
+          "name": "Moong sprout salad 120g with onion & tomato (450g gross in 330g glass container)",
+          "kcal": 134,
+          "protein": 9,
+          "fat": 0.4,
+          "sat": 0,
+          "carb": 25.1,
+          "fibre": 7.2,
+          "sodium": 240,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed7_sprouts.jpg"
         }
       ]
     }
