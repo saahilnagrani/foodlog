@@ -8785,6 +8785,18 @@
           "carb": 0.8,
           "fibre": 0,
           "sodium": 220
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:30",
+          "name": "Whey drink (30g ON whey vanilla + 11g ISO100 mocha + 200ml Oatly Barista + 22g nuts & seeds + 80g strawberries)",
+          "kcal": 447,
+          "protein": 38.1,
+          "fat": 21.4,
+          "sat": 3.1,
+          "carb": 27.4,
+          "fibre": 4.7,
+          "sodium": 264
         }
       ]
     }
