@@ -8741,6 +8741,30 @@
           "carb": 26.1,
           "fibre": 5.6,
           "sodium": 570
+        },
+        {
+          "meal": "Snack",
+          "t": "25:00",
+          "name": "Toblerone dark chocolate 50g",
+          "kcal": 269,
+          "protein": 3.2,
+          "fat": 16,
+          "sat": 10,
+          "carb": 25,
+          "fibre": 4.4,
+          "sodium": 4
+        },
+        {
+          "meal": "Snack",
+          "t": "25:00",
+          "name": "Tiffany Finns Scorchin Hot chips 36g",
+          "kcal": 189,
+          "protein": 2.7,
+          "fat": 11.7,
+          "sat": 3.8,
+          "carb": 18.3,
+          "fibre": 1.7,
+          "sodium": 454
         }
       ]
     },
