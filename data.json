@@ -8821,6 +8821,18 @@
           "carb": 16.6,
           "fibre": 1.8,
           "sodium": 600
+        },
+        {
+          "meal": "Snack",
+          "t": "17:49",
+          "name": "Baat Cheet papad 0.75",
+          "kcal": 34,
+          "protein": 2.3,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 5.6,
+          "fibre": 0.6,
+          "sodium": 188
         }
       ]
     }
