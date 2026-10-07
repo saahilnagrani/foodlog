@@ -8861,15 +8861,27 @@
         {
           "meal": "Dinner",
           "t": "19:26",
-          "name": "Home butter chicken, half the pot (pot: Mother's Recipe mix 40g + 250g raw breast + ~40g Greek yogurt + 1 tsp oil)",
-          "kcal": 265,
-          "protein": 32,
-          "fat": 7.5,
-          "sat": 1.7,
-          "carb": 14.5,
-          "fibre": 1.6,
-          "sodium": 710,
+          "name": "Home butter chicken: 120g cooked breast + 72g sauce (Mother's Recipe mix 40g, ~40g Greek yogurt, 1 tsp oil; sauce 149g total)",
+          "kcal": 307,
+          "protein": 40.5,
+          "fat": 8.4,
+          "sat": 1.9,
+          "carb": 14,
+          "fibre": 1.5,
+          "sodium": 705,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed7_butterchicken.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:26",
+          "name": "Plain paratha x2 (70g total)",
+          "kcal": 205,
+          "protein": 4.5,
+          "fat": 7,
+          "sat": 2,
+          "carb": 29,
+          "fibre": 2.2,
+          "sodium": 300
         }
       ]
     }
