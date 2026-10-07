@@ -8861,14 +8861,14 @@
         {
           "meal": "Dinner",
           "t": "19:26",
-          "name": "Home butter chicken 190g (Mother's Recipe mix 40g + 250g raw breast + Greek yogurt; pot ~415g, 46% share)",
-          "kcal": 230,
-          "protein": 30,
-          "fat": 5,
-          "sat": 1.1,
-          "carb": 14,
-          "fibre": 1.5,
-          "sodium": 670,
+          "name": "Home butter chicken, half the pot (pot: Mother's Recipe mix 40g + 250g raw breast + ~40g Greek yogurt + 1 tsp oil)",
+          "kcal": 265,
+          "protein": 32,
+          "fat": 7.5,
+          "sat": 1.7,
+          "carb": 14.5,
+          "fibre": 1.6,
+          "sodium": 710,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed7_butterchicken.jpg"
         }
       ]
