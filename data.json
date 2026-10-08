@@ -8914,6 +8914,32 @@
           "fibre": 6,
           "sodium": 200,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu8_sprouts.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:20",
+          "name": "Yellow dal tadka 217g (scale tared)",
+          "kcal": 206,
+          "protein": 12,
+          "fat": 5.4,
+          "sat": 1.1,
+          "carb": 28,
+          "fibre": 6.5,
+          "sodium": 650,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu8_dal.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:21",
+          "name": "Cooked white rice 135g (352g with dal, tared)",
+          "kcal": 175,
+          "protein": 3.5,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 38,
+          "fibre": 0.5,
+          "sodium": 3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu8_dalrice.jpg"
         }
       ]
     }
