@@ -1336,6 +1336,7 @@ const EWHT={lab:'egg whites',u:'pc',d:4,k:17,p:3.6,f:.06, s:0,    c:.2,  b:0,  n
 const RATE={
   onwhey: {u:'g', d:34, k:3.87,p:.774,f:.048,s:.032,c:.129,b:0,   n:4.2},   /* 130mg / 31g scoop */
   awesome:{u:'g', d:35, k:3.69,p:.61, f:.084,s:.03, c:.036,b:.043,n:3},
+  superyou:{u:'g',d:36, k:3.416,p:.67,f:.033,s:.006,c:.109,b:.104,n:4.08}, /* SuperYou Pro cold coffee, fermented yeast; 147mg + 3.8g fibre / 36g scoop */
   clear:  {u:'g', d:30, k:3.64,p:.84, f:.004,s:0,   c:.04,b:0,    n:3.3},
   oatly:  {u:'ml',d:100,k:.6,  p:.01, f:.03, s:.003,c:.067,b:.008,n:.4},    /* 0.1g salt / 100ml */
   nuts:   {u:'g', d:20, k:6.6, p:.18, f:.61, s:.068,c:.136,b:.07, n:.1},    /* unsalted mix */
@@ -1355,6 +1356,7 @@ const QALIAS={
  'Clear whey':['clear whey'],
  'Dymatize ISO100 mocha (caffeine)':['iso100','iso 100','dymatize'],
  'Awesome protein':['awesome'],
+ 'SuperYou Pro cold coffee (yeast protein)':['superyou','super you','yeast protein'],
  'Oat milk (Oatly)':['oatly','oat milk'],
  'Mix nuts & seeds':['mix nuts','nuts & seeds','nuts and seeds'],
  'Strawberries':['strawberr'],
@@ -1391,7 +1393,7 @@ const QUICK=[
  {n:'Whey drink',             meal:'Drink',    parts:[
     lab(RATE.onwhey ,'ON whey vanilla'),
     lab(RATE.iso100 ,'ISO100 mocha'),
-    lab(RATE.awesome,'Awesome choc&nut'),
+    lab(RATE.superyou,'SuperYou cold coffee'),
     lab(RATE.clear  ,'Clear whey str&lime'),
     lab(RATE.oatly  ,'Oatly Barista'),
     lab(RATE.nuts   ,'nuts & seeds', 10),
@@ -1400,6 +1402,7 @@ const QUICK=[
  {n:'Clear whey',             meal:'Snack',    parts:[RATE.clear]},
  {n:'ON whey (vanilla)',      meal:'Snack',    parts:[RATE.onwhey]},
  {n:'Awesome protein',        meal:'Snack',    parts:[RATE.awesome]},
+ {n:'SuperYou Pro cold coffee (yeast protein)',meal:'Snack',parts:[RATE.superyou]},
  {n:'Oat milk (Oatly)',       meal:'Snack',    parts:[RATE.oatly]},
  {n:'Mix nuts & seeds',       meal:'Snack',    parts:[RATE.nuts]},
  {n:'Egg-white omelette',     meal:'Breakfast',parts:[EWHT, OIL]},
