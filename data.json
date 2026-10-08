@@ -8894,6 +8894,30 @@
           "carb": 16.9,
           "fibre": 2.2,
           "sodium": 210
+        },
+        {
+          "meal": "Snack",
+          "t": "27:00",
+          "name": "Papa John's Nashville chicken sandwich",
+          "kcal": 750,
+          "protein": 39,
+          "fat": 32,
+          "sat": 8,
+          "carb": 78,
+          "fibre": 3,
+          "sodium": 1800
+        },
+        {
+          "meal": "Snack",
+          "t": "27:00",
+          "name": "Snickers ice cream bar",
+          "kcal": 180,
+          "protein": 3,
+          "fat": 10,
+          "sat": 5,
+          "carb": 19,
+          "fibre": 0.5,
+          "sodium": 65
         }
       ]
     },
