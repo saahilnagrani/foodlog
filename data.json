@@ -9012,6 +9012,30 @@
           "carb": 26,
           "fibre": 8.4,
           "sodium": 242
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:11",
+          "name": "Fresh to Home salmon 120g cooked (=137g raw; pack 240g raw gave 210g) + 1/2 tsp oil",
+          "kcal": 291,
+          "protein": 30,
+          "fat": 18.9,
+          "sat": 3.6,
+          "carb": 0,
+          "fibre": 0,
+          "sodium": 84
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:11",
+          "name": "Fresh to Home hamour 100g cooked (=140g raw; pack 280g raw gave 200g) + 1/2 tsp oil",
+          "kcal": 179,
+          "protein": 35,
+          "fat": 4.3,
+          "sat": 0.8,
+          "carb": 0,
+          "fibre": 0,
+          "sodium": 74
         }
       ]
     }
