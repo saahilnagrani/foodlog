@@ -8988,6 +8988,18 @@
           "carb": 24,
           "fibre": 0.3,
           "sodium": 2
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:55",
+          "name": "Egg-white omelette (4 egg whites + 1tsp oil)",
+          "kcal": 113,
+          "protein": 14.4,
+          "fat": 5.2,
+          "sat": 0.7,
+          "carb": 0.8,
+          "fibre": 0,
+          "sodium": 220
         }
       ]
     }
