@@ -8964,6 +8964,30 @@
           "fibre": 0.5,
           "sodium": 3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu8_dalrice.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:49",
+          "name": "Yellow dal tadka 145g (2nd serving)",
+          "kcal": 138,
+          "protein": 8,
+          "fat": 3.6,
+          "sat": 0.7,
+          "carb": 19,
+          "fibre": 4.4,
+          "sodium": 435
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:49",
+          "name": "Cooked white rice 85g (2nd serving)",
+          "kcal": 110,
+          "protein": 2.2,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 24,
+          "fibre": 0.3,
+          "sodium": 2
         }
       ]
     }
