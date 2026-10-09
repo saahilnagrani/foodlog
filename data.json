@@ -9105,6 +9105,31 @@
           "carb": 25.2,
           "fibre": 4,
           "sodium": 258
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:55",
+          "name": "Veg hakka noodles 125g (2nd serving, tared)",
+          "kcal": 206,
+          "protein": 5,
+          "fat": 6.7,
+          "sat": 1,
+          "carb": 31,
+          "fibre": 1.9,
+          "sodium": 375
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:55",
+          "name": "Chilli prawn in red masala 155g with onion & capsicum (estimated; ~95g prawns)",
+          "kcal": 215,
+          "protein": 22,
+          "fat": 9.5,
+          "sat": 1.4,
+          "carb": 11,
+          "fibre": 1.5,
+          "sodium": 620,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri9_prawnnoodles.jpg"
         }
       ]
     }
