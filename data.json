@@ -9056,6 +9056,19 @@
           "fibre": 2.2,
           "sodium": 530,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri9_chillitofu.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:19",
+          "name": "Veg hakka noodles 167g (scale tared)",
+          "kcal": 275,
+          "protein": 6.5,
+          "fat": 9,
+          "sat": 1.3,
+          "carb": 41,
+          "fibre": 2.5,
+          "sodium": 500,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri9_noodles.jpg"
         }
       ]
     }
