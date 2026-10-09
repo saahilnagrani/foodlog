@@ -9069,6 +9069,18 @@
           "fibre": 2.5,
           "sodium": 500,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri9_noodles.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:45",
+          "name": "Whey drink (31g ON whey vanilla + 9g ISO100 mocha + 200ml Oatly Barista + 17g nuts & seeds + 60g strawberries)",
+          "kcal": 404,
+          "protein": 36.3,
+          "fat": 18.3,
+          "sat": 2.7,
+          "carb": 25.2,
+          "fibre": 4,
+          "sodium": 258
         }
       ]
     }
