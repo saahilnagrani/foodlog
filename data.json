@@ -8927,6 +8927,30 @@
       "workout": "Home B: face pull 3x20 (40 lb band), biceps curl 3x15 (40 lb band), triceps pushdown 3x15 (40 lb band), standing calf raise 3x15 on step, side plank 2x28s each side",
       "items": [
         {
+          "meal": "Snack",
+          "t": "13:00",
+          "name": "Baat Cheet papad 1",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 7.5,
+          "fibre": 0.8,
+          "sodium": 250
+        },
+        {
+          "meal": "Snack",
+          "t": "13:00",
+          "name": "Punjabi masala papad 1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9,
+          "sodium": 300
+        },
+        {
           "meal": "Lunch",
           "t": "13:13",
           "name": "Moong sprout salad 100g with onion & tomato (scale tared)",
