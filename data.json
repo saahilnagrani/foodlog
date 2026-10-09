@@ -8940,19 +8940,6 @@
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu8_sprouts.jpg"
         },
         {
-          "meal": "Dinner",
-          "t": "13:16",
-          "name": "Chilli tofu 170g (127g pan-fried tofu + 27g onion & capsicum + 16g Heinz zero sugar ketchup)",
-          "kcal": 210,
-          "protein": 15.5,
-          "fat": 14,
-          "sat": 2,
-          "carb": 5.6,
-          "fibre": 2.2,
-          "sodium": 530,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu8_chillitofu.jpg"
-        },
-        {
           "meal": "Lunch",
           "t": "13:20",
           "name": "Yellow dal tadka 217g (scale tared)",
@@ -9049,6 +9036,26 @@
           "carb": 0,
           "fibre": 0,
           "sodium": 74
+        }
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "label": "Fri 9 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "13:16",
+          "name": "Chilli tofu 170g (127g pan-fried tofu + 27g onion & capsicum + 16g Heinz zero sugar ketchup)",
+          "kcal": 210,
+          "protein": 15.5,
+          "fat": 14,
+          "sat": 2,
+          "carb": 5.6,
+          "fibre": 2.2,
+          "sodium": 530,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri9_chillitofu.jpg"
         }
       ]
     }
