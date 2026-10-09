@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-08",
+  "updated": "2026-10-09",
   "days": [
     {
       "date": "2026-07-24",
@@ -8938,6 +8938,19 @@
           "fibre": 6,
           "sodium": 200,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu8_sprouts.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "13:16",
+          "name": "Chilli tofu 170g (127g pan-fried tofu + 27g onion & capsicum + 16g Heinz zero sugar ketchup)",
+          "kcal": 210,
+          "protein": 15.5,
+          "fat": 14,
+          "sat": 2,
+          "carb": 5.6,
+          "fibre": 2.2,
+          "sodium": 530,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu8_chillitofu.jpg"
         },
         {
           "meal": "Lunch",
