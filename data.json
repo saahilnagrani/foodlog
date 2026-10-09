@@ -9130,6 +9130,18 @@
           "fibre": 1.5,
           "sodium": 620,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri9_prawnnoodles.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:56",
+          "name": "Spiced hamour fillet 41g cooked, leftover (=57g raw)",
+          "kcal": 66,
+          "protein": 14.3,
+          "fat": 0.8,
+          "sat": 0.2,
+          "carb": 0.5,
+          "fibre": 0,
+          "sodium": 110
         }
       ]
     }
