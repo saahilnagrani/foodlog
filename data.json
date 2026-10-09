@@ -9142,6 +9142,18 @@
           "carb": 0.5,
           "fibre": 0,
           "sodium": 110
+        },
+        {
+          "meal": "Snack",
+          "t": "23:11",
+          "name": "Yellow moong dal 130g",
+          "kcal": 124,
+          "protein": 7.2,
+          "fat": 3.2,
+          "sat": 0.7,
+          "carb": 17,
+          "fibre": 3.9,
+          "sodium": 390
         }
       ]
     }
