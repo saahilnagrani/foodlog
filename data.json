@@ -9310,14 +9310,14 @@
         {
           "meal": "Snack",
           "t": "26:54",
-          "name": "Egg-white bhurji, ~8 whites with onion & tomato, 1 tsp oil (estimated, count?)",
-          "kcal": 195,
-          "protein": 29,
-          "fat": 5.5,
-          "sat": 0.8,
-          "carb": 4,
-          "fibre": 0.8,
-          "sodium": 500,
+          "name": "Egg bhurji 140g (~70% of a batch of ~5 whites + 1 yolk, onion & tomato, 1 tsp oil)",
+          "kcal": 140,
+          "protein": 15,
+          "fat": 6.7,
+          "sat": 1.6,
+          "carb": 2.5,
+          "fibre": 0.7,
+          "sodium": 475,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat10_bhurji.jpg"
         },
         {
