@@ -9198,6 +9198,18 @@
           "fibre": 2.6,
           "sodium": 1170,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat10_butterchicken.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "17:40",
+          "name": "Moong sprouts 71g, plain (scale tared)",
+          "kcal": 97,
+          "protein": 6.8,
+          "fat": 0.4,
+          "sat": 0,
+          "carb": 17.8,
+          "fibre": 4.3,
+          "sodium": 7
         }
       ]
     }
