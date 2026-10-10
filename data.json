@@ -9157,6 +9157,18 @@
         },
         {
           "meal": "Snack",
+          "t": "24:30",
+          "name": "Home tiramisu ~136g of ~400g batch (Savushkin 1% tvorog, Vicenzi fingers, Oatly, Jägermeister cold brew, espresso, maple syrup, cocoa)",
+          "kcal": 243,
+          "protein": 13.3,
+          "fat": 3.1,
+          "sat": 0.9,
+          "carb": 36.7,
+          "fibre": 1.4,
+          "sodium": 65
+        },
+        {
+          "meal": "Snack",
           "t": "30:00",
           "name": "L'usine multigrain sliced bread x3 (90g, label)",
           "kcal": 234,
@@ -9226,14 +9238,14 @@
         {
           "meal": "Snack",
           "t": "19:23",
-          "name": "Home tiramisu 268g of ~400g batch, two thirds (Savushkin 1% tvorog 180g, 12 Vicenzi fingers, Oatly, Jägermeister cold brew 30ml, espresso, maple syrup, cocoa); 132g left",
-          "kcal": 477,
-          "protein": 26,
-          "fat": 6,
-          "sat": 1.7,
-          "carb": 72,
-          "fibre": 2.8,
-          "sodium": 127
+          "name": "Home tiramisu 132g of ~400g batch (Savushkin 1% tvorog, Vicenzi fingers, Oatly, Jägermeister cold brew, espresso, maple syrup, cocoa); 132g left",
+          "kcal": 236,
+          "protein": 12.9,
+          "fat": 3,
+          "sat": 0.9,
+          "carb": 35.6,
+          "fibre": 1.4,
+          "sodium": 63
         }
       ]
     }
