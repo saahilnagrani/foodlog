@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-09",
+  "updated": "2026-10-10",
   "days": [
     {
       "date": "2026-07-24",
@@ -9154,6 +9154,30 @@
           "carb": 17,
           "fibre": 3.9,
           "sodium": 390
+        },
+        {
+          "meal": "Snack",
+          "t": "30:00",
+          "name": "L'usine multigrain sliced bread x3 (90g, label)",
+          "kcal": 234,
+          "protein": 8.1,
+          "fat": 5.4,
+          "sat": 1.8,
+          "carb": 39,
+          "fibre": 3,
+          "sodium": 321
+        },
+        {
+          "meal": "Snack",
+          "t": "30:00",
+          "name": "Haldiram's bhujia 150g (label)",
+          "kcal": 857,
+          "protein": 17.1,
+          "fat": 60,
+          "sat": 17.1,
+          "carb": 64,
+          "fibre": 8.6,
+          "sodium": 1887
         }
       ]
     }
