@@ -9180,6 +9180,26 @@
           "sodium": 1887
         }
       ]
+    },
+    {
+      "date": "2026-10-10",
+      "label": "Sat 10 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Dinner",
+          "t": "17:39",
+          "name": "Butter chicken 321g: ~200g cooked breast + ~120g Mother's Recipe mix sauce (237g chicken plate + 84g extra gravy; estimated)",
+          "kcal": 513,
+          "protein": 68,
+          "fat": 14,
+          "sat": 3.2,
+          "carb": 24,
+          "fibre": 2.6,
+          "sodium": 1170,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat10_butterchicken.jpg"
+        }
+      ]
     }
   ]
 }
