@@ -9169,6 +9169,30 @@
         },
         {
           "meal": "Snack",
+          "t": "25:00",
+          "name": "Punjabi masala papad 1",
+          "kcal": 50,
+          "protein": 3.4,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 8.3,
+          "fibre": 0.9,
+          "sodium": 300
+        },
+        {
+          "meal": "Snack",
+          "t": "25:00",
+          "name": "Baat Cheet papad 2",
+          "kcal": 90,
+          "protein": 6,
+          "fat": 0.8,
+          "sat": 0.1,
+          "carb": 15,
+          "fibre": 1.6,
+          "sodium": 500
+        },
+        {
+          "meal": "Snack",
           "t": "30:00",
           "name": "L'usine multigrain sliced bread x3 (90g, label)",
           "kcal": 234,
