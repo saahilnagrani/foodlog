@@ -9319,6 +9319,18 @@
           "fibre": 0.8,
           "sodium": 500,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat10_bhurji.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "26:55",
+          "name": "Whey drink (34g SuperYou cold coffee + 160ml Oatly Barista + 16g nuts & seeds)",
+          "kcal": 318,
+          "protein": 27.3,
+          "fat": 15.7,
+          "sat": 1.8,
+          "carb": 16.6,
+          "fibre": 5.9,
+          "sodium": 204
         }
       ]
     }
