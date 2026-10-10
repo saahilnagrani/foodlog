@@ -9282,6 +9282,18 @@
           "carb": 51,
           "fibre": 1.6,
           "sodium": 440
+        },
+        {
+          "meal": "Snack",
+          "t": "26:08",
+          "name": "Haldiram's bhujia 44g (label)",
+          "kcal": 251,
+          "protein": 5,
+          "fat": 17.6,
+          "sat": 5,
+          "carb": 18.9,
+          "fibre": 2.5,
+          "sodium": 554
         }
       ]
     }
