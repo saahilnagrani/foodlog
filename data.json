@@ -9189,15 +9189,27 @@
         {
           "meal": "Dinner",
           "t": "17:39",
-          "name": "Butter chicken 321g: ~200g cooked breast + ~120g Mother's Recipe mix sauce (237g chicken plate + 84g extra gravy; estimated)",
-          "kcal": 513,
-          "protein": 68,
-          "fat": 14,
-          "sat": 3.2,
-          "carb": 24,
-          "fibre": 2.6,
-          "sodium": 1170,
+          "name": "Butter chicken 321g: 230g cooked breast + 91g Mother's Recipe mix sauce",
+          "kcal": 517,
+          "protein": 75.4,
+          "fat": 13.5,
+          "sat": 3.3,
+          "carb": 18,
+          "fibre": 1.9,
+          "sodium": 940,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat10_butterchicken.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "17:39",
+          "name": "Plain paratha x2 (75g total)",
+          "kcal": 220,
+          "protein": 4.8,
+          "fat": 7.5,
+          "sat": 2.1,
+          "carb": 31,
+          "fibre": 2.4,
+          "sodium": 320
         },
         {
           "meal": "Dinner",
@@ -9210,6 +9222,18 @@
           "carb": 17.8,
           "fibre": 4.3,
           "sodium": 7
+        },
+        {
+          "meal": "Snack",
+          "t": "19:23",
+          "name": "Home tiramisu, half batch ~225g (Savushkin 1% tvorog, 6 Vicenzi fingers, Oatly, Jägermeister cold brew, espresso, maple syrup, cocoa)",
+          "kcal": 358,
+          "protein": 19.5,
+          "fat": 4.5,
+          "sat": 1.3,
+          "carb": 54,
+          "fibre": 2.1,
+          "sodium": 95
         }
       ]
     }
