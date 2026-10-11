@@ -9474,6 +9474,30 @@
           "fibre": 6.5,
           "sodium": 1400,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun11_buffalofries.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "20:00",
+          "name": "Whisky sour (60ml whisky, lemon, sugar syrup, egg white)",
+          "kcal": 200,
+          "protein": 1,
+          "fat": 0,
+          "sat": 0,
+          "carb": 14,
+          "fibre": 0,
+          "sodium": 10
+        },
+        {
+          "meal": "Drink",
+          "t": "20:00",
+          "name": "Double Tanqueray gin & tonic (60ml gin + 300ml Indian tonic)",
+          "kcal": 245,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 25,
+          "fibre": 0,
+          "sodium": 10
         }
       ]
     }
