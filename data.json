@@ -9377,6 +9377,42 @@
           "fibre": 3,
           "sodium": 280,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun11_chutney.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:40",
+          "name": "iD protein masala dosa 45g (2nd)",
+          "kcal": 145,
+          "protein": 9.2,
+          "fat": 3.3,
+          "sat": 0.4,
+          "carb": 19.5,
+          "fibre": 2,
+          "sodium": 120
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:40",
+          "name": "iD protein plain dosa 37g",
+          "kcal": 133,
+          "protein": 9,
+          "fat": 3.2,
+          "sat": 0.4,
+          "carb": 17,
+          "fibre": 1.7,
+          "sodium": 100
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:40",
+          "name": "Sambar with lauki ~212g (2nd serving, assumed same size)",
+          "kcal": 127,
+          "protein": 5.5,
+          "fat": 3.5,
+          "sat": 0.5,
+          "carb": 18,
+          "fibre": 3.5,
+          "sodium": 640
         }
       ]
     }
