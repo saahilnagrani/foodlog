@@ -9425,6 +9425,30 @@
           "carb": 18,
           "fibre": 3.5,
           "sodium": 640
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:41",
+          "name": "iD protein plain dosa 37g (2nd)",
+          "kcal": 133,
+          "protein": 9,
+          "fat": 3.2,
+          "sat": 0.4,
+          "carb": 17,
+          "fibre": 1.7,
+          "sodium": 100
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:41",
+          "name": "Potato onion masala 25g",
+          "kcal": 38,
+          "protein": 0.7,
+          "fat": 1,
+          "sat": 0.1,
+          "carb": 7,
+          "fibre": 0.9,
+          "sodium": 70
         }
       ]
     }
