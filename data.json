@@ -9490,14 +9490,14 @@
         {
           "meal": "Drink",
           "t": "20:00",
-          "name": "Double Tanqueray gin & tonic (60ml gin + 300ml Indian tonic)",
-          "kcal": 245,
+          "name": "Double Tanqueray gin & tonic (60ml gin + 150ml Indian tonic)",
+          "kcal": 190,
           "protein": 0,
           "fat": 0,
           "sat": 0,
-          "carb": 25,
+          "carb": 12.5,
           "fibre": 0,
-          "sodium": 10
+          "sodium": 5
         }
       ]
     }
