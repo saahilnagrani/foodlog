@@ -9461,6 +9461,19 @@
           "carb": 23.3,
           "fibre": 7,
           "sodium": 205
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:59",
+          "name": "Buffalo chicken loaded fries, McCafferty's Yas Island (whole dish, estimated: ~200g fries + 80g buffalo chicken + ranch + pico)",
+          "kcal": 950,
+          "protein": 24,
+          "fat": 57,
+          "sat": 10,
+          "carb": 82,
+          "fibre": 6.5,
+          "sodium": 1400,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun11_buffalofries.jpg"
         }
       ]
     }
