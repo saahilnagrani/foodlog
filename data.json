@@ -9342,14 +9342,14 @@
         {
           "meal": "Lunch",
           "t": "16:26",
-          "name": "Onion dosa 46g (scale tared)",
-          "kcal": 90,
-          "protein": 2,
-          "fat": 2.5,
-          "sat": 0.4,
+          "name": "iD protein dosa with potato & onion, 1 dosa 46g (batch: 600g iD protein batter + ~450g potato, 8 dosas; per-dosa estimate pending batch weight)",
+          "kcal": 92,
+          "protein": 4.1,
+          "fat": 1.6,
+          "sat": 0.2,
           "carb": 15,
-          "fibre": 0.8,
-          "sodium": 180,
+          "fibre": 1.3,
+          "sodium": 100,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun11_dosa.jpg"
         },
         {
@@ -9368,14 +9368,14 @@
         {
           "meal": "Lunch",
           "t": "16:27",
-          "name": "Coconut chutney 158g (estimated; all of it?)",
-          "kcal": 205,
-          "protein": 2.5,
-          "fat": 18,
-          "sat": 15,
-          "carb": 7,
-          "fibre": 5,
-          "sodium": 400,
+          "name": "iD coconut chutney 80g (of 120g pack; FatSecret per 100g: 194 kcal, 15.6 F, 1.8 P; sat & sodium estimated)",
+          "kcal": 155,
+          "protein": 1.4,
+          "fat": 12.4,
+          "sat": 10.8,
+          "carb": 9.4,
+          "fibre": 3,
+          "sodium": 280,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun11_chutney.jpg"
         }
       ]
