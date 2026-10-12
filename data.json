@@ -9662,6 +9662,19 @@
           "carb": 24.5,
           "fibre": 4.1,
           "sodium": 213
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:13",
+          "name": "Mutton curry 227g with bones (est. ~90g meat, ~50g bone, ~87g gravy)",
+          "kcal": 330,
+          "protein": 25,
+          "fat": 22,
+          "sat": 7.5,
+          "carb": 7,
+          "fibre": 1,
+          "sodium": 420,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon12_mutton.jpg"
         }
       ]
     }
