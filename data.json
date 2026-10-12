@@ -9502,26 +9502,26 @@
         {
           "meal": "Snack",
           "t": "24:58",
-          "name": "Home tiramisu v2 81g (batch ~790g: 180g quark, 30g SuperYou, 1 egg, Oatly, maple syrup, 13 fingers, 60ml Jägermeister cold brew, coffee, 22g Biscoff, cocoa)",
-          "kcal": 119,
-          "protein": 7,
-          "fat": 2.3,
-          "sat": 0.7,
-          "carb": 14.4,
-          "fibre": 0.8,
-          "sodium": 46
+          "name": "Home tiramisu v2 81g (batch 600g: 180g quark, 30g SuperYou, 1 egg, Oatly, maple syrup, 13 fingers, 60ml Jägermeister cold brew, coffee, 22g Biscoff, cocoa)",
+          "kcal": 158,
+          "protein": 9.2,
+          "fat": 3,
+          "sat": 0.9,
+          "carb": 19,
+          "fibre": 1.1,
+          "sodium": 62
         },
         {
           "meal": "Snack",
           "t": "26:10",
           "name": "Home tiramisu v2 85g (2nd portion)",
-          "kcal": 125,
-          "protein": 7.3,
-          "fat": 2.4,
-          "sat": 0.7,
-          "carb": 15.1,
-          "fibre": 0.9,
-          "sodium": 48
+          "kcal": 166,
+          "protein": 9.6,
+          "fat": 3.1,
+          "sat": 0.9,
+          "carb": 20,
+          "fibre": 1.1,
+          "sodium": 65
         },
         {
           "meal": "Snack",
@@ -9687,6 +9687,18 @@
           "carb": 6,
           "fibre": 1,
           "sodium": 394
+        },
+        {
+          "meal": "Snack",
+          "t": "22:55",
+          "name": "Home tiramisu v2 117g",
+          "kcal": 228,
+          "protein": 13.2,
+          "fat": 4.3,
+          "sat": 1.3,
+          "carb": 27.5,
+          "fibre": 1.5,
+          "sodium": 89
         }
       ]
     }
