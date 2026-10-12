@@ -9572,6 +9572,50 @@
           "sodium": 503
         }
       ]
+    },
+    {
+      "date": "2026-10-12",
+      "label": "Mon 12 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "17:42",
+          "name": "iD protein plain dosa 50g (~80g batter)",
+          "kcal": 180,
+          "protein": 12.2,
+          "fat": 4.3,
+          "sat": 0.5,
+          "carb": 23,
+          "fibre": 2.3,
+          "sodium": 135,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon12_dosa.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:42",
+          "name": "Sambar with lauki 218g",
+          "kcal": 131,
+          "protein": 5.7,
+          "fat": 3.6,
+          "sat": 0.5,
+          "carb": 18.5,
+          "fibre": 3.6,
+          "sodium": 655
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:42",
+          "name": "iD coconut chutney 40g",
+          "kcal": 78,
+          "protein": 0.7,
+          "fat": 6.2,
+          "sat": 5.4,
+          "carb": 4.7,
+          "fibre": 1.5,
+          "sodium": 140
+        }
+      ]
     }
   ]
 }
