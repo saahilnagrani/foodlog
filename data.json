@@ -9534,6 +9534,42 @@
           "carb": 8.7,
           "fibre": 0.3,
           "sodium": 38
+        },
+        {
+          "meal": "Snack",
+          "t": "28:04",
+          "name": "Lotus Biscoff crunchy spread 33g",
+          "kcal": 191,
+          "protein": 1.2,
+          "fat": 12.5,
+          "sat": 2.9,
+          "carb": 19,
+          "fibre": 0.7,
+          "sodium": 85
+        },
+        {
+          "meal": "Snack",
+          "t": "28:04",
+          "name": "L'usine multigrain bread 1 slice (30g, label)",
+          "kcal": 78,
+          "protein": 2.7,
+          "fat": 1.8,
+          "sat": 0.6,
+          "carb": 13,
+          "fibre": 1,
+          "sodium": 107
+        },
+        {
+          "meal": "Snack",
+          "t": "28:04",
+          "name": "Haldiram's bhujia 40g (label)",
+          "kcal": 228,
+          "protein": 4.6,
+          "fat": 16,
+          "sat": 4.6,
+          "carb": 17.2,
+          "fibre": 2.3,
+          "sodium": 503
         }
       ]
     }
