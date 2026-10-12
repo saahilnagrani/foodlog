@@ -9650,6 +9650,18 @@
           "carb": 41,
           "fibre": 11.7,
           "sodium": 390
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:18",
+          "name": "Whey drink (31g ON whey vanilla + 200ml Oatly Barista + 18g nuts & seeds + 60g strawberries)",
+          "kcal": 378,
+          "protein": 29.7,
+          "fat": 18.6,
+          "sat": 2.8,
+          "carb": 24.5,
+          "fibre": 4.1,
+          "sodium": 213
         }
       ]
     }
