@@ -9570,6 +9570,18 @@
           "carb": 17.2,
           "fibre": 2.3,
           "sodium": 503
+        },
+        {
+          "meal": "Snack",
+          "name": "Haldiram's mint lachha 100g (label)",
+          "kcal": 543,
+          "protein": 8.6,
+          "fat": 28.6,
+          "sat": 8.6,
+          "carb": 60,
+          "fibre": 0,
+          "sodium": 1193,
+          "t": "29:00"
         }
       ]
     },
@@ -9578,6 +9590,18 @@
       "label": "Mon 12 Oct",
       "workout": "",
       "items": [
+        {
+          "meal": "Snack",
+          "name": "Haldiram's mint lachha 100g (label)",
+          "kcal": 543,
+          "protein": 8.6,
+          "fat": 28.6,
+          "sat": 8.6,
+          "carb": 60,
+          "fibre": 0,
+          "sodium": 1193,
+          "t": "15:00"
+        },
         {
           "meal": "Lunch",
           "t": "17:42",
