@@ -9791,6 +9791,30 @@
           "fibre": 0.9,
           "sodium": 644,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue13_prawncurry.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:28",
+          "name": "Moong sprout salad 103g with onion & tomato (scale tared)",
+          "kcal": 115,
+          "protein": 7.7,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 21.6,
+          "fibre": 6.2,
+          "sodium": 206
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:28",
+          "name": "Plain roti x2 (65g total, no ghee)",
+          "kcal": 190,
+          "protein": 6,
+          "fat": 3,
+          "sat": 0.5,
+          "carb": 38,
+          "fibre": 4,
+          "sodium": 300
         }
       ]
     }
