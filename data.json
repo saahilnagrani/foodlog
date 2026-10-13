@@ -9766,6 +9766,18 @@
           "carb": 20.6,
           "fibre": 6.3,
           "sodium": 264
+        },
+        {
+          "meal": "Snack",
+          "t": "18:19",
+          "name": "Mandarin 1 (~90g, segments)",
+          "kcal": 48,
+          "protein": 0.7,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 12,
+          "fibre": 1.6,
+          "sodium": 2
         }
       ]
     }
