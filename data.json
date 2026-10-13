@@ -9754,6 +9754,18 @@
           "carb": 39,
           "fibre": 0.6,
           "sodium": 3
+        },
+        {
+          "meal": "Snack",
+          "t": "16:27",
+          "name": "Whey drink (11g ISO100 mocha + 31g SuperYou cold coffee + 200ml Oatly Barista + 21g nuts & seeds)",
+          "kcal": 404,
+          "protein": 34.9,
+          "fat": 20.2,
+          "sat": 2.2,
+          "carb": 20.6,
+          "fibre": 6.3,
+          "sodium": 264
         }
       ]
     }
