@@ -33,6 +33,11 @@
   .food .fs{font-size:11px;color:#666;line-height:1.45;}
   .food .fs b{color:#333;font-weight:600;}
   .food.sub{border-top:1px dashed #eee;padding-top:7px;}
+  .fsearch{position:relative;margin:0 0 8px;}
+  .fsearch input{width:100%;box-sizing:border-box;padding:9px 36px 9px 12px;border:1px solid #ddd;border-radius:10px;font-size:14px;background:#f7f7f7;color:#111;font-family:inherit;}
+  .fsearch input:focus{outline:none;border-color:#999;}
+  .fsearch button{position:absolute;right:6px;top:3px;border:0;background:none;color:#333;opacity:.55;font-size:20px;line-height:1;padding:2px 6px;cursor:pointer;}
+  .fnone{font-size:12px;color:#777;padding:14px 0;}
   .foodwrap{overflow-x:auto;margin:0 -16px;padding:0 16px;}
   .foodkey{font-size:12px;line-height:1.55;color:#4a4a4a;background:#fafafa;border:1px solid #ececec;border-left:3px solid #bdbdbd;border-radius:8px;padding:9px 11px;margin:0 0 14px;}
   .foodkey b{color:#111;}
@@ -405,6 +410,7 @@
       <button class="close" onclick="closeFoods()">&times;</button>
       <h3>Foods: the figures behind quick add</h3>
       <div class="foodkey">Every quick-add food, as the app counts it. Figures are <b>per 100 g</b>, <b>per 100 ml</b> or <b>per piece</b> as shown under the name. Na is sodium in mg. The grey line under each row says where the numbers come from: <b>a pack label</b>, <b>USDA</b> (FoodData Central) or <b>an estimate</b> from a typical recipe. Sodium on cooked dishes is always an estimate, since salt does not show in a photo. Foods logged by chat that are not on this list use the same three sources and the entry name says which.</div>
+      <div class="fsearch"><input id="fq" type="search" placeholder="Search foods, parts or sources" autocomplete="off" oninput="buildFoods()"><button id="fqx" onclick="document.getElementById('fq').value='';buildFoods();document.getElementById('fq').focus();" aria-label="Clear">&times;</button></div>
       <div id="foodsList"></div>
       <button class="sbtn primary" style="margin-top:22px;" onclick="closeFoods()">Done</button>
     </div>
@@ -1285,15 +1291,22 @@ function buildFoods(){
   const f=(v,d)=>v===null||v===undefined?'?':(Math.round(v*(d?10:1))/(d?10:1)).toString();
   const kind=src=>/^estimate/i.test(src)?'Estimate':/label/i.test(src)?'Label':/usda/i.test(src)?'USDA':'Estimate';
   const cell=(v,l,d)=>`<div>${f(v,d)}<small>${l}</small></div>`;
-  document.getElementById('foodsList').innerHTML=foodsRows().map(r=>
+  /* search: every word must appear in the food name, the part label or the
+     source note; a multi-part food shows all its parts when its name matches */
+  const q=(document.getElementById('fq').value||'').toLowerCase().split(/\s+/).filter(Boolean);
+  document.getElementById('fqx').hidden=!q.length;
+  let rows=foodsRows();
+  if(q.length){ let keepGroup=false; rows=rows.filter(r=>{ if(r.name)keepGroup=q.every(w=>r.name.toLowerCase().includes(w)); const own=q.every(w=>((r.name||'')+' '+r.part+' '+r.src).toLowerCase().includes(w)); return keepGroup||own; }); }
+  document.getElementById('foodsList').innerHTML=rows.length?rows.map(r=>
     `<div class="food${r.name?'':' sub'}">`+
     (r.name?`<div class="fn">${fesc(r.name)}</div>`:'')+(r.part?`<div class="fp">${fesc(r.part)}</div>`:'')+
     `<div class="fu">${r.unit} · default ${fesc(r.dflt)}</div>`+
     `<div class="fm">${cell(r.k,'kcal')}${cell(r.p,'prot',1)}${cell(r.f,'fat',1)}${cell(r.s,'sat',1)}${cell(r.c,'carb',1)}${cell(r.b,'fibre',1)}${cell(r.n,'na mg')}</div>`+
-    `<div class="fs"><b>${kind(r.src)}.</b> ${fesc(r.src.replace(/^(USDA|Estimate)\s*(from USDA)?:\s*/i,''))}</div></div>`).join('');
+    `<div class="fs"><b>${kind(r.src)}.</b> ${fesc(r.src.replace(/^(USDA|Estimate)\s*(from USDA)?:\s*/i,''))}</div></div>`).join('')
+    :'<div class="fnone">Nothing matches. Try one word, or a source like "label", "usda" or "estimate".</div>';
 }
 function openFoods(swap){
-  if(!swap){keepScroll(); histPush();} buildFoods();
+  if(!swap){keepScroll(); histPush();} document.getElementById('fq').value=''; buildFoods();
   document.body.classList.add('modal-open','foods-open');
   document.getElementById('foodsBg').classList.add('open');
   window.scrollTo(0,0); bnavSet();
