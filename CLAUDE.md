@@ -170,8 +170,11 @@ guessing it badly swamps the food estimate.
   while it is still being eaten, and fibre days containing pre-fibre items are
   excluded because they are floors. A fifth, full-width sodium chart sits
   under the fat/fibre pair with a 2300 mg line. A fixed bottom nav
-  switches between **Log**, **Search** (the whole-log search bar) and **Plan**
-  (the training-plan sheet). The nav exists because the Android wrapper's
+  switches between **Log**, **Search** (the whole-log search bar), **Plan**
+  (the training-plan sheet) and **Foods** (every quick-add food normalised to
+  per 100 g / 100 ml / piece, with the `src` note that sits beside each rate in
+  `RATE` / `QUICK`: a pack label, USDA, or an estimate. Give every new rate a
+  `src`). The nav exists because the Android wrapper's
   pull-to-refresh swallows the pull-down gesture that also opens search.
 - Adding a food: the app's **+ Add food** button picks from a fixed list of ~32
   quick-add foods, each with per-gram rates including fibre and sodium (`n`,
