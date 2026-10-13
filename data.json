@@ -9710,14 +9710,14 @@
         {
           "meal": "Dinner",
           "t": "15:44",
-          "name": "Dahi wali kadhi 220g (pot 570g: ~200g Greek yogurt 0% + ~30g besan + 1 tsp oil tadka; amounts assumed)",
-          "kcal": 110,
-          "protein": 10.2,
-          "fat": 3.1,
+          "name": "Dahi wali kadhi 220g (pot 570g: 330g Greek yogurt 0% + 30g besan + 1 tsp oil tadka)",
+          "kcal": 142,
+          "protein": 15.2,
+          "fat": 3.4,
           "sat": 0.4,
-          "carb": 10,
+          "carb": 12.4,
           "fibre": 1.2,
-          "sodium": 500
+          "sodium": 517
         },
         {
           "meal": "Dinner",
