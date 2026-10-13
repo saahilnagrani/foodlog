@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "days": [
     {
       "date": "2026-07-24",
@@ -9699,6 +9699,37 @@
           "carb": 27.5,
           "fibre": 1.5,
           "sodium": 89
+        }
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "label": "Tue 13 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Dinner",
+          "t": "15:44",
+          "name": "Dahi wali kadhi 220g (pot 570g: ~200g Greek yogurt 0% + ~30g besan + 1 tsp oil tadka; amounts assumed)",
+          "kcal": 110,
+          "protein": 10.2,
+          "fat": 3.1,
+          "sat": 0.4,
+          "carb": 10,
+          "fibre": 1.2,
+          "sodium": 500
+        },
+        {
+          "meal": "Dinner",
+          "t": "15:44",
+          "name": "Cooked white rice 140g",
+          "kcal": 182,
+          "protein": 3.6,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 39,
+          "fibre": 0.6,
+          "sodium": 3
         }
       ]
     }
