@@ -9699,6 +9699,30 @@
           "carb": 27.5,
           "fibre": 1.5,
           "sodium": 89
+        },
+        {
+          "meal": "Snack",
+          "t": "27:00",
+          "name": "L'usine multigrain bread x2.5 (75g, label)",
+          "kcal": 195,
+          "protein": 6.8,
+          "fat": 4.5,
+          "sat": 1.5,
+          "carb": 32.5,
+          "fibre": 2.5,
+          "sodium": 268
+        },
+        {
+          "meal": "Snack",
+          "t": "27:00",
+          "name": "Haldiram's bhujia ~150g (label)",
+          "kcal": 857,
+          "protein": 17.1,
+          "fat": 60,
+          "sat": 17.1,
+          "carb": 64,
+          "fibre": 8.6,
+          "sodium": 1887
         }
       ]
     },
