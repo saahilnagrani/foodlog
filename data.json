@@ -9826,7 +9826,7 @@
         {
           "meal": "Lunch",
           "t": "15:55",
-          "name": "Chicken curry pieces 180g (~160g cooked breast + clinging gravy, tared); gravy serving not yet logged",
+          "name": "Chicken curry pieces 180g (~160g cooked breast + clinging gravy, tared)",
           "kcal": 278,
           "protein": 51.6,
           "fat": 7.4,
@@ -9835,6 +9835,18 @@
           "fibre": 0.2,
           "sodium": 480,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed14_chickencurry.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:55",
+          "name": "Chicken curry gravy 122g (658g - 536g left in the box)",
+          "kcal": 137,
+          "protein": 2.4,
+          "fat": 10,
+          "sat": 1.6,
+          "carb": 10,
+          "fibre": 1.5,
+          "sodium": 490
         },
         {
           "meal": "Lunch",
