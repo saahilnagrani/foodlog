@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-13",
+  "updated": "2026-10-14",
   "days": [
     {
       "date": "2026-07-24",
@@ -9815,6 +9815,38 @@
           "carb": 38,
           "fibre": 4,
           "sodium": 300
+        }
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "label": "Wed 14 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "15:55",
+          "name": "Chicken curry pieces 180g (~160g cooked breast + clinging gravy, tared); gravy serving not yet logged",
+          "kcal": 278,
+          "protein": 51.6,
+          "fat": 7.4,
+          "sat": 2,
+          "carb": 1.6,
+          "fibre": 0.2,
+          "sodium": 480,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed14_chickencurry.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:56",
+          "name": "Plain roti x2 (78g total, no ghee)",
+          "kcal": 230,
+          "protein": 7.2,
+          "fat": 3.6,
+          "sat": 0.6,
+          "carb": 46,
+          "fibre": 4.8,
+          "sodium": 360
         }
       ]
     }
