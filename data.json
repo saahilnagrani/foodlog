@@ -9859,6 +9859,31 @@
           "carb": 46,
           "fibre": 4.8,
           "sodium": 360
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:56",
+          "name": "Cooked white rice 182g (scale tared)",
+          "kcal": 237,
+          "protein": 4.7,
+          "fat": 0.5,
+          "sat": 0.2,
+          "carb": 51,
+          "fibre": 0.7,
+          "sodium": 4
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:57",
+          "name": "Yellow moong dal 248g (430g with rice, tared)",
+          "kcal": 236,
+          "protein": 13.6,
+          "fat": 6.2,
+          "sat": 1.2,
+          "carb": 32,
+          "fibre": 7.4,
+          "sodium": 745,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed14_dalchawal.jpg"
         }
       ]
     }
