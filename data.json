@@ -9884,6 +9884,30 @@
           "fibre": 7.4,
           "sodium": 745,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed14_dalchawal.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:39",
+          "name": "Cooked white rice ~100g (2nd serving)",
+          "kcal": 130,
+          "protein": 2.6,
+          "fat": 0.3,
+          "sat": 0.1,
+          "carb": 28,
+          "fibre": 0.4,
+          "sodium": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:39",
+          "name": "Yellow moong dal ~140g (2nd serving)",
+          "kcal": 133,
+          "protein": 7.7,
+          "fat": 3.5,
+          "sat": 0.7,
+          "carb": 18,
+          "fibre": 4.2,
+          "sodium": 420
         }
       ]
     }
