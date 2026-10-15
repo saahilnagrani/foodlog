@@ -39,6 +39,14 @@
   .fsearch input::-webkit-search-cancel-button,.fsearch input::-webkit-search-decoration{-webkit-appearance:none;appearance:none;}
   .fsearch button{position:absolute;right:6px;top:3px;border:0;background:none;color:#333;opacity:.55;font-size:20px;line-height:1;padding:2px 6px;cursor:pointer;}
   .fnone{font-size:12px;color:#777;padding:14px 0;}
+  .fsec{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#888;font-weight:700;margin:14px 0 6px;}
+  .tares{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px;}
+  .tare{border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fafafa;}
+  .tare img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee;}
+  .tare .noimg{width:100%;aspect-ratio:1/1;background:#eee;display:flex;align-items:center;justify-content:center;font-size:11px;color:#999;}
+  .tare .tg{font-size:17px;font-weight:700;color:#111;padding:7px 9px 0;font-variant-numeric:tabular-nums;}
+  .tare .tn{font-size:12px;font-weight:600;color:#222;padding:1px 9px 0;line-height:1.3;}
+  .tare .ts{font-size:10.5px;color:#777;padding:3px 9px 9px;line-height:1.4;}
   .foodwrap{overflow-x:auto;margin:0 -16px;padding:0 16px;}
   .foodkey{font-size:12px;line-height:1.55;color:#4a4a4a;background:#fafafa;border:1px solid #ececec;border-left:3px solid #bdbdbd;border-radius:8px;padding:9px 11px;margin:0 0 14px;}
   .foodkey b{color:#111;}
@@ -412,6 +420,8 @@
       <h3>Foods: the figures behind quick add</h3>
       <div class="foodkey">Every quick-add food, as the app counts it. Figures are <b>per 100 g</b>, <b>per 100 ml</b> or <b>per piece</b> as shown under the name. Na is sodium in mg. The grey line under each row says where the numbers come from: <b>a pack label</b>, <b>USDA</b> (FoodData Central) or <b>an estimate</b> from a typical recipe. Sodium on cooked dishes is always an estimate, since salt does not show in a photo. Foods logged by chat that are not on this list use the same three sources and the entry name says which.</div>
       <div class="fsearch"><input id="fq" type="search" placeholder="Search foods, parts or sources" autocomplete="off" oninput="buildFoods()"><button id="fqx" onclick="document.getElementById('fq').value='';buildFoods();document.getElementById('fq').focus();" aria-label="Clear">&times;</button></div>
+      <div id="tareSec"><div class="fsec">Containers: subtract when the scale was not tared</div><div class="tares" id="tareList"></div></div>
+      <div class="fsec" id="foodSec">Foods</div>
       <div id="foodsList"></div>
       <button class="sbtn primary" style="margin-top:22px;" onclick="closeFoods()">Done</button>
     </div>
@@ -1296,8 +1306,12 @@ function buildFoods(){
      source note; a multi-part food shows all its parts when its name matches */
   const q=(document.getElementById('fq').value||'').toLowerCase().split(/\s+/).filter(Boolean);
   document.getElementById('fqx').hidden=!q.length;
+  const tares=q.length?TARE.filter(t=>q.every(w=>(t.n+' '+t.src+' '+t.g+' g').toLowerCase().includes(w))):TARE;
+  document.getElementById('tareList').innerHTML=tares.map(t=>`<div class="tare">${t.img?`<img src="images/${t.img}" alt="" loading="lazy" onclick="lb('images/${t.img}','${fesc(t.n)}')">`:'<div class="noimg">no photo</div>'}<div class="tg">${t.g} g</div><div class="tn">${fesc(t.n)}</div><div class="ts">${fesc(t.src)}</div></div>`).join('');
+  document.getElementById('tareSec').style.display=tares.length?'':'none';
   let rows=foodsRows();
   if(q.length){ let keepGroup=false; rows=rows.filter(r=>{ if(r.name)keepGroup=q.every(w=>r.name.toLowerCase().includes(w)); const own=q.every(w=>((r.name||'')+' '+r.part+' '+r.src).toLowerCase().includes(w)); return keepGroup||own; }); }
+  document.getElementById('foodSec').style.display=rows.length||!tares.length?'':'none';
   document.getElementById('foodsList').innerHTML=rows.length?rows.map(r=>
     `<div class="food${r.name?'':' sub'}">`+
     (r.name?`<div class="fn">${fesc(r.name)}</div>`:'')+(r.part?`<div class="fp">${fesc(r.part)}</div>`:'')+
@@ -1531,6 +1545,22 @@ const QUICK=[
  {n:'Banana',                 meal:'Snack',    parts:[{u:'pc',d:1,k:105, p:1.3,  f:.35, s:0,   c:27,  b:3.1,n:1,src:'USDA: 1 medium banana, 118 g'}]},
  {n:'Sprite Zero with black salt & chaat masala',meal:'Drink',parts:[{u:'pc',d:1,k:8,p:0,f:0,s:0,c:1,b:0,n:620,src:'Sprite Zero can label (35 mg sodium per 330 ml) + estimate: ~1 g black salt and ~1 g chaat masala'}]},
  {n:'Lipton zero sugar ice tea (mango)',meal:'Drink',parts:[{u:'ml',d:500,k:.01,p:0,f:0,s:0,c:.002,b:0,n:.1,src:'Lipton zero sugar ice tea bottle label'}]}
+];
+/* Known container weights, for gross-weight photos. Mirrors the tare table in
+   CLAUDE.md; img is a crop of the photo the weight was first used with. */
+const TARE=[
+ {n:'Square glass box, 240 g',g:240,img:'tare_sq240.jpg',src:'Weighed empty on the scale, 15 Oct (sprout salad)'},
+ {n:'Square glass box, 315 g',g:315,img:'tare_sq315.jpg',src:'Stated on 7 Oct (moong sprout salad, 450 g gross). Looks the same as the 240 g and 330 g boxes: weigh empty to tell them apart'},
+ {n:'Square glass box, 330 g',g:330,img:'tare_sq330.jpg',src:'Stated on 5 Oct (prawn curry, 706 g gross)'},
+ {n:'Rectangular glass box with lid, 500 g',g:500,img:'tare_rect500.jpg',src:'Stated on 12 Oct (tiramisu); also held the chicken gravy on 14 Oct'},
+ {n:'Clear glass bowl, smaller, 415 g',g:415,img:'tare_bowl415.jpg',src:'Weighed empty, 7 Oct (butter chicken)'},
+ {n:'Clear glass mixing bowl, 590 g',g:590,img:'tare_mix590.jpg',src:'Stated on 9 Sep (daal palak); about twice the shaker\'s width'},
+ {n:'Dark blue ceramic bowl, 518 g',g:518,img:'tare_blue518.jpg',src:'Stated on 12 Sep (poha, 605 g gross)'},
+ {n:'Large blue salad bowl, 833 g',g:833,img:'tare_salad833.jpg',src:'Stated on 19 Aug (watermelon & feta)'},
+ {n:'Deep steel bowl, 353 g',g:353,img:'',src:'Stated on 10 Aug (egg curry); no photo of the bowl itself'},
+ {n:'Steel thali, Ajmer, 180 g',g:180,img:'tare_thali180.jpg',src:'Stated on 23 Sep (kadhi chawal)'},
+ {n:'Steel rice katori, Ajmer, 150 g',g:150,img:'tare_katori.jpg',src:'Stated on 25 Sep (dal chawal); the larger of the two katoris in the picture'},
+ {n:'Steel dal katori, Ajmer, 60 g',g:60,img:'tare_katori.jpg',src:'Stated on 25 Sep (dal chawal); the small one at the back'},
 ];
 const R1=n=>Math.round(n*10)/10;
 let selDate='', selMeal='Snack';
@@ -1843,8 +1873,11 @@ function lb(src,cap){
   im.onload=ok;im.onerror=bad;
   im.removeAttribute('src');im.setAttribute('src',src);
   if(im.complete&&im.naturalWidth>0)ok();
-  /* belt and braces: hide the log screen directly, not only via the body class */
-  keepScroll(); histPush();
+  /* belt and braces: hide the log screen directly, not only via the body class.
+     Opened from inside the Foods sheet, remember that sheet's scroll instead of
+     the log's, so closing lands back on the same container. */
+  LBSHEET=document.body.classList.contains('foods-open')?(window.scrollY||0):null;
+  if(LBSHEET===null)keepScroll(); histPush();
   const v=document.getElementById('view'),t=document.getElementById('topbar'),f=document.querySelector('.fab');
   if(v)v.style.display='none';if(t)t.style.display='none';if(f)f.style.display='none';
   document.body.classList.add('modal-open');
@@ -1852,12 +1885,14 @@ function lb(src,cap){
   window.scrollTo(0,0);setTimeout(()=>window.scrollTo(0,0),60);
   return false;
 }
+let LBSHEET=null;
 function closeLb(fromHistory){
   if(!fromHistory)histPop();
   document.getElementById('lb').classList.remove('open');
-  document.body.classList.remove('modal-open');
   const v=document.getElementById('view'),t=document.getElementById('topbar'),f=document.querySelector('.fab');
   if(v)v.style.display='';if(t)t.style.display='';if(f)f.style.display='';
+  if(LBSHEET!==null){ const y=LBSHEET; LBSHEET=null; setTimeout(()=>window.scrollTo(0,y),0); return; }   /* back to the Foods sheet, which stays open */
+  document.body.classList.remove('modal-open');
   restoreScroll();
 }
 

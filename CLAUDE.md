@@ -100,6 +100,7 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 
 | container | empty weight |
 |---|---|
+| square glass box, smallest (sprout salad 15 Oct; weighed empty on the scale) | **240 g** |
 | square glass container, larger (prawn curry 5 Oct) | **330 g** |
 | square glass container, smaller (moong sprouts 7 Oct; looks the same, weigh to tell) | **315 g** |
 | deep steel bowl (egg curry, 10 Aug) | 353 g |
@@ -111,6 +112,10 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 | steel thali at the Ajmer house (kadhi chawal, 23 Sep) | **180 g** |
 | deep steel rice katori, Ajmer (25 Sep) | **150 g** |
 | small steel dal katori, Ajmer (25 Sep) | **60 g** |
+
+The same table, with a crop of each container's photo, is the **Containers**
+section of the app's Foods tab (`TARE` in `index.html`, thumbnails
+`images/tare_*.jpg`); keep the two in step.
 
 If a gross weight arrives for a container that isn't listed, estimate it but say so,
 and ask for the empty weight — the container is usually most of the gross figure, so
