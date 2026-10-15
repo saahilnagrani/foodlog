@@ -9928,6 +9928,18 @@
           "fibre": 5.1,
           "sodium": 826,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu15_laukikofta.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:34",
+          "name": "Moong sprout salad 97g with onion & tomato",
+          "kcal": 109,
+          "protein": 7.3,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 20.3,
+          "fibre": 5.8,
+          "sodium": 194
         }
       ]
     }
