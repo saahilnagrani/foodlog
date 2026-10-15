@@ -9940,6 +9940,18 @@
           "carb": 20.3,
           "fibre": 5.8,
           "sodium": 194
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:36",
+          "name": "Plain paratha x2 (73g total; looks lightly oiled)",
+          "kcal": 214,
+          "protein": 4.7,
+          "fat": 7.3,
+          "sat": 2.1,
+          "carb": 30,
+          "fibre": 2.3,
+          "sodium": 310
         }
       ]
     }
