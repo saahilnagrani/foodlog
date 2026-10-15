@@ -9193,6 +9193,18 @@
         },
         {
           "meal": "Snack",
+          "t": "26:00",
+          "name": "Lotus Biscoff crunchy spread ~140g (backfill: ~350g over last week's nights, 70g already logged Sun; rest split over Fri & Sat; label)",
+          "kcal": 799,
+          "protein": 4.5,
+          "fat": 50,
+          "sat": 11,
+          "carb": 82,
+          "fibre": 1.3,
+          "sodium": 336
+        },
+        {
+          "meal": "Snack",
           "t": "30:00",
           "name": "L'usine multigrain sliced bread x3 (90g, label)",
           "kcal": 234,
@@ -9282,6 +9294,18 @@
           "carb": 35.6,
           "fibre": 1.4,
           "sodium": 63
+        },
+        {
+          "meal": "Snack",
+          "t": "26:00",
+          "name": "Lotus Biscoff crunchy spread ~140g (backfill: ~350g over last week's nights, 70g already logged Sun; rest split over Fri & Sat; label)",
+          "kcal": 799,
+          "protein": 4.5,
+          "fat": 50,
+          "sat": 11,
+          "carb": 82,
+          "fibre": 1.3,
+          "sodium": 336
         },
         {
           "meal": "Snack",
@@ -9908,6 +9932,30 @@
           "carb": 18,
           "fibre": 4.2,
           "sodium": 420
+        },
+        {
+          "meal": "Snack",
+          "t": "26:00",
+          "name": "Lotus Biscoff crunchy spread 136g (label)",
+          "kcal": 777,
+          "protein": 4.4,
+          "fat": 48.6,
+          "sat": 10.7,
+          "carb": 80,
+          "fibre": 1.2,
+          "sodium": 326
+        },
+        {
+          "meal": "Snack",
+          "t": "26:00",
+          "name": "Hunter's sea salt & black pepper chips 40g (label)",
+          "kcal": 195,
+          "protein": 3,
+          "fat": 10.7,
+          "sat": 1.1,
+          "carb": 23.9,
+          "fibre": 2.2,
+          "sodium": 265
         }
       ]
     },
