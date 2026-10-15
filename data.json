@@ -10024,6 +10024,19 @@
           "carb": 12,
           "fibre": 2.4,
           "sodium": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:09",
+          "name": "Fresh to Home salmon 218g cooked (=~248g raw, the whole pack) + 1 tsp oil, spiced",
+          "kcal": 531,
+          "protein": 54.6,
+          "fat": 34.8,
+          "sat": 6.7,
+          "carb": 0.5,
+          "fibre": 0,
+          "sodium": 350,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu15_salmon.jpg"
         }
       ]
     }
