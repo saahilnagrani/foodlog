@@ -10037,6 +10037,18 @@
           "fibre": 0,
           "sodium": 350,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu15_salmon.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:09",
+          "name": "Moong sprout salad 90g with onion & tomato (405g gross in the 315g square glass container)",
+          "kcal": 101,
+          "protein": 6.8,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 18.8,
+          "fibre": 5.4,
+          "sodium": 180
         }
       ]
     }
