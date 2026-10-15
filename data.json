@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-14",
+  "updated": "2026-10-15",
   "days": [
     {
       "date": "2026-07-24",
@@ -9908,6 +9908,26 @@
           "carb": 18,
           "fibre": 4.2,
           "sodium": 420
+        }
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "label": "Thu 15 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "15:30",
+          "name": "Mutton curry 258g: 164g pieces (~140g meat, boneless?) + 94g thick masala (estimated)",
+          "kcal": 486,
+          "protein": 38,
+          "fat": 32,
+          "sat": 11,
+          "carb": 9.5,
+          "fibre": 1.4,
+          "sodium": 585,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu15_muttoncurry.jpg"
         }
       ]
     }
