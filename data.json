@@ -10012,6 +10012,18 @@
           "carb": 20.2,
           "fibre": 6.2,
           "sodium": 253
+        },
+        {
+          "meal": "Snack",
+          "t": "18:20",
+          "name": "Orange 100g",
+          "kcal": 47,
+          "protein": 0.9,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 12,
+          "fibre": 2.4,
+          "sodium": 0
         }
       ]
     }
