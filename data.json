@@ -10117,6 +10117,19 @@
           "carb": 25.3,
           "fibre": 8.2,
           "sodium": 230
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:54",
+          "name": "Chicken & egg fried rice 140g (~45g breast, ~25g egg, ~60g rice, estimated)",
+          "kcal": 238,
+          "protein": 19,
+          "fat": 9,
+          "sat": 2,
+          "carb": 22,
+          "fibre": 0.8,
+          "sodium": 450,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri16_friedrice.jpg"
         }
       ]
     }
