@@ -10133,6 +10133,18 @@
         },
         {
           "meal": "Dinner",
+          "t": "22:05",
+          "name": "Chicken & egg fried rice 110g (2nd serving)",
+          "kcal": 187,
+          "protein": 15,
+          "fat": 7.1,
+          "sat": 1.6,
+          "carb": 17.3,
+          "fibre": 0.6,
+          "sodium": 354
+        },
+        {
+          "meal": "Dinner",
           "t": "22:14",
           "name": "Chilli chicken 75g, home-style dry (~55g breast)",
           "kcal": 158,
