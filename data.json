@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-15",
+  "updated": "2026-10-16",
   "days": [
     {
       "date": "2026-07-24",
@@ -10049,6 +10049,38 @@
           "carb": 34.5,
           "fibre": 9.9,
           "sodium": 330
+        }
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "label": "Fri 16 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "15:31",
+          "name": "Plain paratha x2 (82g total)",
+          "kcal": 240,
+          "protein": 5.3,
+          "fat": 8.2,
+          "sat": 2.3,
+          "carb": 34,
+          "fibre": 2.6,
+          "sodium": 350
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:31",
+          "name": "Lauki kofta curry 394g (912g gross in the 518g blue bowl; ~3 koftas 150g + 244g gravy, estimated)",
+          "kcal": 610,
+          "protein": 13,
+          "fat": 39.5,
+          "sat": 5.3,
+          "carb": 48.5,
+          "fibre": 6.6,
+          "sodium": 1385,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri16_kofta.jpg"
         }
       ]
     }
