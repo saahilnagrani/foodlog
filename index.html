@@ -39,7 +39,6 @@
   .fsearch input::-webkit-search-cancel-button,.fsearch input::-webkit-search-decoration{-webkit-appearance:none;appearance:none;}
   .fsearch button{position:absolute;right:6px;top:3px;border:0;background:none;color:#333;opacity:.55;font-size:20px;line-height:1;padding:2px 6px;cursor:pointer;}
   .fnone{font-size:12px;color:#777;padding:14px 0;}
-  .fsec{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#888;font-weight:700;margin:14px 0 6px;}
   .tares{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:6px;}
   .tare{border:1px solid #eee;border-radius:10px;overflow:hidden;background:#fafafa;}
   .tare img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#eee;}
@@ -417,11 +416,11 @@
   <div class="sheet-bg" id="foodsBg">
     <div class="sheet">
       <button class="close" onclick="closeFoods()">&times;</button>
-      <h3>Foods: the figures behind quick add</h3>
-      <div class="foodkey">Every quick-add food, as the app counts it. Figures are <b>per 100 g</b>, <b>per 100 ml</b> or <b>per piece</b> as shown under the name. Na is sodium in mg. The grey line under each row says where the numbers come from: <b>a pack label</b>, <b>USDA</b> (FoodData Central) or <b>an estimate</b> from a typical recipe. Sodium on cooked dishes is always an estimate, since salt does not show in a photo. Foods logged by chat that are not on this list use the same three sources and the entry name says which.</div>
-      <div class="fsearch"><input id="fq" type="search" placeholder="Search foods, parts or sources" autocomplete="off" oninput="buildFoods()"><button id="fqx" onclick="document.getElementById('fq').value='';buildFoods();document.getElementById('fq').focus();" aria-label="Clear">&times;</button></div>
-      <div id="tareSec"><div class="fsec">Containers: subtract when the scale was not tared</div><div class="tares" id="tareList"></div></div>
-      <div class="fsec" id="foodSec">Foods</div>
+      <h3>Foods &amp; containers</h3>
+      <div class="row-chips" id="foodsTabs" style="margin-bottom:12px;"><button class="schip on" id="ft_foods" onclick="foodsPick('foods')">Foods</button><button class="schip" id="ft_tare" onclick="foodsPick('tare')">Containers</button></div>
+      <div class="foodkey" id="foodsKey"></div>
+      <div class="fsearch"><input id="fq" type="search" placeholder="Search" autocomplete="off" oninput="buildFoods()"><button id="fqx" onclick="document.getElementById('fq').value='';buildFoods();document.getElementById('fq').focus();" aria-label="Clear">&times;</button></div>
+      <div id="tareSec"><div class="tares" id="tareList"></div></div>
       <div id="foodsList"></div>
       <button class="sbtn primary" style="margin-top:22px;" onclick="closeFoods()">Done</button>
     </div>
@@ -1298,20 +1297,33 @@ function foodsRows(){
   });
   return rows;
 }
+let FOODSTAB='foods';
+function foodsPick(k){FOODSTAB=k;document.getElementById('fq').value='';buildFoods();window.scrollTo(0,0);}
+const FOODSKEY={
+  foods:'Every quick-add food, as the app counts it. Figures are <b>per 100 g</b>, <b>per 100 ml</b> or <b>per piece</b> as shown under the name. Na is sodium in mg. The grey line under each row says where the numbers come from: <b>a pack label</b>, <b>USDA</b> (FoodData Central) or <b>an estimate</b> from a typical recipe. Sodium on cooked dishes is always an estimate, since salt does not show in a photo. Searching "label", "usda" or "estimate" filters by source.',
+  tare:'Empty weights of the bowls and boxes food gets weighed in. When the scale was not tared, the food is the gross weight minus the container. Several look alike, so the card says how each weight was obtained; weigh a container empty once and say which card it is to make it exact. Tap a photo to enlarge it.'};
 function buildFoods(){
   const f=(v,d)=>v===null||v===undefined?'?':(Math.round(v*(d?10:1))/(d?10:1)).toString();
   const kind=src=>/^estimate/i.test(src)?'Estimate':/label/i.test(src)?'Label':/usda/i.test(src)?'USDA':'Estimate';
   const cell=(v,l,d)=>`<div>${f(v,d)}<small>${l}</small></div>`;
-  /* search: every word must appear in the food name, the part label or the
-     source note; a multi-part food shows all its parts when its name matches */
+  const tare=FOODSTAB==='tare';
+  ['foods','tare'].forEach(k=>document.getElementById('ft_'+k).classList.toggle('on',k===FOODSTAB));
+  document.getElementById('foodsKey').innerHTML=FOODSKEY[FOODSTAB];
+  document.getElementById('fq').placeholder=tare?'Search containers':'Search foods, parts or sources';
+  /* search: every word must appear in the name, the part label or the source
+     note; a multi-part food shows all its parts when its name matches */
   const q=(document.getElementById('fq').value||'').toLowerCase().split(/\s+/).filter(Boolean);
   document.getElementById('fqx').hidden=!q.length;
-  const tares=q.length?TARE.filter(t=>q.every(w=>(t.n+' '+t.src+' '+t.g+' g').toLowerCase().includes(w))):TARE;
-  document.getElementById('tareList').innerHTML=tares.map(t=>`<div class="tare">${t.img?`<img src="images/${t.img}" alt="" loading="lazy" onclick="lb('images/${t.img}','${fesc(t.n)}')">`:'<div class="noimg">no photo</div>'}<div class="tg">${t.g} g</div><div class="tn">${fesc(t.n)}</div><div class="ts">${fesc(t.src)}</div></div>`).join('');
-  document.getElementById('tareSec').style.display=tares.length?'':'none';
+  document.getElementById('tareSec').style.display=tare?'':'none';
+  document.getElementById('foodsList').style.display=tare?'none':'';
+  if(tare){
+    const tares=q.length?TARE.filter(t=>q.every(w=>(t.n+' '+t.src+' '+t.g+' g').toLowerCase().includes(w))):TARE;
+    document.getElementById('tareList').innerHTML=tares.length?tares.map(t=>`<div class="tare">${t.img?`<img src="images/${t.img}" alt="" loading="lazy" onclick="lb('images/${t.img}','${fesc(t.n)}')">`:'<div class="noimg">no photo</div>'}<div class="tg">${t.g} g</div><div class="tn">${fesc(t.n)}</div><div class="ts">${fesc(t.src)}</div></div>`).join('')
+      :'<div class="fnone">No container matches.</div>';
+    return;
+  }
   let rows=foodsRows();
   if(q.length){ let keepGroup=false; rows=rows.filter(r=>{ if(r.name)keepGroup=q.every(w=>r.name.toLowerCase().includes(w)); const own=q.every(w=>((r.name||'')+' '+r.part+' '+r.src).toLowerCase().includes(w)); return keepGroup||own; }); }
-  document.getElementById('foodSec').style.display=rows.length||!tares.length?'':'none';
   document.getElementById('foodsList').innerHTML=rows.length?rows.map(r=>
     `<div class="food${r.name?'':' sub'}">`+
     (r.name?`<div class="fn">${fesc(r.name)}</div>`:'')+(r.part?`<div class="fp">${fesc(r.part)}</div>`:'')+
