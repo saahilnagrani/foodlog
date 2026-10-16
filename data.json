@@ -10072,14 +10072,14 @@
         {
           "meal": "Lunch",
           "t": "15:31",
-          "name": "Lauki kofta curry 394g (912g gross in the 518g blue bowl; ~3 koftas 150g + 244g gravy, estimated)",
-          "kcal": 610,
-          "protein": 13,
-          "fat": 39.5,
-          "sat": 5.3,
-          "carb": 48.5,
-          "fibre": 6.6,
-          "sodium": 1385,
+          "name": "Lauki kofta curry 139g (912g gross, bowl 773g; ~3 koftas 100g + 39g gravy, estimated)",
+          "kcal": 265,
+          "protein": 6.1,
+          "fat": 16.4,
+          "sat": 2,
+          "carb": 22.6,
+          "fibre": 2.9,
+          "sodium": 430,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri16_kofta.jpg"
         }
       ]

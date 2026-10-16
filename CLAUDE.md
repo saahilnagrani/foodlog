@@ -106,7 +106,8 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 | deep steel bowl (egg curry, 10 Aug) | 353 g |
 | large salad bowl (watermelon & feta, 19 Aug) | 833 g |
 | clear glass mixing bowl (daal palak, 9 Sep; about twice the shaker's width) | **590 g** |
-| dark blue ceramic bowl (poha, 12 Sep) | **518 g** |
+| dark blue ceramic bowl, smaller (poha, 12 Sep) | **518 g** |
+| dark blue ceramic bowl, large (kofta curry 16 Oct; weighed with smears) | **773 g** |
 | clear glass bowl, smaller (butter chicken 7 Oct) | **415 g** |
 | rectangular glass container with lid (tiramisu 11 Oct, chicken gravy 14 Oct; looks like the square ones but much heavier) | **500 g** |
 | steel thali at the Ajmer house (kadhi chawal, 23 Sep) | **180 g** |
