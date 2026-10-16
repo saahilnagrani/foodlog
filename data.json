@@ -10130,6 +10130,43 @@
           "fibre": 0.8,
           "sodium": 450,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri16_friedrice.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:14",
+          "name": "Chilli chicken 75g, home-style dry (~55g breast)",
+          "kcal": 158,
+          "protein": 17,
+          "fat": 7,
+          "sat": 1.5,
+          "carb": 6,
+          "fibre": 0.5,
+          "sodium": 300,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri16_chillichicken.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:14",
+          "name": "Onion & tomato 17g (with the chilli chicken)",
+          "kcal": 6,
+          "protein": 0.2,
+          "fat": 0,
+          "sat": 0,
+          "carb": 1.3,
+          "fibre": 0.4,
+          "sodium": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:14",
+          "name": "Veg hakka noodles ~100g (not weighed, estimated from photo)",
+          "kcal": 165,
+          "protein": 4,
+          "fat": 5.4,
+          "sat": 0.8,
+          "carb": 25,
+          "fibre": 1.5,
+          "sodium": 300
         }
       ]
     }
