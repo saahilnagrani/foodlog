@@ -10192,6 +10192,19 @@
           "fibre": 2,
           "sodium": 750,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri16_faasos.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "28:03",
+          "name": "Faasos classic chicken tikka paratha burger, flaky paratha, whole 260g (estimated)",
+          "kcal": 675,
+          "protein": 30,
+          "fat": 34,
+          "sat": 12,
+          "carb": 62,
+          "fibre": 3,
+          "sodium": 1300,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri16_parathaburger.jpg"
         }
       ]
     }
