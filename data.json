@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-16",
+  "updated": "2026-10-17",
   "days": [
     {
       "date": "2026-07-24",
@@ -10179,6 +10179,19 @@
           "carb": 25,
           "fibre": 1.5,
           "sodium": 300
+        },
+        {
+          "meal": "Snack",
+          "t": "27:58",
+          "name": "Faasos OG chicken tikka paratha wrap, half of ~300g (estimated)",
+          "kcal": 345,
+          "protein": 16,
+          "fat": 16,
+          "sat": 5,
+          "carb": 34,
+          "fibre": 2,
+          "sodium": 750,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri16_faasos.jpg"
         }
       ]
     }
