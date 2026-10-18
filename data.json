@@ -10342,6 +10342,18 @@
           "fibre": 3,
           "sodium": 330,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun18_prawnpasta.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "23:49",
+          "name": "Whey drink (36g SuperYou cold coffee + 200ml Oatly Barista + 19g nuts & seeds + 73g strawberries)",
+          "kcal": 392,
+          "protein": 30.1,
+          "fat": 19,
+          "sat": 2.1,
+          "carb": 25.5,
+          "fibre": 8.1,
+          "sodium": 230
         }
       ]
     }
