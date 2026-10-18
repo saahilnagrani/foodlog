@@ -10293,6 +10293,30 @@
           "carb": 37.5,
           "fibre": 4,
           "sodium": 295
+        },
+        {
+          "meal": "Snack",
+          "t": "21:46",
+          "name": "Onion paratha 50g",
+          "kcal": 150,
+          "protein": 3.5,
+          "fat": 5.5,
+          "sat": 1.5,
+          "carb": 21,
+          "fibre": 1.8,
+          "sodium": 220
+        },
+        {
+          "meal": "Snack",
+          "t": "21:46",
+          "name": "Greek yogurt 0% 110g (Hayatna)",
+          "kcal": 69,
+          "protein": 11,
+          "fat": 0.6,
+          "sat": 0,
+          "carb": 5,
+          "fibre": 0,
+          "sodium": 46
         }
       ]
     }
