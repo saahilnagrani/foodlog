@@ -10281,6 +10281,18 @@
           "fibre": 0.9,
           "sodium": 305,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun18_chickencurry.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:50",
+          "name": "Plain roti x2 (64g total, no ghee)",
+          "kcal": 187,
+          "protein": 5.9,
+          "fat": 3,
+          "sat": 0.5,
+          "carb": 37.5,
+          "fibre": 4,
+          "sodium": 295
         }
       ]
     }
