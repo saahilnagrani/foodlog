@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-17",
+  "updated": "2026-10-18",
   "days": [
     {
       "date": "2026-07-24",
@@ -10249,6 +10249,38 @@
           "fibre": 1.5,
           "sodium": 297,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat17_chillichicken.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-18",
+      "label": "Sun 18 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "16:48",
+          "name": "Chicken curry pieces 143g (~130g cooked breast + clinging masala, tared)",
+          "kcal": 225,
+          "protein": 42,
+          "fat": 5.5,
+          "sat": 1.5,
+          "carb": 1.5,
+          "fibre": 0.2,
+          "sodium": 390
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:49",
+          "name": "Chicken curry gravy 76g (219g plate, tared)",
+          "kcal": 85,
+          "protein": 1.5,
+          "fat": 6.2,
+          "sat": 1,
+          "carb": 6.2,
+          "fibre": 0.9,
+          "sodium": 305,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun18_chickencurry.jpg"
         }
       ]
     }
