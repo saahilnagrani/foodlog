@@ -10333,14 +10333,14 @@
         {
           "meal": "Dinner",
           "t": "22:31",
-          "name": "Spaghetti in tomato-yogurt sauce 190g (260g plate, tared; ~130g cooked pasta + 60g sauce)",
-          "kcal": 270,
-          "protein": 10,
-          "fat": 5.5,
-          "sat": 1.2,
-          "carb": 46,
-          "fibre": 3,
-          "sodium": 330,
+          "name": "Barilla whole wheat spaghetti ~130g cooked (~55g dry, label) in tomato-yogurt sauce 60g (260g plate, tared)",
+          "kcal": 246,
+          "protein": 9.5,
+          "fat": 4.4,
+          "sat": 0.8,
+          "carb": 40,
+          "fibre": 5.1,
+          "sodium": 245,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun18_prawnpasta.jpg"
         },
         {
