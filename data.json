@@ -10446,6 +10446,42 @@
           "carb": 1.5,
           "fibre": 0.8,
           "sodium": 450
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:49",
+          "name": "Soya keema 160g (2nd serving, same pot)",
+          "kcal": 219,
+          "protein": 20.6,
+          "fat": 5.4,
+          "sat": 0.7,
+          "carb": 19.8,
+          "fibre": 6.6,
+          "sodium": 396
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:49",
+          "name": "Haldiram's frozen pudina paratha 1 (~80g, estimated from typical label)",
+          "kcal": 250,
+          "protein": 5,
+          "fat": 10,
+          "sat": 4.5,
+          "carb": 35,
+          "fibre": 2.5,
+          "sodium": 420
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:49",
+          "name": "Chokhi Dhani green chilli pickle 10g (label)",
+          "kcal": 25,
+          "protein": 0,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 1,
+          "fibre": 0.5,
+          "sodium": 300
         }
       ]
     }
