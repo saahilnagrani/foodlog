@@ -10397,6 +10397,19 @@
           "carb": 19,
           "fibre": 2.4,
           "sodium": 117
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:09",
+          "name": "Soya keema 194g (soya granules with onion, tomato, peas; ~1 tsp oil; estimated)",
+          "kcal": 250,
+          "protein": 24,
+          "fat": 8,
+          "sat": 1.2,
+          "carb": 20,
+          "fibre": 7,
+          "sodium": 620,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon19_soyakeema.jpg"
         }
       ]
     }
