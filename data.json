@@ -10410,6 +10410,42 @@
           "fibre": 8,
           "sodium": 480,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon19_soyakeema.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:09",
+          "name": "Plain paratha x2 (70g total)",
+          "kcal": 205,
+          "protein": 4.5,
+          "fat": 7,
+          "sat": 2,
+          "carb": 29,
+          "fibre": 2.2,
+          "sodium": 300
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:09",
+          "name": "Baat Cheet papad 1",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 7.5,
+          "fibre": 0.8,
+          "sodium": 250
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:09",
+          "name": "Chokhi Dhani green chilli pickle 15g (label)",
+          "kcal": 38,
+          "protein": 0,
+          "fat": 0.4,
+          "sat": 0,
+          "carb": 1.5,
+          "fibre": 0.8,
+          "sodium": 450
         }
       ]
     }
