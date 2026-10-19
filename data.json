@@ -10385,6 +10385,18 @@
           "carb": 42.6,
           "fibre": 12.2,
           "sodium": 408
+        },
+        {
+          "meal": "Dinner",
+          "t": "19:09",
+          "name": "Barilla whole wheat spaghetti in tomato-yogurt sauce 91g, leftover (scale tared; ~62g cooked pasta + 29g sauce)",
+          "kcal": 118,
+          "protein": 4.5,
+          "fat": 2.1,
+          "sat": 0.4,
+          "carb": 19,
+          "fibre": 2.4,
+          "sodium": 117
         }
       ]
     }
