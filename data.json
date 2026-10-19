@@ -10373,6 +10373,18 @@
           "carb": 21.9,
           "fibre": 7.2,
           "sodium": 229
+        },
+        {
+          "meal": "Lunch",
+          "t": "18:45",
+          "name": "Moong sprout salad 87g with onion & tomato (587g gross in the 500g rectangular box)",
+          "kcal": 97,
+          "protein": 6.5,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 18.2,
+          "fibre": 5.2,
+          "sodium": 174
         }
       ]
     }
