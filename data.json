@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-18",
+  "updated": "2026-10-19",
   "days": [
     {
       "date": "2026-07-24",
@@ -10354,6 +10354,25 @@
           "carb": 25.5,
           "fibre": 8.1,
           "sodium": 230
+        }
+      ]
+    },
+    {
+      "date": "2026-10-19",
+      "label": "Mon 19 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:56",
+          "name": "Whey drink (36g SuperYou cold coffee + 200ml Oatly Barista + 18g nuts & seeds + 28g strawberries)",
+          "kcal": 371,
+          "protein": 29.6,
+          "fat": 18.3,
+          "sat": 2,
+          "carb": 21.9,
+          "fibre": 7.2,
+          "sodium": 229
         }
       ]
     }
