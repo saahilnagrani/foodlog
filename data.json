@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-19",
+  "updated": "2026-10-20",
   "days": [
     {
       "date": "2026-07-24",
@@ -10482,6 +10482,38 @@
           "carb": 1,
           "fibre": 0.5,
           "sodium": 300
+        }
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "label": "Tue 20 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Dinner",
+          "t": "18:08",
+          "name": "Biryani chicken breast pieces 164g (~150g breast + masala, tared)",
+          "kcal": 255,
+          "protein": 47,
+          "fat": 6.5,
+          "sat": 1.7,
+          "carb": 2.5,
+          "fibre": 0.3,
+          "sodium": 450
+        },
+        {
+          "meal": "Dinner",
+          "t": "18:09",
+          "name": "Biryani rice 178g (342g plate, tared; home-style, measured oil)",
+          "kcal": 285,
+          "protein": 5.5,
+          "fat": 7,
+          "sat": 1.5,
+          "carb": 50,
+          "fibre": 1.5,
+          "sodium": 520,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue20_biryani.jpg"
         }
       ]
     }
