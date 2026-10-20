@@ -10526,6 +10526,31 @@
           "carb": 5.1,
           "fibre": 0,
           "sodium": 120
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:11",
+          "name": "Onion pudina paratha x2 (122g total)",
+          "kcal": 355,
+          "protein": 8.5,
+          "fat": 12.5,
+          "sat": 3.5,
+          "carb": 52,
+          "fibre": 4.5,
+          "sodium": 520,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue20_paratha.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:11",
+          "name": "Kolios Greek yogurt 0% 102g (label)",
+          "kcal": 53,
+          "protein": 8.5,
+          "fat": 0,
+          "sat": 0,
+          "carb": 4.9,
+          "fibre": 0,
+          "sodium": 114
         }
       ]
     }
