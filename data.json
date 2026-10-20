@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "days": [
     {
       "date": "2026-07-24",
@@ -10482,6 +10482,18 @@
           "carb": 1,
           "fibre": 0.5,
           "sodium": 300
+        },
+        {
+          "meal": "Snack",
+          "name": "Haldiram's mint lachha 100g (half of 200g pack; label)",
+          "kcal": 543,
+          "protein": 8.6,
+          "fat": 28.6,
+          "sat": 8.6,
+          "carb": 60,
+          "fibre": 0,
+          "sodium": 1193,
+          "t": "31:00"
         }
       ]
     },
@@ -10577,6 +10589,18 @@
           "fibre": 0.6,
           "sodium": 240,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue20_ewomelette.jpg"
+        },
+        {
+          "meal": "Snack",
+          "name": "Haldiram's mint lachha 100g (half of 200g pack; label)",
+          "kcal": 543,
+          "protein": 8.6,
+          "fat": 28.6,
+          "sat": 8.6,
+          "carb": 60,
+          "fibre": 0,
+          "sodium": 1193,
+          "t": "27:11"
         }
       ]
     }
