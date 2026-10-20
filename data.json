@@ -10514,6 +10514,18 @@
           "fibre": 1.5,
           "sodium": 520,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue20_biryani.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "18:15",
+          "name": "Kolios Greek yogurt 0% 107g (label)",
+          "kcal": 56,
+          "protein": 8.9,
+          "fat": 0,
+          "sat": 0,
+          "carb": 5.1,
+          "fibre": 0,
+          "sodium": 120
         }
       ]
     }
