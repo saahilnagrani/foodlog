@@ -10603,6 +10603,25 @@
           "t": "27:11"
         }
       ]
+    },
+    {
+      "date": "2026-10-21",
+      "label": "Wed 21 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Drink",
+          "t": "13:00",
+          "name": "Whey drink (10g ISO100 mocha + 36g SuperYou cold coffee + 200ml Oatly Barista + 20g nuts & seeds + 85g strawberries)",
+          "kcal": 439,
+          "protein": 37.9,
+          "fat": 19.9,
+          "sat": 2.2,
+          "carb": 27.5,
+          "fibre": 8.4,
+          "sodium": 280
+        }
+      ]
     }
   ]
 }
