@@ -10645,6 +10645,31 @@
           "fibre": 0.6,
           "sodium": 3,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed21_dalchawal.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:09",
+          "name": "Moong sprout salad 101g with onion & tomato (scale tared)",
+          "kcal": 113,
+          "protein": 7.6,
+          "fat": 0.3,
+          "sat": 0,
+          "carb": 21.1,
+          "fibre": 6.1,
+          "sodium": 202
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:09",
+          "name": "Dal chawal mixed 477g (731g gross in the 254g shallow square glass box, matched by size vs the scale; ~half dal, half rice; chilli & chaat masala on top)",
+          "kcal": 537,
+          "protein": 19.3,
+          "fat": 6.7,
+          "sat": 1.4,
+          "carb": 97.7,
+          "fibre": 8.1,
+          "sodium": 870,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed21_dalchawal2.jpg"
         }
       ]
     }
