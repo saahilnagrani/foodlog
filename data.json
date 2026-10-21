@@ -10661,14 +10661,14 @@
         {
           "meal": "Dinner",
           "t": "22:09",
-          "name": "Dal chawal mixed 477g (731g gross in the 254g shallow square glass box, matched by size vs the scale; ~half dal, half rice; chilli & chaat masala on top)",
-          "kcal": 537,
-          "protein": 19.3,
-          "fat": 6.7,
-          "sat": 1.4,
-          "carb": 97.7,
-          "fibre": 8.1,
-          "sodium": 870,
+          "name": "Dal chawal mixed 477g (731g gross in the 254g shallow square glass box, matched by size vs the scale; ~65% dal 310g, ~35% rice 167g; chilli & chaat masala on top)",
+          "kcal": 512,
+          "protein": 21.4,
+          "fat": 8.3,
+          "sat": 1.7,
+          "carb": 86.8,
+          "fibre": 10,
+          "sodium": 1080,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed21_dalchawal2.jpg"
         }
       ]
