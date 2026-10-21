@@ -10693,7 +10693,8 @@
           "sat": 5.7,
           "carb": 3.6,
           "fibre": 0.3,
-          "sodium": 805
+          "sodium": 805,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed21_gdkchicken.jpg"
         },
         {
           "meal": "Dinner",
