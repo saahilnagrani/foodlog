@@ -1301,7 +1301,7 @@ let FOODSTAB='foods';
 function foodsPick(k){FOODSTAB=k;document.getElementById('fq').value='';buildFoods();window.scrollTo(0,0);}
 const FOODSKEY={
   foods:'Every quick-add food, as the app counts it. Figures are <b>per 100 g</b>, <b>per 100 ml</b> or <b>per piece</b> as shown under the name. Na is sodium in mg. The grey line under each row says where the numbers come from: <b>a pack label</b>, <b>USDA</b> (FoodData Central) or <b>an estimate</b> from a typical recipe. Sodium on cooked dishes is always an estimate, since salt does not show in a photo. Searching "label", "usda" or "estimate" filters by source.',
-  tare:'Empty weights of the bowls and boxes food gets weighed in. When the scale was not tared, the food is the gross weight minus the container. Several look alike, so each photo keeps the scale in shot: compare the container's width with the scale platform to tell them apart. Tap a photo to enlarge it.'};
+  tare:'Empty weights of the bowls and boxes food gets weighed in. When the scale was not tared, the food is the gross weight minus the container. Several look alike, so each photo keeps the scale in shot: compare each container\u2019s width with the scale platform to tell them apart. Tap a photo to enlarge it.'};
 function buildFoods(){
   const f=(v,d)=>v===null||v===undefined?'?':(Math.round(v*(d?10:1))/(d?10:1)).toString();
   const kind=src=>/^estimate/i.test(src)?'Estimate':/label/i.test(src)?'Label':/usda/i.test(src)?'USDA':'Estimate';

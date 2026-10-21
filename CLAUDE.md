@@ -23,6 +23,12 @@ calorie/macro numbers and writing them into `data.json`. That is the routine job
 - `data.json` — **the source of truth for the food log.** This is what you edit.
 - `images/` — meal photos, referenced by URL from `data.json`.
 - `tools/fmt_data.py` — the one definition of `data.json`'s on-disk format.
+- `tools/check_js.js` — syntax-checks the inline scripts in `index.html`.
+  **Run `node tools/check_js.js` before every push that touches `index.html`.**
+  A single unescaped apostrophe inside a single-quoted JS string (e.g. a
+  `src` note or help text saying "container's") is a syntax error that blanks
+  the entire app on the phone; this happened on 21 Oct. Write `\u2019` or
+  escape it as `\\'`.
 - `README.md` — placeholder, ignore.
 
 ## Always write `data.json` through `tools/fmt_data.py`
