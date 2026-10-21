@@ -1301,7 +1301,7 @@ let FOODSTAB='foods';
 function foodsPick(k){FOODSTAB=k;document.getElementById('fq').value='';buildFoods();window.scrollTo(0,0);}
 const FOODSKEY={
   foods:'Every quick-add food, as the app counts it. Figures are <b>per 100 g</b>, <b>per 100 ml</b> or <b>per piece</b> as shown under the name. Na is sodium in mg. The grey line under each row says where the numbers come from: <b>a pack label</b>, <b>USDA</b> (FoodData Central) or <b>an estimate</b> from a typical recipe. Sodium on cooked dishes is always an estimate, since salt does not show in a photo. Searching "label", "usda" or "estimate" filters by source.',
-  tare:'Empty weights of the bowls and boxes food gets weighed in. When the scale was not tared, the food is the gross weight minus the container. Several look alike, so the card says how each weight was obtained; weigh a container empty once and say which card it is to make it exact. Tap a photo to enlarge it.'};
+  tare:'Empty weights of the bowls and boxes food gets weighed in. When the scale was not tared, the food is the gross weight minus the container. Several look alike, so each photo keeps the scale in shot: compare the container's width with the scale platform to tell them apart. Tap a photo to enlarge it.'};
 function buildFoods(){
   const f=(v,d)=>v===null||v===undefined?'?':(Math.round(v*(d?10:1))/(d?10:1)).toString();
   const kind=src=>/^estimate/i.test(src)?'Estimate':/label/i.test(src)?'Label':/usda/i.test(src)?'USDA':'Estimate';
@@ -1573,8 +1573,8 @@ const TARE=[
  {n:'White ceramic plate, wide rim',g:550,img:'tare_plate550.jpg',src:'Weighed empty on the scale, 20 Oct'},
  {n:'Clear glass bowl, smaller',g:415,img:'tare_bowl415.jpg',src:'Weighed empty, 7 Oct (butter chicken)'},
  {n:'Clear glass mixing bowl',g:590,img:'tare_mix590.jpg',src:'Stated on 9 Sep (daal palak); about twice the shaker\'s width'},
- {n:'Dark blue ceramic bowl, large',g:773,img:'tare_blue773.jpg',src:'Weighed on the scale, 16 Oct, with curry smears still in it (kofta curry). Heavier than the 518 g blue bowl: weigh to tell them apart'},
- {n:'Dark blue ceramic bowl, smaller',g:518,img:'tare_blue518.jpg',src:'Stated on 12 Sep (poha, 605 g gross). A second blue bowl weighed 773 g on 16 Oct, so check which one is on the scale'},
+ {n:'Dark blue ceramic bowl, large',g:766,img:'tare_blue766.jpg',src:'Weighed empty on the scale, 21 Oct. Clearly wider than the scale platform and overhangs it on both sides; spiral inside, dotted band outside'},
+ {n:'Dark blue ceramic bowl, smaller',g:518,img:'tare_blue518.jpg',src:'Weighed empty on the scale, 21 Oct (confirms 12 Sep). About as wide as the scale platform, barely overhangs it'},
  {n:'Large blue salad bowl',g:833,img:'tare_salad833.jpg',src:'Stated on 19 Aug (watermelon & feta)'},
  {n:'Deep steel bowl',g:353,img:'',src:'Stated on 10 Aug (egg curry); no photo of the bowl itself'},
  {n:'Steel thali, Ajmer',g:180,img:'tare_thali180.jpg',src:'Stated on 23 Sep (kadhi chawal)'},

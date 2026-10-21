@@ -107,8 +107,8 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 | deep steel bowl (egg curry, 10 Aug) | 353 g |
 | large salad bowl (watermelon & feta, 19 Aug) | 833 g |
 | clear glass mixing bowl (daal palak, 9 Sep; about twice the shaker's width) | **590 g** |
-| dark blue ceramic bowl, smaller (poha, 12 Sep) | **518 g** |
-| dark blue ceramic bowl, large (kofta curry 16 Oct; weighed with smears) | **773 g** |
+| dark blue ceramic bowl, smaller (about the scale platform's width; weighed empty 21 Oct) | **518 g** |
+| dark blue ceramic bowl, large (clearly wider than the scale, overhangs both sides; weighed empty 21 Oct) | **766 g** |
 | white ceramic plate, wide rim (weighed empty 20 Oct) | **550 g** |
 | clear glass bowl, smaller (butter chicken 7 Oct) | **415 g** |
 | rectangular glass container with lid (tiramisu 11 Oct, chicken gravy 14 Oct; looks like the square ones but much heavier) | **500 g** |
@@ -119,6 +119,15 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 The same table, with a crop of each container's photo, is the **Containers**
 section of the app's Foods tab (`TARE` in `index.html`, thumbnails
 `images/tare_*.jpg`); keep the two in step.
+
+**Identify the container by its size relative to the scale, not by guessing.**
+Every gross-weight photo has the same HealthSense scale in it, and the scale's
+platform is a fixed ruler. Compare the container's width (and depth, for the
+glass boxes) against the platform and against the reference photos in the
+Containers section, which were deliberately shot from a similar angle with the
+scale in frame. The square glass boxes and the two blue bowls look alike and
+differ only in size. Say which container you matched and why; if two are
+equally close, give both resulting food weights and ask.
 
 If a gross weight arrives for a container that isn't listed, estimate it but say so,
 and ask for the empty weight — the container is usually most of the gross figure, so
