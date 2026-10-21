@@ -107,9 +107,9 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 | container | empty weight |
 |---|---|
 | square glass box, smallest (sprout salad 15 Oct; weighed empty on the scale) | **240 g** |
-| square glass box, shallow (pasta 19 Oct; weighed empty) | **254 g** |
+| square glass box, shallow (pasta 19 Oct; weighed empty; same footprint as the 315 g box, low walls) | **254 g** |
 | square glass box, largest (sprout salad 19 Oct; weighed empty; probably the 'prawn curry 5 Oct' box once stated as 330 g) | **383 g** |
-| square glass container, smaller (moong sprouts 7 Oct; looks the same, weigh to tell) | **315 g** |
+| square glass box, tall (dal chawal 21 Oct, weighed 316 g with smears; also the 7 Oct sprouts box; same footprint as the 254 g box, taller walls) | **315 g** |
 | cream speckled bowl, shallow with wide rim (a little wider than the scale; weighed empty 21 Oct; the 10 Aug egg curry bowl, once listed as a 353 g steel bowl) | **347 g** |
 | large salad bowl (watermelon & feta, 19 Aug) | 833 g |
 | clear glass mixing bowl (daal palak, 9 Sep; about twice the shaker's width) | **590 g** |
@@ -132,7 +132,9 @@ platform is a fixed ruler. Compare the container's width (and depth, for the
 glass boxes) against the platform and against the reference photos in the
 Containers section, which were deliberately shot from a similar angle with the
 scale in frame. The square glass boxes and the two blue bowls look alike and
-differ only in size. Say which container you matched and why; if two are
+differ only in size. Width alone does not separate the 254 g and 315 g boxes
+(same footprint); look at the wall height against the food level, and when it
+is still ambiguous give both food weights rather than picking one. Say which container you matched and why; if two are
 equally close, give both resulting food weights and ask.
 
 If a gross weight arrives for a container that isn't listed, estimate it but say so,
