@@ -10682,6 +10682,31 @@
           "fibre": 8.7,
           "sodium": 960,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed21_dalchawal2.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:20",
+          "name": "GDK Doner Gym Box chicken doner 179g with onion (scale tared; no sauce)",
+          "kcal": 367,
+          "protein": 37.6,
+          "fat": 21.5,
+          "sat": 5.7,
+          "carb": 3.6,
+          "fibre": 0.3,
+          "sodium": 805
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:20",
+          "name": "GDK Gym Box salad 53g: red cabbage, lettuce, onion (232g with chicken, tared)",
+          "kcal": 13,
+          "protein": 0.6,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 2.8,
+          "fibre": 1.2,
+          "sodium": 10,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed21_gdkbox.jpg"
         }
       ]
     }
