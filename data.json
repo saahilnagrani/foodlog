@@ -10793,14 +10793,26 @@
         {
           "meal": "Snack",
           "t": "26:31",
-          "name": "Fresh To Home frozen poha 78g heated (425g gross in the 347g cream bowl; = ~106g frozen at the label rate, using the 2 Sep 95g frozen -> 70g heated ratio)",
-          "kcal": 359,
-          "protein": 7.1,
-          "fat": 8.9,
-          "sat": 1.2,
-          "carb": 62,
-          "fibre": 2,
-          "sodium": 538
+          "name": "Fresh To Home frozen poha 78g, weighed frozen (425g gross in the 347g cream bowl; label rate)",
+          "kcal": 264,
+          "protein": 5.2,
+          "fat": 6.5,
+          "sat": 0.9,
+          "carb": 45.7,
+          "fibre": 1.4,
+          "sodium": 395
+        },
+        {
+          "meal": "Snack",
+          "t": "26:34",
+          "name": "Haldiram's bhujia 34g on the poha (scale tared; label)",
+          "kcal": 194,
+          "protein": 3.9,
+          "fat": 13.6,
+          "sat": 3.9,
+          "carb": 14.6,
+          "fibre": 1.9,
+          "sodium": 428
         }
       ]
     }
