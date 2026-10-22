@@ -10743,15 +10743,27 @@
         {
           "meal": "Snack",
           "t": "17:59",
-          "name": "Papa John's chicken Papadia, whole 244g (grilled chicken, peppers, onion, tomato, cheese, buffalo-style sauce; estimated)",
-          "kcal": 620,
-          "protein": 33,
-          "fat": 24,
-          "sat": 10,
-          "carb": 66,
+          "name": "Papa John's Nashville chicken sandwich (244g; same figures as earlier orders)",
+          "kcal": 750,
+          "protein": 39,
+          "fat": 32,
+          "sat": 8,
+          "carb": 78,
           "fibre": 3,
-          "sodium": 1500,
-          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu22_papadia.jpg"
+          "sodium": 1800,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu22_pjnashville.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "18:18",
+          "name": "Moong sprout chaat 156g with onion & tomato (656g gross in the 500g rectangular glass box, matched by size vs the scale)",
+          "kcal": 175,
+          "protein": 11.7,
+          "fat": 0.5,
+          "sat": 0,
+          "carb": 32.6,
+          "fibre": 9.4,
+          "sodium": 312
         }
       ]
     }
