@@ -10825,6 +10825,18 @@
           "carb": 51,
           "fibre": 1.6,
           "sodium": 440
+        },
+        {
+          "meal": "Snack",
+          "t": "26:47",
+          "name": "Haldiram's bhujia 42g on the 2nd poha (scale tared; label)",
+          "kcal": 240,
+          "protein": 4.8,
+          "fat": 16.8,
+          "sat": 4.8,
+          "carb": 18,
+          "fibre": 2.4,
+          "sodium": 528
         }
       ]
     }
