@@ -10813,6 +10813,18 @@
           "carb": 14.6,
           "fibre": 1.9,
           "sodium": 428
+        },
+        {
+          "meal": "Snack",
+          "t": "26:45",
+          "name": "Fresh To Home frozen poha 87g, weighed frozen (2nd serving; 434g gross in the 347g cream bowl; label rate)",
+          "kcal": 295,
+          "protein": 5.8,
+          "fat": 7.3,
+          "sat": 1,
+          "carb": 51,
+          "fibre": 1.6,
+          "sodium": 440
         }
       ]
     }
