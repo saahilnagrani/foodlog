@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-21",
+  "updated": "2026-10-22",
   "days": [
     {
       "date": "2026-07-24",
@@ -10708,6 +10708,25 @@
           "fibre": 1.2,
           "sodium": 10,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed21_gdkbox.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "label": "Thu 22 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Snack",
+          "t": "17:44",
+          "name": "Whey drink (8g ON whey vanilla + 28g SuperYou cold coffee + 200ml Oatly Barista + 20g nuts & seeds + 85g strawberries)",
+          "kcal": 406,
+          "protein": 31.1,
+          "fat": 19.8,
+          "sat": 2.4,
+          "carb": 26.7,
+          "fibre": 7.6,
+          "sodium": 231
         }
       ]
     }
