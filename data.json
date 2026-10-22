@@ -10764,6 +10764,31 @@
           "carb": 32.6,
           "fibre": 9.4,
           "sodium": 312
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:05",
+          "name": "Chicken breast pieces in pasta sauce 73g (~60g cooked breast, scale tared)",
+          "kcal": 106,
+          "protein": 19.5,
+          "fat": 2.8,
+          "sat": 0.8,
+          "carb": 1.5,
+          "fibre": 0.2,
+          "sodium": 200
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:06",
+          "name": "Whole wheat spaghetti in tomato-yogurt sauce 230g (303g with chicken, tared; ~160g cooked pasta from ~70g dry + 70g sauce)",
+          "kcal": 298,
+          "protein": 11.1,
+          "fat": 4.8,
+          "sat": 1,
+          "carb": 49.8,
+          "fibre": 6.6,
+          "sodium": 253,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu22_chickenpasta.jpg"
         }
       ]
     }
