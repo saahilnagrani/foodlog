@@ -10739,6 +10739,19 @@
           "carb": 27,
           "fibre": 3.1,
           "sodium": 1
+        },
+        {
+          "meal": "Snack",
+          "t": "17:59",
+          "name": "Papa John's chicken Papadia, whole 244g (grilled chicken, peppers, onion, tomato, cheese, buffalo-style sauce; estimated)",
+          "kcal": 620,
+          "protein": 33,
+          "fat": 24,
+          "sat": 10,
+          "carb": 66,
+          "fibre": 3,
+          "sodium": 1500,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu22_papadia.jpg"
         }
       ]
     }
