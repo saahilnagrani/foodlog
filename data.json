@@ -11033,6 +11033,19 @@
           "carb": 17,
           "fibre": 0.6,
           "sodium": 35
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:11",
+          "name": "Beetroot aloo tikki x5, 126g total, pan-fried (same rate as the 23 Oct tikki)",
+          "kcal": 240,
+          "protein": 4.1,
+          "fat": 10.2,
+          "sat": 1.6,
+          "carb": 33.7,
+          "fibre": 4.5,
+          "sodium": 366,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat24_beettikki.jpg"
         }
       ]
     }
