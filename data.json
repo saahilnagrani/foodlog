@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-23",
+  "updated": "2026-10-24",
   "days": [
     {
       "date": "2026-07-24",
@@ -10929,6 +10929,38 @@
           "carb": 8.3,
           "fibre": 1.1,
           "sodium": 90
+        }
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "label": "Sat 24 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:40",
+          "name": "Veg hakka noodles 189g (764g gross in the 575g white pasta bowl weighed just before)",
+          "kcal": 311,
+          "protein": 7.4,
+          "fat": 10.1,
+          "sat": 1.5,
+          "carb": 46.4,
+          "fibre": 2.9,
+          "sodium": 567
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:40",
+          "name": "Chilli chicken in gravy 225g (989g minus 764g; battered breast pieces ~140g + capsicum, onion, sauce; estimated)",
+          "kcal": 410,
+          "protein": 36,
+          "fat": 18,
+          "sat": 3.2,
+          "carb": 24,
+          "fibre": 1.5,
+          "sodium": 950,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat24_chillichicken.jpg"
         }
       ]
     }
