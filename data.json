@@ -11046,6 +11046,19 @@
           "fibre": 4.5,
           "sodium": 366,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat24_beettikki.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "24:53",
+          "name": "Chilli chicken in gravy 97g, 2nd serving (same batch as lunch, same rate)",
+          "kcal": 177,
+          "protein": 15.5,
+          "fat": 7.8,
+          "sat": 1.4,
+          "carb": 10.3,
+          "fibre": 0.6,
+          "sodium": 410,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat24_chillichicken2.jpg"
         }
       ]
     }
