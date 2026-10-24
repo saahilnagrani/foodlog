@@ -10929,6 +10929,66 @@
           "carb": 8.3,
           "fibre": 1.1,
           "sodium": 90
+        },
+        {
+          "meal": "Drink",
+          "t": "21:00",
+          "name": "Gin & zero sugar tonic x4 (friend's party, Dubai; ~45ml gin each, estimated)",
+          "kcal": 400,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 0,
+          "fibre": 0,
+          "sodium": 40
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:30",
+          "name": "Amritsr (JLT) sev puri x3 (estimated)",
+          "kcal": 210,
+          "protein": 4,
+          "fat": 10,
+          "sat": 2.5,
+          "carb": 26,
+          "fibre": 2.5,
+          "sodium": 420
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:30",
+          "name": "Amritsr (JLT) hara bhara kabab x1 (~40g, estimated)",
+          "kcal": 90,
+          "protein": 2.5,
+          "fat": 5,
+          "sat": 0.8,
+          "carb": 9,
+          "fibre": 2,
+          "sodium": 210
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:30",
+          "name": "Amritsr (JLT) paneer tikka x2 pieces (~55g, estimated)",
+          "kcal": 175,
+          "protein": 9.5,
+          "fat": 13,
+          "sat": 7.5,
+          "carb": 4,
+          "fibre": 0.5,
+          "sodium": 260
+        },
+        {
+          "meal": "Snack",
+          "t": "23:00",
+          "name": "Crrrrunch (Dubai) white Lotus crrrrunch, whole (assumed ~100g white chocolate + Lotus biscuit bar; weight unknown)",
+          "kcal": 560,
+          "protein": 6,
+          "fat": 33,
+          "sat": 18,
+          "carb": 60,
+          "fibre": 1,
+          "sodium": 200
         }
       ]
     },
