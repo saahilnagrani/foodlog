@@ -11021,6 +11021,18 @@
           "fibre": 1.5,
           "sodium": 950,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat24_chillichicken.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "15:32",
+          "name": "Home tiramisu v3 84g (batch 22 Oct: 180g quark, 1 egg, 30ml Oatly, 12g maple, 12 fingers, 60ml Jägermeister cold brew, coffee, cocoa; 870 kcal per batch; batch 548-616g by box, logged at the midpoint 150 kcal/100g)",
+          "kcal": 126,
+          "protein": 6.5,
+          "fat": 1.8,
+          "sat": 0.6,
+          "carb": 17,
+          "fibre": 0.6,
+          "sodium": 35
         }
       ]
     }
