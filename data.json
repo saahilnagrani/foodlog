@@ -11103,6 +11103,31 @@
           "carb": 3.1,
           "fibre": 1.9,
           "sodium": 256
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:16",
+          "name": "Home poha 114g cooked (461g gross in the 347g cream bowl)",
+          "kcal": 235,
+          "protein": 4.8,
+          "fat": 9.3,
+          "sat": 1.3,
+          "carb": 32.7,
+          "fibre": 1.6,
+          "sodium": 352,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun25_poha.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:17",
+          "name": "Haldiram's bhujia 45g on the poha (506g minus 461g; label)",
+          "kcal": 257,
+          "protein": 5.1,
+          "fat": 18,
+          "sat": 5.1,
+          "carb": 19.3,
+          "fibre": 2.6,
+          "sodium": 566
         }
       ]
     }
