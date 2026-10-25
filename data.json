@@ -11237,6 +11237,31 @@
           "carb": 25.3,
           "fibre": 8.3,
           "sodium": 238
+        },
+        {
+          "meal": "Snack",
+          "t": "25:47",
+          "name": "Papa John's stuffed dough bites x4, cheese & jalapeño (~50g each; estimated)",
+          "kcal": 560,
+          "protein": 22,
+          "fat": 22,
+          "sat": 10,
+          "carb": 66,
+          "fibre": 3,
+          "sodium": 1300,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun25_pjbites.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "25:47",
+          "name": "Papa John's hot sauce dip, 1 tub (~30g; estimated)",
+          "kcal": 15,
+          "protein": 0,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 2,
+          "fibre": 0.2,
+          "sodium": 650
         }
       ]
     }
