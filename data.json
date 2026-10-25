@@ -11132,14 +11132,14 @@
         {
           "meal": "Dinner",
           "t": "20:29",
-          "name": "Top Ramen curry veg noodles 146g, ~half the pot (493g in the 347g cream bowl; other portion 914g in the 766g blue bowl = 148g; pot from 120g dry noodles + tastemaker; typical instant-noodle label rates)",
-          "kcal": 276,
-          "protein": 5.1,
-          "fat": 10.8,
-          "sat": 5.1,
-          "carb": 38.4,
-          "fibre": 1.5,
-          "sodium": 900,
+          "name": "Top Ramen curry veg noodles 146g, ~27% of the pot (493g in the 347g cream bowl; other portion 914g in the 518g blue bowl = 396g; pot 542g from 120g dry noodles + tastemaker; typical instant-noodle label rates)",
+          "kcal": 149,
+          "protein": 2.7,
+          "fat": 5.8,
+          "sat": 2.7,
+          "carb": 20.7,
+          "fibre": 0.8,
+          "sodium": 485,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun25_topramen.jpg"
         }
       ]

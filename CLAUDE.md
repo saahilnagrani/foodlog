@@ -132,7 +132,9 @@ platform is a fixed ruler. Compare the container's width (and depth, for the
 glass boxes) against the platform and against the reference photos in the
 Containers section, which were deliberately shot from a similar angle with the
 scale in frame. The square glass boxes and the two blue bowls look alike and
-differ only in size. The 254 g and 315 g boxes are about as wide as each other on
+differ only in size. The two blue bowls (518 g and 766 g) look almost the same width
+against the scale from above (25 Oct: picked 766, it was 518), so always ask
+which one unless the photo shows both side by side. The 254 g and 315 g boxes are about as wide as each other on
 the scale: the 254 g one is rectangular (wider than deep) with low walls, the
 315 g one is square with tall walls. Check shape and wall height, not width
 alone, and when it is still ambiguous give both food weights rather than
