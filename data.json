@@ -11141,6 +11141,30 @@
           "fibre": 0.8,
           "sodium": 485,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun25_topramen.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:50",
+          "name": "Top Ramen curry veg noodles 79g, 2nd serving (426g in the 347g cream bowl; same pot rate)",
+          "kcal": 80,
+          "protein": 1.5,
+          "fat": 3.1,
+          "sat": 1.5,
+          "carb": 11.2,
+          "fibre": 0.4,
+          "sodium": 262
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:50",
+          "name": "Haldiram's bhujia 8g (label)",
+          "kcal": 46,
+          "protein": 0.9,
+          "fat": 3.2,
+          "sat": 0.9,
+          "carb": 3.4,
+          "fibre": 0.5,
+          "sodium": 101
         }
       ]
     }
