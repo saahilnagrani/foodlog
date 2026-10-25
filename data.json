@@ -10885,6 +10885,30 @@
           "carb": 20,
           "fibre": 0.4,
           "sodium": 55
+        },
+        {
+          "meal": "Snack",
+          "name": "Haldiram's mint lachha 100g (half of 200g pack; label)",
+          "kcal": 543,
+          "protein": 8.6,
+          "fat": 28.6,
+          "sat": 8.6,
+          "carb": 60,
+          "fibre": 0,
+          "sodium": 1193,
+          "t": "30:00"
+        },
+        {
+          "meal": "Snack",
+          "t": "30:00",
+          "name": "Twix wafer roll x1 (half a 22.5g pack; 57 kcal per roll, pack label)",
+          "kcal": 57,
+          "protein": 0.7,
+          "fat": 3.1,
+          "sat": 1.9,
+          "carb": 6.6,
+          "fibre": 0.2,
+          "sodium": 12
         }
       ]
     },
@@ -11059,6 +11083,42 @@
           "fibre": 0.6,
           "sodium": 410,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat24_chillichicken2.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "30:30",
+          "name": "Hunter's sea salt & black pepper chips 40g (pack size assumed; label)",
+          "kcal": 195,
+          "protein": 3,
+          "fat": 10.7,
+          "sat": 1.1,
+          "carb": 23.9,
+          "fibre": 2.2,
+          "sodium": 265
+        },
+        {
+          "meal": "Snack",
+          "name": "Haldiram's mint lachha 100g (half of 200g pack; label)",
+          "kcal": 543,
+          "protein": 8.6,
+          "fat": 28.6,
+          "sat": 8.6,
+          "carb": 60,
+          "fibre": 0,
+          "sodium": 1193,
+          "t": "30:30"
+        },
+        {
+          "meal": "Snack",
+          "t": "30:30",
+          "name": "Twix wafer rolls x2 (one 22.5g pack = 2 rolls, 57 kcal each per pack label)",
+          "kcal": 114,
+          "protein": 1.4,
+          "fat": 6.2,
+          "sat": 3.8,
+          "carb": 13.2,
+          "fibre": 0.4,
+          "sodium": 24
         }
       ]
     },
