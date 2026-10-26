@@ -11352,6 +11352,39 @@
           "sodium": 18
         }
       ]
+    },
+    {
+      "date": "2026-10-26",
+      "label": "Mon 26 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "13:29",
+          "name": "Chicken & egg fried rice 108g (626g in 518g blue bowl; rates as 16 Oct)",
+          "kcal": 184,
+          "protein": 14.7,
+          "fat": 6.9,
+          "sat": 1.6,
+          "carb": 17,
+          "fibre": 0.6,
+          "sodium": 346,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon26_prawnrice.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:31",
+          "name": "Prawn masala 164g (102g coated prawns + 62g gravy, tared; ~90g cooked prawns + ~74g masala)",
+          "kcal": 178,
+          "protein": 23,
+          "fat": 7.4,
+          "sat": 1.2,
+          "carb": 6.5,
+          "fibre": 1.2,
+          "sodium": 600,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon26_prawnrice.jpg"
+        }
+      ]
     }
   ]
 }
