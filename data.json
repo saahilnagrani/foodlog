@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-25",
+  "updated": "2026-10-26",
   "days": [
     {
       "date": "2026-07-24",
@@ -11262,6 +11262,19 @@
           "carb": 1,
           "fibre": 0,
           "sodium": 950
+        },
+        {
+          "meal": "Snack",
+          "t": "29:10",
+          "name": "Chicken & egg fried rice 89g (436g in 347g cream bowl; rates as 16 Oct)",
+          "kcal": 151,
+          "protein": 12.1,
+          "fat": 5.7,
+          "sat": 1.3,
+          "carb": 14,
+          "fibre": 0.5,
+          "sodium": 286,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun25_friedrice.jpg"
         }
       ]
     }
