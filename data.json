@@ -11326,6 +11326,30 @@
           "fibre": 4.2,
           "sodium": 563,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun25_friedrice3.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "29:39",
+          "name": "Lotus Biscoff biscuits x8 (~62g; label 484 kcal/100g)",
+          "kcal": 302,
+          "protein": 3.1,
+          "fat": 11.9,
+          "sat": 5,
+          "carb": 45.3,
+          "fibre": 0.8,
+          "sodium": 230
+        },
+        {
+          "meal": "Snack",
+          "t": "29:39",
+          "name": "Twix miniature x1 (~10g; user's figures)",
+          "kcal": 49,
+          "protein": 0.5,
+          "fat": 2.4,
+          "sat": 1.4,
+          "carb": 6.4,
+          "fibre": 0.1,
+          "sodium": 18
         }
       ]
     }
