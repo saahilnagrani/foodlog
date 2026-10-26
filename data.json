@@ -11432,6 +11432,31 @@
           "fibre": 10.7,
           "sodium": 358,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon26_sprouts.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:16",
+          "name": "Fresh to Home salmon 210g cooked (=~240g raw, whole pack) + 1 tsp oil, spiced, pan-seared",
+          "kcal": 510,
+          "protein": 53,
+          "fat": 33.3,
+          "sat": 6.5,
+          "carb": 0.5,
+          "fibre": 0,
+          "sodium": 350,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon26_salmon.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:16",
+          "name": "Green chutney ~15g + lime (estimated)",
+          "kcal": 8,
+          "protein": 0.4,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 1.2,
+          "fibre": 0.6,
+          "sodium": 90
         }
       ]
     }
