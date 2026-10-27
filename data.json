@@ -11526,6 +11526,19 @@
           "fibre": 9.7,
           "sodium": 324,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue27_sprouts.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:09",
+          "name": "Onion jeera pulao 203g (scale tared; rate as 26 Sep masala pulao)",
+          "kcal": 305,
+          "protein": 5.6,
+          "fat": 8.1,
+          "sat": 1.5,
+          "carb": 52.8,
+          "fibre": 1.5,
+          "sodium": 457,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue27_pulao.jpg"
         }
       ]
     }
