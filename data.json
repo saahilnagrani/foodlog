@@ -11480,13 +11480,13 @@
         {
           "meal": "Lunch",
           "t": "16:57",
-          "name": "Green chicken curry 180g (129g pieces + 51g gravy, in 347g cream bowl; ~115g cooked breast + ~65g green masala, estimated)",
-          "kcal": 262,
-          "protein": 37,
-          "fat": 9.3,
-          "sat": 2.1,
-          "carb": 4.8,
-          "fibre": 1.2,
+          "name": "Palak chicken 180g (129g pieces + 51g spinach gravy, in 347g cream bowl; ~115g cooked breast + ~65g palak masala)",
+          "kcal": 249,
+          "protein": 37.4,
+          "fat": 8.3,
+          "sat": 1.9,
+          "carb": 3.5,
+          "fibre": 1.6,
           "sodium": 550,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue27_greenchicken.jpg"
         }
