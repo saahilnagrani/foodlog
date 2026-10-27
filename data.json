@@ -11489,6 +11489,18 @@
           "fibre": 1.6,
           "sodium": 550,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue27_greenchicken.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "17:18",
+          "name": "Plain paratha x1 (~35g, weight assumed; rate as 19 Oct)",
+          "kcal": 103,
+          "protein": 2.3,
+          "fat": 3.5,
+          "sat": 1,
+          "carb": 14.5,
+          "fibre": 1.1,
+          "sodium": 150
         }
       ]
     }
