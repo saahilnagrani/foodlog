@@ -11551,6 +11551,30 @@
           "carb": 4.6,
           "fibre": 0,
           "sodium": 106
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:52",
+          "name": "Onion jeera pulao 114g, 2nd serving",
+          "kcal": 171,
+          "protein": 3.1,
+          "fat": 4.5,
+          "sat": 0.8,
+          "carb": 29.7,
+          "fibre": 0.8,
+          "sodium": 257
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:52",
+          "name": "Kolios Greek yogurt 0% 75g, 2nd serving (label)",
+          "kcal": 39,
+          "protein": 6.2,
+          "fat": 0,
+          "sat": 0,
+          "carb": 3.6,
+          "fibre": 0,
+          "sodium": 84
         }
       ]
     }
