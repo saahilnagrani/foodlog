@@ -11513,6 +11513,19 @@
           "carb": 8.3,
           "fibre": 0.6,
           "sodium": 86
+        },
+        {
+          "meal": "Snack",
+          "t": "18:47",
+          "name": "Moong sprout salad 293g with onion & tomato (547g gross in the 254g rectangular box, matched by width vs the scale; 164g if it was the 383g box)",
+          "kcal": 328,
+          "protein": 22,
+          "fat": 0.9,
+          "sat": 0.1,
+          "carb": 61.2,
+          "fibre": 17.6,
+          "sodium": 586,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue27_sprouts.jpg"
         }
       ]
     }
