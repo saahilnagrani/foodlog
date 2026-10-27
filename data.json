@@ -11476,6 +11476,19 @@
           "carb": 25.5,
           "fibre": 7.9,
           "sodium": 278
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:57",
+          "name": "Green chicken curry 180g (129g pieces + 51g gravy, in 347g cream bowl; ~115g cooked breast + ~65g green masala, estimated)",
+          "kcal": 262,
+          "protein": 37,
+          "fat": 9.3,
+          "sat": 2.1,
+          "carb": 4.8,
+          "fibre": 1.2,
+          "sodium": 550,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue27_greenchicken.jpg"
         }
       ]
     }
