@@ -11575,6 +11575,19 @@
           "carb": 3.6,
           "fibre": 0,
           "sodium": 84
+        },
+        {
+          "meal": "Dinner",
+          "t": "23:22",
+          "name": "Palak chicken 127g (102g pieces + 25g spinach gravy; ~90g cooked breast)",
+          "kcal": 182,
+          "protein": 28.9,
+          "fat": 5.6,
+          "sat": 1.3,
+          "carb": 2,
+          "fibre": 0.9,
+          "sodium": 373,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue27_palakchicken2.jpg"
         }
       ]
     }
