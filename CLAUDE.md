@@ -108,7 +108,7 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 |---|---|
 | square glass box, smallest (sprout salad 15 Oct; weighed empty on the scale) | **240 g** |
 | small rectangular glass box, shallow (pasta 19 Oct; weighed empty; wider than deep, low walls) | **254 g** |
-| square glass box, largest (sprout salad 19 Oct; weighed empty; probably the 'prawn curry 5 Oct' box once stated as 330 g) | **383 g** |
+| glass box, largest (sprout salad 19 Oct; weighed empty, user says 385 on 27 Oct; slightly wider than deep, so it can pass for the 254 g box: it overhangs the scale more and has taller walls; probably the 'prawn curry 5 Oct' box once stated as 330 g) | **383 g** |
 | square glass box, tall (dal chawal 21 Oct, weighed 316 g with smears; also the 7 Oct sprouts box; truly square, tall walls) | **315 g** |
 | cream speckled bowl, shallow with wide rim (a little wider than the scale; weighed empty 21 Oct; the 10 Aug egg curry bowl, once listed as a 353 g steel bowl) | **347 g** |
 | large salad bowl (watermelon & feta, 19 Aug) | 833 g |
