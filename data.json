@@ -11539,6 +11539,18 @@
           "fibre": 1.5,
           "sodium": 457,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue27_pulao.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:09",
+          "name": "Kolios Greek yogurt 0% 95g (label)",
+          "kcal": 49,
+          "protein": 7.9,
+          "fat": 0,
+          "sat": 0,
+          "carb": 4.6,
+          "fibre": 0,
+          "sodium": 106
         }
       ]
     }
