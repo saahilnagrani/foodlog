@@ -115,7 +115,7 @@ The user often weighs food **in** its container and gives the gross weight. Subt
 | clear glass mixing bowl (daal palak, 9 Sep; about twice the shaker's width) | **590 g** |
 | dark blue ceramic bowl, smaller (about the scale platform's width; weighed empty 21 Oct) | **518 g** |
 | dark blue ceramic bowl, large (clearly wider than the scale, overhangs both sides; weighed empty 21 Oct) | **766 g** |
-| white pasta bowls with grey rim, a set that look identical, wider than the scale (574 g and 575 g weighed 24 Oct, one 550 g on 20 Oct; use 570 g when unsure) | **~570 g** |
+| white pasta bowls with grey rim, a set of four that look identical, wider than the scale: a heavier pair (574 g, 575 g weighed 24 Oct) and a lighter pair (550 g on 20 Oct, 551 g on 28 Oct); use 563 g when unsure and say the food could be ±12 g | **~563 g** |
 | clear glass bowl, smaller (butter chicken 7 Oct) | **415 g** |
 | rectangular glass container with lid (tiramisu 11 Oct, chicken gravy 14 Oct; looks like the square ones but much heavier) | **500 g** |
 | steel thali at the Ajmer house (kadhi chawal, 23 Sep) | **180 g** |
