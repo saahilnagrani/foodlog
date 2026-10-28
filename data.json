@@ -11632,6 +11632,31 @@
           "fibre": 3.2,
           "sodium": 930,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed28_prawnpasta.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:06",
+          "name": "Soya keema 210g (scale tared; rate as 19 Oct pot)",
+          "kcal": 287,
+          "protein": 27.1,
+          "fat": 7,
+          "sat": 1,
+          "carb": 26,
+          "fibre": 8.7,
+          "sodium": 520,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed28_soyakeema.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:06",
+          "name": "Plain paratha 67g",
+          "kcal": 196,
+          "protein": 4.3,
+          "fat": 6.7,
+          "sat": 1.9,
+          "carb": 27.7,
+          "fibre": 2.1,
+          "sodium": 287
         }
       ]
     }
