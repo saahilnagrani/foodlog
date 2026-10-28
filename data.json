@@ -11614,6 +11614,26 @@
           "sodium": 384
         }
       ]
+    },
+    {
+      "date": "2026-10-28",
+      "label": "Wed 28 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "15:40",
+          "name": "Prawn tagliatelle 306g (857g in the 551g pasta bowl, weighed just before; batch ~625g from 120g dry Divella + ~260g prawns + tomato-onion + ~2 tbsp oil, estimated)",
+          "kcal": 440,
+          "protein": 34,
+          "fat": 11.8,
+          "sat": 2.1,
+          "carb": 49,
+          "fibre": 3.2,
+          "sodium": 930,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed28_prawnpasta.jpg"
+        }
+      ]
     }
   ]
 }
