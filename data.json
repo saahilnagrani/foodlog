@@ -11690,6 +11690,18 @@
           "fibre": 1.5,
           "sodium": 511,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu29_biryanirice.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:11",
+          "name": "Kolios Greek yogurt 0% 75g (scale tared; brand assumed)",
+          "kcal": 39,
+          "protein": 6.2,
+          "fat": 0,
+          "sat": 0,
+          "carb": 3.6,
+          "fibre": 0,
+          "sodium": 84
         }
       ]
     }
