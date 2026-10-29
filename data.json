@@ -11750,6 +11750,32 @@
           "carb": 11.8,
           "fibre": 2.4,
           "sodium": 0
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:05",
+          "name": "Biryani chicken breast pieces 112g (scale tared; rate as 20 Oct)",
+          "kcal": 174,
+          "protein": 32.1,
+          "fat": 4.4,
+          "sat": 1.2,
+          "carb": 1.7,
+          "fibre": 0.2,
+          "sodium": 307,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu29_biryanichicken2.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:06",
+          "name": "Biryani rice 137g (249g with the chicken, tared)",
+          "kcal": 219,
+          "protein": 4.2,
+          "fat": 5.4,
+          "sat": 1.2,
+          "carb": 38.5,
+          "fibre": 1.2,
+          "sodium": 400,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu29_biryanirice2.jpg"
         }
       ]
     }
