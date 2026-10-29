@@ -11694,14 +11694,14 @@
         {
           "meal": "Lunch",
           "t": "16:11",
-          "name": "Kolios Greek yogurt 0% 75g (scale tared; brand assumed)",
-          "kcal": 39,
-          "protein": 6.2,
+          "name": "Kri Kri Greek yogurt 0% 75g (scale tared; label)",
+          "kcal": 44,
+          "protein": 7.7,
           "fat": 0,
           "sat": 0,
-          "carb": 3.6,
+          "carb": 3.4,
           "fibre": 0,
-          "sodium": 84
+          "sodium": 30
         }
       ]
     }
