@@ -11788,6 +11788,19 @@
           "carb": 2.8,
           "fibre": 0,
           "sodium": 25
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:10",
+          "name": "Moong sprout salad ~150g with onion & tomato (422g gross in a small round glass bowl not yet weighed empty; bowl assumed ~270g)",
+          "kcal": 168,
+          "protein": 11.3,
+          "fat": 0.5,
+          "sat": 0.1,
+          "carb": 31.4,
+          "fibre": 9,
+          "sodium": 300,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu29_sprouts.jpg"
         }
       ]
     }
