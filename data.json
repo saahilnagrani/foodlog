@@ -11776,6 +11776,18 @@
           "fibre": 1.2,
           "sodium": 400,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu29_biryanirice2.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:07",
+          "name": "Kri Kri Greek yogurt 0% 62g (75g in cup - 13g empty cup; label)",
+          "kcal": 37,
+          "protein": 6.4,
+          "fat": 0,
+          "sat": 0,
+          "carb": 2.8,
+          "fibre": 0,
+          "sodium": 25
         }
       ]
     }
