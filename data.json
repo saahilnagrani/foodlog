@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-29",
+  "updated": "2026-10-30",
   "days": [
     {
       "date": "2026-07-24",
@@ -11801,6 +11801,26 @@
           "fibre": 5.3,
           "sodium": 176,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu29_sprouts.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "label": "Fri 30 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "15:15",
+          "name": "Soya keema 178g (scale tared; rate as 19 Oct pot)",
+          "kcal": 243,
+          "protein": 23,
+          "fat": 6,
+          "sat": 0.8,
+          "carb": 22.1,
+          "fibre": 7.3,
+          "sodium": 440,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri30_soyakeema.jpg"
         }
       ]
     }
