@@ -11821,6 +11821,19 @@
           "fibre": 7.3,
           "sodium": 440,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri30_soyakeema.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:18",
+          "name": "Plain paratha x2 (73g, scale tared)",
+          "kcal": 214,
+          "protein": 4.7,
+          "fat": 7.3,
+          "sat": 2.1,
+          "carb": 30.2,
+          "fibre": 2.3,
+          "sodium": 313,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri30_paratha.jpg"
         }
       ]
     }
