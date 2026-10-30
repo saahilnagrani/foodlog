@@ -11834,6 +11834,18 @@
           "fibre": 2.3,
           "sodium": 313,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri30_paratha.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "15:32",
+          "name": "Soya keema 110g, 2nd serving",
+          "kcal": 150,
+          "protein": 14.2,
+          "fat": 3.7,
+          "sat": 0.5,
+          "carb": 13.6,
+          "fibre": 4.5,
+          "sodium": 272
         }
       ]
     }
