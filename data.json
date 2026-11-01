@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-10-30",
+  "updated": "2026-11-01",
   "days": [
     {
       "date": "2026-07-24",
@@ -11859,6 +11859,18 @@
           "fibre": 0,
           "sodium": 270,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri30_salmon.jpg"
+        },
+        {
+          "meal": "Drink",
+          "t": "19:42",
+          "name": "Whey drink (36g SuperYou cold coffee + 200ml Oatly Barista + 20g nuts & seeds + 50g strawberries)",
+          "kcal": 391,
+          "protein": 30.1,
+          "fat": 19.5,
+          "sat": 2.2,
+          "carb": 23.9,
+          "fibre": 7.7,
+          "sodium": 229
         }
       ]
     }
