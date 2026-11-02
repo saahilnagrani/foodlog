@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-11-01",
+  "updated": "2026-11-02",
   "days": [
     {
       "date": "2026-07-24",
@@ -11871,6 +11871,304 @@
           "carb": 23.9,
           "fibre": 7.7,
           "sodium": 229
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:09",
+          "name": "Flight meal: bulgur salad cup ~100g (estimated)",
+          "kcal": 130,
+          "protein": 3.5,
+          "fat": 5,
+          "sat": 0.7,
+          "carb": 18,
+          "fibre": 3.5,
+          "sodium": 250,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri30_flightsalad.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:09",
+          "name": "Flight meal: yogurt ~100g with almond flakes & crumbled cheese (estimated)",
+          "kcal": 121,
+          "protein": 6.2,
+          "fat": 8.4,
+          "sat": 3.8,
+          "carb": 6,
+          "fibre": 0.7,
+          "sodium": 160
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:14",
+          "name": "Flight meal: creamy chicken curry ~120g (estimated)",
+          "kcal": 190,
+          "protein": 16,
+          "fat": 12,
+          "sat": 4,
+          "carb": 5,
+          "fibre": 1,
+          "sodium": 500,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri30_flight.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:14",
+          "name": "Flight meal: white + yellow rice ~150g (estimated)",
+          "kcal": 200,
+          "protein": 4,
+          "fat": 1.5,
+          "sat": 0.4,
+          "carb": 42,
+          "fibre": 0.6,
+          "sodium": 250
+        },
+        {
+          "meal": "Dinner",
+          "t": "24:14",
+          "name": "Flight meal: dal makhani cup ~80g (estimated)",
+          "kcal": 140,
+          "protein": 4.8,
+          "fat": 8.5,
+          "sat": 4.8,
+          "carb": 10.7,
+          "fibre": 2.7,
+          "sodium": 210
+        },
+        {
+          "meal": "Drink",
+          "t": "24:14",
+          "name": "Coke Zero 330ml",
+          "kcal": 1,
+          "protein": 0,
+          "fat": 0,
+          "sat": 0,
+          "carb": 0,
+          "fibre": 0,
+          "sodium": 40
+        },
+        {
+          "meal": "Snack",
+          "t": "30:30",
+          "name": "Uncle Chips, Rs 20 pack (~50g assumed; IST, Jaipur-Ajmer drive, time estimated)",
+          "kcal": 270,
+          "protein": 3,
+          "fat": 16.5,
+          "sat": 7,
+          "carb": 27,
+          "fibre": 1.5,
+          "sodium": 375
+        },
+        {
+          "meal": "Snack",
+          "t": "30:30",
+          "name": "Lay's India Magic Masala (blue), Rs 20 pack (~48g assumed; IST)",
+          "kcal": 261,
+          "protein": 3.3,
+          "fat": 16.6,
+          "sat": 6.7,
+          "carb": 24.8,
+          "fibre": 1.4,
+          "sodium": 346
+        },
+        {
+          "meal": "Breakfast",
+          "t": "31:41",
+          "name": "Plain paratha x3 (~45g each, estimated; IST, Ajmer)",
+          "kcal": 396,
+          "protein": 8.7,
+          "fat": 13.5,
+          "sat": 3.9,
+          "carb": 55.8,
+          "fibre": 4.2,
+          "sodium": 580,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/fri30_parathas.jpg"
+        },
+        {
+          "meal": "Breakfast",
+          "t": "31:41",
+          "name": "Homemade dahi ~100g (estimated)",
+          "kcal": 63,
+          "protein": 3.3,
+          "fat": 3.3,
+          "sat": 2,
+          "carb": 4,
+          "fibre": 0,
+          "sodium": 44
+        }
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "label": "Sat 31 Oct",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "16:34",
+          "name": "Plain roti x3 (~32g each, no ghee assumed; IST)",
+          "kcal": 281,
+          "protein": 8.9,
+          "fat": 4.5,
+          "sat": 0.8,
+          "carb": 56,
+          "fibre": 6,
+          "sodium": 440
+        },
+        {
+          "meal": "Lunch",
+          "t": "16:34",
+          "name": "Turai sabzi 2 servings ~292g (206g gross - 60g katori = 146g, 2nd serving assumed the same; rate as 25 Sep)",
+          "kcal": 204,
+          "protein": 4.4,
+          "fat": 13.1,
+          "sat": 1.8,
+          "carb": 17.5,
+          "fibre": 5.8,
+          "sodium": 307,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat31_turai.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:14",
+          "name": "Yellow dal ~150g + white rice ~150g, plate 1 (estimated; dal rate as 25 Sep)",
+          "kcal": 315,
+          "protein": 9.9,
+          "fat": 4.5,
+          "sat": 1.8,
+          "carb": 57,
+          "fibre": 3.9,
+          "sodium": 183,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat31_dalrice.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:14",
+          "name": "Mango pickle ~15g",
+          "kcal": 38,
+          "protein": 0.2,
+          "fat": 3.5,
+          "sat": 0.5,
+          "carb": 1.5,
+          "fibre": 0.5,
+          "sodium": 375
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:28",
+          "name": "Yellow dal ~130g + white rice ~150g, plate 2 (estimated)",
+          "kcal": 299,
+          "protein": 9.1,
+          "fat": 4,
+          "sat": 1.5,
+          "carb": 55,
+          "fibre": 3.5,
+          "sodium": 159,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat31_dalrice2.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "22:28",
+          "name": "Papad 1, roasted",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 7.5,
+          "fibre": 0.8,
+          "sodium": 250
+        },
+        {
+          "meal": "Snack",
+          "t": "27:00",
+          "name": "Ratlami sev 50g (estimated)",
+          "kcal": 280,
+          "protein": 7,
+          "fat": 19,
+          "sat": 6,
+          "carb": 21,
+          "fibre": 2.5,
+          "sodium": 620
+        },
+        {
+          "meal": "Snack",
+          "t": "27:00",
+          "name": "Bhujia 50g (Haldiram's label rate)",
+          "kcal": 286,
+          "protein": 5.7,
+          "fat": 20,
+          "sat": 5.7,
+          "carb": 21.4,
+          "fibre": 2.9,
+          "sodium": 629
+        },
+        {
+          "meal": "Snack",
+          "t": "27:00",
+          "name": "Twix wafer rolls x10 (5 packs of 2; 57 kcal per roll, label)",
+          "kcal": 570,
+          "protein": 7,
+          "fat": 31,
+          "sat": 19,
+          "carb": 66,
+          "fibre": 2,
+          "sodium": 120
+        }
+      ]
+    },
+    {
+      "date": "2026-11-01",
+      "label": "Sun 1 Nov",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "13:42",
+          "name": "Roti x2.5 incl. 1 green methi/missi roti (~80g, estimated; IST)",
+          "kcal": 234,
+          "protein": 7.4,
+          "fat": 3.8,
+          "sat": 0.6,
+          "carb": 47,
+          "fibre": 5,
+          "sodium": 370,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun1_roti.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:42",
+          "name": "Methi aloo sabzi 231g (120g + 111g, scale less 60g katori; rate as 15 Sep)",
+          "kcal": 277,
+          "protein": 5.4,
+          "fat": 13.9,
+          "sat": 1.8,
+          "carb": 33.9,
+          "fibre": 6.2,
+          "sodium": 416,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sun1_methialoo.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Dhodha barfi 1 piece (~40g, estimated)",
+          "kcal": 170,
+          "protein": 4,
+          "fat": 8,
+          "sat": 4.5,
+          "carb": 21,
+          "fibre": 0.4,
+          "sodium": 30
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:56",
+          "name": "Homemade curd ~100g (estimated)",
+          "kcal": 63,
+          "protein": 3.3,
+          "fat": 3.3,
+          "sat": 2,
+          "carb": 4,
+          "fibre": 0,
+          "sodium": 44
         }
       ]
     }
