@@ -12357,6 +12357,19 @@
           "carb": 4.5,
           "fibre": 0.8,
           "sodium": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:56",
+          "name": "Matar (green peas) masala, 1 katori ~150g (not weighed; estimated)",
+          "kcal": 180,
+          "protein": 6,
+          "fat": 9,
+          "sat": 1.5,
+          "carb": 17,
+          "fibre": 6,
+          "sodium": 600,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue3_matar.jpg"
         }
       ]
     }
