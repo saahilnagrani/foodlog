@@ -12181,6 +12181,90 @@
           "carb": 4,
           "fibre": 0,
           "sodium": 44
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Malai kofta, 1 restaurant serving ~200g (Bagh Baan, Ajmer; time estimated)",
+          "kcal": 450,
+          "protein": 10,
+          "fat": 35,
+          "sat": 15,
+          "carb": 22,
+          "fibre": 2,
+          "sodium": 900
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Dal makhani, 1 restaurant serving ~200g (Bagh Baan)",
+          "kcal": 350,
+          "protein": 12,
+          "fat": 21,
+          "sat": 12,
+          "carb": 27,
+          "fibre": 6.5,
+          "sodium": 700
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Paneer tikka masala, 1 restaurant serving ~200g (Bagh Baan)",
+          "kcal": 480,
+          "protein": 20,
+          "fat": 36,
+          "sat": 18,
+          "carb": 15,
+          "fibre": 2.5,
+          "sodium": 900
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Butter tawa roti x1 (Bagh Baan)",
+          "kcal": 150,
+          "protein": 4,
+          "fat": 5.5,
+          "sat": 3.3,
+          "carb": 22,
+          "fibre": 3,
+          "sodium": 200
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Butter naan, half (Bagh Baan)",
+          "kcal": 160,
+          "protein": 4.5,
+          "fat": 5,
+          "sat": 2.8,
+          "carb": 24,
+          "fibre": 1,
+          "sodium": 260
+        },
+        {
+          "meal": "Drink",
+          "t": "21:00",
+          "name": "Buttermilk (chaas), 1 glass ~250ml, salted",
+          "kcal": 50,
+          "protein": 3,
+          "fat": 1.5,
+          "sat": 1,
+          "carb": 5,
+          "fibre": 0,
+          "sodium": 400
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:00",
+          "name": "Papad 1, roasted (Bagh Baan)",
+          "kcal": 45,
+          "protein": 3,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 7.5,
+          "fibre": 0.8,
+          "sodium": 250
         }
       ]
     },
