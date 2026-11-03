@@ -12320,6 +12320,43 @@
           "carb": 20,
           "fibre": 6.7,
           "sodium": 229
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:41",
+          "name": "Tandoori chicken & chicken tikka, 4 pieces ~170g (3 on the plate + 1 more boneless tikka; estimated; IST)",
+          "kcal": 298,
+          "protein": 42,
+          "fat": 12,
+          "sat": 3.5,
+          "carb": 4,
+          "fibre": 0.5,
+          "sodium": 715,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue3_tikka.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:41",
+          "name": "Roti x1 (~40g)",
+          "kcal": 117,
+          "protein": 3.7,
+          "fat": 1.9,
+          "sat": 0.3,
+          "carb": 23,
+          "fibre": 2.5,
+          "sodium": 180
+        },
+        {
+          "meal": "Dinner",
+          "t": "20:41",
+          "name": "Onion salad ~50g",
+          "kcal": 20,
+          "protein": 0.5,
+          "fat": 0,
+          "sat": 0,
+          "carb": 4.5,
+          "fibre": 0.8,
+          "sodium": 2
         }
       ]
     }
