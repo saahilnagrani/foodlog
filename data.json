@@ -12274,6 +12274,42 @@
       "workout": "",
       "items": [
         {
+          "meal": "Lunch",
+          "t": "14:00",
+          "name": "Dal palak, 1 katori ~160g (not weighed; ghee tadka assumed; IST, time estimated)",
+          "kcal": 144,
+          "protein": 7.4,
+          "fat": 4.5,
+          "sat": 1.8,
+          "carb": 17,
+          "fibre": 4.5,
+          "sodium": 480
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:00",
+          "name": "Pulao 150g (rate as 26 Sep masala pulao)",
+          "kcal": 225,
+          "protein": 4.1,
+          "fat": 6,
+          "sat": 1.1,
+          "carb": 39,
+          "fibre": 1.1,
+          "sodium": 338
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:00",
+          "name": "Homemade curd, 1 katori ~150g (full-fat, not weighed)",
+          "kcal": 95,
+          "protein": 5,
+          "fat": 5,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 0,
+          "sodium": 66
+        },
+        {
           "meal": "Drink",
           "t": "18:00",
           "name": "Whey drink (36g SuperYou cold coffee + 200ml Oatly Barista + 20g nuts & seeds)",
