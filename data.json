@@ -12028,6 +12028,18 @@
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/sat31_turai.jpg"
         },
         {
+          "meal": "Drink",
+          "t": "18:00",
+          "name": "Whey drink (36g SuperYou cold coffee + 200ml Oatly Barista + 20g nuts & seeds)",
+          "kcal": 375,
+          "protein": 29.7,
+          "fat": 19.4,
+          "sat": 2.2,
+          "carb": 20,
+          "fibre": 6.7,
+          "sodium": 229
+        },
+        {
           "meal": "Dinner",
           "t": "22:14",
           "name": "Yellow dal ~150g + white rice ~150g, plate 1 (estimated; dal rate as 25 Sep)",
