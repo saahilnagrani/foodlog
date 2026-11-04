@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-11-03",
+  "updated": "2026-11-04",
   "days": [
     {
       "date": "2026-07-24",
@@ -12269,6 +12269,88 @@
       ]
     },
     {
+      "date": "2026-11-02",
+      "label": "Mon 2 Nov",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "13:30",
+          "name": "Onion paratha x1 (~100g, estimated; IST)",
+          "kcal": 260,
+          "protein": 6,
+          "fat": 10,
+          "sat": 3,
+          "carb": 37,
+          "fibre": 4,
+          "sodium": 400,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon2_onionparatha.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:30",
+          "name": "Papad x2, roasted",
+          "kcal": 90,
+          "protein": 6,
+          "fat": 0.8,
+          "sat": 0.2,
+          "carb": 15,
+          "fibre": 1.6,
+          "sodium": 500
+        },
+        {
+          "meal": "Lunch",
+          "t": "13:30",
+          "name": "Homemade curd, 1 katori ~150g (estimated)",
+          "kcal": 95,
+          "protein": 5,
+          "fat": 5,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 0,
+          "sodium": 66
+        },
+        {
+          "meal": "Snack",
+          "t": "20:16",
+          "name": "Soya chaap, street plate ~200g, masala/tandoori (estimated)",
+          "kcal": 480,
+          "protein": 27,
+          "fat": 24,
+          "sat": 7,
+          "carb": 38,
+          "fibre": 4,
+          "sodium": 1150,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon2_chaap.jpg"
+        },
+        {
+          "meal": "Snack",
+          "t": "20:16",
+          "name": "Onion slices ~40g",
+          "kcal": 16,
+          "protein": 0.4,
+          "fat": 0,
+          "sat": 0,
+          "carb": 3.6,
+          "fibre": 0.7,
+          "sodium": 2
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:56",
+          "name": "Yellow dal ~200g + white rice ~100g (estimated)",
+          "kcal": 290,
+          "protein": 10.6,
+          "fat": 5.7,
+          "sat": 2.3,
+          "carb": 48,
+          "fibre": 4.8,
+          "sodium": 242,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon2_dalrice.jpg"
+        }
+      ]
+    },
+    {
       "date": "2026-11-03",
       "label": "Tue 3 Nov",
       "workout": "",
@@ -12370,6 +12452,51 @@
           "fibre": 6,
           "sodium": 600,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue3_matar.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "label": "Wed 4 Nov",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:46",
+          "name": "Moong sprouts ~120g with chaat masala (estimated; IST)",
+          "kcal": 163,
+          "protein": 11.5,
+          "fat": 0.6,
+          "sat": 0.1,
+          "carb": 30,
+          "fibre": 7.2,
+          "sodium": 312,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed4_sprouts.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:46",
+          "name": "Besan-methi chilla x1 (~70g, estimated)",
+          "kcal": 150,
+          "protein": 7,
+          "fat": 6,
+          "sat": 1,
+          "carb": 17,
+          "fibre": 3.5,
+          "sodium": 250,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed4_chilla.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:46",
+          "name": "Homemade curd, 1 katori ~150g, black salt & pepper (estimated)",
+          "kcal": 95,
+          "protein": 5,
+          "fat": 5,
+          "sat": 3,
+          "carb": 6,
+          "fibre": 0,
+          "sodium": 266
         }
       ]
     }
