@@ -12276,14 +12276,14 @@
         {
           "meal": "Lunch",
           "t": "13:30",
-          "name": "Onion paratha x1 (~100g, estimated; IST)",
-          "kcal": 260,
-          "protein": 6,
-          "fat": 10,
-          "sat": 3,
-          "carb": 37,
-          "fibre": 4,
-          "sodium": 400,
+          "name": "Onion paratha x3 (~100g each, estimated; IST)",
+          "kcal": 780,
+          "protein": 18,
+          "fat": 30,
+          "sat": 9,
+          "carb": 111,
+          "fibre": 12,
+          "sodium": 1200,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon2_onionparatha.jpg"
         },
         {
@@ -12301,14 +12301,14 @@
         {
           "meal": "Lunch",
           "t": "13:30",
-          "name": "Homemade curd, 1 katori ~150g (estimated)",
-          "kcal": 95,
-          "protein": 5,
-          "fat": 5,
-          "sat": 3,
-          "carb": 6,
+          "name": "Homemade curd, 2 katoris ~300g (estimated)",
+          "kcal": 190,
+          "protein": 10,
+          "fat": 10,
+          "sat": 6,
+          "carb": 12,
           "fibre": 0,
-          "sodium": 66
+          "sodium": 132
         },
         {
           "meal": "Snack",
@@ -12476,27 +12476,27 @@
         {
           "meal": "Lunch",
           "t": "14:46",
-          "name": "Besan-methi chilla x1 (~70g, estimated)",
-          "kcal": 150,
-          "protein": 7,
-          "fat": 6,
-          "sat": 1,
-          "carb": 17,
-          "fibre": 3.5,
-          "sodium": 250,
+          "name": "Besan-methi chilla x2.25 (~70g each, estimated)",
+          "kcal": 338,
+          "protein": 15.8,
+          "fat": 13.5,
+          "sat": 2.3,
+          "carb": 38.3,
+          "fibre": 7.9,
+          "sodium": 563,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/wed4_chilla.jpg"
         },
         {
           "meal": "Lunch",
           "t": "14:46",
-          "name": "Homemade curd, 1 katori ~150g, black salt & pepper (estimated)",
-          "kcal": 95,
-          "protein": 5,
-          "fat": 5,
-          "sat": 3,
-          "carb": 6,
+          "name": "Homemade curd, 2 katoris ~300g, black salt & pepper (estimated)",
+          "kcal": 190,
+          "protein": 10,
+          "fat": 10,
+          "sat": 6,
+          "carb": 12,
           "fibre": 0,
-          "sodium": 266
+          "sodium": 332
         }
       ]
     }
