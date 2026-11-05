@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-11-04",
+  "updated": "2026-11-05",
   "days": [
     {
       "date": "2026-07-24",
@@ -12497,6 +12497,50 @@
           "carb": 12,
           "fibre": 0,
           "sodium": 332
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "label": "Thu 5 Nov",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:33",
+          "name": "Palak paneer, 1 katori ~150g (~40g paneer; homemade, estimated; IST)",
+          "kcal": 191,
+          "protein": 10.3,
+          "fat": 14.3,
+          "sat": 6.1,
+          "carb": 7.5,
+          "fibre": 2.5,
+          "sodium": 600,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/thu5_palakpaneer.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:33",
+          "name": "Roti x3 (~35g each, no ghee assumed)",
+          "kcal": 307,
+          "protein": 9.7,
+          "fat": 4.9,
+          "sat": 0.8,
+          "carb": 61.5,
+          "fibre": 6.6,
+          "sodium": 480
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:33",
+          "name": "Cucumber slices ~80g",
+          "kcal": 12,
+          "protein": 0.5,
+          "fat": 0.1,
+          "sat": 0,
+          "carb": 2.9,
+          "fibre": 0.4,
+          "sodium": 2
         }
       ]
     }
