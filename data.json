@@ -12521,14 +12521,14 @@
         {
           "meal": "Lunch",
           "t": "14:33",
-          "name": "Roti x3 (~35g each, no ghee assumed)",
-          "kcal": 307,
-          "protein": 9.7,
-          "fat": 4.9,
-          "sat": 0.8,
-          "carb": 61.5,
-          "fibre": 6.6,
-          "sodium": 480
+          "name": "Roti x2 (~35g each) with a little ghee (~1/4 tsp each)",
+          "kcal": 226,
+          "protein": 6.5,
+          "fat": 5.8,
+          "sat": 2.1,
+          "carb": 41,
+          "fibre": 4.4,
+          "sodium": 320
         },
         {
           "meal": "Lunch",
