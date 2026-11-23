@@ -12600,6 +12600,19 @@
           "fibre": 1.5,
           "sodium": 474,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon23_chickengravy.jpg"
+        },
+        {
+          "meal": "Dinner",
+          "t": "21:53",
+          "name": "Plain paratha x2 (53g, scale tared; rate as 30 Oct)",
+          "kcal": 155,
+          "protein": 3.4,
+          "fat": 5.3,
+          "sat": 1.5,
+          "carb": 21.9,
+          "fibre": 1.7,
+          "sodium": 227,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon23_paratha.jpg"
         }
       ]
     }
