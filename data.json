@@ -12576,6 +12576,18 @@
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon23_bhurji.jpg"
         },
         {
+          "meal": "Drink",
+          "t": "17:30",
+          "name": "Whey drink (10g ISO100 mocha + 33g SuperYou cold coffee + 200ml Oatly Barista + 20g nuts & seeds + 50g strawberries)",
+          "kcal": 417,
+          "protein": 35.6,
+          "fat": 19.7,
+          "sat": 2.2,
+          "carb": 24.5,
+          "fibre": 7.4,
+          "sodium": 267
+        },
+        {
           "meal": "Dinner",
           "t": "21:49",
           "name": "Chicken curry pieces 113g (scale tared; ~100g cooked breast + clinging gravy; rate as 14 Oct)",
