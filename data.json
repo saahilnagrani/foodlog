@@ -8,7 +8,7 @@
     "fibre": 30,
     "sodium": 2300
   },
-  "updated": "2026-11-23",
+  "updated": "2026-11-24",
   "days": [
     {
       "date": "2026-07-24",
@@ -12625,6 +12625,39 @@
           "fibre": 1.7,
           "sodium": 227,
           "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/mon23_paratha.jpg"
+        }
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "label": "Tue 24 Nov",
+      "workout": "",
+      "items": [
+        {
+          "meal": "Lunch",
+          "t": "14:34",
+          "name": "White rice 142g (scale tared)",
+          "kcal": 185,
+          "protein": 3.7,
+          "fat": 0.4,
+          "sat": 0.1,
+          "carb": 39.8,
+          "fibre": 0.6,
+          "sodium": 3,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue24_rice.jpg"
+        },
+        {
+          "meal": "Lunch",
+          "t": "14:35",
+          "name": "Dal palak 280g (chana/moong with spinach; 422g - 142g rice; thick dal rate)",
+          "kcal": 378,
+          "protein": 18.2,
+          "fat": 11.2,
+          "sat": 1.7,
+          "carb": 49,
+          "fibre": 7.8,
+          "sodium": 840,
+          "img": "https://raw.githubusercontent.com/saahilnagrani/foodlog/main/images/tue24_dalpalak.jpg"
         }
       ]
     }
